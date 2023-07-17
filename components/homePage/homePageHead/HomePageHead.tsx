@@ -1,10 +1,10 @@
 /* ----------------------------- MUI Components ----------------------------- */
 import { Box, Stack, Typography, useTheme } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
-import Image from "next/image";
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- NextJs Components --------------------------- */
+import Image from "next/image";
 import Link from "next/link";
 /* -------------------------------------------------------------------------- */
 

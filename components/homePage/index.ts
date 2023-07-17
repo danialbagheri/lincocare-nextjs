@@ -1,3 +1,3 @@
-import HomePage from "./HomePage";
-
-export { HomePage };
+export * from "./homePageHead";
+export * from "./privateLabel";
+export * from "./homePageBrands";

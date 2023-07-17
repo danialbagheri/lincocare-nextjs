@@ -14,6 +14,9 @@ function Container({ children, sx }: ContainerTypes) {
         width: { xs: "100%", md: "min(980px,80%)" },
         margin: "0 auto",
         px: { xs: 9, md: 0 },
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
         ...sx,
       }}
     >

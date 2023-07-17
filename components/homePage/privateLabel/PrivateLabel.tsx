@@ -7,10 +7,10 @@ function PrivateLabel() {
   const theme = useTheme();
 
   return (
-    <Container sx={{ py: { xs: 20, md: 40 } }}>
+    <Container sx={{ pt: { xs: 20, md: 40 }, pb: 0 }}>
       <Stack
         direction={{ xs: "column", md: "row" }}
-        gap={{ xs: 14, md: 14 }}
+        gap={14}
         alignItems={"center"}
         justifyContent={"center"}
       >
@@ -20,20 +20,31 @@ function PrivateLabel() {
         >
           Private label
         </Typography>
-        <Image
-          alt={"private-label"}
-          width={595}
-          height={322}
-          src={"/images/private-label.png"}
-        />
         <Box
           sx={{
-            flexGrow: 1,
+            position: "relative",
+            width: "100%",
+            height: { xs: 160, md: 300 },
+          }}
+        >
+          <Image
+            alt={"private-label"}
+            style={{ objectFit: "contain" }}
+            fill
+            sizes={"100vw"}
+            loading={"lazy"}
+            src={"/images/private-label.png"}
+          />
+        </Box>
+        <Box
+          sx={{
             display: "flex",
             alignItems: { xs: "center", md: "flex-start" },
             justifyContent: "flex-start",
             flexDirection: "column",
             gap: 4,
+            flexGrow: 1,
+            width: "70%",
             "&>a": {
               display: "inline-block",
               textDecoration: "none",
@@ -54,9 +65,44 @@ function PrivateLabel() {
             Brief info Brief info Brief Brief info Brief info Brief info Brief
             info Brief info Brief info Brief info Brief info Brief{" "}
           </Typography>
-          <Link href={""}>Know more</Link>
+          <Link href={"/private_label"}>Know more</Link>
         </Box>
       </Stack>
+
+      <Box
+        sx={{
+          position: "relative",
+          height: 238,
+          width: "100%",
+          mt: "100px",
+          display: { xs: "none", md: "block" },
+        }}
+      >
+        <Image
+          alt={"private-label"}
+          fill
+          src={"/images/privateLabelProcess.png"}
+          style={{ objectFit: "contain" }}
+          sizes={"100vw"}
+          loading={"lazy"}
+        />
+      </Box>
+      <Box
+        sx={{
+          margin: "0 auto",
+          pt: 25,
+          display: { xs: "none", md: "block" },
+          "&>a": {
+            display: "inline-block",
+            textDecoration: "none",
+            color: "black",
+            borderBottom: "2px solid " + theme.palette.lincoBlue.light,
+            p: 2,
+          },
+        }}
+      >
+        <Link href="">Private label process</Link>
+      </Box>
     </Container>
   );
 }
