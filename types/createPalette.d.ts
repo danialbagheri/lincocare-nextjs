@@ -9,6 +9,10 @@ declare module "@mui/material/styles" {
     earth: SimplePaletteColorOptions;
     lincoYellow: SimplePaletteColorOptions;
     lincoBlue: SimplePaletteColorOptions;
+    silkiaBlue: SimplePaletteColorOptions;
+    regenPink: SimplePaletteColorOptions;
+    dimplesBlue: SimplePaletteColorOptions;
+    cabanaBrown: SimplePaletteColorOptions;
   }
 
   // allow configuration using `createTheme`
@@ -20,5 +24,9 @@ declare module "@mui/material/styles" {
     earth: SimplePaletteColorOptions;
     lincoYellow: SimplePaletteColorOptions;
     lincoBlue: SimplePaletteColorOptions;
+    silkiaBlue: SimplePaletteColorOptions;
+    regenPink: SimplePaletteColorOptions;
+    dimplesBlue: SimplePaletteColorOptions;
+    cabanaBrown: SimplePaletteColorOptions;
   }
 }

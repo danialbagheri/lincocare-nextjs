@@ -1,35 +1,23 @@
 import * as React from "react";
 
-import SwipeableViews from "react-swipeable-views";
+import { IconButton, Stack, Typography } from "@mui/material";
 
-import { useTheme } from "@mui/material/styles";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Box from "@mui/material/Box";
-
-import Image from "next/image";
-
+import { BrandDetail } from "./brandDetail";
 import { Container } from "shared";
-import { Typography } from "@mui/material";
-import Link from "next/link";
+import SwipeableViews from "react-swipeable-views";
+import Tab from "@mui/material/Tab";
+import { TabPanelProps } from "../HomePageTypes";
+import Tabs from "@mui/material/Tabs";
+import { useTheme } from "@mui/material/styles";
 
-interface brandDetail {
-  name: string;
-  imageSrc: string;
-  description: string;
-}
-
-interface TabPanelProps {
-  children?: React.ReactNode;
-  dir?: string;
-  index: number;
-  value: number;
-  brandDetail: brandDetail;
-}
+const NEXT = "next";
+const PREVIOUS = "previous";
 
 function TabPanel(props: TabPanelProps) {
   const { children, value, index, brandDetail, ...other } = props;
-  const theme = useTheme();
 
   return (
     <div
@@ -39,58 +27,7 @@ function TabPanel(props: TabPanelProps) {
       aria-labelledby={`full-width-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box
-          sx={{
-            p: 3,
-            position: "relative",
-            height: { md: 300, lg: 400, xl: 500 },
-          }}
-        >
-          <Image
-            src={brandDetail.imageSrc}
-            fill
-            alt="home-page-photo"
-            style={{ objectFit: "cover" }}
-            sizes={"100vw"}
-            loading={"lazy"}
-          />
-          <Box
-            sx={{
-              position: "absolute",
-              top: { md: "15%", lg: "25%", xl: "40%" },
-              left: { md: "40%", lg: "45%", xl: "48%" },
-              transform: "translate(50%,0)",
-              maxWidth: 350,
-            }}
-          >
-            <Typography
-              variant="h4"
-              color={"#fff"}
-              sx={{ fontWeight: 700, textTransform: "uppercase" }}
-            >
-              {brandDetail.name}
-            </Typography>
-            <Typography variant="body1" color={"#fff"} sx={{ mt: 5 }}>
-              {brandDetail.description}
-            </Typography>
-            <Box
-              sx={{
-                pt: 5,
-                "&>a": {
-                  display: "inline-block",
-                  textDecoration: "none",
-                  color: "#fff",
-                  borderBottom: "2px solid " + theme.palette.lincoYellow.main,
-                  p: 2,
-                },
-              }}
-            >
-              <Link href="">Know more</Link>
-            </Box>
-          </Box>
-        </Box>
-      )}
+      {value === index && <BrandDetail brandDetail={brandDetail} />}
     </div>
   );
 }
@@ -109,64 +46,136 @@ export default function HomePageBrands() {
   const brands = [
     {
       name: "Calypso",
-      imageSrc: "/images/homePageBrandsCalypso.png",
+      imageSrc: "calypso.png",
       description:
         "Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info  Brief info Brief info Brief info",
+      bgColor: theme.palette.primary.main,
     },
     {
       name: "Cabana",
-      imageSrc: "",
+      imageSrc: "cabana.png",
       description:
         "Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info  Brief info Brief info Brief info",
+      bgColor: theme.palette.cabanaBrown.main,
     },
     {
       name: "Silkia",
-      imageSrc: "",
+      imageSrc: "silkia.png",
       description:
         "Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info  Brief info Brief info Brief info",
+      bgColor: theme.palette.silkiaBlue.main,
     },
     {
       name: "Dimples",
-      imageSrc: "",
+      imageSrc: "dimples.png",
       description:
         "Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info  Brief info Brief info Brief info",
+      bgColor: theme.palette.dimplesBlue.main,
     },
     {
       name: "Re-Gen",
       imageSrc: "",
       description:
         "Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info  Brief info Brief info Brief info",
+      bgColor: theme.palette.regenPink.main,
     },
     {
       name: "Safa",
       imageSrc: "",
       description:
         "Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info  Brief info Brief info Brief info",
+      bgColor: theme.palette.cabanaBrown.main,
     },
   ];
+  const brandsCount = brands.length;
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (
+    event: React.SyntheticEvent,
+    newValue: number
+  ): void => {
+    event.preventDefault();
     setValue(newValue);
   };
 
-  const handleChangeIndex = (index: number) => {
+  const handleChangeIndex = (index: number): void => {
     setValue(index);
   };
 
+  const changeBrandHandler = (type: string) => {
+    switch (type) {
+      case NEXT:
+        if (value < brandsCount - 1) {
+          setValue(value + 1);
+        } else setValue(0);
+        break;
+      case PREVIOUS:
+        if (value > 0) {
+          setValue(value - 1);
+        } else setValue(brandsCount - 1);
+    }
+  };
+
   return (
-    <Box sx={{ bgcolor: "background.paper" }}>
+    <Box
+      sx={{
+        mt: { xs: 15, md: 0 },
+        p: { xs: "60px 40px", md: "unset" },
+        bgcolor: { xs: brands[value].bgColor, md: "unset" },
+        transition: "all 500ms",
+      }}
+    >
       <Container>
-        <Typography variant="h4" align="center" mb={20}>
+        <Typography
+          align="center"
+          mb={{ xs: 15, md: 20 }}
+          color={{ xs: "#fff", md: "#000" }}
+          sx={{ typography: { xs: "h5", md: "h4" } }}
+        >
           Linco brands
         </Typography>
+        <Stack
+          direction={"row"}
+          alignItems="center"
+          justifyContent="space-between"
+          sx={{ width: "100%", display: { xs: "flex", md: "none" } }}
+        >
+          <IconButton
+            aria-label="previous"
+            color="primary"
+            sx={{ color: "white " }}
+            onClick={() => changeBrandHandler(PREVIOUS)}
+          >
+            <ArrowBackIosNewIcon fontSize="large" />
+          </IconButton>
+          <Typography
+            variant="h5"
+            color={"#fff"}
+            sx={{
+              fontWeight: 700,
+              textTransform: "uppercase",
+            }}
+          >
+            {brands[value].name}
+          </Typography>
+          <IconButton
+            aria-label="delete"
+            color="primary"
+            sx={{ color: "white !important" }}
+            onClick={() => changeBrandHandler(NEXT)}
+          >
+            <ArrowForwardIosIcon fontSize="large" />
+          </IconButton>
+        </Stack>
         <Tabs
           value={value}
           onChange={handleChange}
           indicatorColor="secondary"
           textColor="inherit"
           variant="fullWidth"
+          scrollButtons={true}
           aria-label="full width tabs example"
           sx={{
+            display: { xs: "none", md: "block" },
             "& .MuiTabs-flexContainer": {
               width: "100%",
               justifyContent: "space-between",
@@ -204,7 +213,12 @@ export default function HomePageBrands() {
         onChangeIndex={handleChangeIndex}
       >
         {brands.map((brand, i) => (
-          <TabPanel value={value} index={i} brandDetail={brand} />
+          <TabPanel
+            key={brand.name}
+            value={value}
+            index={i}
+            brandDetail={brand}
+          />
         ))}
       </SwipeableViews>
     </Box>

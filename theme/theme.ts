@@ -1,5 +1,5 @@
-import { createTheme } from "@mui/material";
 import { Inter } from "next/font/google";
+import { createTheme } from "@mui/material";
 
 export const inter = Inter({
   weight: ["300", "400", "500", "700"],
@@ -37,6 +37,16 @@ const theme = createTheme({
       light: "#004EAA",
       main: "#062952",
     },
+    cabanaBrown: { main: "#CEA974" },
+    silkiaBlue: {
+      main: "#2B69B1",
+    },
+    regenPink: {
+      main: "#FEA08C",
+    },
+    dimplesBlue: {
+      main: "#AECEF4",
+    },
   },
 
   spacing: 4,
@@ -70,6 +80,20 @@ const theme = createTheme({
       fontStyle: "normal",
       fontWeight: 500,
       lineHeight: "52px",
+    },
+    h5: {
+      fontFamily: inter.style.fontFamily,
+      fontSize: "32px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "40px",
+    },
+    h6: {
+      fontFamily: inter.style.fontFamily,
+      fontSize: "18px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "30px",
     },
 
     body1: {

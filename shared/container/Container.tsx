@@ -3,6 +3,7 @@ import * as React from "react";
 /* ----------------------------- MUI Components ----------------------------- */
 import { Box } from "@mui/material";
 import { SxProps } from "@mui/system";
+
 /* -------------------------------------------------------------------------- */
 
 type ContainerTypes = { children: React.ReactNode; sx?: SxProps };

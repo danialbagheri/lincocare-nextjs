@@ -1,7 +1,13 @@
-import { Box, Divider } from "@mui/material";
+import {
+  HomePageAboutLinco,
+  HomePageBrands,
+  HomePageHead,
+  HomePageRetailers,
+  PrivateLabel,
+} from "components";
 
-import { HomePageBrands, HomePageHead, PrivateLabel } from "components";
 import { Container } from "shared";
+import { Divider } from "@mui/material";
 
 export default function Home() {
   return (
@@ -14,6 +20,8 @@ export default function Home() {
       </Container>
 
       <HomePageBrands />
+      <HomePageRetailers />
+      <HomePageAboutLinco />
     </>
   );
 }
