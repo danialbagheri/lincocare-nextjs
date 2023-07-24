@@ -43,7 +43,11 @@ function AboutLincoDescription() {
         }}
       >
         <Typography
-          sx={{ typography: { xs: "h5", md: "h4" }, minWidth: "300px" }}
+          sx={{
+            typography: { xs: "h5", md: "h4" },
+            minWidth: "300px",
+            display: "inline",
+          }}
           color={"#ffffff"}
         >
           About Linco

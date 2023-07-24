@@ -136,7 +136,7 @@ export default function HomePageBrands() {
         <Stack
           direction={"row"}
           alignItems="center"
-          justifyContent="space-between"
+          justifyContent={"center"}
           sx={{ width: "100%", display: { xs: "flex", md: "none" } }}
         >
           <IconButton
@@ -153,6 +153,8 @@ export default function HomePageBrands() {
             sx={{
               fontWeight: 700,
               textTransform: "uppercase",
+              minWidth: "165px",
+              textAlign: "center",
             }}
           >
             {brands[value].name}
@@ -202,7 +204,7 @@ export default function HomePageBrands() {
           }}
         >
           {brands.map((brand, i) => (
-            <Tab key={i} label={brand.name} {...a11yProps(i)} />
+            <Tab key={brand.name} label={brand.name} {...a11yProps(i)} />
           ))}
         </Tabs>
       </Container>

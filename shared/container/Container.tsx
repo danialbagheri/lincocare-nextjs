@@ -6,15 +6,19 @@ import { SxProps } from "@mui/system";
 
 /* -------------------------------------------------------------------------- */
 
-type ContainerTypes = { children: React.ReactNode; sx?: SxProps };
+type ContainerTypes = {
+  children: React.ReactNode;
+  sx?: SxProps;
+  fullWidth?: boolean;
+};
 
-function Container({ children, sx }: ContainerTypes) {
+function Container({ children, sx, fullWidth = false }: ContainerTypes) {
   return (
     <Box
       sx={{
         width: { xs: "100%", md: "min(980px,80%)" },
         margin: "0 auto",
-        px: { xs: 9, md: 0 },
+        px: { xs: fullWidth ? 0 : 9, md: 0 },
         display: "flex",
         justifyContent: "center",
         flexDirection: "column",

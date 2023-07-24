@@ -2,14 +2,15 @@ import { Box, SxProps } from "@mui/material";
 
 import Link from "next/link";
 
-interface customLinkTypes {
+interface CustomLinkTypes {
   borderColor: string;
   href: string;
   children: React.ReactNode;
   sx?: SxProps;
+  color?: string;
 }
 
-function CustomLink(props: customLinkTypes) {
+function CustomLink(props: CustomLinkTypes) {
   return (
     <Box
       sx={{
@@ -17,7 +18,7 @@ function CustomLink(props: customLinkTypes) {
         "&>a": {
           display: "inline-block",
           textDecoration: "none",
-          color: "#fff",
+          color: props.color || "#fff",
           borderBottom: "2px solid " + props.borderColor,
           p: 2,
         },
