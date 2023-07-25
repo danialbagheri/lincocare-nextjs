@@ -5,7 +5,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import { Container } from "shared";
 import { NewsDetail } from "./newsDetail";
 
-function HomePageNews() {
+function LincoNews() {
   const scrollContainer = React.useRef<HTMLHeadingElement>(null);
   const scrollElement = React.useRef<HTMLHeadingElement>(null);
   const [boxShadow, setBoxShadow] = React.useState("unset");
@@ -135,4 +135,4 @@ function HomePageNews() {
   );
 }
 
-export default HomePageNews;
+export default LincoNews;

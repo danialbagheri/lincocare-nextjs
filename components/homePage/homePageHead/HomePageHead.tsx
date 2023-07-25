@@ -22,9 +22,9 @@ function HomePageHead() {
         }}
       >
         <Image
-          src={"/images/homePageBG.png"}
+          src={"/images/homePage/head/homePageBG.png"}
           fill
-          alt="home-page-photo"
+          alt="Home page head"
           style={{ objectFit: "cover", filter: " brightness(0.7)" }}
           sizes={"100vw"}
           loading={"lazy"}

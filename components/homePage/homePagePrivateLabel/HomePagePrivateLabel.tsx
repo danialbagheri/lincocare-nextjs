@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "shared";
 
-function PrivateLabel() {
+function HomePagePrivateLabel() {
   const theme = useTheme();
 
   return (
@@ -33,7 +33,7 @@ function PrivateLabel() {
             fill
             sizes={"100vw"}
             loading={"lazy"}
-            src={"/images/private-label.png"}
+            src={"/images/homePage/privateLabel/privateLabel.png"}
           />
         </Box>
         <Box
@@ -79,9 +79,9 @@ function PrivateLabel() {
         }}
       >
         <Image
-          alt={"private-label"}
+          alt={"Private label process"}
           fill
-          src={"/images/privateLabelProcess.png"}
+          src={"/images/homePage/privateLabel/privateLabelProcess.png"}
           style={{ objectFit: "contain" }}
           sizes={"100vw"}
           loading={"lazy"}
@@ -107,4 +107,4 @@ function PrivateLabel() {
   );
 }
 
-export default PrivateLabel;
+export default HomePagePrivateLabel;

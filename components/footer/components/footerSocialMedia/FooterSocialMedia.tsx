@@ -1,4 +1,4 @@
-import { Box, Icon, Stack } from "@mui/material";
+import { Box, Icon, IconButton, Stack } from "@mui/material";
 
 import GoogleIcon from "@mui/icons-material/Google";
 import Image from "next/image";
@@ -8,7 +8,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const IconLink = (props: { children: React.ReactNode }) => {
   return (
-    <Icon
+    <IconButton
       sx={{
         fontSize: "2.5rem",
         width: 60,
@@ -22,7 +22,7 @@ const IconLink = (props: { children: React.ReactNode }) => {
       }}
     >
       {props.children}
-    </Icon>
+    </IconButton>
   );
 };
 

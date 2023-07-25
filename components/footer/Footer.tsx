@@ -1,4 +1,4 @@
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import {
   Contact,
   FooterAccreditations,
@@ -22,6 +22,18 @@ function Footer() {
         </Stack>
         <FooterAccreditations />
         <FooterSocialMedia />
+        <Typography
+          variant="body2"
+          color={"#5A7EA8"}
+          sx={{
+            position: "absolute",
+            bottom: "12px",
+            left: "50%",
+            transform: "translate(-50%,0)",
+          }}
+        >
+          ©2023 Linco Care Ltd. All rights reserved
+        </Typography>
       </Container>
     </Box>
   );

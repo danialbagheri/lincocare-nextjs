@@ -11,9 +11,10 @@ import CssBaseline from "@mui/material/CssBaseline";
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Local Components ---------------------------- */
-import { AppProvider } from "components";
+
 import { theme } from "theme";
 import { Layout } from "layout";
+import { AppProvider } from "components/appProvider";
 /* -------------------------------------------------------------------------- */
 
 export default function MyApp(props: AppProps) {

@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 import { Container } from "shared";
 import Image from "next/image";
 
-function HomePageAccreditations() {
+function Accreditations() {
   return (
     <Container>
       <Typography
@@ -51,4 +51,4 @@ function HomePageAccreditations() {
   );
 }
 
-export default HomePageAccreditations;
+export default Accreditations;
