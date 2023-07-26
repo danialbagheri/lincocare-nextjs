@@ -13,6 +13,8 @@ declare module "@mui/material/styles" {
     regenPink: SimplePaletteColorOptions;
     dimplesBlue: SimplePaletteColorOptions;
     cabanaBrown: SimplePaletteColorOptions;
+    silkiaDepilatory: SimplePaletteColorOptions;
+    sunTropic: SimplePaletteColorOptions;
   }
 
   // allow configuration using `createTheme`
@@ -28,5 +30,7 @@ declare module "@mui/material/styles" {
     regenPink: SimplePaletteColorOptions;
     dimplesBlue: SimplePaletteColorOptions;
     cabanaBrown: SimplePaletteColorOptions;
+    silkiaDepilatory: SimplePaletteColorOptions;
+    sunTropic: SimplePaletteColorOptions;
   }
 }

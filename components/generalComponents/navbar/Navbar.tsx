@@ -17,6 +17,8 @@ import { useScrollTrigger } from "@mui/material";
 
 import Image from "next/image";
 import { theme } from "theme";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 interface Props {
   /**
@@ -27,9 +29,15 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ["Brands", "Private label", "About us", "Contact us"];
+const navItems = [
+  { name: "Brands", link: "/brands" },
+  { name: "Private label", link: "" },
+  { name: "About us", link: "" },
+  { name: "Contact us", link: "" },
+];
 
 export default function Navbar(props: Props) {
+  const router = useRouter();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -51,9 +59,9 @@ export default function Navbar(props: Props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item.name} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <Link href={item.link}>{item.name}</Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -144,10 +152,13 @@ export default function Navbar(props: Props) {
           >
             {navItems.map((item) => (
               <Button
-                key={item}
+                key={item.name}
                 sx={{ color: "#ffffff", textTransform: "none" }}
+                onClick={function () {
+                  router.push(item.link);
+                }}
               >
-                {item}
+                {item.name}
               </Button>
             ))}
           </Box>

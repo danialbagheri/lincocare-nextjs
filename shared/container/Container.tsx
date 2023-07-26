@@ -1,32 +1,28 @@
 import * as React from "react";
 
 /* ----------------------------- MUI Components ----------------------------- */
-import { Box } from "@mui/material";
-import { SxProps } from "@mui/system";
+import { Box, BoxProps } from "@mui/material";
 
 /* -------------------------------------------------------------------------- */
 
-type ContainerTypes = {
-  children: React.ReactNode;
-  sx?: SxProps;
+interface ContainerTypes extends BoxProps {
   fullWidth?: boolean;
-};
+}
 
-function Container({ children, sx, fullWidth = false }: ContainerTypes) {
+function Container(props: ContainerTypes) {
   return (
     <Box
+      {...props}
       sx={{
         width: { xs: "100%", md: "min(980px,80%)" },
         margin: "0 auto",
-        px: { xs: fullWidth ? 0 : 9, md: 0 },
+        px: { xs: props.fullWidth ? 0 : 9, md: 0 },
         display: "flex",
         justifyContent: "center",
         flexDirection: "column",
-        ...sx,
+        ...props.sx,
       }}
-    >
-      {children}
-    </Box>
+    />
   );
 }
 

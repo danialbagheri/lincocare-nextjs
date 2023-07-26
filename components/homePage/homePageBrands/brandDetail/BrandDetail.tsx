@@ -27,7 +27,7 @@ function BrandDetail(props: { brandDetail: BrandDetailTypes }) {
         <Box
           sx={{
             position: "relative",
-            width: { xs: "100%", sm: "50%", md: "30%", lg: "20%", xl: "10%" },
+            width: { xs: "100%", sm: "50%", md: "30%", lg: "20%" },
             height: "100%",
             paddingBottom: {
               xs: "70%",
@@ -39,7 +39,7 @@ function BrandDetail(props: { brandDetail: BrandDetailTypes }) {
           }}
         >
           <Image
-            src={"/images/homePage/brands/" + brandDetail.imageSrc}
+            src={"/images/brands/" + brandDetail.imageSrc}
             fill
             alt="home-page-photo"
             style={{ objectFit: "contain" }}

@@ -13,7 +13,7 @@ function LincoNews() {
   const newsArr = [
     {
       id: 1101,
-      image: "/images/homePage/brands/cabana.png",
+      image: "/images/brands/cabana.png",
       date: "July 11, 2023",
       title: "How Reliable Is Your Sanitiser?",
       description:
@@ -21,7 +21,7 @@ function LincoNews() {
     },
     {
       id: 1102,
-      image: "/images/homePage/brands/calypso.png",
+      image: "/images/brands/calypso.png",
       date: "July 11, 2023",
       title: "How Reliable Is Your Sanitiser?",
       description:
@@ -29,7 +29,7 @@ function LincoNews() {
     },
     {
       id: 1103,
-      image: "/images/homePage/brands/dimples.png",
+      image: "/images/brands/dimples.png",
       date: "July 11, 2023",
       title: "How Reliable Is Your Sanitiser?",
       description:
@@ -37,7 +37,7 @@ function LincoNews() {
     },
     {
       id: 1104,
-      image: "/images/homePage/brands/cabana.png",
+      image: "/images/brands/cabana.png",
       date: "July 11, 2023",
       title: "How Reliable Is Your Sanitiser?",
       description:
@@ -45,7 +45,7 @@ function LincoNews() {
     },
     {
       id: 1105,
-      image: "/images/homePage/brands/cabana.png",
+      image: "/images/brands/cabana.png",
       date: "July 11, 2023",
       title: "How Reliable Is Your Sanitiser?",
       description:
@@ -53,7 +53,7 @@ function LincoNews() {
     },
     {
       id: 1106,
-      image: "/images/homePage/brands/cabana.png",
+      image: "/images/brands/cabana.png",
       date: "July 11, 2023",
       title: "How Reliable Is Your Sanitiser?",
       description:

@@ -1,5 +1,4 @@
-import { Footer } from "components/footer";
-import { Navbar } from "components/navbar";
+import { Footer, Navbar } from "components/generalComponents";
 
 function Layout({ children }: React.PropsWithChildren) {
   return (

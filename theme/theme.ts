@@ -41,11 +41,17 @@ const theme = createTheme({
     silkiaBlue: {
       main: "#2B69B1",
     },
+    silkiaDepilatory: {
+      main: "#CF639F",
+    },
     regenPink: {
       main: "#FEA08C",
     },
     dimplesBlue: {
       main: "#AECEF4",
+    },
+    sunTropic: {
+      main: "#5BB087",
     },
   },
 

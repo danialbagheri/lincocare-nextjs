@@ -47,7 +47,7 @@ function SiteMap() {
       <Stack direction={"row"} gap={{ xs: 15, md: 22 }}>
         <Box>
           <FooterLink href="">Private label</FooterLink>
-          <FooterLink href="">Brands</FooterLink>
+          <FooterLink href="/brands">Brands</FooterLink>
           <FooterLink href="">About us</FooterLink>
           <FooterLink href="">Sustaiability</FooterLink>
           <FooterLink href="">News</FooterLink>

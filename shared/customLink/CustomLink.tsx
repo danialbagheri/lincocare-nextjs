@@ -1,25 +1,30 @@
-import { Box, SxProps } from "@mui/material";
+import { Box, BoxProps, SxProps, useTheme } from "@mui/material";
 
 import Link from "next/link";
 
-interface CustomLinkTypes {
-  borderColor: string;
+interface CustomLinkTypes extends BoxProps {
+  borderColor?: { xs: string; md: string };
   href: string;
   children: React.ReactNode;
   sx?: SxProps;
-  color?: string;
 }
 
 function CustomLink(props: CustomLinkTypes) {
+  const theme = useTheme();
+
   return (
     <Box
+      {...props}
       sx={{
         pt: 5,
         "&>a": {
           display: "inline-block",
           textDecoration: "none",
           color: props.color || "#fff",
-          borderBottom: "2px solid " + props.borderColor,
+          borderBottom: `2px solid`,
+          borderColor: props.borderColor
+            ? { ...props.borderColor }
+            : theme.palette.lincoYellow.main,
           p: 2,
         },
         ...props.sx,

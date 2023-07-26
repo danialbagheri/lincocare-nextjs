@@ -6,6 +6,7 @@ import StarIcon from "@mui/icons-material/Star";
 /* ---------------------------- NextJs Components --------------------------- */
 import Image from "next/image";
 import Link from "next/link";
+import { HeadContainer } from "shared";
 /* -------------------------------------------------------------------------- */
 
 function HomePageHead() {
@@ -13,14 +14,7 @@ function HomePageHead() {
 
   return (
     <>
-      <Box
-        sx={{
-          position: "relative",
-          height: { xs: 500, md: 600, xl: 700 },
-          width: "100%",
-          backgroundColor: "rgba(0, 0, 0, 0.5)",
-        }}
-      >
+      <HeadContainer sx={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
         <Image
           src={"/images/homePage/head/homePageBG.png"}
           fill
@@ -61,7 +55,7 @@ function HomePageHead() {
           </Typography>
           <Link href={""}>Know more</Link>
         </Box>
-      </Box>
+      </HeadContainer>
       <Box
         sx={{ p: 3, bgcolor: "#F5F5F5", display: { xs: "none", md: "flex" } }}
       >
