@@ -60,6 +60,7 @@ const ArrowButton = (props: ArrowButtonTypes) => {
           : { right: { xs: 10, md: -80 } }),
         top: { xs: "8%", md: "50%" },
         transform: "translate(0,-50%)",
+        zIndex: 10,
       }}
       onClick={() =>
         handleSwipeChange({

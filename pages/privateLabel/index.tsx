@@ -1,7 +1,11 @@
-import { Box, Divider } from "@mui/material";
-import { Head, ProcessLevels } from "components/privateLabelPage";
+/* ----------------------------- MUI Components ----------------------------- */
+import { Divider } from "@mui/material";
+/* -------------------------------------------------------------------------- */
 
+/* ---------------------------- Local Components ---------------------------- */
+import { Head, ProcessLevels } from "components/privateLabelPage";
 import { Container } from "shared";
+/* -------------------------------------------------------------------------- */
 
 function PrivateLabel() {
   return (
