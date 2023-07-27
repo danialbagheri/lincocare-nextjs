@@ -37,7 +37,7 @@ function NewsDetail(props: NewsDetailTypes) {
       <Box sx={{ overflow: "hidden", display: { xs: "none", md: "block" } }}>
         <Typography color={"#A4A4A4"}>{props.date}</Typography>
         <Typography
-          color={"lincoBlue.light"}
+          color={"lincoBlue.main"}
           sx={{
             overflow: "hidden",
             display: "-webkit-box",
@@ -51,7 +51,7 @@ function NewsDetail(props: NewsDetailTypes) {
         <CustomLink
           color={"#000"}
           href=""
-          borderColor={theme.palette.lincoBlue.light}
+          borderColor={theme.palette.lincoBlue.main}
         >
           Read more
         </CustomLink>

@@ -49,7 +49,7 @@ function HomePagePrivateLabel() {
               display: "inline-block",
               textDecoration: "none",
               color: "black",
-              borderBottom: "2px solid " + theme.palette.lincoBlue.light,
+              borderBottom: "2px solid " + theme.palette.lincoBlue.main,
               p: 2,
             },
           }}
@@ -60,7 +60,7 @@ function HomePagePrivateLabel() {
           >
             Private label
           </Typography>
-          <Typography color={"lincoBlue.light"}>
+          <Typography color={"lincoBlue.main"}>
             Brief info Brief info Brief info Brief info Brief info Brief info
             Brief info Brief info Brief Brief info Brief info Brief info Brief
             info Brief info Brief info Brief info Brief info Brief{" "}
@@ -96,7 +96,7 @@ function HomePagePrivateLabel() {
             display: "inline-block",
             textDecoration: "none",
             color: "black",
-            borderBottom: "2px solid " + theme.palette.lincoBlue.light,
+            borderBottom: "2px solid " + theme.palette.lincoBlue.main,
             p: 2,
           },
         }}

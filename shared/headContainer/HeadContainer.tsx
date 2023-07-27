@@ -10,10 +10,10 @@ function HeadContainer(props: HeadContainerTypes) {
     <Box
       {...props}
       sx={{
-        ...props.sx,
         position: "relative",
         height: { xs: 500, md: 600, xl: 700 },
         width: "100%",
+        ...props.sx,
       }}
     />
   );

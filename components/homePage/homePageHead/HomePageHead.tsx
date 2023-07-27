@@ -48,7 +48,7 @@ function HomePageHead() {
           </Typography>
           <Typography
             mt={4}
-            color={"lincoBlue.main"}
+            color={"lincoBlue.dark"}
             sx={{ typography: { xs: "h3", md: "h2" } }}
           >
             Supporting sentence
@@ -67,7 +67,7 @@ function HomePageHead() {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            color: theme.palette.lincoBlue.main,
+            color: theme.palette.lincoBlue.dark,
           }}
         >
           {["Quality", "Ethics", "Innovation"].map((item) => (

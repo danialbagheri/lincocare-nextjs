@@ -25,7 +25,7 @@ function LincoBrands() {
       description:
         "Cabana Sun offers protection and tan in the same bottle helping you stay safe while tanning. Our bestsellers are our Dry Coco Oil and our Tropical Sun Lotion Spray.",
       color: theme.palette.cabanaBrown.main,
-      borderColor: theme.palette.lincoBlue.light,
+      borderColor: theme.palette.lincoBlue.main,
       knowMoreLink: "",
       brandWebsiteLink: "",
     },
@@ -69,7 +69,7 @@ function LincoBrands() {
       description:
         "Dimples range includes body wax strips, hair removal cream, bleach cream and spray foams so that no matter your skin type or preferences, there’s a Dimples product for you.",
       color: theme.palette.dimplesBlue.main,
-      borderColor: theme.palette.lincoBlue.light,
+      borderColor: theme.palette.lincoBlue.main,
       knowMoreLink: "",
       brandWebsiteLink: "",
     },
@@ -80,7 +80,7 @@ function LincoBrands() {
       description:
         "This unique handbag size range offers both UVA and UVB protection. All products are water-resistant, so you don’t need to worry about getting burned at the beach or in the pool.",
       color: theme.palette.sunTropic.main,
-      borderColor: theme.palette.lincoBlue.light,
+      borderColor: theme.palette.lincoBlue.main,
       knowMoreLink: "",
       brandWebsiteLink: "",
     },
@@ -91,7 +91,7 @@ function LincoBrands() {
       description:
         "This unique handbag size range offers both UVA and UVB protection. All products are water-resistant, so you don’t need to worry about getting burned at the beach or in the pool.",
       color: "#EFF1F3",
-      borderColor: theme.palette.lincoBlue.light,
+      borderColor: theme.palette.lincoBlue.main,
       knowMoreLink: "",
       brandWebsiteLink: "",
       privateLabel: true,

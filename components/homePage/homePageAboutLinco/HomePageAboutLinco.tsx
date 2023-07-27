@@ -18,7 +18,7 @@ function HomePageAboutLinco() {
       <Box
         py={{ xs: 19, md: 25 }}
         mt={{ xs: 16, md: 30 }}
-        sx={{ position: "relative", bgcolor: theme.palette.lincoBlue.main }}
+        sx={{ position: "relative", bgcolor: theme.palette.lincoBlue.dark }}
       >
         <Container>
           <AboutLincoDescription />

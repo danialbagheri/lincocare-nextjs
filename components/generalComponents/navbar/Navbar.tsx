@@ -8,7 +8,6 @@ import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -28,10 +27,10 @@ interface Props {
   window?: () => Window;
 }
 
-const drawerWidth = 240;
-const navItems = [
+const DRAWER_WIDTH = 240;
+const NAV_ITEMS = [
   { name: "Brands", link: "/brands" },
-  { name: "Private label", link: "" },
+  { name: "Private label", link: "/privateLabel" },
   { name: "About us", link: "" },
   { name: "Contact us", link: "" },
 ];
@@ -40,6 +39,7 @@ export default function Navbar(props: Props) {
   const router = useRouter();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const darkNavbar = router.pathname.includes("/privateLabel");
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -58,7 +58,7 @@ export default function Navbar(props: Props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
+        {NAV_ITEMS.map((item) => (
           <ListItem key={item.name} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <Link href={item.link}>{item.name}</Link>
@@ -69,6 +69,12 @@ export default function Navbar(props: Props) {
     </Box>
   );
 
+  const renderProperDrawerColor = () => {
+    if (darkNavbar) {
+      return "#FFF";
+    } else return "lincoBlue.main";
+  };
+
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
@@ -78,9 +84,7 @@ export default function Navbar(props: Props) {
         component="nav"
         color={"primary"}
         sx={{
-          backgroundColor: trigger
-            ? theme.palette.lincoBlue.main
-            : "transparent",
+          backgroundColor: trigger ? renderProperDrawerColor() : "transparent",
           boxShadow: trigger
             ? "0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)"
             : "unset",
@@ -102,10 +106,15 @@ export default function Navbar(props: Props) {
             onClick={handleDrawerToggle}
             sx={{ display: { md: "none" } }}
           >
-            <MenuIcon sx={{ fill: "#fff", fontSize: 40 }} />
+            <MenuIcon
+              sx={{
+                fill: darkNavbar ? theme.palette.lincoBlue.main : "#fff",
+                fontSize: 40,
+              }}
+            />
           </IconButton>
 
-          {/* Linco mobile icon */}
+          {/*  ---------------------------- Linco mobile icon ---------------------------  */}
           <Box
             sx={{
               flexGrow: 1,
@@ -113,17 +122,25 @@ export default function Navbar(props: Props) {
               textAlign: "left",
             }}
           >
-            <IconButton color="inherit" aria-label="open drawer">
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={() => router.push("/")}
+            >
               <Image
                 alt={"linco-logo"}
-                src={"/icons/Linco-logo-white-mobile.svg"}
+                src={
+                  darkNavbar
+                    ? "/icons/Linco-logo-blue-mobile.png"
+                    : "/icons/Linco-logo-white-mobile.svg"
+                }
                 width={30}
                 height={40}
               />
             </IconButton>
           </Box>
 
-          {/* Linco desktop icon */}
+          {/*  --------------------------- Linco desktop icon ---------------------------  */}
           <Box
             sx={{
               flexGrow: 1,
@@ -131,10 +148,18 @@ export default function Navbar(props: Props) {
               textAlign: "left",
             }}
           >
-            <IconButton color="inherit" aria-label="open drawer">
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={() => router.push("/")}
+            >
               <Image
                 alt={"linco-logo"}
-                src={"/icons/Linco-logo-white-small.svg"}
+                src={
+                  darkNavbar
+                    ? "/icons/Linco-logo-blue-small.png"
+                    : "/icons/Linco-logo-white-small.svg"
+                }
                 width={177}
                 height={40}
               />
@@ -147,13 +172,16 @@ export default function Navbar(props: Props) {
               px: 3,
               gap: 4,
               borderBottom: "1px solid",
-              borderColor: "lincoYellow.main",
+              borderColor: darkNavbar ? "lincoBlue.light" : "lincoYellow.main",
             }}
           >
-            {navItems.map((item) => (
+            {NAV_ITEMS.map((item) => (
               <Button
                 key={item.name}
-                sx={{ color: "#ffffff", textTransform: "none" }}
+                sx={{
+                  color: darkNavbar ? "lincoBlue.dark" : "#FFFFFF",
+                  textTransform: "none",
+                }}
                 onClick={function () {
                   router.push(item.link);
                 }}
@@ -179,7 +207,7 @@ export default function Navbar(props: Props) {
             display: { xs: "block", md: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: drawerWidth,
+              width: DRAWER_WIDTH,
             },
           }}
         >

@@ -8,11 +8,13 @@ interface Props {
 }
 
 const AppProvider: NextPage<Props> = (props) => {
-  const initState = {};
+  const initState = {
+    brightNavbar: false,
+  };
 
   const [appState, setAppState] = React.useState(initState);
 
-  const value = [appState, setAppState];
+  const value = React.useMemo(() => [appState, setAppState], []);
 
   return (
     <AppContext.Provider value={value}>{props.children}</AppContext.Provider>

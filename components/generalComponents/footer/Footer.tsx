@@ -10,7 +10,7 @@ import { Container } from "shared";
 
 function Footer() {
   return (
-    <Box bgcolor={"lincoBlue.main"}>
+    <Box bgcolor={"lincoBlue.dark"}>
       <Container sx={{ py: 25, position: "relative" }}>
         <Stack
           direction={{ xs: "column", md: "row" }}

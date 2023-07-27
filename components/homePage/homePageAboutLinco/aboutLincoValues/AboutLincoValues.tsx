@@ -50,7 +50,7 @@ const ValueComponent = (props: ValueComponentTypes) => {
       >
         {props.title}
       </Typography>
-      <Typography color={"lincoBlue.light"} mt={{ xs: 4, md: 6 }}>
+      <Typography color={"lincoBlue.main"} mt={{ xs: 4, md: 6 }}>
         {props.description}
       </Typography>
     </Box>
@@ -92,7 +92,7 @@ function AboutLincoValues(props: PropsType) {
         width: "100%",
         position: "relative",
         pb: 25,
-        bgcolor: theme.palette.lincoBlue.main,
+        bgcolor: theme.palette.lincoBlue.dark,
       }}
     >
       <Typography variant="h5" color={"#FFF"} textAlign={"center"}>

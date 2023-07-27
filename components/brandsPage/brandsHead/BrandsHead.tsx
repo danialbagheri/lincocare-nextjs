@@ -5,7 +5,7 @@ import { Container, CustomLink, HeadContainer } from "shared";
 function BrandsHead() {
   return (
     <HeadContainer
-      bgcolor={"lincoBlue.main"}
+      bgcolor={"lincoBlue.dark"}
       sx={{ height: { xs: 630, md: 700, xl: 910 } }}
     >
       <Container>

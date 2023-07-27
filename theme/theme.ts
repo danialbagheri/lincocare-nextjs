@@ -34,8 +34,9 @@ const theme = createTheme({
       main: "#FBFF00",
     },
     lincoBlue: {
-      light: "#004EAA",
-      main: "#062952",
+      light: "#247DE7",
+      main: "#004EAA",
+      dark: "#062952",
     },
     cabanaBrown: { main: "#CEA974" },
     silkiaBlue: {
