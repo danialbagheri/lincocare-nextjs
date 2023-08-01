@@ -102,6 +102,20 @@ const theme = createTheme({
       fontWeight: 400,
       lineHeight: "30px",
     },
+    h7: {
+      fontFamily: inter.style.fontFamily,
+      fontSize: "36px",
+      fontStyle: "normal",
+      fontWeight: 700,
+      lineHeight: "normal",
+    },
+    h7thin: {
+      fontFamily: inter.style.fontFamily,
+      fontSize: "36px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+    },
 
     body1: {
       fontFamily: inter.style.fontFamily,

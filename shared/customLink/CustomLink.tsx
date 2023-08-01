@@ -3,7 +3,7 @@ import { Box, BoxProps, SxProps, useTheme } from "@mui/material";
 import Link from "next/link";
 
 interface CustomLinkTypes extends BoxProps {
-  borderColor?: { xs: string; md: string };
+  borderColor?: { xs: string; md: string } | { xs: string };
   href: string;
   children: React.ReactNode;
   sx?: SxProps;

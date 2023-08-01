@@ -1,4 +1,5 @@
 import { SimpleSimplePaletteColorOptions } from "@mui/material";
+import { TypographyOptions } from "@mui/material/styles/createTypography";
 
 declare module "@mui/material/styles" {
   interface Palette {
@@ -32,5 +33,25 @@ declare module "@mui/material/styles" {
     cabanaBrown: SimplePaletteColorOptions;
     silkiaDepilatory: SimplePaletteColorOptions;
     sunTropic: SimplePaletteColorOptions;
+  }
+}
+
+declare module "@mui/material/styles/createTypography" {
+  interface Typography {
+    h7: React.CSSProperties;
+    h7thin: React.CSSProperties;
+  }
+
+  // allow configuration using `createMuiTheme`
+  interface TypographyOptions {
+    h7?: React.CSSProperties;
+    h7thin?: React.CSSProperties;
+  }
+}
+
+declare module "@mui/material/Typography/Typography" {
+  interface TypographyPropsVariantOverrides {
+    h7: true;
+    h7thin: true;
   }
 }
