@@ -14,13 +14,27 @@ function HomePageHead() {
 
   return (
     <>
-      <HeadContainer sx={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
-        <video width="100%" height="100%" autoPlay={true} loop muted>
-          <source
-            src="/images/homePage/head/homePageVideo.mp4"
-            type="video/mp4"
-          ></source>
-        </video>
+      <HeadContainer
+        sx={{ backgroundColor: "rgba(0, 0, 0, 0.5)", overflow: "hidden" }}
+      >
+        <Box
+          position="relative"
+          sx={{ "&>video": { scale: { xs: "4", md: "1.4", xl: "unset" } } }}
+        >
+          <video
+            width="100%"
+            height="100%"
+            autoPlay={true}
+            loop
+            muted
+            poster="/images/homePage/head/homePageBG.png"
+          >
+            <source
+              src="/images/homePage/head/homePageVideo.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </Box>
         <Box
           sx={{
             position: "absolute",
