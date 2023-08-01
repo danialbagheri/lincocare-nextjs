@@ -15,14 +15,12 @@ function HomePageHead() {
   return (
     <>
       <HeadContainer sx={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
-        <Image
-          src={"/images/homePage/head/homePageBG.png"}
-          fill
-          alt="Home page head"
-          style={{ objectFit: "cover", filter: " brightness(0.7)" }}
-          sizes={"100vw"}
-          loading={"lazy"}
-        />
+        <video width="100%" height="100%" autoPlay={true} loop muted>
+          <source
+            src="/images/homePage/head/homePageVideo.mp4"
+            type="video/mp4"
+          ></source>
+        </video>
         <Box
           sx={{
             position: "absolute",
