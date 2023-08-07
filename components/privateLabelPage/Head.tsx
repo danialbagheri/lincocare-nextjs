@@ -118,7 +118,7 @@ export function Head() {
               </Box>
               <Box width={{ xs: "100%", md: "40%" }}>
                 <Typography
-                  sx={{ typography: { xs: "h5", md: "h4" } }}
+                  sx={{ typography: { xs: "h4", md: "h4" } }}
                   textAlign={{ xs: "center", md: "left" }}
                   px={{ xs: 3, md: 0 }}
                 >
@@ -126,7 +126,7 @@ export function Head() {
                 </Typography>
                 <Typography
                   color="lincoBlue.main"
-                  sx={{ typography: { xs: "h3", md: "h5" } }}
+                  sx={{ typography: { xs: "h3", md: "h4" } }}
                   mt={4}
                   textAlign={{ xs: "center", md: "left" }}
                 >

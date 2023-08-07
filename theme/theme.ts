@@ -54,13 +54,80 @@ const theme = createTheme({
     sunTropic: {
       main: "#5BB087",
     },
+    gray: {
+      light: "#C2C2C2",
+      main: "#B1B1B1",
+    },
   },
 
   spacing: 4,
 
   typography: {
+    largeTitle: {
+      fontFamily: inter.style.fontFamily,
+      fontSize: "72px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+    },
+    // h1: {
+    //   fontFamily: inter.style.fontFamily,
+    //   fontSize: "56px",
+    //   fontStyle: "normal",
+    //   fontWeight: 400,
+    //   lineHeight: "normal",
+    // },
+    // h2: {
+    //   fontFamily: inter.style.fontFamily,
+    //   fontSize: "42px",
+    //   fontStyle: "normal",
+    //   fontWeight: 500,
+    //   lineHeight: "52px",
+    // },
+    // h3: {
+    //   fontFamily: inter.style.fontFamily,
+    //   fontSize: "26px",
+    //   fontStyle: "normal",
+    //   fontWeight: 500,
+    //   lineHeight: "35px",
+    // },
+    // h4: {
+    //   fontFamily: inter.style.fontFamily,
+    //   fontSize: "42px",
+    //   fontStyle: "normal",
+    //   fontWeight: 500,
+    //   lineHeight: "52px",
+    // },
+    // h5: {
+    //   fontFamily: inter.style.fontFamily,
+    //   fontSize: "32px",
+    //   fontStyle: "normal",
+    //   fontWeight: 400,
+    //   lineHeight: "40px",
+    // },
+    // h6: {
+    //   fontFamily: inter.style.fontFamily,
+    //   fontSize: "18px",
+    //   fontStyle: "normal",
+    //   fontWeight: 400,
+    //   lineHeight: "30px",
+    // },
+    // h7: {
+    //   fontFamily: inter.style.fontFamily,
+    //   fontSize: "36px",
+    //   fontStyle: "normal",
+    //   fontWeight: 700,
+    //   lineHeight: "normal",
+    // },
+    // h7thin: {
+    //   fontFamily: inter.style.fontFamily,
+    //   fontSize: "36px",
+    //   fontStyle: "normal",
+    //   fontWeight: 400,
+    //   lineHeight: "normal",
+    // },
+
     h1: {
-      /* Extra Large Title */
       fontFamily: inter.style.fontFamily,
       fontSize: "56px",
       fontStyle: "normal",
@@ -69,31 +136,31 @@ const theme = createTheme({
     },
     h2: {
       fontFamily: inter.style.fontFamily,
-      fontSize: "32px",
-      fontStyle: "normal",
-      fontWeight: 400,
-      lineHeight: "40px",
-    },
-    h3: {
-      fontFamily: inter.style.fontFamily,
-      fontSize: "26px",
-      fontStyle: "normal",
-      fontWeight: 500,
-      lineHeight: "35px",
-    },
-    h4: {
-      fontFamily: inter.style.fontFamily,
       fontSize: "42px",
       fontStyle: "normal",
       fontWeight: 500,
       lineHeight: "52px",
     },
-    h5: {
+    h3: {
+      fontFamily: inter.style.fontFamily,
+      fontSize: "36px",
+      fontStyle: "normal",
+      fontWeight: 700,
+      lineHeight: "normal",
+    },
+    h4: {
       fontFamily: inter.style.fontFamily,
       fontSize: "32px",
       fontStyle: "normal",
       fontWeight: 400,
       lineHeight: "40px",
+    },
+    h5: {
+      fontFamily: inter.style.fontFamily,
+      fontSize: "26px",
+      fontStyle: "normal",
+      fontWeight: 500,
+      lineHeight: "35px",
     },
     h6: {
       fontFamily: inter.style.fontFamily,
@@ -102,14 +169,8 @@ const theme = createTheme({
       fontWeight: 400,
       lineHeight: "30px",
     },
-    h7: {
-      fontFamily: inter.style.fontFamily,
-      fontSize: "36px",
-      fontStyle: "normal",
-      fontWeight: 700,
-      lineHeight: "normal",
-    },
-    h7thin: {
+    h7: {},
+    h3thin: {
       fontFamily: inter.style.fontFamily,
       fontSize: "36px",
       fontStyle: "normal",

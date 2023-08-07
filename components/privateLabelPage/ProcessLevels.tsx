@@ -1,52 +1,7 @@
 import { Box, Stack, Typography, useTheme } from "@mui/material";
 
 import { Container } from "shared";
-import { ProcessLevelItem } from "./components";
-
-const PROCESS_ITEMS = [
-  {
-    title: "Product Formulation",
-    imgSrc: "/images/privateLabelPage/body/Formulation.jpg",
-    description:
-      "Brief info Brief info Brief info Brief info Brief info Brief info Brief info",
-    link: "",
-  },
-  {
-    title: "Manufacturing",
-    imgSrc: "/images/privateLabelPage/body/Manufacturing.jpg",
-    description:
-      "Brief info Brief info Brief info Brief info Brief info Brief info Brief info",
-    link: "",
-  },
-  {
-    title: "Quality Assurance",
-    imgSrc: "/images/privateLabelPage/body/Quality-control.jpg",
-    description:
-      "Brief info Brief info Brief info Brief info Brief info Brief info Brief info",
-    link: "",
-  },
-  {
-    title: "Packaging",
-    imgSrc: "/images/privateLabelPage/body/Packaging.jpg",
-    description:
-      "Brief info Brief info Brief info Brief info Brief info Brief info Brief info",
-    link: "",
-  },
-  {
-    title: "Branding & Packaging Design",
-    imgSrc: "/images/privateLabelPage/body/Branding.jpg",
-    description:
-      "Brief info Brief info Brief info Brief info Brief info Brief info Brief info",
-    link: "",
-  },
-  {
-    title: "Support Services",
-    imgSrc: "/images/privateLabelPage/body/Customer-service.jpg",
-    description:
-      "Brief info Brief info Brief info Brief info Brief info Brief info Brief info",
-    link: "",
-  },
-];
+import { FAQTitle, ProcessLevelItem, PROCESS_ITEMS } from "./components";
 
 export function ProcessLevels() {
   const theme = useTheme();
@@ -61,7 +16,7 @@ export function ProcessLevels() {
         <Typography
           textAlign="center"
           sx={{
-            typography: { xs: "h3", md: "h5" },
+            typography: { xs: "h3", md: "h4" },
             bgcolor: { xs: "#F4F4F4", md: "unset" },
           }}
         >
@@ -71,6 +26,7 @@ export function ProcessLevels() {
       <Box
         sx={{
           position: "relative",
+          overflow: "hidden",
         }}
       >
         <Box
@@ -93,7 +49,7 @@ export function ProcessLevels() {
             textAlign="center"
             mt={{ xs: 6, md: 10 }}
             mb={5}
-            variant="h7"
+            variant="h3"
             color="lincoBlue.main"
           >
             Start
@@ -104,7 +60,7 @@ export function ProcessLevels() {
           />
         </Stack>
 
-        <Box>
+        <Box position="relative">
           {PROCESS_ITEMS.map((item, i) => (
             <ProcessLevelItem
               key={item.title}
@@ -113,9 +69,12 @@ export function ProcessLevels() {
               title={item.title}
               description={item.description}
               link={item.link}
+              data={item.data}
             />
           ))}
         </Box>
+
+        <FAQTitle />
       </Box>
     </>
   );

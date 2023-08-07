@@ -95,7 +95,7 @@ function AboutLincoValues(props: PropsType) {
         bgcolor: theme.palette.lincoBlue.dark,
       }}
     >
-      <Typography variant="h5" color={"#FFF"} textAlign={"center"}>
+      <Typography variant="h4" color={"#FFF"} textAlign={"center"}>
         Linco values
       </Typography>
 

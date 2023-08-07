@@ -129,7 +129,7 @@ export default function HomePageBrands() {
           align="center"
           mb={{ xs: 15, md: 20 }}
           color={{ xs: "#fff", md: "#000" }}
-          sx={{ typography: { xs: "h5", md: "h4" } }}
+          sx={{ typography: { xs: "h4", md: "h4" } }}
         >
           Linco brands
         </Typography>
@@ -148,7 +148,7 @@ export default function HomePageBrands() {
             <ArrowBackIosNewIcon fontSize="large" />
           </IconButton>
           <Typography
-            variant="h5"
+            variant="h4"
             color={"#fff"}
             sx={{
               fontWeight: 700,

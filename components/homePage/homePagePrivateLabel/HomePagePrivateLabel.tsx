@@ -15,7 +15,7 @@ function HomePagePrivateLabel() {
         justifyContent={"center"}
       >
         <Typography
-          variant={"h2"}
+          variant={"h4"}
           sx={{ display: { xs: "block", md: "none" } }}
         >
           Private label

@@ -44,7 +44,7 @@ function AboutLincoDescription() {
       >
         <Typography
           sx={{
-            typography: { xs: "h5", md: "h4" },
+            typography: { xs: "h4", md: "h4" },
             minWidth: "300px",
             display: "inline",
           }}

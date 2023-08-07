@@ -98,7 +98,7 @@ function BrandDetail(props: BrandDetailTypes) {
               textAlign={{ xs: "center", md: "left" }}
               mt={{ xs: 13, md: 5 }}
               sx={{
-                typography: { xs: "h2", md: "h1" },
+                typography: { xs: "h4", md: "h1" },
                 fontWeight: "700 ",
               }}
             >

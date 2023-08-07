@@ -8,7 +8,7 @@ function Accreditations() {
     <Container>
       <Typography
         textAlign={"center"}
-        sx={{ typography: { xs: "h5", md: "h4" } }}
+        sx={{ typography: { xs: "h4", md: "h4" } }}
         mb={{ xs: 12, md: 16 }}
       >
         Accreditations

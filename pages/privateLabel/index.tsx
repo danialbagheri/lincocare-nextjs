@@ -1,9 +1,15 @@
 /* ----------------------------- MUI Components ----------------------------- */
 import { Divider } from "@mui/material";
+import { LincoNews } from "components/generalComponents";
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Local Components ---------------------------- */
-import { Head, ProcessLevels } from "components/privateLabelPage";
+import {
+  CommunicatePart,
+  FAQ,
+  Head,
+  ProcessLevels,
+} from "components/privateLabelPage";
 import { Container } from "shared";
 /* -------------------------------------------------------------------------- */
 
@@ -22,6 +28,20 @@ function PrivateLabel() {
       </Container>
 
       <ProcessLevels />
+      <FAQ />
+
+      <CommunicatePart />
+
+      <Container fullWidth>
+        <Divider
+          sx={{
+            bgcolor: "gray.light",
+            mb: 16,
+          }}
+        />
+      </Container>
+
+      <LincoNews />
     </>
   );
 }

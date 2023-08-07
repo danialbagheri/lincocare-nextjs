@@ -4,7 +4,6 @@ import StarIcon from "@mui/icons-material/Star";
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- NextJs Components --------------------------- */
-import Image from "next/image";
 import Link from "next/link";
 import { HeadContainer } from "shared";
 /* -------------------------------------------------------------------------- */
@@ -55,13 +54,13 @@ function HomePageHead() {
             },
           }}
         >
-          <Typography sx={{ typography: { xs: "h2", md: "h1" } }} color="#fff">
+          <Typography sx={{ typography: { xs: "h4", md: "h1" } }} color="#fff">
             700+ Product Formulations
           </Typography>
           <Typography
             mt={4}
             color={"lincoBlue.dark"}
-            sx={{ typography: { xs: "h3", md: "h2" } }}
+            sx={{ typography: { xs: "h3", md: "h4" } }}
           >
             Supporting sentence
           </Typography>

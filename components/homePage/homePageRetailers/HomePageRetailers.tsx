@@ -70,7 +70,7 @@ function HomePageRetailers() {
 
   return (
     <Container sx={{ alignItems: "center", pt: { xs: 17, md: 55 } }}>
-      <Typography sx={{ typography: { xs: "h5", md: "h4" } }}>
+      <Typography sx={{ typography: { xs: "h4", md: "h4" } }}>
         Retailers
       </Typography>
       {retailersDetail.map((retailer) => (

@@ -26,11 +26,40 @@ export function NumberElement(props: {
         justifyContent: "center",
         alignItems: "center",
         bgcolor: props.hover ? "transparent" : "#FFFFFF",
+
         ...props.sx,
       }}
     >
+      {props.hover ? (
+        <>
+          <Box
+            sx={{
+              position: "absolute",
+              height: "500px",
+              width: "2px",
+              bottom: "100%",
+              left: "50%",
+              bgcolor: "#FFFFFF",
+              transform: "translate(-50%,0)",
+              display: { xs: "none", md: "block" },
+            }}
+          />
+          <Box
+            sx={{
+              position: "absolute",
+              height: "100%",
+              width: "2px",
+              top: "100%",
+              left: "50%",
+              bgcolor: "#FFFFFF",
+              transform: "translate(-50%,0)",
+              display: { xs: "none", md: "block" },
+            }}
+          />
+        </>
+      ) : null}
       <Typography
-        variant="h7thin"
+        variant="h3thin"
         color={props.hover ? "#FFFFFF" : "lincoBlue.main"}
       >
         {props.number}

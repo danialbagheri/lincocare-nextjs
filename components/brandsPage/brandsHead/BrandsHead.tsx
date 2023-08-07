@@ -17,7 +17,7 @@ function BrandsHead() {
           <Typography variant={"h1"} color={"#FFFFFF"}>
             Linco brands
           </Typography>
-          <Typography mt={3} variant={"h2"} color={"#77B4FB"}>
+          <Typography mt={3} variant={"h4"} color={"#77B4FB"}>
             Supporting sentence
           </Typography>
           <Box
@@ -49,7 +49,7 @@ function BrandsHead() {
         </Stack>
         <Stack alignItems={"center"} display={{ xs: "flex", md: "none" }}>
           <Typography
-            variant={"h2"}
+            variant={"h4"}
             pt={58}
             color={"#FFFFFF"}
             textAlign={"center"}
