@@ -5,7 +5,7 @@ interface HeadContainerTypes extends BoxProps {
   sx?: SxProps;
 }
 
-function HeadContainer(props: HeadContainerTypes) {
+export function HeadContainer(props: HeadContainerTypes) {
   return (
     <Box
       {...props}
@@ -18,5 +18,3 @@ function HeadContainer(props: HeadContainerTypes) {
     />
   );
 }
-
-export default HeadContainer;

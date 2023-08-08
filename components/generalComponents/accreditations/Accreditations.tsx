@@ -1,11 +1,11 @@
-import { Box, Typography } from "@mui/material";
+import { Box, SxProps, Typography } from "@mui/material";
 
 import { Container } from "shared";
 import Image from "next/image";
 
-function Accreditations() {
+function Accreditations(props: { sx?: SxProps }) {
   return (
-    <Container>
+    <Container sx={{ ...props.sx }}>
       <Typography
         textAlign={"center"}
         sx={{ typography: { xs: "h4", md: "h4" } }}

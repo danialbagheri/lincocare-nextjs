@@ -127,6 +127,19 @@ const theme = createTheme({
     //   lineHeight: "normal",
     // },
 
+    //     font-family: Inter;
+    // font-size: 68px;
+    // font-style: normal;
+    // font-weight: 500;
+    // line-height: normal;
+    h0: {
+      fontFamily: inter.style.fontFamily,
+      fontSize: "68px",
+      fontStyle: "normal",
+      fontWeight: 500,
+      lineHeight: "normal",
+    },
+
     h1: {
       fontFamily: inter.style.fontFamily,
       fontSize: "56px",
@@ -177,7 +190,13 @@ const theme = createTheme({
       fontWeight: 400,
       lineHeight: "normal",
     },
-
+    subtitle1: {
+      fontFamily: inter.style.fontFamily,
+      fontSize: "18px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+    },
     body1: {
       fontFamily: inter.style.fontFamily,
       fontSize: "16px",

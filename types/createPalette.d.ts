@@ -44,6 +44,7 @@ declare module "@mui/material/styles/createTypography" {
     largeTitle: React.CSSProperties;
     h7: React.CSSProperties;
     h3thin: React.CSSProperties;
+    h0: React.CSSProperties;
   }
 
   // allow configuration using `createMuiTheme`
@@ -51,6 +52,7 @@ declare module "@mui/material/styles/createTypography" {
     largeTitle: React.CSSProperties;
     h7?: React.CSSProperties;
     h3thin?: React.CSSProperties;
+    h0?: React.CSSProperties;
   }
 }
 
@@ -59,5 +61,6 @@ declare module "@mui/material/Typography/Typography" {
     largeTitle: true;
     h7: true;
     h3thin: true;
+    h0: true;
   }
 }

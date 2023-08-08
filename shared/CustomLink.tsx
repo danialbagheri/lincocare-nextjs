@@ -9,7 +9,7 @@ interface CustomLinkTypes extends BoxProps {
   sx?: SxProps;
 }
 
-function CustomLink(props: CustomLinkTypes) {
+export function CustomLink(props: CustomLinkTypes) {
   const theme = useTheme();
 
   return (
@@ -34,5 +34,3 @@ function CustomLink(props: CustomLinkTypes) {
     </Box>
   );
 }
-
-export default CustomLink;

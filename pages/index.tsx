@@ -1,12 +1,15 @@
 import { Container } from "shared";
 import { Divider } from "@mui/material";
-import { Accreditations, LincoNews } from "components/generalComponents";
+import {
+  Accreditations,
+  LincoNews,
+  Retailers,
+} from "components/generalComponents";
 import {
   HomePageAboutLinco,
   HomePageBrands,
   HomePageHead,
   HomePagePrivateLabel,
-  HomePageRetailers,
 } from "components/homePage";
 
 export default function Home() {
@@ -20,7 +23,7 @@ export default function Home() {
       </Container>
 
       <HomePageBrands />
-      <HomePageRetailers />
+      <Retailers />
       <HomePageAboutLinco />
 
       <Container fullWidth>

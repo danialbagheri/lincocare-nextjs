@@ -9,7 +9,7 @@ interface ContainerTypes extends BoxProps {
   fullWidth?: boolean;
 }
 
-function Container(props: ContainerTypes) {
+export function Container(props: ContainerTypes) {
   return (
     <Box
       {...props}
@@ -25,5 +25,3 @@ function Container(props: ContainerTypes) {
     />
   );
 }
-
-export default Container;

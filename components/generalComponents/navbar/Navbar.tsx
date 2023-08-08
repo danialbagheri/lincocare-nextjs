@@ -31,7 +31,7 @@ const DRAWER_WIDTH = 240;
 const NAV_ITEMS = [
   { name: "Brands", link: "/brands" },
   { name: "Private label", link: "/privateLabel" },
-  { name: "About us", link: "" },
+  { name: "About us", link: "/aboutUs" },
   { name: "Contact us", link: "" },
 ];
 
@@ -72,7 +72,7 @@ export default function Navbar(props: Props) {
   const renderProperDrawerColor = () => {
     if (darkNavbar) {
       return "#FFF";
-    } else return "lincoBlue.main";
+    } else return "lincoBlue.dark";
   };
 
   const container =
