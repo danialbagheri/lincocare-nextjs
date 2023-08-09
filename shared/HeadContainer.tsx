@@ -1,5 +1,4 @@
 import { Box, BoxProps, SxProps } from "@mui/material";
-import React from "react";
 
 interface HeadContainerTypes extends BoxProps {
   sx?: SxProps;
