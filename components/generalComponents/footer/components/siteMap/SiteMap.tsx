@@ -49,7 +49,7 @@ function SiteMap() {
           <FooterLink href="/privateLabel">Private label</FooterLink>
           <FooterLink href="/brands">Brands</FooterLink>
           <FooterLink href="/aboutUs">About us</FooterLink>
-          <FooterLink href="">Sustaiability</FooterLink>
+          <FooterLink href="/sustainability">Sustainability</FooterLink>
           <FooterLink href="">News</FooterLink>
           <FooterLink href="" noMargin>
             Career

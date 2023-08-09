@@ -38,7 +38,7 @@ export function GlobalMarket() {
       </Typography>
       <Countries />
 
-      <Container pt="34.03%" position="relative">
+      <Container pt={{ xs: "33%", md: "23.03%" }} position="relative">
         <Image
           src={"/images/aboutUsPage/about/global.png"}
           alt="Accreditations"

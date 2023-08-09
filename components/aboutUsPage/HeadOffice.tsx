@@ -14,7 +14,13 @@ export function HeadOffice() {
         Linco head office
       </Typography>
       <Box position="relative">
-        <Container sx={{ position: "relative", pt: "48.3%", zIndex: 1 }}>
+        <Container
+          sx={{
+            position: "relative",
+            pt: { xs: "40%", md: "33.3%" },
+            zIndex: 1,
+          }}
+        >
           <Image
             src={"/images/aboutUsPage/about/office.png"}
             alt="Accreditations"
