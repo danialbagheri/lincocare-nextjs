@@ -42,7 +42,8 @@ export default function Navbar(props: Props) {
   const darkNavbar =
     router.pathname.includes("/privateLabel") ||
     router.pathname.includes("/privacyPolicy") ||
-    router.pathname.includes("/disclaimer");
+    router.pathname.includes("/disclaimer") ||
+    router.pathname.includes("/news");
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,

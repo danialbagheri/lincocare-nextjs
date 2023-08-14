@@ -5,61 +5,61 @@ import { Box, Stack, Typography } from "@mui/material";
 import { Container } from "shared";
 import { NewsDetail } from "./newsDetail";
 
-function LincoNews() {
+const newsArr = [
+  {
+    id: 1101,
+    image: "/images/brands/cabana.png",
+    date: "July 11, 2023",
+    title: "How Reliable Is Your Sanitiser?",
+    description:
+      "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
+  },
+  {
+    id: 1102,
+    image: "/images/brands/calypso.png",
+    date: "July 11, 2023",
+    title: "How Reliable Is Your Sanitiser?",
+    description:
+      "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
+  },
+  {
+    id: 1103,
+    image: "/images/brands/dimples.png",
+    date: "July 11, 2023",
+    title: "How Reliable Is Your Sanitiser?",
+    description:
+      "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
+  },
+  {
+    id: 1104,
+    image: "/images/brands/cabana.png",
+    date: "July 11, 2023",
+    title: "How Reliable Is Your Sanitiser?",
+    description:
+      "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
+  },
+  {
+    id: 1105,
+    image: "/images/brands/cabana.png",
+    date: "July 11, 2023",
+    title: "How Reliable Is Your Sanitiser?",
+    description:
+      "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
+  },
+  {
+    id: 1106,
+    image: "/images/brands/cabana.png",
+    date: "July 11, 2023",
+    title: "How Reliable Is Your Sanitiser?",
+    description:
+      "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
+  },
+];
+
+function LincoNews(data: any) {
   const scrollContainer = React.useRef<HTMLHeadingElement>(null);
   const scrollElement = React.useRef<HTMLHeadingElement>(null);
   const [boxShadow, setBoxShadow] = React.useState("unset");
-
-  const newsArr = [
-    {
-      id: 1101,
-      image: "/images/brands/cabana.png",
-      date: "July 11, 2023",
-      title: "How Reliable Is Your Sanitiser?",
-      description:
-        "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
-    },
-    {
-      id: 1102,
-      image: "/images/brands/calypso.png",
-      date: "July 11, 2023",
-      title: "How Reliable Is Your Sanitiser?",
-      description:
-        "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
-    },
-    {
-      id: 1103,
-      image: "/images/brands/dimples.png",
-      date: "July 11, 2023",
-      title: "How Reliable Is Your Sanitiser?",
-      description:
-        "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
-    },
-    {
-      id: 1104,
-      image: "/images/brands/cabana.png",
-      date: "July 11, 2023",
-      title: "How Reliable Is Your Sanitiser?",
-      description:
-        "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
-    },
-    {
-      id: 1105,
-      image: "/images/brands/cabana.png",
-      date: "July 11, 2023",
-      title: "How Reliable Is Your Sanitiser?",
-      description:
-        "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
-    },
-    {
-      id: 1106,
-      image: "/images/brands/cabana.png",
-      date: "July 11, 2023",
-      title: "How Reliable Is Your Sanitiser?",
-      description:
-        "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
-    },
-  ];
 
   const scrollHandler = (
     eleWidth: number | undefined,
@@ -84,6 +84,8 @@ function LincoNews() {
       }
     }
   };
+
+  React.useEffect(() => {}, []);
 
   React.useLayoutEffect(() => {
     scrollHandler(

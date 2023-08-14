@@ -50,7 +50,7 @@ function SiteMap() {
           <FooterLink href="/brands">Brands</FooterLink>
           <FooterLink href="/aboutUs">About us</FooterLink>
           <FooterLink href="/sustainability">Sustainability</FooterLink>
-          <FooterLink href="">News</FooterLink>
+          <FooterLink href="/news">News</FooterLink>
           <FooterLink href="" noMargin>
             Career
           </FooterLink>

@@ -1,23 +1,28 @@
 import * as React from "react";
 import { NextPage } from "next";
+import { BlogRes } from "services/lincoServicesTypes";
 
-const AppContext = React.createContext({});
+interface InitialStateTypes {
+  news: BlogRes[];
+}
+interface AppContextInterface {
+  appState: InitialStateTypes | null;
+  setAppState: (value: any) => void;
+}
 
 interface Props {
   children: React.ReactNode;
 }
 
+const AppContext = React.createContext<AppContextInterface | null>(null);
+
 const AppProvider: NextPage<Props> = (props) => {
-  const initState = {
-    brightNavbar: false,
-  };
-
-  const [appState, setAppState] = React.useState(initState);
-
-  const value = React.useMemo(() => [appState, setAppState], []);
+  const [appState, setAppState] = React.useState(null);
 
   return (
-    <AppContext.Provider value={value}>{props.children}</AppContext.Provider>
+    <AppContext.Provider value={{ appState, setAppState }}>
+      {props.children}
+    </AppContext.Provider>
   );
 };
 

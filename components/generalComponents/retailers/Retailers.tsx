@@ -34,7 +34,7 @@ const RetailerItem = (props: {
   title: string;
 }) => {
   return (
-    <>
+    <Box>
       <Typography variant={"h6"} color={"#247DE7"} mt={{ xs: 7, md: 20 }}>
         {props.title}
       </Typography>
@@ -54,7 +54,7 @@ const RetailerItem = (props: {
       >
         {renderBrandsLogo(props.count, props.retail)}
       </Box>
-    </>
+    </Box>
   );
 };
 

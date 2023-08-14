@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { Container, HeadContainer, LincoDivider } from "shared";
+import { Container, LincoDivider } from "shared";
 import { DATA } from "./components";
 
 export function ConditionPages(props: {
@@ -22,7 +22,7 @@ export function ConditionPages(props: {
       />
       <Container>
         {DATA[pageType].map((d) => (
-          <Box>
+          <Box key={d.title}>
             <Typography fontSize="16px" fontWeight="700">
               {d.title}
             </Typography>
