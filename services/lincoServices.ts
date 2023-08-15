@@ -1,14 +1,23 @@
 import { get } from "utils";
 
 export const getListOfAllBlogs = ({
-  count = 10,
-  tag = "",
+  count,
+  tag,
+  page,
 }: {
-  count: number;
+  count?: string;
   tag?: string;
+  page?: string;
 }) => {
+  const query = {
+    ...(count ? { count } : {}),
+    ...(tag ? { tag } : {}),
+    ...(page ? { page } : {}),
+  };
+
   return get({
-    endpoint: `api/blogs/all/?count=${count}${tag ? `&tag=${tag}` : ""}`,
+    endpoint: `api/blogs/all/`,
+    query,
   });
 };
 

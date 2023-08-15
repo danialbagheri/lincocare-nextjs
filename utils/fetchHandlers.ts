@@ -8,8 +8,10 @@ const errorHandler = (response: any) => {
   }
 };
 
-const get = ({ endpoint, baseURL = BASE_URL }: FetchHandlerGet) => {
-  return fetch(`${baseURL}${endpoint}`)
+const get = ({ endpoint, baseURL = BASE_URL, query }: FetchHandlerGet) => {
+  return fetch(
+    `${baseURL}${endpoint}${query ? "?" + new URLSearchParams(query) : ""}`
+  )
     .then(async (response) => {
       return Promise.resolve(await response.json());
     })

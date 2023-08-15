@@ -30,9 +30,9 @@ export function NewsItem(props: PropTypes) {
       >
         <Image
           fill
-          alt={data.image_alt_text}
+          alt={data?.image_alt_text}
           style={{ objectFit: "cover" }}
-          src={data.image}
+          src={data.image || ""}
         />
       </Box>
       <Box
@@ -49,7 +49,7 @@ export function NewsItem(props: PropTypes) {
       >
         <Link href={`news/${data.slug}`}>
           <Typography variant="h5" lineHeight={"164%"}>
-            {data.title}
+            {data?.title}
           </Typography>
         </Link>
         <Typography color="lincoBlue.main" mt={2}>

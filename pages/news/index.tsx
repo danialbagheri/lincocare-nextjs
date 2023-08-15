@@ -40,6 +40,7 @@ export default function News(props: PropTypes) {
         <>
           <NewsSection
             news={data.results}
+            count={data.count}
             sx={{ flexGrow: { xs: 1, md: 2 } }}
           />
           <Divider orientation="vertical" sx={{ height: "unset" }} />
@@ -53,7 +54,7 @@ export default function News(props: PropTypes) {
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    const data = await getListOfAllBlogs({ count: 10 });
+    const data = await getListOfAllBlogs({ page: "1" });
     return { props: { data } };
   } catch {
     return { props: { error: "Something went wrong!" } };

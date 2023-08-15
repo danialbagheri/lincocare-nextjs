@@ -1,4 +1,5 @@
 import * as React from "react";
+import HTMLReactParser from "html-react-parser";
 
 /* ---------------------------- NextJs Components --------------------------- */
 import Image from "next/image";
@@ -10,12 +11,11 @@ import { Box, Skeleton, Typography, useTheme } from "@mui/material";
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Local Components ---------------------------- */
-import { getSingleBlog } from "services";
-import { BlogRes } from "services/lincoServicesTypes";
 import { manipulateDate } from "utils";
-import { Container, CustomLink } from "shared";
-import HTMLReactParser from "html-react-parser";
+import { getSingleBlog } from "services";
 import { MoreFromLinco } from "./components";
+import { Container, CustomLink } from "shared";
+import { BlogRes } from "services/lincoServicesTypes";
 /* -------------------------------------------------------------------------- */
 
 interface NewsDataTypes extends BlogRes {
