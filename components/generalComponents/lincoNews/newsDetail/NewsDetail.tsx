@@ -2,16 +2,14 @@ import { Box, Stack, Typography, useTheme } from "@mui/material";
 
 import { CustomLink } from "shared";
 import Image from "next/image";
+import { BlogRes } from "services/lincoServicesTypes";
+import HTMLReactParser from "html-react-parser";
+import { manipulateDate } from "utils";
 
-interface NewsDetailTypes {
-  image: string;
-  title: string;
-  description: string;
-  date: string;
-}
-
-function NewsDetail(props: NewsDetailTypes) {
+function NewsDetail(props: { newsData: BlogRes }) {
+  const { newsData } = props;
   const theme = useTheme();
+  const properDate = manipulateDate(newsData.publish_date);
 
   return (
     <Stack
@@ -20,10 +18,10 @@ function NewsDetail(props: NewsDetailTypes) {
     >
       <Box sx={{ position: "relative", width: "100%", pb: "100%" }}>
         <Image
-          src={props.image}
+          src={newsData.image || ""}
           fill
           style={{ objectFit: "contain" }}
-          alt={props.title}
+          alt={newsData.image_alt_text}
         />
       </Box>
       <Typography
@@ -32,29 +30,41 @@ function NewsDetail(props: NewsDetailTypes) {
           fontWeight: { xs: 700, md: 500 },
         }}
       >
-        {props.title}
+        {newsData.title}
       </Typography>
-      <Box sx={{ overflow: "hidden", display: { xs: "none", md: "block" } }}>
-        <Typography color={"#A4A4A4"}>{props.date}</Typography>
+      <Box
+        sx={{
+          overflow: "hidden",
+          display: { xs: "none", md: "flex" },
+          flexDirection: "column",
+          flexGrow: 1,
+          justifyContent: "space-between",
+        }}
+      >
         <Typography
-          color={"lincoBlue.main"}
-          sx={{
-            overflow: "hidden",
-            display: "-webkit-box",
-            " -webkit-box-orient": "vertical",
-            "-webkit-line-clamp": "3",
-            whiteSpace: "pre-wrap",
-          }}
-        >
-          {props.description}
-        </Typography>
-        <CustomLink
-          color={"#000"}
-          href=""
-          borderColor={theme.palette.lincoBlue.main}
-        >
-          Read more
-        </CustomLink>
+          color={"#A4A4A4"}
+        >{`${properDate.day} ${properDate.month}, ${properDate.year}`}</Typography>
+        <Box>
+          <Typography
+            color={"lincoBlue.main"}
+            sx={{
+              overflow: "hidden",
+              display: "-webkit-box",
+              " -webkit-box-orient": "vertical",
+              "-webkit-line-clamp": "3",
+              whiteSpace: "pre-wrap",
+            }}
+          >
+            {HTMLReactParser(newsData?.body || "")}
+          </Typography>
+          <CustomLink
+            color={"#000"}
+            href=""
+            borderColor={theme.palette.lincoBlue.main}
+          >
+            Read more
+          </CustomLink>
+        </Box>
       </Box>
     </Stack>
   );

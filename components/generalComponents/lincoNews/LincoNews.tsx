@@ -4,62 +4,15 @@ import { Box, Stack, Typography } from "@mui/material";
 
 import { Container } from "shared";
 import { NewsDetail } from "./newsDetail";
-
-const newsArr = [
-  {
-    id: 1101,
-    image: "/images/brands/cabana.png",
-    date: "July 11, 2023",
-    title: "How Reliable Is Your Sanitiser?",
-    description:
-      "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
-  },
-  {
-    id: 1102,
-    image: "/images/brands/calypso.png",
-    date: "July 11, 2023",
-    title: "How Reliable Is Your Sanitiser?",
-    description:
-      "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
-  },
-  {
-    id: 1103,
-    image: "/images/brands/dimples.png",
-    date: "July 11, 2023",
-    title: "How Reliable Is Your Sanitiser?",
-    description:
-      "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
-  },
-  {
-    id: 1104,
-    image: "/images/brands/cabana.png",
-    date: "July 11, 2023",
-    title: "How Reliable Is Your Sanitiser?",
-    description:
-      "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
-  },
-  {
-    id: 1105,
-    image: "/images/brands/cabana.png",
-    date: "July 11, 2023",
-    title: "How Reliable Is Your Sanitiser?",
-    description:
-      "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
-  },
-  {
-    id: 1106,
-    image: "/images/brands/cabana.png",
-    date: "July 11, 2023",
-    title: "How Reliable Is Your Sanitiser?",
-    description:
-      "Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on Calypso's sanitisers were featured in a Which article recently, which found that some sanitisers sold on",
-  },
-];
+import { getListOfAllBlogs } from "services";
+import { BlogRes, ListOfAllBlogsRes } from "services/lincoServicesTypes";
 
 function LincoNews(data: any) {
   const scrollContainer = React.useRef<HTMLHeadingElement>(null);
   const scrollElement = React.useRef<HTMLHeadingElement>(null);
   const [boxShadow, setBoxShadow] = React.useState("unset");
+  const [loading, setLoading] = React.useState(false);
+  const [news, setNews] = React.useState<BlogRes[]>([]);
 
   const scrollHandler = (
     eleWidth: number | undefined,
@@ -85,7 +38,12 @@ function LincoNews(data: any) {
     }
   };
 
-  React.useEffect(() => {}, []);
+  React.useEffect(() => {
+    getListOfAllBlogs({ count: "5" }).then((res: ListOfAllBlogsRes) => {
+      setLoading(true);
+      setNews(res.results);
+    });
+  }, []);
 
   React.useLayoutEffect(() => {
     scrollHandler(
@@ -122,14 +80,8 @@ function LincoNews(data: any) {
             )
           }
         >
-          {newsArr.map((news) => (
-            <NewsDetail
-              key={news.id}
-              image={news.image}
-              title={news.title}
-              description={news.description}
-              date={news.date}
-            />
+          {news.map((n) => (
+            <NewsDetail key={n.id} newsData={n} />
           ))}
         </Stack>
       </Box>

@@ -51,7 +51,7 @@ export function MoreFromLinco() {
   const [data, setData] = React.useState<BlogRes[]>([]);
 
   React.useEffect(() => {
-    getListOfAllBlogs({ count: 3 }).then((res) => setData(res.results));
+    getListOfAllBlogs({ count: "3" }).then((res) => setData(res.results));
   }, []);
 
   return (
