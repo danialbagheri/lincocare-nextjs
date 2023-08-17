@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import { Container, CustomLink } from "shared";
-import { BRANDS_IMAGE } from "./components";
+import { BRANDS_IMAGE } from "../../aboutUsPage/components";
 
 export function Brands() {
   return (
@@ -29,7 +29,7 @@ export function Brands() {
         </Box>
       </Box>
       <CustomLink
-        href=""
+        href="/brands"
         color="#000"
         borderColor={{ xs: "lincoBlue.main" }}
         mt={8}

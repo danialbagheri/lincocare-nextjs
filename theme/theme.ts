@@ -12,7 +12,7 @@ export const inter = Inter({
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#FF6B00",
+      main: "#004EAA",
     },
     secondary: {
       main: "#226F61",

@@ -2,7 +2,6 @@ import * as React from "react";
 
 /* ----------------------------- MUI Components ----------------------------- */
 import { Box, BoxProps } from "@mui/material";
-
 /* -------------------------------------------------------------------------- */
 
 interface ContainerTypes extends BoxProps {

@@ -56,7 +56,7 @@ function SiteMap() {
           </FooterLink>
         </Box>
         <Box>
-          <FooterLink href="">Contact us</FooterLink>
+          <FooterLink href="/contactUs">Contact us</FooterLink>
           <FooterLink href="/privacyPolicy">Privacy policy</FooterLink>
           <FooterLink href="/disclaimer" noMargin>
             Disclaimer

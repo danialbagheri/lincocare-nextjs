@@ -1,13 +1,13 @@
 import {
   AboutLinco,
   Achievements,
-  Brands,
   GlobalMarket,
   Head,
   HeadOffice,
 } from "components/aboutUsPage";
 import {
   Accreditations,
+  Brands,
   LincoNews,
   Retailers,
 } from "components/generalComponents";

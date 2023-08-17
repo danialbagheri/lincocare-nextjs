@@ -1,12 +1,8 @@
 import { Box, Stack, Typography } from "@mui/material";
-import {
-  Contact,
-  FooterAccreditations,
-  FooterSocialMedia,
-  SiteMap,
-} from "./components";
+import { Contact, FooterAccreditations, SiteMap } from "./components";
 
 import { Container } from "shared";
+import { SocialMedia } from "../socialMedia";
 
 function Footer() {
   return (
@@ -21,7 +17,7 @@ function Footer() {
           <SiteMap />
         </Stack>
         <FooterAccreditations />
-        <FooterSocialMedia />
+        <SocialMedia />
         <Typography
           variant="body2"
           color={"#5A7EA8"}

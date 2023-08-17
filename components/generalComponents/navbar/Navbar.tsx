@@ -32,7 +32,7 @@ const NAV_ITEMS = [
   { name: "Brands", link: "/brands" },
   { name: "Private label", link: "/privateLabel" },
   { name: "About us", link: "/aboutUs" },
-  { name: "Contact us", link: "" },
+  { name: "Contact us", link: "/contactUs" },
 ];
 
 export default function Navbar(props: Props) {
@@ -43,6 +43,7 @@ export default function Navbar(props: Props) {
     router.pathname.includes("/privateLabel") ||
     router.pathname.includes("/privacyPolicy") ||
     router.pathname.includes("/disclaimer") ||
+    router.pathname.includes("/contactUs") ||
     router.pathname.includes("/news");
 
   const trigger = useScrollTrigger({
