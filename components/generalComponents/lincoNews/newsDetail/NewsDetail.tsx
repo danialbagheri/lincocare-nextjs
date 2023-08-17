@@ -20,7 +20,7 @@ function NewsDetail(props: { newsData: BlogRes }) {
         <Image
           src={newsData.image || ""}
           fill
-          style={{ objectFit: "contain" }}
+          style={{ objectFit: "cover" }}
           alt={newsData.image_alt_text}
         />
       </Box>
