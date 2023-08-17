@@ -11,8 +11,6 @@ function NewsDetail(props: { newsData: BlogRes }) {
   const theme = useTheme();
   const properDate = manipulateDate(newsData.publish_date);
 
-  console.log("news Data:::", newsData);
-
   return (
     <Stack
       sx={{ width: { xs: 193, md: 300 }, minWidth: { xs: 193, md: 300 } }}
