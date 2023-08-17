@@ -39,8 +39,8 @@ function LincoNews(data: any) {
   };
 
   React.useEffect(() => {
+    setLoading(true);
     getListOfAllBlogs({ count: "5" }).then((res: ListOfAllBlogsRes) => {
-      setLoading(true);
       setNews(res.results);
     });
   }, []);
