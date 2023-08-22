@@ -5,3 +5,4 @@ export * from "./footer";
 export * from "./retailers";
 export * from "./socialMedia";
 export * from "./brands";
+export * from "./brandsDetail";

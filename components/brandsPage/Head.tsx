@@ -2,7 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import { Container, CustomLink, HeadContainer } from "shared";
 
-function BrandsHead() {
+export function Head() {
   return (
     <HeadContainer
       bgcolor={"lincoBlue.dark"}
@@ -64,5 +64,3 @@ function BrandsHead() {
     </HeadContainer>
   );
 }
-
-export default BrandsHead;

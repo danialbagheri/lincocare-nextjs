@@ -1,9 +1,17 @@
-import { Box, Stack, Typography, useTheme } from "@mui/material";
+/* ---------------------------- NextJs Components --------------------------- */
 import Image from "next/image";
 import Link from "next/link";
-import { Container } from "shared";
+/* -------------------------------------------------------------------------- */
 
-function HomePagePrivateLabel() {
+/* ----------------------------- MUI Components ----------------------------- */
+import { Box, Stack, Typography, useTheme } from "@mui/material";
+/* -------------------------------------------------------------------------- */
+
+/* ---------------------------- Local Components ---------------------------- */
+import { Container } from "shared";
+/* -------------------------------------------------------------------------- */
+
+export function PrivateLabel() {
   const theme = useTheme();
 
   return (
@@ -61,11 +69,12 @@ function HomePagePrivateLabel() {
             Private label
           </Typography>
           <Typography color={"lincoBlue.main"}>
-            Brief info Brief info Brief info Brief info Brief info Brief info
-            Brief info Brief info Brief Brief info Brief info Brief info Brief
-            info Brief info Brief info Brief info Brief info Brief{" "}
+            Linco Care offers a one-stop bespoke Private Label service in all
+            areas of wet fill manufacture including oils, creams, lotions, gels
+            and liquids, specializing in sun care, personal care and depilatory
+            products.
           </Typography>
-          <Link href={"/private_label"}>Know more</Link>
+          <Link href={"/privateLabel"}>Know more</Link>
         </Box>
       </Stack>
 
@@ -106,5 +115,3 @@ function HomePagePrivateLabel() {
     </Container>
   );
 }
-
-export default HomePagePrivateLabel;

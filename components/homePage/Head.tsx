@@ -1,14 +1,15 @@
-/* ----------------------------- MUI Components ----------------------------- */
-import { Box, Stack, Typography, useTheme } from "@mui/material";
-import StarIcon from "@mui/icons-material/Star";
-/* -------------------------------------------------------------------------- */
-
 /* ---------------------------- NextJs Components --------------------------- */
 import Link from "next/link";
 import { HeadContainer } from "shared";
 /* -------------------------------------------------------------------------- */
 
-function HomePageHead() {
+/* ----------------------------- MUI Components ----------------------------- */
+import { Box, Stack, Typography, useTheme } from "@mui/material";
+import StarIcon from "@mui/icons-material/Star";
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+export function Head() {
   const theme = useTheme();
 
   return (
@@ -20,14 +21,7 @@ function HomePageHead() {
           position="relative"
           sx={{ "&>video": { scale: { xs: "4", md: "1.4", xl: "unset" } } }}
         >
-          <video
-            width="100%"
-            height="100%"
-            autoPlay={true}
-            loop
-            muted
-            poster="/images/homePage/head/homePageBG.png"
-          >
+          <video width="100%" height="100%" autoPlay={true} loop muted>
             <source
               src="/images/homePage/head/homePageVideo.mp4"
               type="video/mp4"
@@ -62,7 +56,7 @@ function HomePageHead() {
             color={"lincoBlue.dark"}
             sx={{ typography: { xs: "h3", md: "h4" } }}
           >
-            Supporting sentence
+            Unique Formulation
           </Typography>
           <Link href={""}>Know more</Link>
         </Box>
@@ -92,5 +86,3 @@ function HomePageHead() {
     </>
   );
 }
-
-export default HomePageHead;

@@ -1,34 +1,40 @@
+/* ---------------------------- NextJs Components --------------------------- */
+import Image from "next/image";
+/* -------------------------------------------------------------------------- */
+
 /* ----------------------------- MUI Components ----------------------------- */
 import { Box, Stack, SxProps, Typography, useTheme } from "@mui/material";
+/* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Local Components ---------------------------- */
 import { CustomLink } from "shared";
 /* -------------------------------------------------------------------------- */
-/* ---------------------------- NextJs Components --------------------------- */
-import Image from "next/image";
 
+/* -------------------------------- Component ------------------------------- */
+const DescriptionText = (props: {
+  sx?: SxProps;
+  borderColor: { xs: string };
+}) => (
+  <Box sx={{ ...props.sx }}>
+    <Typography color={"#ffffff"} mt={4}>
+      Linco Skincare is constantly exploring new avenues of research and
+      development to create revolutionary products that will change the skincare
+      industry; skincare guaranteed not to rub you up the wrong way.
+    </Typography>
+
+    <CustomLink
+      sx={{ textAlign: { xs: "center", md: "left" }, mt: { xs: 4, md: 0 } }}
+      borderColor={props.borderColor}
+      href=""
+    >
+      Know more
+    </CustomLink>
+  </Box>
+);
 /* -------------------------------------------------------------------------- */
 
-function AboutLincoDescription() {
+export function AboutLincoDescription() {
   const theme = useTheme();
-
-  const DescriptionText = (props: { sx?: SxProps }) => (
-    <Box sx={{ ...props.sx }}>
-      <Typography color={"#ffffff"} mt={4}>
-        Linco Skincare is constantly exploring new avenues of research and
-        development to create revolutionary products that will change the
-        skincare industry; skincare guaranteed not to rub you up the wrong way.
-      </Typography>
-
-      <CustomLink
-        sx={{ textAlign: { xs: "center", md: "left" }, mt: { xs: 4, md: 0 } }}
-        borderColor={theme.palette.lincoYellow.main}
-        href=""
-      >
-        Know more
-      </CustomLink>
-    </Box>
-  );
 
   return (
     <Stack
@@ -52,7 +58,10 @@ function AboutLincoDescription() {
         >
           About Linco
         </Typography>
-        <DescriptionText sx={{ display: { xs: "none", md: "block" } }} />
+        <DescriptionText
+          sx={{ display: { xs: "none", md: "block" } }}
+          borderColor={theme.palette.lincoYellow.main}
+        />
       </Box>
       <Box
         sx={{
@@ -70,9 +79,10 @@ function AboutLincoDescription() {
           loading={"lazy"}
         />
       </Box>
-      <DescriptionText sx={{ display: { xs: "block", md: "none" } }} />
+      <DescriptionText
+        sx={{ display: { xs: "block", md: "none" } }}
+        borderColor={theme.palette.lincoYellow.main}
+      />
     </Stack>
   );
 }
-
-export default AboutLincoDescription;

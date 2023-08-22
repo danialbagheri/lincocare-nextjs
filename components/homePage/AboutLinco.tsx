@@ -1,14 +1,21 @@
 import * as React from "react";
 
+/* ----------------------------- MUI Components ----------------------------- */
 import { Box, useTheme } from "@mui/system";
-
-import { AboutLincoDescription } from "./aboutLincoDescription";
-import { AboutLincoStatistics } from "./aboutLincoStatistics";
-import { AboutLincoValues } from "./aboutLincoValues";
-import { Container } from "shared";
 import { Divider } from "@mui/material";
+/* -------------------------------------------------------------------------- */
 
-function HomePageAboutLinco() {
+/* ---------------------------- Local Components ---------------------------- */
+import { Container } from "shared";
+import {
+  AboutLincoDescription,
+  AboutLincoStatistics,
+  AboutLincoValues,
+} from "./components";
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+export function AboutLinco() {
   const [valuesComponentHeight, setValuesComponentHeight] = React.useState<
     number | undefined
   >(0);
@@ -39,5 +46,3 @@ function HomePageAboutLinco() {
     </>
   );
 }
-
-export default HomePageAboutLinco;

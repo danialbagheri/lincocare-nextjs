@@ -30,6 +30,9 @@ const theme = createTheme({
     earth: {
       main: "#3C1510",
     },
+    calypsoOrange: {
+      main: "#EC6B1C",
+    },
     lincoYellow: {
       main: "#FBFF00",
     },
@@ -70,68 +73,6 @@ const theme = createTheme({
       fontWeight: 400,
       lineHeight: "normal",
     },
-    // h1: {
-    //   fontFamily: inter.style.fontFamily,
-    //   fontSize: "56px",
-    //   fontStyle: "normal",
-    //   fontWeight: 400,
-    //   lineHeight: "normal",
-    // },
-    // h2: {
-    //   fontFamily: inter.style.fontFamily,
-    //   fontSize: "42px",
-    //   fontStyle: "normal",
-    //   fontWeight: 500,
-    //   lineHeight: "52px",
-    // },
-    // h3: {
-    //   fontFamily: inter.style.fontFamily,
-    //   fontSize: "26px",
-    //   fontStyle: "normal",
-    //   fontWeight: 500,
-    //   lineHeight: "35px",
-    // },
-    // h4: {
-    //   fontFamily: inter.style.fontFamily,
-    //   fontSize: "42px",
-    //   fontStyle: "normal",
-    //   fontWeight: 500,
-    //   lineHeight: "52px",
-    // },
-    // h5: {
-    //   fontFamily: inter.style.fontFamily,
-    //   fontSize: "32px",
-    //   fontStyle: "normal",
-    //   fontWeight: 400,
-    //   lineHeight: "40px",
-    // },
-    // h6: {
-    //   fontFamily: inter.style.fontFamily,
-    //   fontSize: "18px",
-    //   fontStyle: "normal",
-    //   fontWeight: 400,
-    //   lineHeight: "30px",
-    // },
-    // h7: {
-    //   fontFamily: inter.style.fontFamily,
-    //   fontSize: "36px",
-    //   fontStyle: "normal",
-    //   fontWeight: 700,
-    //   lineHeight: "normal",
-    // },
-    // h7thin: {
-    //   fontFamily: inter.style.fontFamily,
-    //   fontSize: "36px",
-    //   fontStyle: "normal",
-    //   fontWeight: 400,
-    //   lineHeight: "normal",
-    // },
-
-    //     font-family: Inter;
-    // font-size: 68px;
-    // font-style: normal;
-    // font-weight: 500;
-    // line-height: normal;
     h0: {
       fontFamily: inter.style.fontFamily,
       fontSize: "68px",

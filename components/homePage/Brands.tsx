@@ -1,36 +1,24 @@
 import * as React from "react";
 
-import { IconButton, Stack, Typography } from "@mui/material";
-
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+/* ----------------------------- MUI Components ----------------------------- */
 import Box from "@mui/material/Box";
-import { BrandDetail } from "./brandDetail";
-import { Container } from "shared";
-import SwipeableViews from "react-swipeable-views";
 import Tab from "@mui/material/Tab";
-import { TabPanelProps } from "../HomePageTypes";
 import Tabs from "@mui/material/Tabs";
 import { useTheme } from "@mui/material/styles";
+import { IconButton, Stack, Typography } from "@mui/material";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+/* -------------------------------------------------------------------------- */
+
+/* ---------------------------- Local Components ---------------------------- */
+import { Container } from "shared";
+import { BrandsTab } from "./components";
+import { BRANDS } from "components/constants";
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
 
 const NEXT = "next";
 const PREVIOUS = "previous";
-
-function TabPanel(props: TabPanelProps) {
-  const { children, value, index, brandDetail, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
-      {...other}
-    >
-      {value === index && <BrandDetail brandDetail={brandDetail} />}
-    </div>
-  );
-}
 
 function a11yProps(index: number) {
   return {
@@ -39,55 +27,11 @@ function a11yProps(index: number) {
   };
 }
 
-export default function HomePageBrands() {
+export function Brands() {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
-  const brands = [
-    {
-      name: "Calypso",
-      imageSrc: "calypso.png",
-      description:
-        "Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info  Brief info Brief info Brief info",
-      bgColor: theme.palette.primary.main,
-    },
-    {
-      name: "Cabana",
-      imageSrc: "cabana.png",
-      description:
-        "Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info  Brief info Brief info Brief info",
-      bgColor: theme.palette.cabanaBrown.main,
-    },
-    {
-      name: "Silkia",
-      imageSrc: "silkia.png",
-      description:
-        "Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info  Brief info Brief info Brief info",
-      bgColor: theme.palette.silkiaBlue.main,
-    },
-    {
-      name: "Dimples",
-      imageSrc: "dimples.png",
-      description:
-        "Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info  Brief info Brief info Brief info",
-      bgColor: theme.palette.dimplesBlue.main,
-    },
-    {
-      name: "Re-Gen",
-      imageSrc: "",
-      description:
-        "Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info  Brief info Brief info Brief info",
-      bgColor: theme.palette.regenPink.main,
-    },
-    {
-      name: "Safa",
-      imageSrc: "",
-      description:
-        "Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info Brief info  Brief info Brief info Brief info",
-      bgColor: theme.palette.cabanaBrown.main,
-    },
-  ];
-  const brandsCount = brands.length;
+  const brandsCount = BRANDS.length;
 
   const handleChange = (
     event: React.SyntheticEvent,
@@ -95,10 +39,6 @@ export default function HomePageBrands() {
   ): void => {
     event.preventDefault();
     setValue(newValue);
-  };
-
-  const handleChangeIndex = (index: number): void => {
-    setValue(index);
   };
 
   const changeBrandHandler = (type: string) => {
@@ -120,7 +60,7 @@ export default function HomePageBrands() {
       sx={{
         mt: { xs: 15, md: 0 },
         p: { xs: "60px 40px", md: "unset" },
-        bgcolor: { xs: brands[value].bgColor, md: "unset" },
+        bgcolor: { xs: BRANDS[value].color, md: "unset" },
         transition: "all 500ms",
       }}
     >
@@ -157,7 +97,7 @@ export default function HomePageBrands() {
               textAlign: "center",
             }}
           >
-            {brands[value].name}
+            {BRANDS[value].name}
           </Typography>
           <IconButton
             aria-label="delete"
@@ -185,7 +125,7 @@ export default function HomePageBrands() {
                 flexGrow: "unset",
                 flexBasis: "unset",
 
-                fontSize: "21px",
+                fontSize: "18px",
                 fontStyle: "normal",
                 fontWeight: 500,
                 lineHeight: "30px",
@@ -193,36 +133,23 @@ export default function HomePageBrands() {
               },
               "&>button.Mui-selected": {
                 fontWeight: 700,
-                height: 75,
-                justifyContent: "flex-start",
+                // height: 75,
+                // justifyContent: "flex-start",
               },
             },
             "& .MuiTabs-indicator": {
-              top: "60px",
+              top: "70px",
               bgcolor: theme.palette.primary.main,
             },
           }}
         >
-          {brands.map((brand, i) => (
+          {BRANDS.map((brand, i) => (
             <Tab key={brand.name} label={brand.name} {...a11yProps(i)} />
           ))}
         </Tabs>
       </Container>
 
-      <SwipeableViews
-        axis={"x"}
-        index={value}
-        onChangeIndex={handleChangeIndex}
-      >
-        {brands.map((brand, i) => (
-          <TabPanel
-            key={brand.name}
-            value={value}
-            index={i}
-            brandDetail={brand}
-          />
-        ))}
-      </SwipeableViews>
+      <BrandsTab index={value} setValue={setValue} value={value} />
     </Box>
   );
 }

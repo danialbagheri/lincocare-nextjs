@@ -1,2 +1,2 @@
-export * from "./brandsHead";
-export * from "./lincoBrands";
+export * from "./Head";
+export * from "./LincoBrands";

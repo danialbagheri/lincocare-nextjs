@@ -1,18 +1,50 @@
 import * as React from "react";
 
-import { Box, Stack, Typography, useTheme } from "@mui/material";
-
+/* ---------------------------- NextJs Components --------------------------- */
 import Image from "next/image";
+/* -------------------------------------------------------------------------- */
 
+/* ----------------------------- MUI Components ----------------------------- */
+import { Box, Stack, Typography, useTheme } from "@mui/material";
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+/* ------------------------------- Interfaces ------------------------------- */
 interface PropsType {
   setEleHeight: (value: number | undefined) => void;
 }
+
 interface ValueComponentTypes {
   title: string;
   description: string;
   image: string;
 }
+/* -------------------------------------------------------------------------- */
 
+/* -------------------------------- Constants ------------------------------- */
+const VALUES = [
+  {
+    title: "Quality",
+    description:
+      "We are dedicated to using only the highest quality ingredients; what we put on our bodies is just as important as what we put in them",
+    image: "/images/homePage/values/quality.png",
+  },
+  {
+    title: "Ethics",
+    description:
+      "As a skin-focused hub, we prioritize workplace ethics and sustainable manufacturing.",
+    image: "/images/homePage/values/ethics.png",
+  },
+  {
+    title: "Innovation",
+    description:
+      "Innovation is our core focus, driving product development and manufacturing processes to stay ahead of the industry.",
+    image: "/images/homePage/values/innovation.png",
+  },
+];
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------- Component ------------------------------- */
 const ValueComponent = (props: ValueComponentTypes) => {
   return (
     <Box
@@ -56,31 +88,11 @@ const ValueComponent = (props: ValueComponentTypes) => {
     </Box>
   );
 };
+/* -------------------------------------------------------------------------- */
 
-function AboutLincoValues(props: PropsType) {
+export function AboutLincoValues(props: PropsType) {
   const valuesRef = React.useRef<HTMLHeadingElement>(null);
   const theme = useTheme();
-
-  const values = [
-    {
-      title: "Quality",
-      description:
-        "We are dedicated to using only the highest quality ingredients; what we put on our bodies is just as important as what we put in them",
-      image: "/images/homePage/values/quality.png",
-    },
-    {
-      title: "Ethics",
-      description:
-        "As a skin-focused hub, we prioritize workplace ethics and sustainable manufacturing.",
-      image: "/images/homePage/values/ethics.png",
-    },
-    {
-      title: "Innovation",
-      description:
-        "Innovation is our core focus, driving product development and manufacturing processes to stay ahead of the industry.",
-      image: "/images/homePage/values/innovation.png",
-    },
-  ];
 
   React.useLayoutEffect(() => {
     props.setEleHeight(valuesRef.current?.clientHeight);
@@ -114,7 +126,7 @@ function AboutLincoValues(props: PropsType) {
         }}
         ref={valuesRef}
       >
-        {values.map((value) => (
+        {VALUES.map((value) => (
           <ValueComponent
             key={value.title}
             title={value.title}
@@ -126,5 +138,3 @@ function AboutLincoValues(props: PropsType) {
     </Box>
   );
 }
-
-export default AboutLincoValues;

@@ -9,6 +9,7 @@ declare module "@mui/material/styles" {
     palm: SimplePaletteColorOptions;
     sand: SimplePaletteColorOptions;
     earth: SimplePaletteColorOptions;
+    calypsoOrange: SimplePaletteColorOptions;
     lincoYellow: SimplePaletteColorOptions;
     lincoBlue: SimplePaletteColorOptions;
     silkiaBlue: SimplePaletteColorOptions;
@@ -27,6 +28,7 @@ declare module "@mui/material/styles" {
     palm: SimplePaletteColorOptions;
     sand: SimplePaletteColorOptions;
     earth: SimplePaletteColorOptions;
+    calypsoOrange: SimplePaletteColorOptions;
     lincoYellow: SimplePaletteColorOptions;
     lincoBlue: SimplePaletteColorOptions;
     silkiaBlue: SimplePaletteColorOptions;

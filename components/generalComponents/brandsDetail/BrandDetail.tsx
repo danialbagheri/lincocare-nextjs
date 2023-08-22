@@ -1,7 +1,17 @@
-import { Box, Stack, Typography, useTheme } from "@mui/material";
+/* ---------------------------- NextJs Components --------------------------- */
 import Image from "next/image";
-import { Container, CustomLink } from "shared";
+/* -------------------------------------------------------------------------- */
 
+/* ----------------------------- MUI Components ----------------------------- */
+import { Box, Stack, Typography, useTheme } from "@mui/material";
+/* -------------------------------------------------------------------------- */
+
+/* ---------------------------- Local Components ---------------------------- */
+import { Container, CustomLink } from "shared";
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+/* ------------------------------- Interfaces ------------------------------- */
 interface BrandDetailTypes {
   name: string;
   imageSrc: string;
@@ -17,7 +27,9 @@ interface BrandDescriptionTypes {
   display: { xs: string; md: string };
   privateLabel?: boolean;
 }
+/* -------------------------------------------------------------------------- */
 
+/* ------------------------------- Components ------------------------------- */
 const BrandDescription = (props: BrandDescriptionTypes) => {
   const theme = useTheme();
 
@@ -64,8 +76,9 @@ const BrandDescription = (props: BrandDescriptionTypes) => {
     </Box>
   );
 };
+/* -------------------------------------------------------------------------- */
 
-function BrandDetail(props: BrandDetailTypes) {
+export default function BrandDetail(props: BrandDetailTypes) {
   return (
     <Stack
       sx={{
@@ -139,5 +152,3 @@ function BrandDetail(props: BrandDetailTypes) {
     </Stack>
   );
 }
-
-export default BrandDetail;

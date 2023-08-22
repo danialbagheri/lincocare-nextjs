@@ -1,14 +1,17 @@
 export interface BrandDetailTypes {
+  id: string;
   name: string;
   imageSrc: string;
   description: string;
-  bgColor: string;
+  color: string;
+  borderColor: string;
+  knowMoreLink: string;
+  brandWebsiteLink: string;
 }
 
 export interface TabPanelProps {
-  children?: React.ReactNode;
   dir?: string;
   index: number;
   value: number;
-  brandDetail: BrandDetailTypes;
+  setValue: (value: number) => void;
 }
