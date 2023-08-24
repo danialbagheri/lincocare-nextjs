@@ -133,8 +133,6 @@ export function Brands() {
               },
               "&>button.Mui-selected": {
                 fontWeight: 700,
-                // height: 75,
-                // justifyContent: "flex-start",
               },
             },
             "& .MuiTabs-indicator": {
@@ -149,7 +147,7 @@ export function Brands() {
         </Tabs>
       </Container>
 
-      <BrandsTab index={value} setValue={setValue} value={value} />
+      <BrandsTab setValue={setValue} value={value} />
     </Box>
   );
 }

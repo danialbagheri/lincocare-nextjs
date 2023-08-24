@@ -11,7 +11,6 @@ export interface BrandDetailTypes {
 
 export interface TabPanelProps {
   dir?: string;
-  index: number;
   value: number;
   setValue: (value: number) => void;
 }
