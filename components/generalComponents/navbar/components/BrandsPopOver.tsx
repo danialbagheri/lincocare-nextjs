@@ -5,6 +5,8 @@ import SwipeableViews from "react-swipeable-views";
 import { Box, Popover, Tab, Tabs, Typography, useTheme } from "@mui/material";
 
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { BRANDS_ID } from "components/constants";
 
 interface PropsTypes {
   anchorEle: HTMLButtonElement | null;
@@ -13,31 +15,37 @@ interface PropsTypes {
 
 const BRANDS = [
   {
+    id: BRANDS_ID.CALYPSO,
     title: "Calypso",
     imageSrc: "/images/brandsPopup/calypso.png",
     text: "Calypso is a sun and skin care brand with a wide range of products.",
   },
   {
+    id: BRANDS_ID.CABANA,
     title: "Cabana",
     imageSrc: "/images/brandsPopup/cabana.png",
     text: "Cabana Sun offers protection and tan in the same bottle.",
   },
   {
-    title: "Silkia Deplaitory",
-    imageSrc: "/images/brandsPopup/silkia.png",
+    id: BRANDS_ID.SILKIA_DEPILATORY,
+    title: "Silkia Depilatory",
+    imageSrc: "/images/brandsPopup/silkiaDepilatory.png",
     text: "Calypso is a sun and skin care brand with a wide range of products.",
   },
   {
+    id: BRANDS_ID.SILKIA_PEDICARE,
     title: "Silkia Pedicare",
     imageSrc: "/images/brandsPopup/silkiaPedicare.png",
     text: "Silkia is hair removal that leaves you with long lasting smoothness.",
   },
   {
+    id: BRANDS_ID.DIMPLES,
     title: "Dimples",
     imageSrc: "/images/brandsPopup/dimples.png",
     text: "Dimples is a British brand with decades of experience in hair removal.",
   },
   {
+    id: BRANDS_ID.SUN_TROPIC,
     title: "Sun tropic",
     imageSrc: "/images/brandsPopup/sunTropic.png",
     text: "Sun Tropic is a unique handbag size range offers both UVA and UVB protection.",
@@ -47,6 +55,7 @@ const BRANDS = [
 export function BrandsPopOver(props: PropsTypes) {
   const { anchorEle, handleClose } = props;
   const [value, setValue] = React.useState(-1);
+  const router = useRouter();
   const theme = useTheme();
 
   function a11yProps(index: number) {
@@ -113,9 +122,24 @@ export function BrandsPopOver(props: PropsTypes) {
               label={brand.title}
               {...a11yProps(i)}
               onMouseOver={() => setValue(i)}
+              onClick={() => router.push(`/brands/${brand.id}`)}
             />
           ))}
         </Tabs>
+        {value === -1 ? (
+          <Typography
+            color="#E2E2E2"
+            textAlign="center"
+            sx={{
+              fontSize: 58,
+              fontWeight: 600,
+              marginBottom: 15,
+              marginTop: 17,
+            }}
+          >
+            Linco brands
+          </Typography>
+        ) : null}
         <SwipeableViews
           axis={"x"}
           index={value}

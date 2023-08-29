@@ -31,6 +31,7 @@ const theme = createTheme({
       main: "#3C1510",
     },
     calypsoOrange: {
+      light: "#F47B47",
       main: "#EC6B1C",
     },
     lincoYellow: {

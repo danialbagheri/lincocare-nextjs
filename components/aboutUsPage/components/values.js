@@ -50,6 +50,6 @@ export const BRANDS_IMAGE = [
   },
   {
     id: "silkia",
-    src: "/images/aboutUsPage/brands/silkia.png",
+    src: "/images/aboutUsPage/brands/silkiaPedicare.png",
   },
 ];
