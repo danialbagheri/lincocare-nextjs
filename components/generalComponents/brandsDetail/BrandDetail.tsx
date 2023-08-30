@@ -45,9 +45,10 @@ const BrandDescription = (props: BrandDescriptionTypes) => {
       <Stack
         direction={"row"}
         justifyContent={{
-          xs: props.privateLabel ? "center" : "space-between",
-          md: "space-between",
+          xs: props.privateLabel ? "center" : "flex-start",
+          md: "flex-start",
         }}
+        gap={10}
       >
         <CustomLink
           color={{ xs: props.privateLabel ? "#000" : "#FFFFFF", md: "#000" }}
