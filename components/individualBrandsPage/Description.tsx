@@ -9,11 +9,11 @@ export function Description(props: { brandDetails: BrandDetailsType }) {
       <Typography
         sx={{ typography: { xs: "h4", md: "h2" }, textTransform: "uppercase" }}
       >
-        {brandDetails.name}
+        {brandDetails?.name}
       </Typography>
       <Box sx={{ columnCount: { xs: 1, md: 2 }, columnGap: 14, mt: 4 }}>
         <Typography textAlign="justify">
-          {brandDetails.detailedDescription}
+          {brandDetails?.detailedDescription}
         </Typography>
       </Box>
     </Box>

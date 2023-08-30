@@ -56,35 +56,35 @@ export const BRANDS = [
         title: "Sun protection",
         description:
           "Our sun protection products are designed by skincare specialists to provide all over body and scalp protection that lasts all day. They are recommended by many independent sources for their high quality and exceptionally low price.",
-        imgSrc: "",
+        imgSrc: "Calypso-sun-protection.png",
       },
       {
         id: "calypso_2",
         title: "Kids/sensitive",
         description:
           "Our sun protection products are designed by skincare specialists to provide all over body and scalp protection that lasts all day. They are recommended by many independent sources for their high quality and exceptionally low price.",
-        imgSrc: "",
+        imgSrc: "Calypso-kids-sensitive.png",
       },
       {
         id: "calypso_3",
         title: "After sun",
         description:
           "Our sun protection products are designed by skincare specialists to provide all over body and scalp protection that lasts all day. They are recommended by many independent sources for their high quality and exceptionally low price.",
-        imgSrc: "",
+        imgSrc: "Calypso-after-sun.png",
       },
       {
         id: "calypso_4",
         title: "Tanning",
         description:
           "Our sun protection products are designed by skincare specialists to provide all over body and scalp protection that lasts all day. They are recommended by many independent sources for their high quality and exceptionally low price.",
-        imgSrc: "",
+        imgSrc: "Calypso-tanning.png",
       },
       {
         id: "calypso_5",
         title: "Health care",
         description:
           "Our sun protection products are designed by skincare specialists to provide all over body and scalp protection that lasts all day. They are recommended by many independent sources for their high quality and exceptionally low price.",
-        imgSrc: "",
+        imgSrc: "Calypso-healthcare.png",
       },
     ],
     detailedDescription:
@@ -116,28 +116,28 @@ export const BRANDS = [
         title: "Sun Protection",
         description:
           "Our sun protection products offer UVA and UVB protection to help prevent burning and premature ageing. They contain Vitamin E, an antioxidant that protects and repairs your skin, and have a beautiful tropical aroma.",
-        imgSrc: "",
+        imgSrc: "Cabana-sun-protection.png",
       },
       {
         id: "cabana_2",
         title: "Kids/Sensitive",
         description:
           "These water-resistant sun protection products are specially designed for children. They protect skin from burning 30 times longer than natural protection and their gentle moisturisers replenish the natural oils lost through exposure to the sun, wind and water.",
-        imgSrc: "",
+        imgSrc: "Cabana-kids-sensitive.png",
       },
       {
         id: "cabana_3",
         title: "After Sun",
         description:
           "These specially formulated after sun products will cool and refresh your skin after a day in the sun. They contain Aloe Vera, known for its natural moisturising and healing abilities.",
-        imgSrc: "",
+        imgSrc: "Cabana-after-sun.png",
       },
       {
         id: "cabana_4",
         title: "Tanning",
         description:
           "Our range of tanning products are specifically designed to give tan lovers the best of both worlds. They provide a high level of sun protection whilst helping to build a deep, long-lasting tan.",
-        imgSrc: "",
+        imgSrc: "Cabana-tanning.png",
       },
     ],
     detailedDescription:
@@ -165,14 +165,14 @@ export const BRANDS = [
         title: "Cracked Heel Repair Cream",
         description:
           "Silkia PediCare Cracked Heel Repair Cream is uniquely formulated with multi-patented +Keratin Technology. The cream provides visible results and repairs cracked heels within 48 hours.",
-        imgSrc: "",
+        imgSrc: "Silkia-cream.png",
       },
       {
         id: "silkia_pedicare_2",
         title: "Cracked Heel Repair Roll-on",
         description:
           "PediCare Cracked Heel Repair Cream is available in tube and roll-on format and you can buy it at Asda, Trago Mills, Bodycare, Home Bargains, Poundworld and Rayburn in the UK.",
-        imgSrc: "",
+        imgSrc: "Silkia-rollon.png",
       },
     ],
     detailedDescription:
@@ -200,21 +200,21 @@ export const BRANDS = [
         title: "Hair Removal Cream",
         description:
           "Silkia Hair Removal Cream is a gentle way of removing hair from the legs, arms and bikini line. Highly effective and quick and easy to use, the specially-formulated cream contains aloe vera to leave skin feeling luxuriously soft with a soothing finish.",
-        imgSrc: "",
+        imgSrc: "Silkia-hair-removal.png",
       },
       {
         id: "silkia_depilatory_2",
         title: "Hair Removal Spray Foam",
         description:
           "The Silkia Hair Removal Spray Foam can be used to remove hair on the arms, legs and bikini line. The velvety foaming spray coats skin quickly and has a delicate rose scent. Aloe vera is incorporated into the foam to provide skin with a hydrating moisturiser. Silkia’s Hair Removal Spray Foam works on wet skin and is ideal for use in the shower or bath.",
-        imgSrc: "",
+        imgSrc: "Silkia-spray-foam.png",
       },
       {
         id: "silkia_depilatory_3",
         title: "Face Wax Strips",
         description:
           "Silkia Face Wax Strips are ideal for those hard to reach areas on the face. With sunflower and damask rose oil, Silkia’s wax formula will leave skin soft and smooth. The post-wax aloe vera cream provided in the pack helps to sooth skin afterwards for optimum comfort and that silky feeling.",
-        imgSrc: "",
+        imgSrc: "Silkia-wax-strips.png",
       },
     ],
     detailedDescription:
@@ -243,21 +243,21 @@ export const BRANDS = [
         title: "HAIR REMOVAL CREAM",
         description:
           "Dimples Hair Removal Cream is the gentle, easy way to remove hair and the result lasts up to twice as long as shaving. It works by dissolving hair below the skin’s surface, leaving you with gorgeous, stubble-free skin. It is enriched with antioxidant Vitamin E andanti-inflammatory pro-vitamin B5 to leave your skin moisturised, soft and healthy.",
-        imgSrc: "",
+        imgSrc: "Dimples-creaml.png",
       },
       {
         id: "dimples_2",
         title: "HAIR REMOVAL SPRAY FOAM",
         description:
           "Hair Removal Spray Foam is the gentle, easy way to remove hair and the result lasts up to twice as long as shaving. It works by dissolving hair below the skin’s surface, leaving you with gorgeous, stubble-free skin. It is enriched with antioxidant Vitamin E and anti-inflammatory pro-vitamin B5 to leave your skin moisturised, soft and healthy. Choose from the relaxing, feminine Rose, the energising Lemon or the floral scent of Jasmine fragrances.",
-        imgSrc: "",
+        imgSrc: "Dimples-spray-foam.png",
       },
       {
         id: "dimples_3",
         title: "WAX BODY STRIPS",
         description:
           "Dimples Wax Strips are quick and easy to use, and because they remove hair from the root, you can enjoy elegant, beautiful skin for up to 6 weeks. With three different wax strips, you’re certain to find the right one for your needs. All our wax strips contain Soothex, a natural anti-inflammatory to calm your skin, and come with our gorgeous aloe vera post-wax cream for a perfect finish.",
-        imgSrc: "",
+        imgSrc: "Dimples-wax-body.png",
       },
     ],
     detailedDescription:
@@ -285,35 +285,35 @@ export const BRANDS = [
         title: "Sun Lotions",
         description:
           "This unique handbag size range offers both UVA and UVB protection. All the products in this range are water-resistant, so you don’t need to worry about getting burned at the beach or in the pool. The sun lotions are available in low, medium and high factors.",
-        imgSrc: "",
+        imgSrc: "Tropic-sun-lotion.png",
       },
       {
         id: "sun_tropic_2",
         title: "Deep Tanning Oils",
         description:
           "For those who want to achieve a natural long-lasting tan, we offer an Original Carrot Oil and a Deep Tanning Oil.",
-        imgSrc: "",
+        imgSrc: "Tropic-tanning-oil.png",
       },
       {
         id: "sun_tropic_3",
         title: "Deep Tanning Gel ",
         description:
           "If you prefer to use a gel instead of an oil to achieve a gorgeous deep tan, then you can try our Deep Tanning Oil Gel and Original Carrot Oil Gel. The light and easily absorbed formula contains moisturisers and is a natural tan accelerator.",
-        imgSrc: "",
+        imgSrc: "Tropic-tanning-gel.png",
       },
       {
         id: "sun_tropic_4",
         title: "Clear Gel",
         description:
           "Sun Tropic offers a range of Clear Gel sun protection that is water resistant, dries quickly and allows you to enjoy your day carefree.",
-        imgSrc: "",
+        imgSrc: "Tropic-clear-gel",
       },
       {
         id: "sun_tropic_5",
         title: "After Sun Lotion",
         description:
           "Sun Tropic also provides sun lovers with a cooling, moisturising After Sun Lotion and an Aloe Vera After Sun Gel. They not only refresh and repair your skin after a long day in the sun, but they also help to prolong your holiday tan.",
-        imgSrc: "",
+        imgSrc: "Tropic-after-sun.png",
       },
     ],
     detailedDescription:
@@ -341,35 +341,35 @@ export const BRANDS = [
         title: "Re-Gen Oil",
         description:
           "Re-Gen Oil puts the beauty back into your skin with a special formula that works wonders. It adds elasticity, locks in moisture and reduces the appearance of a wide range of minor imperfections to give you smooth, supple skin.",
-        imgSrc: "",
+        imgSrc: "Regen-oil.png",
       },
       {
         id: "re_gen_2",
         title: "Re-Gen Gel",
         description:
           "Re-Gen Gel is a non-greasy emollient formulation proven to help treat, soothe and moisturise dry, rough or chapped skin. Its oleo-gel consistency retains moisture lost by exposure to daily weather conditions, frequent showering and dry indoor ambiances. It is suitable for sensitive skin and can be used on the face and body.",
-        imgSrc: "",
+        imgSrc: "Regen-gel.png",
       },
       {
         id: "re_gen_3",
         title: "Re-Gen Cream",
         description:
           "This specially formulated product helps prevent and provides treatment for stretch marks, scars, dry skin and blemishes. It contains the active ingredient PCL Liquid for skin regeneration, as well as other essential ingredients including Vitamin E, Lavender, Calendula, Chamomile and Rosemary Oils.",
-        imgSrc: "",
+        imgSrc: "Regen-cream.png",
       },
       {
         id: "re_gen_4",
         title: "Re-Gen Serum",
         description:
           "Re-Gen Serum is a specially formulated product which helps lift and firm facial and neck contours while diminishing blemishes and pigmentation marks. Its unique, concentrated formula contains the highly effective ingredient PCL Liquid™ for reviving skin radiance and easy absorption, ensuring effective results for dry and ageing skin.",
-        imgSrc: "",
+        imgSrc: "Regen-serum.png",
       },
       {
         id: "re_gen_5",
-        title: "Re-Gen Serum",
+        title: "Re-Gen Spray",
         description:
           "Re-Gen Oil Continuous Spray is a specially formulated product which helps improve the appearance of stretch marks, scars and ageing skin. Its unique and safe formula contains the highly effective ingredient PCL Liquid™ for skin regeneration and easy absorption, ensuring effective results for dry and blemished skin.",
-        imgSrc: "",
+        imgSrc: "Regen-spray.png",
       },
     ],
     detailedDescription:

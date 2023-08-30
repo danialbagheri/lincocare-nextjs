@@ -1,4 +1,5 @@
 import { BRANDS } from "components/constants";
+import { Brands, LincoNews } from "components/generalComponents";
 import {
   Description,
   Head,
@@ -7,7 +8,7 @@ import {
 } from "components/individualBrandsPage";
 
 import { useRouter } from "next/router";
-import { Container } from "shared";
+import { Container, LincoDivider } from "shared";
 
 export default function BrandPage() {
   const brandId = useRouter().query.brandId?.toString();
@@ -21,6 +22,12 @@ export default function BrandPage() {
         <Description brandDetails={brandDetails} />
         <Products brandDetails={brandDetails} />
       </Container>
+      <LincoDivider sx={{ mb: { xs: 1, md: 6 } }} fullWidth />
+      <Container>
+        <Brands />
+      </Container>
+      <LincoDivider sx={{ mb: { xs: 16, md: 26 } }} fullWidth />
+      <LincoNews />
     </>
   );
 }

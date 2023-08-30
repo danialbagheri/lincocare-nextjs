@@ -147,6 +147,7 @@ export function BrandsPopOver(props: PropsTypes) {
         >
           {BRANDS.map((brand, i) => (
             <div
+              key={brand.id}
               hidden={i !== value}
               role="tabpanel"
               id={`full-width-tabpanel-${value}`}
