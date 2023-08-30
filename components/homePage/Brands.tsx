@@ -130,6 +130,8 @@ export function Brands() {
                 fontWeight: 500,
                 lineHeight: "30px",
                 textTransform: "unset",
+                color: "#000",
+                opacity: 1,
               },
               "&>button.Mui-selected": {
                 fontWeight: 700,
@@ -137,7 +139,7 @@ export function Brands() {
             },
             "& .MuiTabs-indicator": {
               top: "70px",
-              bgcolor: theme.palette.primary.main,
+              bgcolor: BRANDS[value].color,
             },
           }}
         >

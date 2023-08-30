@@ -32,8 +32,8 @@ const VALUES = [
   {
     title: "Ethics",
     description:
-      "As a skin-focused hub, we prioritize workplace ethics and sustainable manufacturing.",
-    image: "/images/homePage/values/ethics.png",
+      "As a skin-focused hub, we make sure that workplace ethics and sustainable manufacturing are a top priority.",
+    image: "/images/homePage/values/ethics.jpeg",
   },
   {
     title: "Innovation",
@@ -62,13 +62,15 @@ const ValueComponent = (props: ValueComponentTypes) => {
           width: { xs: "175px", md: "240px" },
           height: { xs: "175px", md: "240px" },
           color: "#000",
+          borderRadius: "50%",
+          overflow: "hidden",
         }}
       >
         <Image
           src={props.image}
           fill
           alt={props.title}
-          style={{ objectFit: "contain" }}
+          style={{ objectFit: "cover" }}
           loading={"lazy"}
         />
       </Box>

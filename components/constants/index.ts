@@ -38,7 +38,7 @@ export const BRANDS = [
     name: "Calypso",
     imageSrc: "/images/brands/calypso.png",
     description:
-      "Calypso sun protection offers a comprehensive range of sun care products for all skin types and for the whole family.",
+      "Calypso is a British sun care brand, providing customers with quality sun care products at exceptionally low prices. Calypso products are not only available to buy in the UK, but also many countries around the globe.",
     color: theme.palette.calypsoOrange.main,
     borderColor: theme.palette.calypsoOrange.main,
     knowMoreLink: "",

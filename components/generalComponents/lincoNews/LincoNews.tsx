@@ -8,49 +8,15 @@ import { getListOfAllBlogs } from "services";
 import { BlogRes, ListOfAllBlogsRes } from "services/lincoServicesTypes";
 
 function LincoNews(data: any) {
-  const scrollContainer = React.useRef<HTMLHeadingElement>(null);
   const scrollElement = React.useRef<HTMLHeadingElement>(null);
-  const [boxShadow, setBoxShadow] = React.useState("unset");
   const [loading, setLoading] = React.useState(false);
   const [news, setNews] = React.useState<BlogRes[]>([]);
 
-  const scrollHandler = (
-    eleWidth: number | undefined,
-    containerWidth: number | undefined,
-    eleScrollLeft: number | undefined
-  ): void => {
-    if (
-      eleWidth !== undefined &&
-      containerWidth !== undefined &&
-      eleScrollLeft !== undefined
-    ) {
-      if (eleWidth <= containerWidth) {
-        setBoxShadow("unset");
-      } else if (eleScrollLeft === 0) {
-        setBoxShadow("-100px 0 24px -70px rgba(0,0,0,0.2) inset");
-      } else if (eleScrollLeft + containerWidth > eleWidth - 5) {
-        setBoxShadow("100px 0 24px -70px rgba(0,0,0,0.2) inset");
-      } else {
-        setBoxShadow(
-          "-100px 0 24px -70px rgba(0,0,0,0.2) inset,100px 0 24px -70px rgba(0,0,0,0.2) inset"
-        );
-      }
-    }
-  };
-
   React.useEffect(() => {
     setLoading(true);
-    getListOfAllBlogs({ count: "5" }).then((res: ListOfAllBlogsRes) => {
+    getListOfAllBlogs({ count: "3" }).then((res: ListOfAllBlogsRes) => {
       setNews(res.results);
     });
-  }, []);
-
-  React.useLayoutEffect(() => {
-    scrollHandler(
-      scrollElement.current?.scrollWidth,
-      scrollContainer.current?.clientWidth,
-      scrollElement.current?.scrollLeft
-    );
   }, []);
 
   return (
@@ -61,24 +27,13 @@ function LincoNews(data: any) {
       >
         Linco news
       </Typography>
-      <Box
-        sx={{
-          boxShadow: boxShadow,
-        }}
-        ref={scrollContainer}
-      >
+      <Box>
         <Stack
-          sx={{ overflow: "scroll", py: 4 }}
+          sx={{ py: 4 }}
           direction={"row"}
-          gap={{ xs: 8, md: 13 }}
+          gap={{ xs: 8, md: 11 }}
           ref={scrollElement}
-          onScroll={() =>
-            scrollHandler(
-              scrollElement.current?.scrollWidth,
-              scrollContainer.current?.clientWidth,
-              scrollElement.current?.scrollLeft
-            )
-          }
+          flexWrap={{ xs: "wrap", md: "nowrap" }}
         >
           {news.map((n) => (
             <NewsDetail key={n.id} newsData={n} />

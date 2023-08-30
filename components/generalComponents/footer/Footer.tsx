@@ -10,7 +10,7 @@ function Footer() {
       <Container sx={{ py: 25, position: "relative" }}>
         <Stack
           direction={{ xs: "column", md: "row" }}
-          gap={{ xs: 12, md: 31 }}
+          gap={{ xs: 12, md: 20 }}
           alignItems={{ xs: "center", md: "flex-start" }}
         >
           <Contact />

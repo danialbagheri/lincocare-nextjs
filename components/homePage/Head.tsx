@@ -33,9 +33,9 @@ export function Head() {
             position: "absolute",
             maxWidth: "378px",
             top: "40%",
-            right: { xs: "50%", md: "45%" },
+            left: { xs: "50%", md: "20%" },
             textAlign: { xs: "center", md: "left" },
-            transform: { xs: "translate(50%,0)", md: "translate(0,0)" },
+            transform: { xs: "translate(-50%,0)", md: "translate(0,0)" },
 
             "&>a": {
               display: "inline-block",
@@ -56,7 +56,7 @@ export function Head() {
             color={"lincoBlue.dark"}
             sx={{ typography: { xs: "h3", md: "h4" } }}
           >
-            Unique Formulation
+            Crafting Excellence, Nurturing beauty
           </Typography>
           <Link href={""}>Know more</Link>
         </Box>

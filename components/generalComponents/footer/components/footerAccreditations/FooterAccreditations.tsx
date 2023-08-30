@@ -4,7 +4,7 @@ import Image from "next/image";
 function FooterAccreditations() {
   return (
     <Box
-      p={7}
+      p={5}
       bgcolor={"#FFFFFF"}
       sx={{
         position: "absolute",

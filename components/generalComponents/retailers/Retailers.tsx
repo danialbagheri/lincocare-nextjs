@@ -35,7 +35,12 @@ const RetailerItem = (props: {
 }) => {
   return (
     <Box>
-      <Typography variant={"h6"} color={"#247DE7"} mt={{ xs: 7, md: 20 }}>
+      <Typography
+        variant={"h6"}
+        color={"#247DE7"}
+        mt={{ xs: 7, md: 20 }}
+        textAlign="center"
+      >
         {props.title}
       </Typography>
       <Divider sx={{ width: "100%", mt: 2 }} />

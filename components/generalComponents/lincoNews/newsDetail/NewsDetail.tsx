@@ -13,7 +13,9 @@ function NewsDetail(props: { newsData: BlogRes }) {
 
   return (
     <Stack
-      sx={{ width: { xs: 193, md: 300 }, minWidth: { xs: 193, md: 300 } }}
+      sx={{
+        width: "100%",
+      }}
       gap={{ xs: 4, md: 5 }}
     >
       <Box sx={{ position: "relative", width: "100%", pt: "100%" }}>
@@ -24,7 +26,7 @@ function NewsDetail(props: { newsData: BlogRes }) {
           alt={newsData.image_alt_text}
         />
       </Box>
-      <Box height={170}>
+      <Box height={80}>
         <Typography
           sx={{
             typography: { xs: "h6", md: "h3" },
@@ -32,7 +34,7 @@ function NewsDetail(props: { newsData: BlogRes }) {
             overflow: "hidden",
             display: "-webkit-box",
             WebkitBoxOrient: "vertical",
-            WebkitLineClamp: "4",
+            WebkitLineClamp: "2",
             whiteSpace: "pre-wrap",
           }}
         >
@@ -51,7 +53,7 @@ function NewsDetail(props: { newsData: BlogRes }) {
         <Typography
           color={"#A4A4A4"}
         >{`${properDate.day} ${properDate.month}, ${properDate.year}`}</Typography>
-        <Box sx={{ height: 67, overflow: "hidden", mt: 2 }}>
+        <Box sx={{ height: 67, mt: 2 }}>
           <Typography
             color={"lincoBlue.main"}
             sx={{
@@ -62,7 +64,8 @@ function NewsDetail(props: { newsData: BlogRes }) {
               whiteSpace: "pre-wrap",
             }}
           >
-            {HTMLReactParser(newsData?.body || "")}
+            {/* {HTMLReactParser(newsData?.body || "")} */}
+            {newsData?.excerpt}
           </Typography>
         </Box>
         <CustomLink

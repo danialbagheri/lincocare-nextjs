@@ -44,7 +44,7 @@ function SiteMap() {
       <Typography mb={5} color={"lincoYellow.main"} variant={"h6"}>
         Sitemap
       </Typography>
-      <Stack direction={"row"} gap={{ xs: 15, md: 22 }}>
+      <Stack direction={"row"} gap={{ xs: 10, md: 15 }}>
         <Box>
           <FooterLink href="/privateLabel">Private label</FooterLink>
           <FooterLink href="/brands">Brands</FooterLink>
