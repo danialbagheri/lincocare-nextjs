@@ -19,7 +19,24 @@ export function Head() {
       >
         <Box
           position="relative"
-          sx={{ "&>video": { scale: { xs: "4", md: "1.4", xl: "unset" } } }}
+          sx={{
+            "&>video": { scale: { xs: "4", md: "1.4", xl: "unset" } },
+
+            "*::-webkit-media-controls-panel": {
+              display: "none !important",
+              webkitAppearance: "none",
+            },
+
+            "*::-webkit-media-controls-play-button": {
+              display: "none !important",
+              webkitAppearance: "none",
+            },
+
+            "*::-webkit-media-controls-start-playback-button": {
+              display: "none !important",
+              webkitAppearance: "none",
+            },
+          }}
         >
           <video width="100%" height="100%" autoPlay={true} loop muted>
             <source

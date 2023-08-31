@@ -68,8 +68,8 @@ export default function Navbar(props: Props) {
         <Toolbar
           sx={{
             px: { xs: 7, md: 24, lg: 40 },
-            pt: { xs: trigger ? 3 : 6, md: trigger ? 3 : 10 },
-            pb: { xs: trigger ? 1 : 6, md: trigger ? 1 : 0 },
+            pt: { xs: 6, md: 10 },
+            pb: { xs: trigger ? 0 : 6, md: 0 },
             flexDirection: { xs: "row-reverse", md: "row" },
           }}
         >

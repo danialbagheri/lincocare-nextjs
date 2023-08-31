@@ -13,7 +13,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 /* ---------------------------- Local Components ---------------------------- */
 import { Container } from "shared";
 import { BrandsTab } from "./components";
-import { BRANDS } from "components/constants";
+import { BRANDS, BRANDS_ID } from "components/constants";
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
@@ -68,8 +68,11 @@ export function Brands() {
         <Typography
           align="center"
           mb={{ xs: 15, md: 20 }}
-          color={{ xs: "#fff", md: "#000" }}
-          sx={{ typography: { xs: "h4", md: "h4" } }}
+          color={{
+            xs: BRANDS[value].privateLabel ? "#000" : "#fff",
+            md: "#000",
+          }}
+          sx={{ typography: { xs: "h4", md: "h2" } }}
         >
           Linco brands
         </Typography>
@@ -82,14 +85,14 @@ export function Brands() {
           <IconButton
             aria-label="previous"
             color="primary"
-            sx={{ color: "white " }}
+            sx={{ color: BRANDS[value].privateLabel ? "#000" : "white " }}
             onClick={() => changeBrandHandler(PREVIOUS)}
           >
             <ArrowBackIosNewIcon fontSize="large" />
           </IconButton>
           <Typography
             variant="h4"
-            color={"#fff"}
+            color={BRANDS[value].privateLabel ? "#000" : "#fff"}
             sx={{
               fontWeight: 700,
               textTransform: "uppercase",
@@ -102,7 +105,9 @@ export function Brands() {
           <IconButton
             aria-label="delete"
             color="primary"
-            sx={{ color: "white !important" }}
+            sx={{
+              color: BRANDS[value].privateLabel ? "#000" : "white !important",
+            }}
             onClick={() => changeBrandHandler(NEXT)}
           >
             <ArrowForwardIosIcon fontSize="large" />
@@ -135,17 +140,22 @@ export function Brands() {
               },
               "&>button.Mui-selected": {
                 fontWeight: 700,
+                paddingTop: 0,
               },
             },
             "& .MuiTabs-indicator": {
-              top: "70px",
-              bgcolor: BRANDS[value].color,
+              top: "50px",
+              bgcolor: BRANDS[value].privateLabel
+                ? theme.palette.lincoBlue.dark
+                : BRANDS[value].color,
             },
           }}
         >
-          {BRANDS.map((brand, i) => (
-            <Tab key={brand.name} label={brand.name} {...a11yProps(i)} />
-          ))}
+          {BRANDS.filter((b) => b.id !== BRANDS_ID.PRIVATE_LABEL).map(
+            (brand, i) => (
+              <Tab key={brand.name} label={brand.name} {...a11yProps(i)} />
+            )
+          )}
         </Tabs>
       </Container>
 

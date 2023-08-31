@@ -145,7 +145,7 @@ export const BRANDS = [
   },
   {
     id: BRANDS_ID.SILKIA_PEDICARE,
-    name: "Silkia Pedicare",
+    name: "Pedicare",
     imageSrc: "/images/brands/silkiaPedicare.png",
     description:
       "Silkia PediCare Cracked Heel Repair Cream is a specially formulated treatment using multi-patented Keratin technology to actively repair your dry, cracked heels.",
@@ -180,7 +180,7 @@ export const BRANDS = [
   },
   {
     id: BRANDS_ID.SILKIA_DEPILATORY,
-    name: "Silkia Depilatory",
+    name: "Silkia",
     imageSrc: "/images/brands/silkiaDepilatory.png",
     description:
       "Silkia Depilatory is your one stop hair removal product providing you with long lasting smoothness that will make everyone else wonder what your secret is.",
@@ -376,7 +376,7 @@ export const BRANDS = [
       "This unique handbag size range offers both UVA and UVB protection. All the products in this range are water-resistant, so you don’t need to worry about getting burned at the beach or in the pool. The sun lotions are available in low, medium and high factors. For those who want to achieve a natural long-lasting tan, we offer an Original Carrot Oil Gel and a Deep Tanning Oil Gel. Sun Tropic also provides sun lovers with a cooling, moisturising After Sun Lotion and an Aloe Vera After Sun Gel to help your skin recover after a long day in the sun. Sun Tropic is available to buy from Venture Blue, Convenience Distribution and Woolacombe Shop in the UK. It is exported to Thailand and several European countries.",
   },
   {
-    id: BRANDS_ID.SUN_TROPIC,
+    id: BRANDS_ID.PRIVATE_LABEL,
     name: "Private label",
     imageSrc: "/images/brands/privateLabel.png",
     description:

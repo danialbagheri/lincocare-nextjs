@@ -8,7 +8,7 @@ function Accreditations(props: { sx?: SxProps }) {
     <Container sx={{ ...props.sx }}>
       <Typography
         textAlign={"center"}
-        sx={{ typography: { xs: "h4", md: "h4" } }}
+        sx={{ typography: { xs: "h4", md: "h2" } }}
         mb={{ xs: 12, md: 16 }}
       >
         Accreditations

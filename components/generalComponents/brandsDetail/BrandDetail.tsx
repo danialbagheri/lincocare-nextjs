@@ -8,6 +8,7 @@ import { Box, Stack, Typography, useTheme } from "@mui/material";
 
 /* ---------------------------- Local Components ---------------------------- */
 import { Container, CustomLink } from "shared";
+import { BrandDetailsType } from "components/constants";
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
@@ -54,9 +55,11 @@ const BrandDescription = (props: BrandDescriptionTypes) => {
           color={{ xs: props.privateLabel ? "#000" : "#FFFFFF", md: "#000" }}
           borderColor={{
             xs: props.privateLabel
-              ? props.borderColor
+              ? theme.palette.lincoBlue.dark
               : theme.palette.lincoYellow.main,
-            md: props.borderColor,
+            md: props.privateLabel
+              ? theme.palette.lincoBlue.dark
+              : props.borderColor,
           }}
           href=""
         >
@@ -79,20 +82,23 @@ const BrandDescription = (props: BrandDescriptionTypes) => {
 };
 /* -------------------------------------------------------------------------- */
 
-export default function BrandDetail(props: BrandDetailTypes) {
+export default function BrandDetail(props: { details: BrandDetailsType }) {
+  const { details } = props;
+
   return (
     <Stack
       sx={{
         width: "100%",
         background: {
-          xs: props.privateLabel ? "#FFFFFF" : props.color,
-          md: `linear-gradient(to bottom, ${props.color} 65%, white 50%)`,
+          xs: details?.color,
+          md: `linear-gradient(to bottom, ${details?.color} 75%, white 50%)`,
         },
         position: "relative",
       }}
       alignItems={"center"}
       justifyContent={"center"}
       pb={{ xs: 14, md: 20 }}
+      pt={20}
     >
       <Container>
         <Stack
@@ -100,7 +106,7 @@ export default function BrandDetail(props: BrandDetailTypes) {
           justifyContent={"center"}
           direction={{
             xs: "column",
-            md: props.privateLabel ? "row-reverse" : "row",
+            md: details?.privateLabel ? "row-reverse" : "row",
           }}
           gap={{ xs: 0, md: 10 }}
           pt={{ xs: 0, md: 10 }}
@@ -108,7 +114,7 @@ export default function BrandDetail(props: BrandDetailTypes) {
           <Box width={"100%"}>
             <Typography
               textTransform={"capitalize"}
-              color={props.privateLabel ? "#000" : "#FFFFFF"}
+              color={details?.privateLabel ? "#000" : "#FFFFFF"}
               textAlign={{ xs: "center", md: "left" }}
               mt={{ xs: 13, md: 5 }}
               sx={{
@@ -116,25 +122,25 @@ export default function BrandDetail(props: BrandDetailTypes) {
                 fontWeight: "700 ",
               }}
             >
-              {props.name}
+              {details?.name}
             </Typography>
             <BrandDescription
-              privateLabel={props.privateLabel}
+              privateLabel={details?.privateLabel}
               display={{ xs: "none", md: "block" }}
-              borderColor={props.borderColor}
-              description={props.description}
+              borderColor={details?.color}
+              description={details?.description}
             />
           </Box>
           <Box
             sx={{
               width: "100%",
               position: "relative",
-              height: { xs: "300px", md: "400px" },
+              height: 320,
               mt: 8,
             }}
           >
             <Image
-              src={props.imageSrc}
+              src={details?.imageSrc}
               alt="Accreditations"
               fill
               style={{ objectFit: "contain" }}
@@ -143,10 +149,10 @@ export default function BrandDetail(props: BrandDetailTypes) {
             />
           </Box>
           <BrandDescription
-            privateLabel={props.privateLabel}
+            privateLabel={details?.privateLabel}
             display={{ xs: "block", md: "none" }}
-            borderColor={props.borderColor}
-            description={props.description}
+            borderColor={details?.borderColor}
+            description={details?.description}
           />
         </Stack>
       </Container>

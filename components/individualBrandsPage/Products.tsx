@@ -56,7 +56,7 @@ export function Products(props: { brandDetails: BrandDetailsType }) {
 
             flexDirection: { xs: "column", md: "row" },
 
-            "& div": { transition: "500ms height ease-out" },
+            "& div": { transition: "100ms height ease-out" },
           }}
           onMouseEnter={() => {
             setItemsHover((prev) => ({ ...prev, [product.id]: true }));

@@ -22,7 +22,7 @@ function LincoNews(data: any) {
   return (
     <Container sx={{ mb: { xs: 18, md: 32 } }}>
       <Typography
-        sx={{ typography: { xs: "h4", md: "h4" }, mb: { xs: 10, md: 13 } }}
+        sx={{ typography: { xs: "h4", md: "h2" }, mb: { xs: 10, md: 13 } }}
         textAlign={"center"}
       >
         Linco news

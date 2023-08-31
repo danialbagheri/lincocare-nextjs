@@ -16,6 +16,7 @@ export function LincoDesktopIcon(props: { darkNavbar: boolean }) {
         flexGrow: 1,
         display: { xs: "none", md: "block" },
         textAlign: "left",
+        paddingBottom: 3,
       }}
     >
       <IconButton

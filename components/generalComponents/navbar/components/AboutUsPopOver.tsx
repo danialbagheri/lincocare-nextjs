@@ -37,6 +37,7 @@ export function AboutUsPopOver(props: PropsTypes) {
       anchorEl={anchorEle}
       onClose={handleClose}
       disableRestoreFocus
+      sx={{ "&>.MuiPopover-paper": { borderRadius: 0 } }}
     >
       <Box
         sx={{
@@ -44,6 +45,7 @@ export function AboutUsPopOver(props: PropsTypes) {
           flexDirection: "column",
           gap: 5,
           p: 8,
+          width: 187,
           pb: 12,
           "&>a": {
             cursor: "pointer",
@@ -52,9 +54,11 @@ export function AboutUsPopOver(props: PropsTypes) {
             maxWidth: "fit-content",
             px: "10px",
             pb: 1,
+            borderBottom: `3px solid transparent`,
           },
           "&>a:hover": {
             fontWeight: 700,
+            borderBottom: `3px solid ${theme.palette.lincoBlue.main}`,
           },
         }}
         onMouseLeave={handleClose}

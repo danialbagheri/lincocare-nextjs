@@ -73,7 +73,7 @@ function Retailers(props: { sx?: SxProps }) {
     <Container
       sx={{ alignItems: "center", pt: { xs: 17, md: 55 }, ...props.sx }}
     >
-      <Typography sx={{ typography: { xs: "h4", md: "h4" } }}>
+      <Typography sx={{ typography: { xs: "h4", md: "h2" } }}>
         Retailers
       </Typography>
       {retailersDetail.map((retailer) => (

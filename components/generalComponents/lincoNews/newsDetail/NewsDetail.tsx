@@ -18,7 +18,7 @@ function NewsDetail(props: { newsData: BlogRes }) {
       }}
       gap={{ xs: 4, md: 5 }}
     >
-      <Box sx={{ position: "relative", width: "100%", pt: "100%" }}>
+      <Box sx={{ position: "relative", width: "100%", pt: "72%" }}>
         <Image
           src={newsData.image || ""}
           fill
@@ -26,10 +26,10 @@ function NewsDetail(props: { newsData: BlogRes }) {
           alt={newsData.image_alt_text}
         />
       </Box>
-      <Box height={80}>
+      <Box height={70}>
         <Typography
           sx={{
-            typography: { xs: "h6", md: "h3" },
+            typography: { xs: "h6", md: "h5" },
             fontWeight: { xs: 700, md: 500 },
             overflow: "hidden",
             display: "-webkit-box",
@@ -71,7 +71,7 @@ function NewsDetail(props: { newsData: BlogRes }) {
         <CustomLink
           color={"#000"}
           href={`/news/${newsData.slug}`}
-          borderColor={theme.palette.lincoBlue.main}
+          borderColor={{ xs: theme.palette.lincoBlue.main }}
         >
           Read more
         </CustomLink>

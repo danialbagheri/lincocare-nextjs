@@ -20,14 +20,7 @@ export function BrandsTab(props: TabPanelProps) {
           aria-labelledby={`full-width-tab-${value}`}
           {...other}
         >
-          <BrandDetail
-            borderColor={brand.borderColor}
-            color={brand.color}
-            description={brand.description}
-            imageSrc={brand.imageSrc}
-            name={brand.name}
-            privateLabel={brand.name === "Private label"}
-          />
+          <BrandDetail details={brand} />
         </div>
       ))}
     </SwipeableViews>

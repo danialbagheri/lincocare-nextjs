@@ -28,13 +28,13 @@ const BRANDS = [
   },
   {
     id: BRANDS_ID.SILKIA_DEPILATORY,
-    title: "Silkia Depilatory",
+    title: "Silkia",
     imageSrc: "/images/brandsPopup/silkiaDepilatory.png",
     text: "Calypso is a sun and skin care brand with a wide range of products.",
   },
   {
     id: BRANDS_ID.SILKIA_PEDICARE,
-    title: "Silkia Pedicare",
+    title: "Pedicare",
     imageSrc: "/images/brandsPopup/silkiaPedicare.png",
     text: "Silkia is hair removal that leaves you with long lasting smoothness.",
   },
@@ -79,8 +79,9 @@ export function BrandsPopOver(props: PropsTypes) {
       anchorEl={anchorEle}
       onClose={handleClose}
       disableRestoreFocus
+      sx={{ "&>.MuiPopover-paper": { borderRadius: 0 } }}
     >
-      <Box onMouseLeave={handleClose}>
+      <Box onMouseLeave={handleClose} sx={{ width: 950, borderRadius: 0 }}>
         <Tabs
           value={value}
           indicatorColor="secondary"
@@ -101,18 +102,19 @@ export function BrandsPopOver(props: PropsTypes) {
 
                 fontSize: "18px",
                 fontStyle: "normal",
-                fontWeight: 500,
+                fontWeight: 700,
                 lineHeight: "30px",
                 textTransform: "unset",
+
+                padding: "8px 16px",
+
+                color: "#AFBCCC",
               },
               "&>button.Mui-selected": {
                 fontWeight: 700,
-                borderBottom: `3px solid ${theme.palette.lincoBlue.main}`,
+                borderBottom: `3px solid ${theme.palette.lincoBlue.dark}`,
+                color: theme.palette.lincoBlue.dark,
               },
-            },
-            "& .MuiTabs-indicator": {
-              top: "70px",
-              bgcolor: theme.palette.primary.main,
             },
           }}
         >
@@ -155,7 +157,11 @@ export function BrandsPopOver(props: PropsTypes) {
               style={{ marginTop: "30px" }}
             >
               <>
-                <Typography textAlign="center" fontSize="14px">
+                <Typography
+                  textAlign="center"
+                  fontSize="14px"
+                  color={theme.palette.lincoBlue.dark}
+                >
                   {brand.text}
                 </Typography>
 

@@ -7,6 +7,7 @@ interface CustomLinkTypes extends BoxProps {
   href: string;
   children: React.ReactNode;
   sx?: SxProps;
+  aSx?: SxProps;
 }
 
 export function CustomLink(props: CustomLinkTypes) {
