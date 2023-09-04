@@ -8,7 +8,7 @@ export function LincoBrands() {
   return (
     <>
       {BRANDS.map((brand) => (
-        <BrandDetail details={brand} />
+        <BrandDetail key={brand.id} details={brand} />
       ))}
     </>
   );

@@ -5,10 +5,11 @@ import { BRANDS_IMAGE } from "../../aboutUsPage/components";
 
 export function Brands() {
   return (
-    <Container py={{ xs: 15, md: 20 }} textAlign="center">
-      <Typography variant="h4" textAlign="center">
-        Brands
-      </Typography>
+    <Container
+      pt={{ xs: 15, md: 20 }}
+      pb={{ xs: 15, md: 19 }}
+      textAlign="center"
+    >
       <Box overflow="scroll" mt={{ xs: 12, md: 15 }}>
         <Box
           sx={{
@@ -33,6 +34,7 @@ export function Brands() {
         color="#000"
         borderColor={{ xs: "lincoBlue.main" }}
         mt={8}
+        aSx={{ px: 8 }}
       >
         All Linco brands
       </CustomLink>

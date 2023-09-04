@@ -17,6 +17,8 @@ import { Layout } from "layout";
 import { AppProvider } from "components/appProvider";
 /* -------------------------------------------------------------------------- */
 
+import "../styles/globals.css";
+
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props;
 

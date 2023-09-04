@@ -17,6 +17,9 @@ export function AboutLinco() {
           width: { xs: "100%", md: "50%" },
           py: { xs: 0, md: 25 },
           pr: { xs: 0, md: 25 },
+          position: { xs: "static", md: "sticky" },
+          top: { xs: 0, md: 200 },
+          height: "fit-content",
         }}
       >
         <Box
@@ -47,7 +50,7 @@ export function AboutLinco() {
             exploring new avenues of research and development to create
             revolutionary products that will change the skincare industry.{" "}
           </Typography>
-          <Divider
+          {/* <Divider
             sx={{
               position: "absolute",
               width: "150%",
@@ -56,7 +59,7 @@ export function AboutLinco() {
               display: { xs: "none", md: "block" },
             }}
             textAlign="right"
-          />
+          /> */}
         </Box>
       </Box>
       <Divider

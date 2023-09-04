@@ -8,7 +8,7 @@ import { Box, Stack, Typography, useTheme } from "@mui/material";
 
 /* ---------------------------- Local Components ---------------------------- */
 import { Container, CustomLink } from "shared";
-import { BrandDetailsType } from "components/constants";
+import { BrandDetailsType, BRANDS_ID } from "components/constants";
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
@@ -35,7 +35,7 @@ const BrandDescription = (props: BrandDescriptionTypes) => {
   const theme = useTheme();
 
   return (
-    <Box display={{ ...props.display }} mt={15}>
+    <Box display={{ ...props.display }} mt={{ xs: 15, md: 5 }}>
       <Typography
         color={props.privateLabel ? "#000" : "#FFFFFF"}
         mt={{ xs: "", md: 3 }}
@@ -85,6 +85,19 @@ const BrandDescription = (props: BrandDescriptionTypes) => {
 export default function BrandDetail(props: { details: BrandDetailsType }) {
   const { details } = props;
 
+  const renderBrandName = (details: BrandDetailsType) => {
+    if (details) {
+      if (
+        details.id === BRANDS_ID.SILKIA_DEPILATORY ||
+        details.id === BRANDS_ID.SILKIA_PEDICARE
+      ) {
+        return details.longName;
+      } else {
+        return details.name;
+      }
+    }
+  };
+
   return (
     <Stack
       sx={{
@@ -99,19 +112,19 @@ export default function BrandDetail(props: { details: BrandDetailsType }) {
       justifyContent={"center"}
       pb={{ xs: 14, md: 20 }}
       pt={20}
+      mb={{ xs: 0, md: "150px" }}
     >
       <Container>
         <Stack
-          alignItems={"center"}
+          alignItems={{ xs: "center", md: "flex-end" }}
           justifyContent={"center"}
           direction={{
             xs: "column",
             md: details?.privateLabel ? "row-reverse" : "row",
           }}
           gap={{ xs: 0, md: 10 }}
-          pt={{ xs: 0, md: 10 }}
         >
-          <Box width={"100%"}>
+          <Box width={{ xs: "100%", md: "40%" }}>
             <Typography
               textTransform={"capitalize"}
               color={details?.privateLabel ? "#000" : "#FFFFFF"}
@@ -122,7 +135,7 @@ export default function BrandDetail(props: { details: BrandDetailsType }) {
                 fontWeight: "700 ",
               }}
             >
-              {details?.name}
+              {renderBrandName(details)}
             </Typography>
             <BrandDescription
               privateLabel={details?.privateLabel}
@@ -133,10 +146,13 @@ export default function BrandDetail(props: { details: BrandDetailsType }) {
           </Box>
           <Box
             sx={{
-              width: "100%",
+              width: { xs: "100%", md: "60%" },
               position: "relative",
-              height: 320,
+              height: 420,
               mt: 8,
+              "&>img": {
+                mt: { xs: 0, md: details?.mt },
+              },
             }}
           >
             <Image

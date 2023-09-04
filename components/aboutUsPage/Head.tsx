@@ -1,39 +1,40 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import { HeadContainer } from "shared";
 
 export function Head() {
-  const theme = useTheme();
   return (
     <HeadContainer
       sx={{
-        backgroundColor: theme.palette.lincoBlue.main,
+        backgroundColor: "#002C60",
         overflow: "hidden",
+        position: "relative",
       }}
     >
       <Image
-        src={"/images/aboutUsPage/head/main.png"}
+        src={"/images/aboutUsPage/head.png"}
         alt="Accreditations"
         fill
-        style={{ objectFit: "cover", opacity: 0.5 }}
+        style={{
+          objectFit: "cover",
+          opacity: 0.5,
+          backgroundBlendMode: "color",
+        }}
         sizes={"100vw"}
         loading={"lazy"}
       />
       <Box
         sx={{
           position: "absolute",
-          maxWidth: "378px",
+          textAlign: "center",
           top: "50%",
-          right: { xs: "50%", md: "55%" },
-          textAlign: { xs: "center", md: "left" },
-          transform: { xs: "translate(50%,0)", md: "translate(0,0)" },
+          left: "50%",
+          transform: "translate(-50%,-50%)",
+          width: "90%",
         }}
       >
         <Typography sx={{ typography: { xs: "h4", md: "h1" } }} color="#fff">
-          40 years of ...
-        </Typography>
-        <Typography mt={4} color={"lincoBlue.dark"} variant="h4">
-          Skin Care Specialists
+          40 years of manufacturing excellence
         </Typography>
       </Box>
     </HeadContainer>

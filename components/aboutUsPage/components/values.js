@@ -38,18 +38,18 @@ export const ACHIEVEMENTS = [
 export const BRANDS_IMAGE = [
   {
     id: "cabana",
-    src: "/images/aboutUsPage/brands/cabana.png",
+    src: "/images/brandsSample/cabanaSun.png",
   },
   {
     id: "calypso",
-    src: "/images/aboutUsPage/brands/calypso.png",
+    src: "/images/brandsSample/calypso.png",
   },
   {
     id: "dimples",
-    src: "/images/aboutUsPage/brands/dimples.png",
+    src: "/images/brandsSample/dimples.png",
   },
   {
     id: "silkia",
-    src: "/images/aboutUsPage/brands/silkiaPedicare.png",
+    src: "/images/brandsSample/silkia.png",
   },
 ];

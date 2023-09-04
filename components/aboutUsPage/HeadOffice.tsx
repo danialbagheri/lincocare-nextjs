@@ -33,11 +33,11 @@ export function HeadOffice() {
         <Box
           sx={{
             position: "absolute",
-            height: "45%",
+            height: { xs: "57%", md: "59%" },
             bgcolor: { xs: "#FFF", md: BACKGROUND_COLOR },
             left: 0,
             right: 0,
-            top: "50%",
+            top: { xs: "57%", md: "49%" },
             transform: "translate(0,-50%)",
           }}
         />

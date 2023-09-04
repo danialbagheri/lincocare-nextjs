@@ -37,6 +37,15 @@ button {
   font-weight: bold;
 }
 
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @keyframes slide {
   0% {
     transform: translate3d(0, 0, 0);

@@ -7,10 +7,11 @@ interface CustomLinkTypes extends BoxProps {
   href: string;
   children: React.ReactNode;
   sx?: SxProps;
-  aSx?: SxProps;
+  aSx?: any;
 }
 
 export function CustomLink(props: CustomLinkTypes) {
+  const { aSx = {} } = props;
   const theme = useTheme();
 
   return (
@@ -27,6 +28,7 @@ export function CustomLink(props: CustomLinkTypes) {
             ? { ...props.borderColor }
             : theme.palette.lincoYellow.main,
           p: 2,
+          ...aSx,
         },
         ...props.sx,
       }}

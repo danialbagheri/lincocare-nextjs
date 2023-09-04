@@ -10,7 +10,7 @@ export function Achievements() {
         variant="h4"
         textAlign="center"
         pt={{ xs: 17, md: 20 }}
-        mb={{ xs: 8, md: 0 }}
+        mb={{ xs: 8, md: 25 }}
       >
         Achievements
       </Typography>
@@ -22,7 +22,7 @@ export function Achievements() {
           mb: 5,
 
           flexDirection: "row",
-          justifyContent: "center",
+          justifyContent: "space-between",
           rowGap: 17,
           columnGap: 9,
           flexWrap: "wrap",

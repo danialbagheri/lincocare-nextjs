@@ -3,7 +3,9 @@ import { theme } from "theme";
 export interface BrandDetailsType {
   id: string;
   name: string;
+  longName?: string;
   imageSrc: string;
+  mt: string;
   description: string;
   color: string;
   borderColor: string;
@@ -36,9 +38,10 @@ export const BRANDS = [
   {
     id: BRANDS_ID.CALYPSO,
     name: "Calypso",
-    imageSrc: "/images/brands/calypso.png",
+    imageSrc: "/images/brands2/calypso.png",
+    mt: "8px",
     description:
-      "Calypso is a British sun care brand, providing customers with quality sun care products at exceptionally low prices. Calypso products are not only available to buy in the UK, but also many countries around the globe.",
+      "Calypso offers a comprehensive range of sun care products for all skin types and the whole family.",
     color: theme.palette.calypsoOrange.main,
     borderColor: theme.palette.calypsoOrange.main,
     knowMoreLink: "",
@@ -93,9 +96,10 @@ export const BRANDS = [
   {
     id: BRANDS_ID.CABANA,
     name: "Cabana",
-    imageSrc: "/images/brands/cabana.png",
+    imageSrc: "/images/brands2/cabana.png",
+    mt: "0",
     description:
-      "Cabana Sun offers protection and tan in the same bottle helping you stay safe while tanning. Our bestsellers are our Dry Coco Oil and our Tropical Sun Lotion Spray.",
+      "Cabana offers protection and tan enhancement in the same bottle, helping you stay safe while tanning. ",
     color: theme.palette.cabanaBrown.main,
     borderColor: theme.palette.lincoBlue.main,
     knowMoreLink: "",
@@ -146,7 +150,9 @@ export const BRANDS = [
   {
     id: BRANDS_ID.SILKIA_PEDICARE,
     name: "Pedicare",
-    imageSrc: "/images/brands/silkiaPedicare.png",
+    longName: "Silkia Pedicare",
+    imageSrc: "/images/brands2/silkiaPedicare.png",
+    mt: "0",
     description:
       "Silkia PediCare Cracked Heel Repair Cream is a specially formulated treatment using multi-patented Keratin technology to actively repair your dry, cracked heels.",
     color: theme.palette.silkiaBlue.main,
@@ -181,9 +187,11 @@ export const BRANDS = [
   {
     id: BRANDS_ID.SILKIA_DEPILATORY,
     name: "Silkia",
-    imageSrc: "/images/brands/silkiaDepilatory.png",
+    longName: "Silkia Depilatory",
+    imageSrc: "/images/brands2/silkiaDepilatory.png",
+    mt: "23px",
     description:
-      "Silkia Depilatory is your one stop hair removal product providing you with long lasting smoothness that will make everyone else wonder what your secret is.",
+      "Silkia Depilatory is your one stop hair removal product, providing you with long lasting smoothness that will make everyone wonder what your secret is.",
     color: theme.palette.silkiaDepilatory.main,
     borderColor: theme.palette.primary.main,
     knowMoreLink: "",
@@ -223,7 +231,8 @@ export const BRANDS = [
   {
     id: BRANDS_ID.DIMPLES,
     name: "Dimples",
-    imageSrc: "/images/brands/dimples.png",
+    imageSrc: "/images/brands2/dimples.png",
+    mt: "16px",
     description:
       "Dimples range includes body wax strips, hair removal cream, bleach cream and spray foams so that no matter your skin type or preferences, there’s a Dimples product for you.",
     color: theme.palette.dimplesBlue.main,
@@ -266,7 +275,8 @@ export const BRANDS = [
   {
     id: BRANDS_ID.SUN_TROPIC,
     name: "Sun Tropic",
-    imageSrc: "/images/brands/sunTropic.png",
+    imageSrc: "/images/brands2/sunTropic.png",
+    mt: "-3px",
     description:
       "This unique handbag size range offers both UVA and UVB protection. All products are water-resistant, so you don’t need to worry about getting burned at the beach or in the pool.",
     color: theme.palette.sunTropic.main,
@@ -322,7 +332,8 @@ export const BRANDS = [
   {
     id: BRANDS_ID.RE_GEN,
     name: "Re-Gen",
-    imageSrc: "/images/brands/reGen.png",
+    imageSrc: "/images/brands2/reGen.png",
+    mt: "5px",
     description:
       "Re-Gen is a range of specialized skin care products that help to fight against ageing, scars, stretch marks, dry skin and uneven skin tone.",
     color: theme.palette.regenPink.main,
@@ -378,7 +389,8 @@ export const BRANDS = [
   {
     id: BRANDS_ID.PRIVATE_LABEL,
     name: "Private label",
-    imageSrc: "/images/brands/privateLabel.png",
+    imageSrc: "/images/brands2/privateLabel.png",
+    mt: "60px",
     description:
       "This unique handbag size range offers both UVA and UVB protection. All products are water-resistant, so you don’t need to worry about getting burned at the beach or in the pool.",
     color: "#EFF1F3",

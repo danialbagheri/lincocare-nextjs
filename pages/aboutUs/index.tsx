@@ -4,12 +4,12 @@ import {
   GlobalMarket,
   Head,
   HeadOffice,
+  Retailers,
 } from "components/aboutUsPage";
 import {
   Accreditations,
   Brands,
   LincoNews,
-  Retailers,
 } from "components/generalComponents";
 import { LincoDivider } from "shared";
 
@@ -23,7 +23,7 @@ function AboutUs() {
       <HeadOffice />
       <GlobalMarket />
       <Achievements />
-      <Retailers sx={{ pt: 40 }} />
+      <Retailers />
 
       <LincoDivider sx={{ mt: { xs: 17, md: 19 } }} />
       <Accreditations sx={{ pt: 25 }} />
@@ -31,7 +31,7 @@ function AboutUs() {
       <LincoDivider sx={{ mt: { xs: 17, md: 19 } }} />
       <Brands />
 
-      <LincoDivider sx={{ mt: { xs: 17, md: 19 }, mb: 19 }} />
+      <LincoDivider sx={{ mb: 19 }} />
       <LincoNews />
     </>
   );

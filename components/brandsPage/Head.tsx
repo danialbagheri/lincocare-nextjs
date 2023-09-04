@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, SxProps, Typography } from "@mui/material";
 import Image from "next/image";
 import { Container, CustomLink, HeadContainer } from "shared";
 
@@ -6,7 +6,7 @@ export function Head() {
   return (
     <HeadContainer
       bgcolor={"lincoBlue.dark"}
-      sx={{ height: { xs: 630, md: 700, xl: 910 } }}
+      sx={{ height: { xs: 630, md: 800, xl: 850 } }}
     >
       <Container>
         <Stack
@@ -18,32 +18,23 @@ export function Head() {
             Linco brands
           </Typography>
           <Typography mt={3} variant={"h4"} color={"#77B4FB"}>
-            Supporting sentence
+            Our diverse range of brands
           </Typography>
           <Box
             sx={{
-              width: { md: "70%", lg: "60%" },
+              width: "100%",
               pt: "30%",
               position: "relative",
+              mt: 20,
             }}
           >
             <Image
-              src={"/images/brandsPage/head/allBrands.png"}
+              src={"/images/brandsPage/allBrands.png"}
               alt="Accreditations"
               fill
-              style={{ objectFit: "contain", zIndex: 20 }}
+              style={{ objectFit: "contain" }}
               sizes={"100vw"}
               loading={"lazy"}
-            />
-            <Box
-              sx={{
-                width: "100%",
-                position: "absolute",
-                bgcolor: "#fff",
-                height: "35%",
-                bottom: "17%",
-                borderRadius: "50%",
-              }}
             />
           </Box>
         </Stack>

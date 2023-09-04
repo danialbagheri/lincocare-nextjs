@@ -3,13 +3,19 @@ import { Box, Divider, SxProps, Typography } from "@mui/material";
 import { Container } from "shared";
 import Image from "next/image";
 
-const renderBrandsLogo = (retailerCount: number, retailer: string) => {
+export const retailersDetail = [
+  { title: "UK and Ireland retailers", count: 13, retail: "uk" },
+  { title: "Overseas retailers", count: 6, retail: "overseas" },
+];
+
+export const renderBrandsLogo = (retailerCount: number, retailer: string) => {
   const brandsArray = [];
   for (let i = 0; i < retailerCount; i++) {
     brandsArray.push(
       <Box
         sx={{
           width: { xs: "84px", md: "157px" },
+          minWidth: { xs: "84px", md: "157px" },
           height: { xs: "42px", md: "80px" },
           position: "relative",
         }}
@@ -64,11 +70,6 @@ const RetailerItem = (props: {
 };
 
 function Retailers(props: { sx?: SxProps }) {
-  const retailersDetail = [
-    { title: "UK and Ireland retailers", count: 13, retail: "uk" },
-    { title: "Overseas retailers", count: 6, retail: "overseas" },
-  ];
-
   return (
     <Container
       sx={{ alignItems: "center", pt: { xs: 17, md: 55 }, ...props.sx }}

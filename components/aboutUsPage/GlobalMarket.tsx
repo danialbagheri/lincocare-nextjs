@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import { Container } from "shared";
 
@@ -38,15 +38,20 @@ export function GlobalMarket() {
       </Typography>
       <Countries />
 
-      <Container pt={{ xs: "33%", md: "23.03%" }} position="relative">
-        <Image
-          src={"/images/aboutUsPage/about/global.png"}
-          alt="Accreditations"
-          fill
-          style={{ objectFit: "contain" }}
-          sizes={"100vw"}
-          loading={"lazy"}
-        />
+      <Container
+        sx={{ width: { xs: "100%", md: "min(1160px,80%)" } }}
+        fullWidth
+      >
+        <Box pt="51%" width="100%" position="relative">
+          <Image
+            src={"/images/aboutUsPage/about/global.png"}
+            alt="Accreditations"
+            fill
+            style={{ objectFit: "contain" }}
+            sizes={"100vw"}
+            loading={"lazy"}
+          />
+        </Box>
       </Container>
       <Countries mobile />
     </>

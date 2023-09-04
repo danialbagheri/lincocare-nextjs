@@ -79,7 +79,7 @@ export function BrandsPopOver(props: PropsTypes) {
       anchorEl={anchorEle}
       onClose={handleClose}
       disableRestoreFocus
-      sx={{ "&>.MuiPopover-paper": { borderRadius: 0 } }}
+      sx={{ "&>.MuiPopover-paper": { borderRadius: 0 }, zIndex: 1000 }}
     >
       <Box onMouseLeave={handleClose} sx={{ width: 950, borderRadius: 0 }}>
         <Tabs

@@ -37,7 +37,7 @@ export function AboutUsPopOver(props: PropsTypes) {
       anchorEl={anchorEle}
       onClose={handleClose}
       disableRestoreFocus
-      sx={{ "&>.MuiPopover-paper": { borderRadius: 0 } }}
+      sx={{ "&>.MuiPopover-paper": { borderRadius: 0 }, zIndex: 1000 }}
     >
       <Box
         sx={{

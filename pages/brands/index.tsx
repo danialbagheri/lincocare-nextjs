@@ -1,7 +1,6 @@
-import { Divider } from "@mui/material";
 import { Head, LincoBrands } from "components/brandsPage";
 import { Accreditations } from "components/generalComponents";
-import { Container, LincoDivider } from "shared";
+import { LincoDivider } from "shared";
 
 function Brands() {
   return (
@@ -9,9 +8,9 @@ function Brands() {
       <Head />
       <LincoBrands />
 
-      <LincoDivider fullWidth sx={{ mt: 17, mb: { xs: 16, md: 17 } }} />
+      <LincoDivider fullWidth sx={{ mt: 17, mb: { xs: 16, md: 32 } }} />
 
-      <Accreditations />
+      <Accreditations sx={{ xs: 16, mb: 46 }} />
     </>
   );
 }
