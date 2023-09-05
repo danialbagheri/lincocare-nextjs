@@ -18,8 +18,8 @@ const BUTTON_DATA = [
 ];
 
 const FIELDS = [
-  { title: "First name", id: "firstName" },
-  { title: "Surname", id: "surname" },
+  { title: "Name", id: "firstName" },
+  { title: "Company", id: "company" },
   { title: "Email", id: "email" },
   { title: "Phone", id: "phone" },
 ];
@@ -37,7 +37,7 @@ export function UserProfile(props: FieldsPropsTypes) {
         mt: { xs: 5, md: 10 },
       }}
     >
-      <SelectFields
+      {/* <SelectFields
         DATA={BUTTON_DATA}
         onChangeHandler={(e) =>
           setFormData((prev: any) => ({
@@ -46,7 +46,7 @@ export function UserProfile(props: FieldsPropsTypes) {
           }))
         }
         value={formData.contactType}
-      />
+      /> */}
 
       <TextFields
         DATA={FIELDS}

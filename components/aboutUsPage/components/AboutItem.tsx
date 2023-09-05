@@ -19,8 +19,8 @@ export function AboutItem(props: PropTypes) {
         mt={6}
         sx={{
           display: { xs: "-webkit-box", md: "block" },
-          "-webkit-line-clamp": { xs: "3", md: "unset" },
-          "-webkit-box-orient": { xs: "vertical", md: "unset" },
+          webkitLineClamp: { xs: "3", md: "unset" },
+          webkitBoxOrient: { xs: "vertical", md: "unset" },
           overflow: { xs: "hidden", md: "visible" },
         }}
       >

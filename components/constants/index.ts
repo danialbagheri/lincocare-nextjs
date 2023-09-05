@@ -38,8 +38,8 @@ export const BRANDS = [
   {
     id: BRANDS_ID.CALYPSO,
     name: "Calypso",
-    imageSrc: "/images/brands2/calypso.png",
-    mt: "8px",
+    imageSrc: "/images/brands/calypso.png",
+    mt: "0px",
     description:
       "Calypso offers a comprehensive range of sun care products for all skin types and the whole family.",
     color: theme.palette.calypsoOrange.main,
@@ -96,7 +96,7 @@ export const BRANDS = [
   {
     id: BRANDS_ID.CABANA,
     name: "Cabana",
-    imageSrc: "/images/brands2/cabana.png",
+    imageSrc: "/images/brands/cabana.png",
     mt: "0",
     description:
       "Cabana offers protection and tan enhancement in the same bottle, helping you stay safe while tanning. ",
@@ -151,7 +151,7 @@ export const BRANDS = [
     id: BRANDS_ID.SILKIA_PEDICARE,
     name: "Pedicare",
     longName: "Silkia Pedicare",
-    imageSrc: "/images/brands2/silkiaPedicare.png",
+    imageSrc: "/images/brands/silkiaPedicare.png",
     mt: "0",
     description:
       "Silkia PediCare Cracked Heel Repair Cream is a specially formulated treatment using multi-patented Keratin technology to actively repair your dry, cracked heels.",
@@ -188,8 +188,8 @@ export const BRANDS = [
     id: BRANDS_ID.SILKIA_DEPILATORY,
     name: "Silkia",
     longName: "Silkia Depilatory",
-    imageSrc: "/images/brands2/silkiaDepilatory.png",
-    mt: "23px",
+    imageSrc: "/images/brands/silkiaDepilatory.png",
+    mt: "03px",
     description:
       "Silkia Depilatory is your one stop hair removal product, providing you with long lasting smoothness that will make everyone wonder what your secret is.",
     color: theme.palette.silkiaDepilatory.main,
@@ -231,8 +231,8 @@ export const BRANDS = [
   {
     id: BRANDS_ID.DIMPLES,
     name: "Dimples",
-    imageSrc: "/images/brands2/dimples.png",
-    mt: "16px",
+    imageSrc: "/images/brands/dimples.png",
+    mt: "06px",
     description:
       "Dimples range includes body wax strips, hair removal cream, bleach cream and spray foams so that no matter your skin type or preferences, there’s a Dimples product for you.",
     color: theme.palette.dimplesBlue.main,
@@ -275,8 +275,8 @@ export const BRANDS = [
   {
     id: BRANDS_ID.SUN_TROPIC,
     name: "Sun Tropic",
-    imageSrc: "/images/brands2/sunTropic.png",
-    mt: "-3px",
+    imageSrc: "/images/brands/sunTropic.png",
+    mt: "03px",
     description:
       "This unique handbag size range offers both UVA and UVB protection. All products are water-resistant, so you don’t need to worry about getting burned at the beach or in the pool.",
     color: theme.palette.sunTropic.main,
@@ -332,8 +332,8 @@ export const BRANDS = [
   {
     id: BRANDS_ID.RE_GEN,
     name: "Re-Gen",
-    imageSrc: "/images/brands2/reGen.png",
-    mt: "5px",
+    imageSrc: "/images/brands/reGen.png",
+    mt: "0px",
     description:
       "Re-Gen is a range of specialized skin care products that help to fight against ageing, scars, stretch marks, dry skin and uneven skin tone.",
     color: theme.palette.regenPink.main,
@@ -389,7 +389,7 @@ export const BRANDS = [
   {
     id: BRANDS_ID.PRIVATE_LABEL,
     name: "Private label",
-    imageSrc: "/images/brands2/privateLabel.png",
+    imageSrc: "/images/brands/privateLabel.png",
     mt: "60px",
     description:
       "This unique handbag size range offers both UVA and UVB protection. All products are water-resistant, so you don’t need to worry about getting burned at the beach or in the pool.",

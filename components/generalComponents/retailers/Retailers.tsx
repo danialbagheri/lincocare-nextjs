@@ -13,6 +13,7 @@ export const renderBrandsLogo = (retailerCount: number, retailer: string) => {
   for (let i = 0; i < retailerCount; i++) {
     brandsArray.push(
       <Box
+        className="centralize"
         sx={{
           width: { xs: "84px", md: "157px" },
           minWidth: { xs: "84px", md: "157px" },

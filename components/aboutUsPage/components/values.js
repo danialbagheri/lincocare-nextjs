@@ -17,22 +17,26 @@ export const ABOUT_ITEM = [
 ];
 
 export const ACHIEVEMENTS = [
-  {
-    title: "1M",
-    subtitle: "Filling capacity",
-  },
-  {
-    title: "60",
-    subtitle: "Countries",
-  },
-  {
-    title: "700+",
-    subtitle: "Product formulations",
-  },
-  {
-    title: "70+",
-    subtitle: "Sun care formulations",
-  },
+  [
+    {
+      title: "1M",
+      subtitle: "Filling capacity",
+    },
+    {
+      title: "60",
+      subtitle: "Countries",
+    },
+  ],
+  [
+    {
+      title: "700+",
+      subtitle: "Product formulations",
+    },
+    {
+      title: "70+",
+      subtitle: "Sun care formulations",
+    },
+  ],
 ];
 
 export const BRANDS_IMAGE = [

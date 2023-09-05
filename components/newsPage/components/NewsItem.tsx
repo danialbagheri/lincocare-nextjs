@@ -48,11 +48,18 @@ export function NewsItem(props: PropTypes) {
         }}
       >
         <Link href={`news/${data.slug}`}>
-          <Typography variant="h5" lineHeight={"164%"}>
+          <Typography
+            sx={{
+              fontSize: "28px",
+              fontStyle: "normal",
+              fontWeight: 500,
+              lineHeight: "37px",
+            }}
+          >
             {data?.title}
           </Typography>
         </Link>
-        <Typography color="lincoBlue.main" mt={2}>
+        <Typography color="lincoBlue.main" mt={4}>
           {`${day} ${month}, ${year}`}
         </Typography>
       </Box>

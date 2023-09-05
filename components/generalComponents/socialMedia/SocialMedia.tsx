@@ -1,10 +1,10 @@
 import { IconButton, Stack, SxProps } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import Instagram from "@mui/icons-material/Instagram";
+import { useRouter } from "next/router";
 
-const IconLink = (props: { children: React.ReactNode }) => {
+const IconLink = (props: { children: React.ReactNode; href: string }) => {
   return (
     <IconButton
       sx={{
@@ -19,6 +19,10 @@ const IconLink = (props: { children: React.ReactNode }) => {
         transition: "200ms all",
         "&>svg": { fontSize: "2.5rem", fill: "#FFF" },
         "&:hover": { bgcolor: "#31528b", transform: "scale(1.2)" },
+      }}
+      onClick={() => {
+        const win = window.open(props.href, "_blank");
+        win?.focus();
       }}
     >
       {props.children}
@@ -45,27 +49,46 @@ export function SocialMedia(props: { sx?: SxProps }) {
           />
         </svg>
       ),
-      link: "",
+      link: "https://www.facebook.com/lincocare",
     },
     {
       id: "twitter",
-      icon: <TwitterIcon />,
-      link: "",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          shape-rendering="geometricPrecision"
+          text-rendering="geometricPrecision"
+          image-rendering="optimizeQuality"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          viewBox="0 0 512 509.64"
+          style={{ fill: "#31528b" }}
+        >
+          <rect width="512" height="509.64" rx="115.61" ry="115.61" />
+          <path
+            style={{ transform: "translate(-120px, -115px) scale(1.5)" }}
+            fill="#FFF"
+            fill-rule="nonzero"
+            d="M323.74 148.35h36.12l-78.91 90.2 92.83 122.73h-72.69l-56.93-74.43-65.15 74.43h-36.14l84.4-96.47-89.05-116.46h74.53l51.46 68.04 59.53-68.04zm-12.68 191.31h20.02l-129.2-170.82H180.4l130.66 170.82z"
+          />
+        </svg>
+      ),
+      link: "https://twitter.com/lincocare",
     },
     {
       id: "instagram",
       icon: <Instagram />,
-      link: "",
+      link: "https://www.instagram.com/lincocare_/",
     },
     {
       id: "youtube",
       icon: <YouTubeIcon />,
-      link: "",
+      link: "https://www.youtube.com/channel/UCl0-N0lOSjoPYlc26LN-6mA",
     },
     {
       id: "linkedIn",
       icon: <LinkedInIcon />,
-      link: "",
+      link: "https://www.linkedin.com/company/lincocare/",
     },
   ];
 
@@ -77,7 +100,9 @@ export function SocialMedia(props: { sx?: SxProps }) {
       justifyContent={{ xs: "center", md: "flex-start" }}
     >
       {socialMedias.map((socialMedia) => (
-        <IconLink key={socialMedia.id}>{socialMedia.icon}</IconLink>
+        <IconLink key={socialMedia.id} href={socialMedia.link}>
+          {socialMedia.icon}
+        </IconLink>
       ))}
     </Stack>
   );

@@ -23,7 +23,8 @@ export function TextFields(props: PropsTypes) {
     >
       {DATA.map((_data) => (
         <TextField
-          required={required}
+          key={_data.id}
+          required={_data.id === "phone" ? false : true}
           label={_data.title}
           value={formData[_data.id as keyof FormDataTypes]}
           onChange={(e) => onChangeHandler(e, _data.id)}

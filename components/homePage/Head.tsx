@@ -7,7 +7,15 @@ import { HeadContainer } from "shared";
 import { Box, Stack, Typography, useTheme } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 /* -------------------------------------------------------------------------- */
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 /* -------------------------------------------------------------------------- */
+
+const HEADER_TITLES = [
+  { id: "formulation", title: "700+ Product Formulations", href: "" },
+  { id: "crafting", title: "Crafting Excellence, Nurturing beauty", href: "" },
+  { id: "custom", title: "Here is our custom Title", href: "" },
+];
 
 export function Head() {
   const theme = useTheme();
@@ -48,13 +56,13 @@ export function Head() {
         <Box
           sx={{
             position: "absolute",
-            maxWidth: "378px",
+            width: { xs: "90%", md: "600px" },
             top: "40%",
             left: { xs: "50%", md: "20%" },
             textAlign: { xs: "center", md: "left" },
             transform: { xs: "translate(-50%,0)", md: "translate(0,0)" },
 
-            "&>a": {
+            "& a": {
               display: "inline-block",
               textDecoration: "none",
               p: 2,
@@ -65,17 +73,27 @@ export function Head() {
             },
           }}
         >
-          <Typography sx={{ typography: { xs: "h4", md: "h1" } }} color="#fff">
-            700+ Product Formulations
-          </Typography>
-          <Typography
-            mt={4}
-            color={"lincoBlue.dark"}
-            sx={{ typography: { xs: "h3", md: "h4" } }}
+          <Slide
+            autoplay
+            slidesToScroll={1}
+            duration={3000}
+            transitionDuration={500}
+            slidesToShow={1}
+            indicators={false}
+            arrows={false}
           >
-            Crafting Excellence, Nurturing beauty
-          </Typography>
-          <Link href={""}>Know more</Link>
+            {HEADER_TITLES.map((headerTitle) => (
+              <Box key={headerTitle.id}>
+                <Typography
+                  sx={{ typography: { xs: "h4", md: "h1" } }}
+                  color="#fff"
+                >
+                  {headerTitle.title}
+                </Typography>
+                <Link href={headerTitle.href}>Know more</Link>
+              </Box>
+            ))}
+          </Slide>
         </Box>
       </HeadContainer>
       <Box

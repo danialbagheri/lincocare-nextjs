@@ -28,18 +28,31 @@ export function Achievements() {
           flexWrap: "wrap",
         }}
       >
-        {ACHIEVEMENTS.map((achievement) => (
+        {ACHIEVEMENTS.map((part, i) => (
           <Box
-            key={achievement.title}
-            color="lincoBlue.main"
-            textAlign="center"
+            key={i}
+            sx={{
+              display: "flex",
+              flexGrow: 1,
+              justifyContent: "space-around",
+            }}
           >
-            <Typography sx={{ typography: { xs: "h1", md: "h0" } }}>
-              {achievement.title}
-            </Typography>
-            <Typography sx={{ typography: { xs: "body1", md: "subtitle1" } }}>
-              {achievement.subtitle}
-            </Typography>
+            {part.map((achievement) => (
+              <Box
+                key={achievement.title}
+                color="lincoBlue.main"
+                textAlign="center"
+              >
+                <Typography sx={{ typography: { xs: "h1", md: "h0" } }}>
+                  {achievement.title}
+                </Typography>
+                <Typography
+                  sx={{ typography: { xs: "body1", md: "subtitle1" } }}
+                >
+                  {achievement.subtitle}
+                </Typography>
+              </Box>
+            ))}
           </Box>
         ))}
       </Stack>

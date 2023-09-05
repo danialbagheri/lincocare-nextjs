@@ -53,9 +53,9 @@ export function ContactForm(props: PropsTypes) {
           Contact form
         </Typography>
         <UserProfile formData={formData} setFormData={setFormData} />
-        <RequiredServices formData={formData} setFormData={setFormData} />
-        <ProductCategory formData={formData} setFormData={setFormData} />
-        <CompanyDetails formData={formData} setFormData={setFormData} />
+        {/* <RequiredServices formData={formData} setFormData={setFormData} /> */}
+        {/* <ProductCategory formData={formData} setFormData={setFormData} />
+        <CompanyDetails formData={formData} setFormData={setFormData} /> */}
         <Message formData={formData} setFormData={setFormData} />
         <SubmitBtn formData={formData} setFormData={setFormData} />
       </Box>

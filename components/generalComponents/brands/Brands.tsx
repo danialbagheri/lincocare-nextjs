@@ -1,6 +1,8 @@
-import { Box, Typography } from "@mui/material";
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 import Image from "next/image";
 import { Container, CustomLink } from "shared";
+
 import { BRANDS_IMAGE } from "../../aboutUsPage/components";
 
 export function Brands() {
@@ -10,25 +12,35 @@ export function Brands() {
       pb={{ xs: 15, md: 19 }}
       textAlign="center"
     >
-      <Box overflow="scroll" mt={{ xs: 12, md: 15 }}>
-        <Box
-          sx={{
-            display: "flex",
-            gap: 22,
-            animation: "slide 15s linear infinite",
-          }}
-        >
-          {BRANDS_IMAGE.map((img) => (
-            <Image
-              key={img.id}
-              src={img.src}
-              width={168}
-              height={79}
-              alt={img.id}
-            />
-          ))}
-        </Box>
-      </Box>
+      <Slide
+        autoplay
+        slidesToScroll={1}
+        duration={1000}
+        transitionDuration={500}
+        slidesToShow={2}
+        indicators={false}
+        arrows={false}
+        responsive={[
+          {
+            breakpoint: 400,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+            },
+          },
+        ]}
+      >
+        {BRANDS_IMAGE.map((img) => (
+          <Image
+            key={img.id}
+            src={img.src}
+            width={168}
+            height={79}
+            alt={img.id}
+          />
+        ))}
+      </Slide>
+
       <CustomLink
         href="/brands"
         color="#000"

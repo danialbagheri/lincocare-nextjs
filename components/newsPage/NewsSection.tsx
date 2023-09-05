@@ -75,6 +75,12 @@ export function NewsSection(props: PropTypes) {
             flexDirection: "column",
             gap: 7,
             "&>div": { width: "100%" },
+            "& a>p": {
+              fontSize: "42px",
+              fontStyle: "normal",
+              fontWeight: 500,
+              lineHeight: "52px",
+            },
           },
         }}
         gap={{ xs: 10, md: 14 }}
