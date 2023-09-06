@@ -64,8 +64,7 @@ function NewsDetail(props: { newsData: BlogRes }) {
               whiteSpace: "pre-wrap",
             }}
           >
-            {/* {HTMLReactParser(newsData?.body || "")} */}
-            {newsData?.excerpt}
+            {newsData?.plain_body}
           </Typography>
         </Box>
         <CustomLink

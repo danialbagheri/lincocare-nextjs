@@ -44,7 +44,6 @@ export function NewsItem(props: PropTypes) {
             textDecoration: "none",
             color: "#000",
           },
-          "&>a:hover": { textDecoration: "underline" },
         }}
       >
         <Link href={`news/${data.slug}`}>

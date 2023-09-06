@@ -107,6 +107,7 @@ export function NewsSection(props: PropTypes) {
               "&:hover": {
                 bgcolor: "transparent",
               },
+              display: btnDisable ? "none" : "block",
             }}
             disabled={btnDisable}
             onClick={loadMoreHandler}

@@ -43,9 +43,9 @@ export default function News(props: PropTypes) {
             count={data.count}
             sx={{ flexGrow: { xs: 1, md: 2 } }}
           />
-          <Divider orientation="vertical" sx={{ height: "unset" }} />
+          {/* <Divider orientation="vertical" sx={{ height: "unset" }} /> */}
 
-          <SocialMediaSection sx={{ flexGrow: 1 }} />
+          {/* <SocialMediaSection sx={{ flexGrow: 1 }} /> */}
         </>
       )}
     </Container>

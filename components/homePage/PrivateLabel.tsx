@@ -98,6 +98,24 @@ export function PrivateLabel() {
       </Box>
       <Box
         sx={{
+          position: "relative",
+          height: 600,
+          width: "100%",
+          mt: "100px",
+          display: { xs: "block", md: "none" },
+        }}
+      >
+        <Image
+          alt={"Private label process"}
+          fill
+          src={"/images/homePage/privateLabel/privateLabelProcessMobile.png"}
+          style={{ objectFit: "contain" }}
+          sizes={"100vw"}
+          loading={"lazy"}
+        />
+      </Box>
+      <Box
+        sx={{
           margin: "0 auto",
           pt: 25,
           display: { xs: "none", md: "block" },

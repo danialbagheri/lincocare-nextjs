@@ -23,14 +23,14 @@ export default function NewsItem() {
         }}
       >
         <SingleNewsSection />
-        <Divider
+        {/* <Divider
           orientation="vertical"
           sx={{ height: "unset", display: { xs: "none", md: "block" } }}
-        />
-        <LincoDivider conSx={{ display: { xs: "block", md: "none" } }} />
+        /> */}
+        {/* <LincoDivider conSx={{ display: { xs: "block", md: "none" } }} />
         <SocialMediaSection
           sx={{ flexGrow: 1, maxWidth: "min(30%,500px)", minWidth: "350px" }}
-        />
+        /> */}
       </Box>
     </>
   );

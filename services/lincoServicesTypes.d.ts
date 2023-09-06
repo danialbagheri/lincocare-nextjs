@@ -8,6 +8,7 @@ export interface BlogRes {
   image_height: number;
   image_width: number;
   is_bookmarked: boolean;
+  plain_body: string;
   publish_date: string;
   published: boolean;
   read_time: string;
