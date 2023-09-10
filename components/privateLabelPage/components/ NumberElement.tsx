@@ -3,7 +3,7 @@ import { Box, SxProps, Typography, useTheme } from "@mui/material";
 export function NumberElement(props: {
   number: number;
   sx?: SxProps;
-  hover: boolean;
+  active: boolean;
 }) {
   const theme = useTheme();
   return (
@@ -13,7 +13,7 @@ export function NumberElement(props: {
         width: 72,
         height: 72,
         border: `2px solid ${
-          props.hover ? "#FFF" : theme.palette.lincoBlue.main
+          props.active ? "#FFF" : theme.palette.lincoBlue.main
         }`,
         borderRadius: "50%",
         left: { xs: "50%", md: 0 },
@@ -25,12 +25,12 @@ export function NumberElement(props: {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        bgcolor: props.hover ? "transparent" : "#FFFFFF",
+        bgcolor: props.active ? "transparent" : "#FFFFFF",
 
         ...props.sx,
       }}
     >
-      {props.hover ? (
+      {props.active ? (
         <>
           <Box
             sx={{
@@ -60,7 +60,7 @@ export function NumberElement(props: {
       ) : null}
       <Typography
         variant="h3thin"
-        color={props.hover ? "#FFFFFF" : "lincoBlue.main"}
+        color={props.active ? "#FFFFFF" : "lincoBlue.main"}
       >
         {props.number}
       </Typography>

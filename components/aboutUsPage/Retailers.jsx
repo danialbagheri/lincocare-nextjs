@@ -28,7 +28,7 @@ export function Retailers() {
       <Slide
         autoplay
         slidesToScroll={1}
-        duration={1000}
+        duration={1750}
         transitionDuration={500}
         slidesToShow={2}
         indicators={false}
