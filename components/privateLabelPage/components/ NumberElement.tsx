@@ -1,69 +1,26 @@
-import { Box, SxProps, Typography, useTheme } from "@mui/material";
+import { Box, SxProps, Typography } from "@mui/material";
 
-export function NumberElement(props: {
-  number: number;
-  sx?: SxProps;
-  active: boolean;
-}) {
-  const theme = useTheme();
+export function NumberElement(props: { number: number; sx?: SxProps }) {
   return (
     <Box
       sx={{
         position: "absolute",
         width: 72,
         height: 72,
-        border: `2px solid ${
-          props.active ? "#FFF" : theme.palette.lincoBlue.main
-        }`,
+        border: `2px solid #FFF`,
         borderRadius: "50%",
-        left: { xs: "50%", md: 0 },
-        top: 0,
-        transform: {
-          xs: "translate(-50%,-50px)",
-          md: "translate(-50%,75%)",
-        },
+        left: "50%",
+        top: "50%",
+        transform: "translate(-50%,-50%)",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        bgcolor: props.active ? "transparent" : "#FFFFFF",
+        color: "#FFF",
 
         ...props.sx,
       }}
     >
-      {props.active ? (
-        <>
-          <Box
-            sx={{
-              position: "absolute",
-              height: "500px",
-              width: "2px",
-              bottom: "100%",
-              left: "50%",
-              bgcolor: "#FFFFFF",
-              transform: "translate(-50%,0)",
-              display: { xs: "none", md: "block" },
-            }}
-          />
-          <Box
-            sx={{
-              position: "absolute",
-              height: "100%",
-              width: "2px",
-              top: "100%",
-              left: "50%",
-              bgcolor: "#FFFFFF",
-              transform: "translate(-50%,0)",
-              display: { xs: "none", md: "block" },
-            }}
-          />
-        </>
-      ) : null}
-      <Typography
-        variant="h3thin"
-        color={props.active ? "#FFFFFF" : "lincoBlue.main"}
-      >
-        {props.number}
-      </Typography>
+      <Typography variant="h3thin">{props.number}</Typography>
     </Box>
   );
 }

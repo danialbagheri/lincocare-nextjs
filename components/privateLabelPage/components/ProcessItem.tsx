@@ -22,20 +22,47 @@ export function ProcessLevelItem(props: ProcessItemTypes) {
     itemSpecs: { shiftUI, top, respectiveScroll },
   } = props;
 
+  const dataRef = useRef<HTMLInputElement>();
+
   return (
     <Box
       className="centralize"
       sx={{
-        transition: "1s",
+        transition: "1s all",
         height: 600,
         width: shiftUI ? "min(1100px,80%)" : "100%",
         bgcolor: shiftUI ? "transparent" : theme.palette.lincoBlue.dark,
         position: "relative",
         overflow: "hidden",
         py: "150px",
-        gap: "min(2% , 140px)",
+        gap: "140px",
       }}
     >
+      {!shiftUI ? (
+        <>
+          <Box
+            sx={{
+              width: "1px",
+              height: 137,
+              position: "absolute",
+              top: 0,
+              left: "50%",
+              bgcolor: "#FFF",
+            }}
+          />
+          <NumberElement number={index + 1} sx={{ top: 171 }} />
+          <Box
+            sx={{
+              width: "1px",
+              height: 137,
+              position: "absolute",
+              top: 206,
+              left: "50%",
+              bgcolor: "#FFF",
+            }}
+          />
+        </>
+      ) : null}
       <Image
         src={imgSrc}
         alt="Product Formulation"
@@ -73,10 +100,11 @@ export function ProcessLevelItem(props: ProcessItemTypes) {
           sx={{
             width: 400,
             position: "absolute",
-            right: "176px",
+            right: 0,
             display: shiftUI ? "none" : "block",
           }}
           style={{ top: -top }}
+          ref={dataRef}
         >
           {data.map((d, i) => (
             <Box key={d.title + i} sx={{ overflow: "hidden" }} color="#FFF">
@@ -110,9 +138,34 @@ export function ProcessLevelItem(props: ProcessItemTypes) {
       </Box>
 
       <Box sx={{ width: "50%", zIndex: 1 }}>
-        <Typography variant="h1" color="#FFF">
+        <Typography
+          variant="h1"
+          color={shiftUI ? theme.palette.lincoBlue.main : "#FFF"}
+          sx={{
+            ...(!shiftUI
+              ? {
+                  position: "absolute",
+                  top: 137,
+                  maxWidth: 480,
+                }
+              : {}),
+          }}
+        >
           {title}
         </Typography>
+        <Typography mt={4} sx={{ display: shiftUI ? "flex" : "none" }}>
+          {description}
+        </Typography>
+        <LinkElement href={link} sx={{ display: shiftUI ? "flex" : "none" }} />
+        <NumberElement
+          number={index + 1}
+          sx={{
+            display: shiftUI ? "flex" : "none",
+            color: theme.palette.lincoBlue.main,
+            bgcolor: "#FFF",
+            borderColor: theme.palette.lincoBlue.main,
+          }}
+        />
       </Box>
     </Box>
   );

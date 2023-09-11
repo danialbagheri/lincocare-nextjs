@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { FAQTitle, ProcessLevelItem, PROCESS_ITEMS } from "./components";
 import { ItemsSpecsTypes } from "./components/types";
 
+const DATA_SCROLL_HEIGHTS = [1259, 1187, 1627, 1393, 662, 1301];
+
 export function ProcessLevels() {
   const theme = useTheme();
 
@@ -15,7 +17,7 @@ export function ProcessLevels() {
     4: { top: 0, shiftUI: false, respectiveScroll: 0 },
     5: { top: 0, shiftUI: false, respectiveScroll: 0 },
   });
-  const [mainContainerTopLevel, setMainContainerTopLevel] = useState(-300);
+  const [mainContainerTopLevel, setMainContainerTopLevel] = useState(-250);
   const containerEle = useRef<HTMLInputElement>(null);
 
   const scrollItemHandler = (
@@ -33,108 +35,152 @@ export function ProcessLevels() {
     }));
   };
 
-  const changeUIFactorHandler = (
-    index: number,
-    shiftValue: boolean,
-    respectiveScroll: number
-  ) => {
+  const changeUIFactorHandler = (index: number, shiftValue: boolean) => {
     setItemsSpecs((prev) => ({
       ...prev,
       [index]: {
         ...prev[index],
         shiftUI: shiftValue,
-        respectiveScroll,
       },
     }));
   };
 
   const scrollHandler = (e: any) => {
     const scroll = window.scrollY;
-    console.log("scroll::::", scroll);
+    console.log("scroll:::", scroll);
 
     //Index 0
-    if (scroll > 942 && scroll < 2200) {
-      scrollItemHandler(scroll, 0, 942);
+    if (scroll > 902 && scroll < 902 + 1259) {
+      scrollItemHandler(scroll, 0, 902);
     }
-    if (scroll > 2500) {
-      changeUIFactorHandler(0, true, scroll - 2500);
+    if (scroll > 902 + 1259 + 50) {
+      changeUIFactorHandler(0, true);
     } else {
-      changeUIFactorHandler(0, false, 0);
+      changeUIFactorHandler(0, false);
     }
-
     //Scroll window
-    if (scroll > 2600 && scroll < 3280) {
-      setMainContainerTopLevel(2300 - scroll);
+    if (scroll > 902 + 1259 + 100 && scroll < 902 + 1259 + 100 + 680) {
+      setMainContainerTopLevel(-250 + 902 + 1259 + 100 - scroll);
     }
 
     //Index 1
-    if (scroll > 3300 && scroll < 4500) {
-      scrollItemHandler(scroll, 1, 3300);
+    if (
+      scroll > 902 + 1259 + 100 + 680 &&
+      scroll < 902 + 1259 + 100 + 680 + 1187
+    ) {
+      scrollItemHandler(scroll, 1, 902 + 1259 + 100 + 680);
     }
-    if (scroll > 4600) {
-      changeUIFactorHandler(1, true, scroll - 4600);
+
+    if (
+      scroll > 902 + 1259 + 100 + 680 - 50 &&
+      scroll < 902 + 1259 + 100 + 680 + 1187 + 50
+    ) {
+      changeUIFactorHandler(1, false);
     } else {
-      changeUIFactorHandler(1, false, 0);
+      changeUIFactorHandler(1, true);
     }
 
     //Scroll window
-    if (scroll > 4700 && scroll < 5376) {
-      setMainContainerTopLevel(3723 - scroll);
+    if (
+      scroll > 902 + 1259 + 100 + 680 + 1187 + 50 &&
+      scroll < 902 + 1259 + 100 + 2 * 680 + 1187 + 50
+    ) {
+      setMainContainerTopLevel(
+        902 + 1259 + 100 + 680 + 1187 + 50 - scroll - 925
+      );
     }
 
     //Index 2
-    if (scroll > 5376 && scroll < 6950) {
-      scrollItemHandler(scroll, 2, 5376);
+    if (
+      scroll > 902 + 1259 + 100 + 2 * 680 + 1187 + 50 &&
+      scroll < 902 + 1259 + 100 + 2 * 680 + 1187 + 50 + 1627
+    ) {
+      scrollItemHandler(scroll, 2, 902 + 1259 + 100 + 2 * 680 + 1187 + 50);
     }
-    if (scroll > 7000) {
-      changeUIFactorHandler(2, true, scroll - 7000);
+
+    if (
+      scroll > 902 + 1259 + 100 + 2 * 680 + 1187 &&
+      scroll < 902 + 1259 + 100 + 2 * 680 + 1187 + 50 + 1627 + 50
+    ) {
+      changeUIFactorHandler(2, false);
     } else {
-      changeUIFactorHandler(2, false, 0);
+      changeUIFactorHandler(2, true);
     }
 
     //Scroll window
-    if (scroll > 7050 && scroll < 7736) {
-      setMainContainerTopLevel(5398 - scroll);
+    if (
+      scroll > 902 + 1259 + 100 + 2 * 680 + 1187 + 50 + 1627 + 50 &&
+      scroll < 902 + 1259 + 100 + 3 * 680 + 1187 + 50 + 1627 + 50
+    ) {
+      setMainContainerTopLevel(
+        902 + 1259 + 100 + 2 * 680 + 1187 + 50 + 1627 + 50 - scroll - 1601
+      );
     }
 
     //Index 3
-    if (scroll > 7736 && scroll < 9130) {
-      scrollItemHandler(scroll, 3, 7736);
+    if (
+      //902 + 1259 + 100 + 3 * 680 + 1187 + 50 + 1627 + 50
+      scroll > 7215 &&
+      //902 + 1259 + 100 + 3 * 680 + 1187 + 50 + 1627 + 50 + 1393
+      scroll < 8608
+    ) {
+      //902 + 1259 + 100 + 3 * 680 + 1187 + 50 + 1627 + 50
+      scrollItemHandler(scroll, 3, 7215);
     }
-    if (scroll > 9180) {
-      changeUIFactorHandler(3, true, scroll - 9180);
+    if (
+      //902 + 1259 + 100 + 3 * 680 + 1187 + 50 + 1627
+      scroll > 7165 &&
+      //902 + 1259 + 100 + 3 * 680 + 1187 + 50 + 1627 + 50 + 1393 + 50
+      scroll < 8658
+    ) {
+      changeUIFactorHandler(3, false);
     } else {
-      changeUIFactorHandler(3, false, 0);
+      changeUIFactorHandler(3, true);
     }
 
     //Scroll window
-    if (scroll > 9180 && scroll < 9860) {
-      setMainContainerTopLevel(6846 - scroll);
+    if (
+      //902 + 1259 + 100 + 3 * 680 + 1187 + 50 + 1627 + 50 + 1393 + 50
+      scroll > 8658 &&
+      //902 + 1259 + 100 + 4 * 680 + 1187 + 50 + 1627 + 50 + 1393 + 50
+      scroll < 9338
+    ) {
+      setMainContainerTopLevel(
+        //902 + 1259 + 100 + 3 * 680 + 1187 + 50 + 1627 + 50 + 1393 + 50 - scroll -2277
+        6381 - scroll
+      );
     }
 
     //Index 4
-    if (scroll > 9860 && scroll < 11000) {
-      scrollItemHandler(scroll, 4, 9860);
+    if (scroll > 9338 && scroll < 9338 + 662) {
+      scrollItemHandler(scroll, 4, 9338);
     }
-    if (scroll > 10580) {
-      changeUIFactorHandler(4, true, scroll - 10580);
+
+    if (scroll > 9338 - 50 && scroll < 9338 + 662 + 50) {
+      changeUIFactorHandler(4, false);
     } else {
-      changeUIFactorHandler(4, false, 0);
+      changeUIFactorHandler(4, true);
     }
 
     //Scroll window
-    if (scroll > 10600 && scroll < 11290) {
-      setMainContainerTopLevel(7593 - scroll);
+    if (scroll > 9338 + 662 + 50 && scroll < 9338 + 662 + 50 + 680) {
+      setMainContainerTopLevel(9338 + 662 + 50 - scroll - 2955);
     }
 
     //Index 5
-    if (scroll > 11290 && scroll < 12600) {
-      scrollItemHandler(scroll, 5, 11290);
+    if (
+      scroll > 9338 + 662 + 50 + 680 &&
+      scroll < 9338 + 662 + 50 + 680 + 1301
+    ) {
+      scrollItemHandler(scroll, 5, 9338 + 662 + 50 + 680);
     }
-    if (scroll > 12600) {
-      changeUIFactorHandler(5, true, scroll - 12600);
+    if (
+      scroll > 9338 + 662 + 50 + 680 - 50 &&
+      scroll < 9338 + 662 + 50 + 680 + 1301 + 50
+    ) {
+      changeUIFactorHandler(5, false);
     } else {
-      changeUIFactorHandler(5, false, 0);
+      changeUIFactorHandler(5, true);
     }
   };
 
@@ -146,7 +192,7 @@ export function ProcessLevels() {
     <>
       <Box
         sx={{
-          height: 12600,
+          height: 12100,
           width: "100%",
           bgcolor: "#FFF",
           position: "relative",
