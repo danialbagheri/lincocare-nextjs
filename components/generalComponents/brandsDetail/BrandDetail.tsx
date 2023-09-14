@@ -9,24 +9,17 @@ import { Box, Stack, Typography, useTheme } from "@mui/material";
 /* ---------------------------- Local Components ---------------------------- */
 import { Container, CustomLink } from "shared";
 import { BrandDetailsType, BRANDS_ID } from "components/constants";
+import { Details } from "@mui/icons-material";
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
 /* ------------------------------- Interfaces ------------------------------- */
-interface BrandDetailTypes {
-  name: string;
-  imageSrc: string;
-  description: string;
-  color: string;
-  borderColor: string;
-  privateLabel?: boolean;
-}
-
 interface BrandDescriptionTypes {
   borderColor: string;
   description: string;
   display: { xs: string; md: string };
   privateLabel?: boolean;
+  details?: BrandDetailsType;
 }
 /* -------------------------------------------------------------------------- */
 
@@ -61,7 +54,7 @@ const BrandDescription = (props: BrandDescriptionTypes) => {
               ? theme.palette.lincoBlue.dark
               : props.borderColor,
           }}
-          href=""
+          href={props.details?.knowMoreLink || ""}
         >
           Know more
         </CustomLink>
@@ -72,7 +65,7 @@ const BrandDescription = (props: BrandDescriptionTypes) => {
             xs: theme.palette.lincoYellow.main,
             md: props.borderColor,
           }}
-          href=""
+          href={`https://${props.details?.brandWebsiteLink}`}
         >
           Brand website
         </CustomLink>
@@ -91,7 +84,7 @@ export default function BrandDetail(props: { details: BrandDetailsType }) {
         details.id === BRANDS_ID.SILKIA_DEPILATORY ||
         details.id === BRANDS_ID.SILKIA_PEDICARE
       ) {
-        return details.longName;
+        return details.fullName;
       } else {
         return details.name;
       }
@@ -124,24 +117,42 @@ export default function BrandDetail(props: { details: BrandDetailsType }) {
           }}
           gap={{ xs: 0, md: 10 }}
         >
-          <Box width={{ xs: "100%", md: "40%" }}>
-            <Typography
-              textTransform={"capitalize"}
-              color={details?.privateLabel ? "#000" : "#FFFFFF"}
-              textAlign={{ xs: "center", md: "left" }}
-              mt={{ xs: 13, md: 5 }}
-              sx={{
-                typography: { xs: "h4", md: "h1" },
-                fontWeight: "700 ",
-              }}
-            >
-              {renderBrandName(details)}
-            </Typography>
+          <Box
+            width={{ xs: "100%", md: "40%" }}
+            sx={{
+              display: { xs: "flex", md: "unset" },
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            {details.whiteLogoSrc ? (
+              <Image
+                alt={details.name}
+                src={details.whiteLogoSrc}
+                width={300}
+                height={204}
+              />
+            ) : (
+              <Typography
+                textTransform={"capitalize"}
+                color={details?.privateLabel ? "#000" : "#FFFFFF"}
+                textAlign={{ xs: "center", md: "left" }}
+                mt={{ xs: 13, md: 5 }}
+                sx={{
+                  typography: { xs: "h4", md: "h1" },
+                  fontWeight: "700 ",
+                }}
+              >
+                {renderBrandName(details)}
+              </Typography>
+            )}
+
             <BrandDescription
               privateLabel={details?.privateLabel}
               display={{ xs: "none", md: "block" }}
               borderColor={details?.color}
               description={details?.description}
+              details={details}
             />
           </Box>
           <Box
@@ -169,6 +180,7 @@ export default function BrandDetail(props: { details: BrandDetailsType }) {
             display={{ xs: "block", md: "none" }}
             borderColor={details?.borderColor}
             description={details?.description}
+            details={details}
           />
         </Stack>
       </Container>

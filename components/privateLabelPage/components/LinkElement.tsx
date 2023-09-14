@@ -1,7 +1,7 @@
 import { SxProps, useTheme } from "@mui/material";
 import { CustomLink } from "shared";
 
-export default function LinkElement(props: { href: string; sx: SxProps }) {
+export default function LinkElement(props: { href: string; sx?: SxProps }) {
   const theme = useTheme();
   return (
     <CustomLink

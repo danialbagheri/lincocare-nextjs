@@ -21,6 +21,6 @@ export interface ItemsSpecsTypes {
 
 export interface EachItemsSpecsTypes {
   top: number;
-  shiftUI: boolean;
+  active: boolean;
   respectiveScroll: number;
 }

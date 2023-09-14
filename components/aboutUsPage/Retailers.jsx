@@ -53,7 +53,7 @@ export function Retailers() {
         color="#000"
         borderColor={{ xs: theme.palette.lincoBlue.main }}
         aSx={{ px: 8 }}
-        href=""
+        href="/#retailers"
       >
         All Linco retailers
       </CustomLink>

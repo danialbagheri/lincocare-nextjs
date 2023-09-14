@@ -6,7 +6,6 @@ import { LincoNews } from "components/generalComponents";
 /* ---------------------------- Local Components ---------------------------- */
 import {
   CommunicatePart,
-  FAQ,
   Head,
   ProcessLevels,
 } from "components/privateLabelPage";
@@ -28,7 +27,6 @@ function PrivateLabel() {
       </Container>
 
       <ProcessLevels />
-      <FAQ />
 
       <CommunicatePart />
 

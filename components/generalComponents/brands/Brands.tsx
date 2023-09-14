@@ -3,14 +3,16 @@ import "react-slideshow-image/dist/styles.css";
 import Image from "next/image";
 import { Container, CustomLink } from "shared";
 
-import { BRANDS_IMAGE } from "../../aboutUsPage/components";
+import { BRANDS } from "components/constants";
+import { SxProps } from "@mui/material";
 
-export function Brands() {
+export function Brands(props: { sx?: SxProps }) {
   return (
     <Container
       pt={{ xs: 15, md: 20 }}
       pb={{ xs: 15, md: 19 }}
       textAlign="center"
+      sx={{ ...props.sx }}
     >
       <Slide
         autoplay
@@ -30,15 +32,23 @@ export function Brands() {
           },
         ]}
       >
-        {BRANDS_IMAGE.map((img) => (
-          <Image
-            key={img.id}
-            src={img.src}
-            width={168}
-            height={79}
-            alt={img.id}
-          />
-        ))}
+        {BRANDS.map((brand) => {
+          if (brand.whiteLogoSrc) {
+            return (
+              <Image
+                key={brand.id}
+                src={brand.whiteLogoSrc || ""}
+                alt={brand.name}
+                width={200}
+                height={136}
+                style={{
+                  filter:
+                    "invert(0%) sepia(100%) saturate(0%) hue-rotate(151deg) brightness(0) contrast(104%)",
+                }}
+              />
+            );
+          }
+        })}
       </Slide>
 
       <CustomLink

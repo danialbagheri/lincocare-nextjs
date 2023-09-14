@@ -74,6 +74,7 @@ function Retailers(props: { sx?: SxProps }) {
   return (
     <Container
       sx={{ alignItems: "center", pt: { xs: 17, md: 10 }, ...props.sx }}
+      id="retailers"
     >
       <Typography sx={{ typography: { xs: "h4", md: "h2" } }}>
         Retailers

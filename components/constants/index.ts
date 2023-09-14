@@ -3,8 +3,9 @@ import { theme } from "theme";
 export interface BrandDetailsType {
   id: string;
   name: string;
-  longName?: string;
+  fullName?: string;
   imageSrc: string;
+  whiteLogoSrc?: string;
   mt: string;
   description: string;
   color: string;
@@ -39,12 +40,13 @@ export const BRANDS = [
     id: BRANDS_ID.CALYPSO,
     name: "Calypso",
     imageSrc: "/images/brands/calypso.png",
+    whiteLogoSrc: "/images/brands/whiteLogo/Calypso-white.svg",
     mt: "0px",
     description:
       "Calypso offers a comprehensive range of sun care products for all skin types and the whole family.",
     color: theme.palette.calypsoOrange.main,
     borderColor: theme.palette.calypsoOrange.main,
-    knowMoreLink: "",
+    knowMoreLink: "/brands/calypso",
     brandWebsiteLink: "Calypsosun.com",
     subtitle: "Healthy Skin is Happy Skin",
     socialMediaLinks: [
@@ -97,13 +99,14 @@ export const BRANDS = [
     id: BRANDS_ID.CABANA,
     name: "Cabana",
     imageSrc: "/images/brands/cabana.png",
+    whiteLogoSrc: "/images/brands/whiteLogo/Cabana-white.svg",
     mt: "0",
     description:
       "Cabana offers protection and tan enhancement in the same bottle, helping you stay safe while tanning. ",
     color: theme.palette.cabanaBrown.main,
     borderColor: theme.palette.lincoBlue.main,
-    knowMoreLink: "",
-    brandWebsiteLink: "Calypsosun.com",
+    knowMoreLink: "/brands/cabana",
+    brandWebsiteLink: "Cabanasun.co.uk ",
     subtitle: "Tanning meets sun protection ",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
@@ -150,15 +153,16 @@ export const BRANDS = [
   {
     id: BRANDS_ID.SILKIA_PEDICARE,
     name: "Pedicare",
-    longName: "Silkia Pedicare",
+    fullName: "Silkia Pedicare",
     imageSrc: "/images/brands/silkiaPedicare.png",
+    whiteLogoSrc: "/images/brands/whiteLogo/Pedicare-white.svg",
     mt: "0",
     description:
       "Silkia PediCare Cracked Heel Repair Cream is a specially formulated treatment using multi-patented Keratin technology to actively repair your dry, cracked heels.",
     color: theme.palette.silkiaBlue.main,
     borderColor: theme.palette.primary.main,
-    knowMoreLink: "",
-    brandWebsiteLink: "Calypsosun.com",
+    knowMoreLink: "/brands/silkiaPedicare",
+    brandWebsiteLink: "Silkia.com",
     subtitle: "Revitalise your skin",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
@@ -187,15 +191,16 @@ export const BRANDS = [
   {
     id: BRANDS_ID.SILKIA_DEPILATORY,
     name: "Silkia",
-    longName: "Silkia Depilatory",
+    fullName: "Silkia Depilatory",
     imageSrc: "/images/brands/silkiaDepilatory.png",
+    whiteLogoSrc: "/images/brands/whiteLogo/Silkia-white.svg",
     mt: "03px",
     description:
       "Silkia Depilatory is your one stop hair removal product, providing you with long lasting smoothness that will make everyone wonder what your secret is.",
     color: theme.palette.silkiaDepilatory.main,
     borderColor: theme.palette.primary.main,
-    knowMoreLink: "",
-    brandWebsiteLink: "Calypsosun.com",
+    knowMoreLink: "/brands/silkiaDepilatory",
+    brandWebsiteLink: "Silkiadepilatory.co.uk",
     subtitle: "For Silkia feeling skin",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
@@ -232,13 +237,14 @@ export const BRANDS = [
     id: BRANDS_ID.DIMPLES,
     name: "Dimples",
     imageSrc: "/images/brands/dimples.png",
+    whiteLogoSrc: "/images/brands/whiteLogo/Dimples-white.svg",
     mt: "06px",
     description:
       "Dimples range includes body wax strips, hair removal cream, bleach cream and spray foams so that no matter your skin type or preferences, there’s a Dimples product for you.",
     color: theme.palette.dimplesBlue.main,
     borderColor: theme.palette.lincoBlue.main,
-    knowMoreLink: "",
-    brandWebsiteLink: "Calypsosun.com",
+    knowMoreLink: "/brands/dimples",
+    brandWebsiteLink: "Dimplesdepilatory.com/",
     subtitle: "The secret to smooth skin",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
@@ -276,13 +282,14 @@ export const BRANDS = [
     id: BRANDS_ID.SUN_TROPIC,
     name: "Sun Tropic",
     imageSrc: "/images/brands/sunTropic.png",
+    whiteLogoSrc: "/images/brands/whiteLogo/SunTropic-white.svg",
     mt: "03px",
     description:
       "This unique handbag size range offers both UVA and UVB protection. All products are water-resistant, so you don’t need to worry about getting burned at the beach or in the pool.",
     color: theme.palette.sunTropic.main,
     borderColor: theme.palette.lincoBlue.main,
-    knowMoreLink: "",
-    brandWebsiteLink: "Calypsosun.com",
+    knowMoreLink: "/brands/sunTropic",
+    brandWebsiteLink: "Suntropic.co.uk",
     subtitle: "Your beach day essential",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
@@ -333,13 +340,14 @@ export const BRANDS = [
     id: BRANDS_ID.RE_GEN,
     name: "Re-Gen",
     imageSrc: "/images/brands/reGen.png",
+    whiteLogoSrc: "/images/brands/whiteLogo/Regen-white.svg",
     mt: "0px",
     description:
       "Re-Gen is a range of specialized skin care products that help to fight against ageing, scars, stretch marks, dry skin and uneven skin tone.",
     color: theme.palette.regenPink.main,
     borderColor: theme.palette.primary.main,
-    knowMoreLink: "",
-    brandWebsiteLink: "www.regenoil.co.uk",
+    knowMoreLink: "/brands/reGen",
+    brandWebsiteLink: "Regenoil.co.uk",
     subtitle: "Feel confident in your skin",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
@@ -395,8 +403,8 @@ export const BRANDS = [
       "This unique handbag size range offers both UVA and UVB protection. All products are water-resistant, so you don’t need to worry about getting burned at the beach or in the pool.",
     color: "#EFF1F3",
     borderColor: theme.palette.lincoBlue.main,
-    knowMoreLink: "",
-    brandWebsiteLink: "Calypsosun.com",
+    knowMoreLink: "/privateLabel",
+    brandWebsiteLink: "",
     privateLabel: true,
     subtitle: "",
     socialMediaLinks: [

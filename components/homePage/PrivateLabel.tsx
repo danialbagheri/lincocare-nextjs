@@ -128,7 +128,9 @@ export function PrivateLabel() {
           },
         }}
       >
-        <Link href="">Private label process</Link>
+        <Link href="/privateLabel#private_label_process">
+          Private label process
+        </Link>
       </Box>
     </Container>
   );

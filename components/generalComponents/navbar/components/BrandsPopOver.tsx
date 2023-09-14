@@ -50,6 +50,12 @@ const BRANDS = [
     imageSrc: "/images/brandsPopup/sunTropic.png",
     text: "Sun Tropic is a unique handbag size range offers both UVA and UVB protection.",
   },
+  {
+    id: BRANDS_ID.RE_GEN,
+    title: "Re-gen",
+    imageSrc: "/images/brandsPopup/sunTropic.png",
+    text: "Sun Tropic is a unique handbag size range offers both UVA and UVB protection.",
+  },
 ];
 
 export function BrandsPopOver(props: PropsTypes) {

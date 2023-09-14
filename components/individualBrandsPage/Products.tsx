@@ -13,24 +13,6 @@ export function Products(props: { brandDetails: BrandDetailsType }) {
   const theme = useTheme();
   const [itemsHover, setItemsHover] = useState<ItemsHoverTypes | null>(null);
 
-  // const mouseMoveHandler = (value: boolean, id: string) => {
-  //   if (itemsHover) {
-  //     console.log("HERE");
-
-  //     const newObj: ItemsHoverTypes = {};
-
-  //     Object.keys(itemsHover).forEach((key) => {
-  //       if (key === id) {
-  //         newObj[id] = value;
-  //       } else {
-  //         newObj[id] = false;
-  //       }
-  //     });
-
-  //     setItemsHover(newObj);
-  //   }
-  // };
-
   useEffect(() => {
     if (brandDetails) {
       const hoverObj: ItemsHoverTypes = {};

@@ -23,9 +23,9 @@ export default function BrandPage() {
         <Products brandDetails={brandDetails} />
       </Container>
       <LincoDivider sx={{ mb: { xs: 1, md: 6 } }} fullWidth />
-      <Container>
-        <Brands />
-      </Container>
+
+      <Brands />
+
       <LincoDivider sx={{ mb: { xs: 16, md: 26 } }} fullWidth />
       <LincoNews />
     </>

@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import {
   AboutLinco,
   Achievements,
@@ -32,6 +33,7 @@ function AboutUs() {
       <Brands />
 
       <LincoDivider sx={{ mb: 19 }} />
+
       <LincoNews />
     </>
   );

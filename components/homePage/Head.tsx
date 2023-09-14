@@ -12,9 +12,22 @@ import "react-slideshow-image/dist/styles.css";
 /* -------------------------------------------------------------------------- */
 
 const HEADER_TITLES = [
-  { id: "formulation", title: "700+ Product Formulations", href: "" },
-  { id: "crafting", title: "Crafting Excellence, Nurturing beauty", href: "" },
-  { id: "custom", title: "Here is our custom Title", href: "" },
+  {
+    id: "formulation",
+    title: "700+ Product Formulations",
+    href: "/privateLabel",
+  },
+  {
+    id: "crafting",
+    title: "Crafting Excellence, Nurturing beauty",
+    href: "/aboutUs",
+  },
+  {
+    id: "custom",
+    title:
+      "Private Label Pioneers: Four Decades of Cosmetic Manufacturing Expertise",
+    href: "/privateLabel",
+  },
 ];
 
 export function Head() {
@@ -56,7 +69,7 @@ export function Head() {
         <Box
           sx={{
             position: "absolute",
-            width: { xs: "90%", md: "600px" },
+            width: { xs: "90%", md: "800px" },
             top: "40%",
             left: { xs: "50%", md: "20%" },
             textAlign: { xs: "center", md: "left" },

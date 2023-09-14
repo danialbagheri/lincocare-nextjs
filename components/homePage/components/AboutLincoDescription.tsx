@@ -25,7 +25,7 @@ const DescriptionText = (props: {
     <CustomLink
       sx={{ textAlign: { xs: "center", md: "left" }, mt: { xs: 4, md: 0 } }}
       borderColor={props.borderColor}
-      href=""
+      href="/aboutUs"
     >
       Know more
     </CustomLink>
