@@ -15,7 +15,7 @@ export function Head() {
           display={{ xs: "none", md: "flex" }}
         >
           <Typography variant={"h1"} color={"#FFFFFF"}>
-            Linco brands
+            Our Brands
           </Typography>
           <Typography mt={3} variant={"h4"} color={"#77B4FB"}>
             Our diverse range of brands

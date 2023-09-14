@@ -66,6 +66,7 @@ const BrandDescription = (props: BrandDescriptionTypes) => {
             md: props.borderColor,
           }}
           href={`https://${props.details?.brandWebsiteLink}`}
+          openInNewPage
         >
           Brand website
         </CustomLink>
@@ -126,12 +127,14 @@ export default function BrandDetail(props: { details: BrandDetailsType }) {
             }}
           >
             {details.whiteLogoSrc ? (
-              <Image
-                alt={details.name}
-                src={details.whiteLogoSrc}
-                width={300}
-                height={204}
-              />
+              <Box sx={{ width: 300, height: 104, position: "relative" }}>
+                <Image
+                  alt={details.name}
+                  src={details.whiteLogoSrc}
+                  fill
+                  style={{ objectFit: "contain" }}
+                />
+              </Box>
             ) : (
               <Typography
                 textTransform={"capitalize"}

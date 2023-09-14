@@ -8,6 +8,7 @@ interface CustomLinkTypes extends BoxProps {
   children: React.ReactNode;
   sx?: SxProps;
   aSx?: any;
+  openInNewPage?: boolean;
 }
 
 export function CustomLink(props: CustomLinkTypes) {
@@ -33,7 +34,9 @@ export function CustomLink(props: CustomLinkTypes) {
         ...props.sx,
       }}
     >
-      <Link href={props.href}>{props.children}</Link>
+      <Link href={props.href} target={props.openInNewPage ? "_blank" : "_self"}>
+        {props.children}
+      </Link>
     </Box>
   );
 }

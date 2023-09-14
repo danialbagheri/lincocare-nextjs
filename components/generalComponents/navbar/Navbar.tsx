@@ -37,6 +37,7 @@ export default function Navbar(props: Props) {
     router.pathname.includes("/privacyPolicy") ||
     router.pathname.includes("/disclaimer") ||
     router.pathname.includes("/contactUs") ||
+    router.pathname.includes("/sustainability") ||
     router.pathname.includes("/news");
 
   const trigger = useScrollTrigger({

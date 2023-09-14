@@ -1,6 +1,6 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import Image from "next/image";
-import { Container, HeadContainer } from "shared";
+import { HeadContainer } from "shared";
 
 export function Head() {
   const theme = useTheme();
@@ -13,7 +13,7 @@ export function Head() {
       }}
     >
       <Image
-        src={"/images/sustainability/head.png"}
+        src={"/images/sustainability/head.jpg"}
         alt="Accreditations"
         fill
         style={{ objectFit: "cover" }}

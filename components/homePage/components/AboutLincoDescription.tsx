@@ -10,29 +10,6 @@ import { Box, Stack, SxProps, Typography, useTheme } from "@mui/material";
 import { CustomLink } from "shared";
 /* -------------------------------------------------------------------------- */
 
-/* -------------------------------- Component ------------------------------- */
-const DescriptionText = (props: {
-  sx?: SxProps;
-  borderColor: { xs: string };
-}) => (
-  <Box sx={{ ...props.sx }}>
-    <Typography color={"#ffffff"} mt={4}>
-      Linco Skincare is constantly exploring new avenues of research and
-      development to create revolutionary products that will change the skincare
-      industry; skincare guaranteed not to rub you up the wrong way.
-    </Typography>
-
-    <CustomLink
-      sx={{ textAlign: { xs: "center", md: "left" }, mt: { xs: 4, md: 0 } }}
-      borderColor={props.borderColor}
-      href="/aboutUs"
-    >
-      Know more
-    </CustomLink>
-  </Box>
-);
-/* -------------------------------------------------------------------------- */
-
 export function AboutLincoDescription() {
   const theme = useTheme();
 
@@ -56,12 +33,27 @@ export function AboutLincoDescription() {
           }}
           color={"#ffffff"}
         >
-          About Linco
+          About Us
         </Typography>
-        <DescriptionText
-          sx={{ display: { xs: "none", md: "block" } }}
-          borderColor={theme.palette.lincoYellow.main}
-        />
+        <Box sx={{ display: { xs: "none", md: "block" } }}>
+          <Typography color={"#ffffff"} mt={4}>
+            Linco Skincare is constantly exploring new avenues of research and
+            development to create revolutionary products that will change the
+            skincare industry; skincare guaranteed not to rub you up the wrong
+            way.
+          </Typography>
+
+          <CustomLink
+            sx={{
+              textAlign: { xs: "center", md: "left" },
+              mt: { xs: 4, md: 0 },
+            }}
+            borderColor={{ xs: theme.palette.lincoYellow.main }}
+            href="/aboutUs"
+          >
+            Know more
+          </CustomLink>
+        </Box>
       </Box>
       <Box
         sx={{
@@ -79,10 +71,22 @@ export function AboutLincoDescription() {
           loading={"lazy"}
         />
       </Box>
-      <DescriptionText
-        sx={{ display: { xs: "block", md: "none" } }}
-        borderColor={theme.palette.lincoYellow.main}
-      />
+      <Box sx={{ display: { xs: "block", md: "none" } }}>
+        <Typography color={"#ffffff"} mt={4}>
+          Linco Skincare is constantly exploring new avenues of research and
+          development to create revolutionary products that will change the
+          skincare industry; skincare guaranteed not to rub you up the wrong
+          way.
+        </Typography>
+
+        <CustomLink
+          sx={{ textAlign: { xs: "center", md: "left" }, mt: { xs: 4, md: 0 } }}
+          borderColor={{ xs: theme.palette.lincoYellow.main }}
+          href="/aboutUs"
+        >
+          Know more
+        </CustomLink>
+      </Box>
     </Stack>
   );
 }

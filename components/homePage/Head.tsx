@@ -24,8 +24,7 @@ const HEADER_TITLES = [
   },
   {
     id: "custom",
-    title:
-      "Private Label Pioneers: Four Decades of Cosmetic Manufacturing Expertise",
+    title: "Four Decades of Manufacturing Expertise",
     href: "/privateLabel",
   },
 ];

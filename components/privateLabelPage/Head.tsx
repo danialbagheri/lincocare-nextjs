@@ -23,26 +23,17 @@ import { ArrowButtonTypes } from "./types";
 const PRIVATE_LABEL_INFO = [
   {
     id: "privateLabel_1",
-    title: "360 degree services_1",
-    description: "from Idea to the market",
+    title: "360 degree services",
     imgSrc: "/images/privateLabelPage/head/privateLabel.png",
   },
   {
     id: "privateLabel_2",
-    title: "360 degree services_2",
-    description: "from Idea to the market",
+    title: "From Idea to the market",
     imgSrc: "/images/privateLabelPage/head/privateLabel.png",
   },
   {
     id: "privateLabel_3",
-    title: "360 degree services_3",
-    description: "from Idea to the market",
-    imgSrc: "/images/privateLabelPage/head/privateLabel.png",
-  },
-  {
-    id: "privateLabel_4",
-    title: "360 degree services_4",
-    description: "from Idea to the market",
+    title: "Four Decades of Cosmetic Manufacturing Expertise",
     imgSrc: "/images/privateLabelPage/head/privateLabel.png",
   },
 ];
@@ -118,19 +109,12 @@ export function Head() {
               </Box>
               <Box width={{ xs: "100%", md: "40%" }}>
                 <Typography
-                  sx={{ typography: { xs: "h4", md: "h4" } }}
-                  textAlign={{ xs: "center", md: "left" }}
-                  px={{ xs: 3, md: 0 }}
-                >
-                  {info.title}
-                </Typography>
-                <Typography
                   color="lincoBlue.main"
                   sx={{ typography: { xs: "h3", md: "h4" } }}
                   mt={4}
                   textAlign={{ xs: "center", md: "left" }}
                 >
-                  {info.description}
+                  {info.title}
                 </Typography>
               </Box>
             </Stack>

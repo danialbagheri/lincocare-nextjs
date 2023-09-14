@@ -25,7 +25,7 @@ function LincoNews(data: any) {
         sx={{ typography: { xs: "h4", md: "h2" }, mb: { xs: 10, md: 13 } }}
         textAlign={"center"}
       >
-        Linco news
+        Skincare Spotlight
       </Typography>
       <Box>
         <Stack
