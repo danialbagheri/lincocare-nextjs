@@ -11,12 +11,12 @@ import {
 } from "components/privateLabelPage";
 import { GetStaticProps } from "next";
 import { getFaq } from "services";
-import { FaqTypes } from "services/lincoServicesTypes";
+import { FaqResultsType } from "services/lincoServicesTypes";
 import { Container } from "shared";
 /* -------------------------------------------------------------------------- */
 
 interface PropsTypes {
-  faq: FaqTypes;
+  faq: FaqResultsType[];
 }
 
 function PrivateLabel(props: PropsTypes) {
@@ -35,7 +35,7 @@ function PrivateLabel(props: PropsTypes) {
         />
       </Container>
 
-      <ProcessLevels faq={faq.results} />
+      <ProcessLevels faq={faq} />
 
       <CommunicatePart />
 

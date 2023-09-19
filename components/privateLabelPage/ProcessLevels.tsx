@@ -11,6 +11,7 @@ interface PropsTypes {
 
 export function ProcessLevels(props: PropsTypes) {
   const { faq } = props;
+
   const theme = useTheme();
 
   const [itemsSpecs, setItemsSpecs] = useState<ItemsSpecsTypes>({
