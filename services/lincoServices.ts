@@ -16,11 +16,19 @@ export const getListOfAllBlogs = ({
   };
 
   return get({
-    endpoint: `api/blogs/all/`,
+    endpoint: `blogs/all/`,
     query,
   });
 };
 
 export const getSingleBlog = (slug: string) => {
-  return get({ endpoint: `api/blogs/all/${slug}/` });
+  return get({ endpoint: `blogs/all/${slug}/` });
+};
+
+export const getIcons = (slug: string) => {
+  return get({ endpoint: `web/icon-groups/${slug}` });
+};
+
+export const getFaq = () => {
+  return get({ endpoint: "faq" });
 };

@@ -4,8 +4,13 @@ import { Container } from "shared";
 import Image from "next/image";
 
 export const retailersDetail = [
-  { title: "UK and Ireland retailers", count: 13, retail: "uk" },
-  { title: "Overseas retailers", count: 6, retail: "overseas" },
+  {
+    id: "ukAndIreland",
+    title: "UK and Ireland retailers",
+    count: 13,
+    retail: "uk",
+  },
+  { id: "overseas", title: "Overseas retailers", count: 6, retail: "overseas" },
 ];
 
 export const renderBrandsLogo = (retailerCount: number, retailer: string) => {
@@ -81,7 +86,7 @@ function Retailers(props: { sx?: SxProps }) {
       </Typography>
       {retailersDetail.map((retailer) => (
         <RetailerItem
-          key={retailer.title}
+          key={retailer.id}
           title={retailer.title}
           count={retailer.count}
           retail={retailer.retail}

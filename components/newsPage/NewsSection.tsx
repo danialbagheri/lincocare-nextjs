@@ -89,7 +89,11 @@ export function NewsSection(props: PropTypes) {
           <NewsItem key={n.id} data={n} />
         ))}
       </Stack>
-      <Box pt={{ xs: 15, md: 30 }} pb={{ xs: 15, md: 50 }} textAlign="center">
+      <Box
+        pt={{ xs: 15, md: 30 }}
+        pb={{ xs: 15, md: 50 }}
+        className="centralize"
+      >
         {loadMoreNewsError ? (
           <LoadErrorComponent err={loadMoreNewsError} />
         ) : (

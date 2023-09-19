@@ -1,12 +1,16 @@
 import { Box, Stack, Typography, useTheme } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
+import { FaqResultsType } from "services/lincoServicesTypes";
 
-import { FAQTitle, ProcessLevelItem, PROCESS_ITEMS } from "./components";
+import { FAQ, ProcessLevelItem, PROCESS_ITEMS } from "./components";
 import { ItemsSpecsTypes } from "./components/types";
 
-const DATA_SCROLL_HEIGHTS = [1742, 1343, 1928, 1770, 1927, 1464];
+interface PropsTypes {
+  faq: FaqResultsType[];
+}
 
-export function ProcessLevels() {
+export function ProcessLevels(props: PropsTypes) {
+  const { faq } = props;
   const theme = useTheme();
 
   const [itemsSpecs, setItemsSpecs] = useState<ItemsSpecsTypes>({
@@ -206,7 +210,7 @@ export function ProcessLevels() {
             position: "absolute",
             width: "2px",
             left: "50%",
-            bottom: 350,
+            bottom: 770,
             top: 320,
             transform: "translate(-50%)",
             backgroundImage: `linear-gradient(${theme.palette.lincoBlue.main} 33%, rgba(255,255,255,0) 0%)`,
@@ -233,7 +237,7 @@ export function ProcessLevels() {
             />
           ))}
         </Box>
-        <FAQTitle />
+        <FAQ items={faq} />
       </Box>
     </Box>
   );

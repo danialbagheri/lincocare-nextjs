@@ -55,6 +55,7 @@ export default function News(props: PropTypes) {
 export const getStaticProps: GetStaticProps = async () => {
   try {
     const data = await getListOfAllBlogs({ page: "1" });
+
     return { props: { data } };
   } catch {
     return { props: { error: "Something went wrong!" } };

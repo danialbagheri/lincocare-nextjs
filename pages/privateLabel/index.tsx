@@ -9,10 +9,19 @@ import {
   Head,
   ProcessLevels,
 } from "components/privateLabelPage";
+import { GetStaticProps } from "next";
+import { getFaq } from "services";
+import { FaqTypes } from "services/lincoServicesTypes";
 import { Container } from "shared";
 /* -------------------------------------------------------------------------- */
 
-function PrivateLabel() {
+interface PropsTypes {
+  faq: FaqTypes;
+}
+
+function PrivateLabel(props: PropsTypes) {
+  const { faq } = props;
+
   return (
     <>
       <Head />
@@ -26,7 +35,7 @@ function PrivateLabel() {
         />
       </Container>
 
-      <ProcessLevels />
+      <ProcessLevels faq={faq.results} />
 
       <CommunicatePart />
 
@@ -45,3 +54,13 @@ function PrivateLabel() {
 }
 
 export default PrivateLabel;
+
+export const getStaticProps: GetStaticProps = async () => {
+  try {
+    const faq = await getFaq();
+
+    return { props: { faq: faq.results } };
+  } catch {
+    return { props: { error: "Something went wrong in loading faq!" } };
+  }
+};

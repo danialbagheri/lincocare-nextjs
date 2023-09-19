@@ -1,4 +1,5 @@
 import { Box, Button, Divider, Typography, useTheme } from "@mui/material";
+import { useRouter } from "next/router";
 import { Container } from "shared";
 
 const DATA = [
@@ -7,17 +8,14 @@ const DATA = [
     question: "Got a question? Ask away!",
     title: "Send us a message",
     button: "Send a message now",
-  },
-  {
-    id: "message",
-    question: "Got an idea? Come consult with us.",
-    title: "Book a meeting",
-    button: "Book a meeting now",
+    link: "/contactUs",
   },
 ];
 
 export function CommunicatePart() {
   const theme = useTheme();
+  const router = useRouter();
+
   return (
     <>
       {DATA.map((d) => (
@@ -116,6 +114,7 @@ export function CommunicatePart() {
                 width: { xs: "min(100%,340px)", md: "340px" },
                 mt: { xs: 10, md: "unset" },
               }}
+              onClick={() => router.push(d.link)}
             >
               <Typography
                 sx={{

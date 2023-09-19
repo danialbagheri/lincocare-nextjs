@@ -61,6 +61,7 @@ export function NewsItem(props: PropTypes) {
         <Typography color="lincoBlue.main" mt={4}>
           {`${day} ${month}, ${year}`}
         </Typography>
+        <Typography mt={4}>{data?.plain_excerpt}</Typography>
       </Box>
     </Box>
   );

@@ -4,6 +4,7 @@ import HTMLReactParser from "html-react-parser";
 /* ---------------------------- NextJs Components --------------------------- */
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { Inter } from "next/font/google";
 /* -------------------------------------------------------------------------- */
 
 /* ----------------------------- MUI Components ----------------------------- */
@@ -25,6 +26,13 @@ interface NewsDataTypes extends BlogRes {
     day: string;
   };
 }
+
+export const inter = Inter({
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  fallback: ["Helvetica", "Arial", "sans-serif"],
+});
 
 export function SingleNewsSection() {
   const slug = useRouter().query.slug;
@@ -117,7 +125,9 @@ export function SingleNewsSection() {
               >
                 {newsData?.title}
               </Typography>
-              <div>{HTMLReactParser(newsData?.body || "")}</div>
+              <Box mt={5} sx={{ "&>*": { fontFamily: `${inter} !important` } }}>
+                {HTMLReactParser(newsData?.body || "")}
+              </Box>
             </>
           )}
 

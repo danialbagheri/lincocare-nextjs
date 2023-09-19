@@ -1,5 +1,7 @@
+import { useState } from "react";
+
+/* ----------------------------- MUI Components ----------------------------- */
 import { Box, Typography } from "@mui/material";
-import { Container } from "shared";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
@@ -7,40 +9,18 @@ import MuiAccordionSummary, {
   AccordionSummaryProps,
 } from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
-import { useState } from "react";
+/* -------------------------------------------------------------------------- */
 
-const DATA = [
-  {
-    id: "1",
-    title: "Collapsible Group Item #1",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendissemalesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsumdolor sit amet, consectetur adipiscing elit. Suspendisse malesuadalacus ex, sit amet blandit leo lobortis eget.",
-  },
-  {
-    id: "2",
-    title: "Collapsible Group Item #2",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendissemalesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsumdolor sit amet, consectetur adipiscing elit. Suspendisse malesuadalacus ex, sit amet blandit leo lobortis eget.",
-  },
-  {
-    id: "3",
-    title: "Collapsible Group Item #3",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendissemalesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsumdolor sit amet, consectetur adipiscing elit. Suspendisse malesuadalacus ex, sit amet blandit leo lobortis eget.",
-  },
-  {
-    id: "4",
-    title: "Collapsible Group Item #4",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendissemalesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsumdolor sit amet, consectetur adipiscing elit. Suspendisse malesuadalacus ex, sit amet blandit leo lobortis eget.",
-  },
-  {
-    id: "5",
-    title: "Collapsible Group Item #5",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendissemalesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsumdolor sit amet, consectetur adipiscing elit. Suspendisse malesuadalacus ex, sit amet blandit leo lobortis eget.",
-  },
-];
+import HTMLReactParser from "html-react-parser";
+
+/* ---------------------------- Local Components ---------------------------- */
+import { Container } from "shared";
+import { FaqResultsType } from "services/lincoServicesTypes";
+/* -------------------------------------------------------------------------- */
+
+interface PropsTypes {
+  items: FaqResultsType[];
+}
 
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -78,11 +58,12 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
 }));
 
-export function FAQTitle() {
-  const [expanded, setExpanded] = useState<string | false>("");
+export function FAQ(props: PropsTypes) {
+  const [expanded, setExpanded] = useState<string | number | false>("");
 
   const handleChange =
-    (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
+    (panel: string | number) =>
+    (event: React.SyntheticEvent, newExpanded: boolean) => {
       setExpanded(newExpanded ? panel : false);
     };
 
@@ -145,17 +126,17 @@ export function FAQTitle() {
         </Typography>
       </Box>
       <Box mt={20}>
-        {DATA.map((d) => (
+        {props.items.map((item) => (
           <Accordion
-            key={d.id}
-            expanded={expanded === d.id}
-            onChange={handleChange(d.id)}
+            key={item.id}
+            expanded={expanded === item.id}
+            onChange={handleChange(item.id)}
           >
             <AccordionSummary sx={{ bgcolor: "white" }}>
-              <Typography>{d.title}</Typography>
+              <Typography>{item.question}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>{d.description}</Typography>
+              <Box>{HTMLReactParser(item?.answer || "")}</Box>
             </AccordionDetails>
           </Accordion>
         ))}

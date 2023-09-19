@@ -5,18 +5,22 @@ import Image from "next/image";
 import { BlogRes } from "services/lincoServicesTypes";
 import HTMLReactParser from "html-react-parser";
 import { manipulateDate } from "utils";
+import { useRouter } from "next/router";
 
 function NewsDetail(props: { newsData: BlogRes }) {
   const { newsData } = props;
   const theme = useTheme();
+  const router = useRouter();
   const properDate = manipulateDate(newsData.publish_date);
 
   return (
     <Stack
       sx={{
         width: "100%",
+        cursor: "pointer",
       }}
       gap={{ xs: 4, md: 5 }}
+      onClick={() => router.push(`/news/${newsData.slug}`)}
     >
       <Box sx={{ position: "relative", width: "100%", pt: "72%" }}>
         <Image
@@ -51,11 +55,10 @@ function NewsDetail(props: { newsData: BlogRes }) {
         }}
       >
         <Typography
-          color={"#A4A4A4"}
+          color={"lincoBlue.main"}
         >{`${properDate.day} ${properDate.month}, ${properDate.year}`}</Typography>
         <Box sx={{ height: 67, mt: 2 }}>
           <Typography
-            color={"lincoBlue.main"}
             sx={{
               overflow: "hidden",
               display: "-webkit-box",
@@ -64,7 +67,7 @@ function NewsDetail(props: { newsData: BlogRes }) {
               whiteSpace: "pre-wrap",
             }}
           >
-            {newsData?.plain_body}
+            {newsData?.plain_excerpt}
           </Typography>
         </Box>
         <CustomLink

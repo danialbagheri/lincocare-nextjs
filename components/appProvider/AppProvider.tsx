@@ -1,26 +1,28 @@
 import * as React from "react";
 import { NextPage } from "next";
-import { BlogRes } from "services/lincoServicesTypes";
+import { SocialMediaIconsItemType } from "services/lincoServicesTypes";
 
-interface InitialStateTypes {
-  news: BlogRes[];
+export interface InitialStateTypes {
+  socialMediaIcons: SocialMediaIconsItemType[];
 }
-interface AppContextInterface {
-  appState: InitialStateTypes | null;
-  setAppState: (value: any) => void;
-}
+type AppContextInterface = [
+  appState?: InitialStateTypes | null,
+  setAppState?: (value: any) => void
+];
 
 interface Props {
   children: React.ReactNode;
 }
 
-const AppContext = React.createContext<AppContextInterface | null>(null);
+const AppContext = React.createContext<AppContextInterface>([]);
 
 const AppProvider: NextPage<Props> = (props) => {
-  const [appState, setAppState] = React.useState(null);
+  const initialState = { socialMediaIcons: [] };
+  const [appState, setAppState] =
+    React.useState<InitialStateTypes>(initialState);
 
   return (
-    <AppContext.Provider value={{ appState, setAppState }}>
+    <AppContext.Provider value={[appState, setAppState]}>
       {props.children}
     </AppContext.Provider>
   );

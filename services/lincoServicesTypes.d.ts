@@ -2,6 +2,7 @@ export interface BlogRes {
   body: string;
   category: [];
   excerpt: string;
+  plain_excerpt: string;
   id: number;
   image: string;
   image_alt_text: string;
@@ -31,4 +32,31 @@ export interface ListOfAllBlogsRes {
 export interface GetListOfAllBlogsTypes {
   count?: number;
   tag?: string;
+}
+
+export interface SocialMediaIconsItemType {
+  icon: string;
+  id: number | string;
+  position: number;
+  svg_icon: string;
+  url: string;
+}
+
+export interface SocialMediaIconsType {
+  id: string | number;
+  name: string;
+  items: socialMediaIconsItemType[];
+}
+
+export interface FaqResultsType {
+  answer: string;
+  id: string | number;
+  public: boolean;
+  question: string;
+}
+export interface FaqTypes {
+  count: number;
+  next: string | null;
+  previous: string | null;
+  results: FaqResultsType[];
 }

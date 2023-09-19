@@ -30,6 +30,17 @@ export function DesktopMenu(props: DesktopMenuProps) {
     setAnchorEle(null);
   };
   const router = useRouter();
+
+  const borderColorRender = () => {
+    if (trigger) {
+      return "transparent";
+    } else if (darkNavbar) {
+      return "lincoBlue.light";
+    } else {
+      return "lincoYellow.main";
+    }
+  };
+
   return (
     <Box
       sx={{
@@ -37,14 +48,10 @@ export function DesktopMenu(props: DesktopMenuProps) {
         px: 3,
         gap: 4,
         borderBottom: "1px solid",
-        borderColor: trigger
-          ? "transparent"
-          : darkNavbar
-          ? "lincoBlue.light"
-          : "lincoYellow.main",
+        borderColor: borderColorRender(),
       }}
     >
-      {NAV_ITEMS.map((item) => (
+      {NAV_ITEMS.map((item, i) => (
         <>
           {item.justMobile ? null : (
             <Button

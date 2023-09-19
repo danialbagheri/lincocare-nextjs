@@ -12,19 +12,23 @@ import { Box, Typography } from "@mui/material";
 import { getListOfAllBlogs } from "services";
 import { BlogRes } from "services/lincoServicesTypes";
 import { manipulateDate } from "utils";
+import { useRouter } from "next/router";
 /* -------------------------------------------------------------------------- */
 
 const Item = (props: { data: BlogRes }) => {
+  const router = useRouter();
   const { year, month, day } = manipulateDate(props.data.publish_date);
   return (
     <Box
       sx={{
+        cursor: "pointer",
         display: "flex",
         justifyContent: "flex-start",
         alignItems: "center",
         flexDirection: { xs: "column", md: "row" },
         gap: { xs: 4, md: 8 },
       }}
+      onClick={() => router.push(`/news/${props.data.slug}`)}
     >
       <Box position="relative" sx={{ width: "30%", height: 120 }}>
         <Image

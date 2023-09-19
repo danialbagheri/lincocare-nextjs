@@ -5,8 +5,11 @@ import { Box, Divider } from "@mui/material";
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Local Components ---------------------------- */
-import { SingleNewsSection, SocialMediaSection } from "components/newsPage";
-import { LincoDivider } from "shared";
+import {
+  SingleNewsSection,
+  // SocialMediaSection
+} from "components/newsPage";
+// import { LincoDivider } from "shared";
 /* -------------------------------------------------------------------------- */
 
 export default function NewsItem() {

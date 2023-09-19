@@ -6,9 +6,29 @@ import {
   Retailers,
 } from "components/generalComponents";
 import { AboutLinco, Brands, Head, PrivateLabel } from "components/homePage";
+import { getIcons } from "services";
+import { GetStaticProps } from "next";
+import { useContext, useEffect } from "react";
+import { AppContext, InitialStateTypes } from "components/appProvider";
+import { SocialMediaIconsType } from "services/lincoServicesTypes";
 /* -------------------------------------------------------------------------- */
 
-export default function Home() {
+interface PropsTypes {
+  socialMediaIcons: SocialMediaIconsType;
+}
+
+export default function Home(props: PropsTypes) {
+  const [, setAppState] = useContext(AppContext);
+
+  useEffect(() => {
+    if (setAppState && props.socialMediaIcons) {
+      setAppState((prev: InitialStateTypes) => ({
+        ...prev,
+        socialMediaIcons: props.socialMediaIcons?.items,
+      }));
+    }
+  }, []);
+
   return (
     <>
       <Head />
@@ -36,3 +56,12 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  try {
+    const socialMediaIcons = await getIcons("social_media");
+    return { props: { socialMediaIcons } };
+  } catch {
+    return { props: { error: "Something went wrong!" } };
+  }
+};

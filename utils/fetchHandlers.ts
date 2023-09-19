@@ -1,6 +1,6 @@
 import { FetchHandlerGet, FetchHandlerPost } from "./types";
 
-const BASE_URL = "https://api.lincocare.co.uk/";
+const BASE_URL = "https://api.lincocare.co.uk/api/";
 
 const errorHandler = (response: any) => {
   if (response) {
