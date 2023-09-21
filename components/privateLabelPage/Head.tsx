@@ -87,7 +87,10 @@ export function Head() {
     <HeadContainer
       // pt={{ xs: 36, md: 62 }}
       // pb={{ xs: 11, md: 26 }}
-      sx={{ height: "unset" }}
+      sx={{
+        // height: "unset",
+        bgcolor: "#939eae",
+      }}
     >
       <Box
         position="relative"
