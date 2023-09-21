@@ -109,7 +109,10 @@ export function Head() {
         }}
       >
         <video width="100%" height="100%" autoPlay={true} loop muted>
-          <source src="/videos/Private-label-banner.mp4" type="video/mp4" />
+          <source
+            src="/videos/private-label-banner-small.mp4"
+            type="video/mp4"
+          />
         </video>
       </Box>
       <Box
