@@ -26,15 +26,6 @@ function PrivateLabel(props: PropsTypes) {
     <>
       <Head />
 
-      <Container>
-        <Divider
-          sx={{
-            bgcolor: "lincoBlue.main",
-            display: { xs: "none", md: "block" },
-          }}
-        />
-      </Container>
-
       <ProcessLevels faq={faq} />
 
       <CommunicatePart />

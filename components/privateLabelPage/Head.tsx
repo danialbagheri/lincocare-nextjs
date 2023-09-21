@@ -1,23 +1,32 @@
 import * as React from "react";
 
 /* ----------------------------- MUI Components ----------------------------- */
-import { Box, IconButton, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  IconButton,
+  // Stack,
+  Typography,
+} from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- NextJs Component ---------------------------- */
-import Image from "next/image";
+// import Image from "next/image";
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Installed library --------------------------- */
-import SwipeableViews from "react-swipeable-views";
+// import SwipeableViews from "react-swipeable-views";
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Local Components ---------------------------- */
-import { Container, HeadContainer } from "shared";
+import {
+  // Container,
+  HeadContainer,
+} from "shared";
 import { handleSwipeChange } from "utils";
 import { ArrowButtonTypes } from "./types";
+import { Slide } from "react-slideshow-image";
 /* -------------------------------------------------------------------------- */
 
 const PRIVATE_LABEL_INFO = [
@@ -72,15 +81,69 @@ const ArrowButton = (props: ArrowButtonTypes) => {
 };
 
 export function Head() {
-  const [index, setIndex] = React.useState(0);
+  // const [index, setIndex] = React.useState(0);
 
   return (
     <HeadContainer
-      pt={{ xs: 36, md: 62 }}
-      pb={{ xs: 11, md: 26 }}
+      // pt={{ xs: 36, md: 62 }}
+      // pb={{ xs: 11, md: 26 }}
       sx={{ height: "unset" }}
     >
-      <Container sx={{ position: "relative" }}>
+      <Box
+        position="relative"
+        sx={{
+          "*::-webkit-media-controls-panel": {
+            display: "none !important",
+            webkitAppearance: "none",
+          },
+
+          "*::-webkit-media-controls-play-button": {
+            display: "none !important",
+            webkitAppearance: "none",
+          },
+
+          "*::-webkit-media-controls-start-playback-button": {
+            display: "none !important",
+            webkitAppearance: "none",
+          },
+        }}
+      >
+        <video width="100%" height="100%" autoPlay={true} loop muted>
+          <source src="/videos/Private-label-banner.mp4" type="video/mp4" />
+        </video>
+      </Box>
+      <Box
+        sx={{
+          position: "absolute",
+          width: { xs: "90%", md: "800px" },
+          top: "40%",
+          left: { xs: "50%", md: "20%" },
+          textAlign: { xs: "center", md: "left" },
+          transform: { xs: "translate(-50%,0)", md: "translate(0,0)" },
+        }}
+      >
+        <Slide
+          autoplay
+          slidesToScroll={1}
+          duration={3000}
+          transitionDuration={500}
+          slidesToShow={1}
+          indicators={false}
+          arrows={false}
+        >
+          {PRIVATE_LABEL_INFO.map((info) => (
+            <Box key={info.id}>
+              <Typography
+                sx={{ typography: { xs: "h4", md: "h1" } }}
+                color="#fff"
+              >
+                {info.title}
+              </Typography>
+            </Box>
+          ))}
+        </Slide>
+      </Box>
+      {/* <Container sx={{ position: "relative" }}>
         <ArrowButton index={index} setIndex={setIndex} state={1} />
         <ArrowButton index={index} setIndex={setIndex} state={-1} />
 
@@ -120,7 +183,7 @@ export function Head() {
             </Stack>
           ))}
         </SwipeableViews>
-      </Container>
+      </Container> */}
     </HeadContainer>
   );
 }
