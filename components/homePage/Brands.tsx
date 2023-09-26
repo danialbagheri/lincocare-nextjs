@@ -74,7 +74,7 @@ export function Brands() {
           }}
           sx={{ typography: { xs: "h4", md: "h2" } }}
         >
-          Linco brands
+          Our brands
         </Typography>
         <Stack
           direction={"row"}

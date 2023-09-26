@@ -43,7 +43,7 @@ export const BRANDS = [
     whiteLogoSrc: "/images/brands/whiteLogo/Calypso-white.svg",
     mt: "0px",
     description:
-      "Calypso offers a comprehensive range of sun care products for all skin types and the whole family.",
+      "Calypso offers an extensive collection of sun care products designed to cater to the needs of all skin types and the entire family.",
     color: theme.palette.calypsoOrange.main,
     borderColor: theme.palette.calypsoOrange.main,
     knowMoreLink: "/brands/calypso",
@@ -102,7 +102,7 @@ export const BRANDS = [
     whiteLogoSrc: "/images/brands/whiteLogo/Cabana-white.svg",
     mt: "0",
     description:
-      "Cabana offers protection and tan enhancement in the same bottle, helping you stay safe while tanning. ",
+      "Cabana combines protection and tan enhancement within a single bottle, offering a dual benefit to ensure your safety while achieving a gorgeous tan.",
     color: theme.palette.cabanaBrown.main,
     borderColor: theme.palette.lincoBlue.main,
     knowMoreLink: "/brands/cabana",
@@ -196,7 +196,7 @@ export const BRANDS = [
     whiteLogoSrc: "/images/brands/whiteLogo/Silkia-white.svg",
     mt: "03px",
     description:
-      "Silkia Depilatory is your one stop hair removal product, providing you with long lasting smoothness that will make everyone wonder what your secret is.",
+      "Silkia Depilatory is your ultimate solution for hair removal, delivering long-lasting smoothness that leaves others curious about your secret.",
     color: theme.palette.silkiaDepilatory.main,
     borderColor: theme.palette.primary.main,
     knowMoreLink: "/brands/silkiaDepilatory",
@@ -240,7 +240,7 @@ export const BRANDS = [
     whiteLogoSrc: "/images/brands/whiteLogo/Dimples-white.svg",
     mt: "06px",
     description:
-      "Dimples range includes body wax strips, hair removal cream, bleach cream and spray foams so that no matter your skin type or preferences, there’s a Dimples product for you.",
+      "The Dimples range encompasses body wax strips, hair removal cream, bleach cream, and spray foams, ensuring that regardless of your skin type or preferences, you'll find the perfect Dimples product for you.",
     color: theme.palette.dimplesBlue.main,
     borderColor: theme.palette.lincoBlue.main,
     knowMoreLink: "/brands/dimples",
@@ -343,7 +343,7 @@ export const BRANDS = [
     whiteLogoSrc: "/images/brands/whiteLogo/Regen-white.svg",
     mt: "0px",
     description:
-      "Re-Gen is a range of specialized skin care products that help to fight against ageing, scars, stretch marks, dry skin and uneven skin tone.",
+      "Gen Discover Re-Gen, a dedicated line of skincare products designed to combat the effects of ageing, scars, stretch marks, dry skin, and uneven skin tone.",
     color: theme.palette.regenPink.main,
     borderColor: theme.palette.primary.main,
     knowMoreLink: "/brands/reGen",

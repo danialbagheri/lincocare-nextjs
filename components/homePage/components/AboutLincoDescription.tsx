@@ -37,10 +37,13 @@ export function AboutLincoDescription() {
         </Typography>
         <Box sx={{ display: { xs: "none", md: "block" } }}>
           <Typography color={"#ffffff"} mt={4}>
-            Linco Skincare is constantly exploring new avenues of research and
-            development to create revolutionary products that will change the
-            skincare industry; skincare guaranteed not to rub you up the wrong
-            way.
+            At Linco Care, we are committed to pushing the boundaries of
+            research and development, striving to innovate and redefine the
+            skincare industry. Our mission is to provide you with revolutionary
+            products that not only meet but exceed your expectations. With a
+            focus on skincare that is gentle yet effective, we aim to ensure
+            your journey towards healthy, radiant skin is always a smooth and
+            delightful one.
           </Typography>
 
           <CustomLink

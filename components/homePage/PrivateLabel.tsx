@@ -69,10 +69,13 @@ export function PrivateLabel() {
             Private label
           </Typography>
           <Typography color={"lincoBlue.main"}>
-            Linco Care offers a one-stop bespoke Private Label service in all
-            areas of wet fill manufacture including oils, creams, lotions, gels
-            and liquids, specializing in sun care, personal care and depilatory
-            products.
+            Linco Care provides a comprehensive, tailor-made Private Label
+            service covering a wide spectrum of wet fill manufacturing,
+            encompassing oils, creams, lotions, gels, and liquids. Our
+            specialisation lies in crafting exceptional products within the sun
+            care, personal care, and depilatory categories. Whether you need a
+            custom solution or seek to expand your brand's offerings, Linco Care
+            is your trusted partner for private label excellence.
           </Typography>
           <Link href={"/privateLabel"}>Know more</Link>
         </Box>
