@@ -34,7 +34,7 @@ const BRANDS = [
   },
   {
     id: BRANDS_ID.SILKIA_PEDICARE,
-    title: "Pedicare",
+    title: "Silkia Skin",
     imageSrc: "/images/brandsPopup/silkiaPedicare.png",
     text: "Silkia is hair removal that leaves you with long lasting smoothness.",
   },
@@ -124,6 +124,7 @@ export function BrandsPopOver(props: PropsTypes) {
             },
           }}
         >
+          {/* To do ::: Use main brands Json instead of this brands */}
           {BRANDS.map((brand, i) => (
             <Tab
               key={brand.title}

@@ -26,7 +26,7 @@ const VALUES = [
   {
     title: "Quality",
     description:
-      "With an enduring commitment to practical,  skincare and sun protection, Linco Care has evolved from a singular focus on sun protection to a diverse range of meticulously crafted, innovative formulations that address a wide spectrum of skincare needs. This journey has firmly established Linco Care as a premier British SPF brand, recognized for its forward-thinking approach and dedication to meeting the evolving demands of skincare.",
+      "We’re dedicated to using only the highest quality ingredients; how we care for our bodies is of the utmost importance.",
     image: "/images/homePage/values/quality.png",
   },
   {
@@ -38,7 +38,7 @@ const VALUES = [
   {
     title: "Innovation",
     description:
-      "From humble grassroots beginnings, where our primary focus was practical and no-nonsense sun protection, Linco Care has evolved into a brand that offers a discerning range of meticulously crafted, cutting-edge formulations designed to address a diverse spectrum of skincare needs. Our commitment to innovation and forward-thinking has firmly established Linco Care as a leader in the skincare industry.",
+      "Innovation is our core focus, driving product development and manufacturing processes to stay ahead.",
     image: "/images/homePage/values/innovation.png",
   },
 ];

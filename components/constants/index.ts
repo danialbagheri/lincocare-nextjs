@@ -152,7 +152,7 @@ export const BRANDS = [
   },
   {
     id: BRANDS_ID.SILKIA_PEDICARE,
-    name: "Pedicare",
+    name: "Silkia Skin",
     fullName: "Silkia Pedicare",
     imageSrc: "/images/brands/silkiaPedicare.png",
     whiteLogoSrc: "/images/brands/whiteLogo/Pedicare-white.svg",

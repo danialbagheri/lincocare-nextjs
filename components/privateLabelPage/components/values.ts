@@ -53,7 +53,7 @@ export const PROCESS_ITEMS = [
   },
   {
     title: "Product Specification ",
-    imgSrc: "/images/privateLabelPage/body/productSpecification.jpg",
+    imgSrc: "/images/privateLabelPage/body/branding&marketing.jpg",
     description:
       "We can source and fill your product into bottles, jars or tubes in a wide range of sizes and in whatever style you’re looking for.",
     link: "",
@@ -99,7 +99,7 @@ export const PROCESS_ITEMS = [
   },
   {
     title: "Branding & Marketing ",
-    imgSrc: "/images/privateLabelPage/body/branding&marketing.jpg",
+    imgSrc: "/images/privateLabelPage/body/productSpecification.jpg",
     description: "Driving digital brand growth through multi-channel marketing",
     link: "",
     data: [

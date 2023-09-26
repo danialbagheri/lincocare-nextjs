@@ -3,7 +3,7 @@ import Image from "next/image";
 /* -------------------------------------------------------------------------- */
 
 /* ----------------------------- MUI Components ----------------------------- */
-import { Box, Stack, SxProps, Typography, useTheme } from "@mui/material";
+import { Box, Stack, Typography, useTheme } from "@mui/material";
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Local Components ---------------------------- */

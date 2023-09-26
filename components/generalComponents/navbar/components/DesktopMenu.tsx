@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Box, Button, Popover } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { useRouter } from "next/router";
 import { NAV_ITEMS } from "./constants";
 import { AboutUsPopOver } from "./AboutUsPopOver";
