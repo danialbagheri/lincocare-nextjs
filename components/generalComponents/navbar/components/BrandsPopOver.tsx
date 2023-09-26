@@ -30,13 +30,13 @@ const BRANDS = [
     id: BRANDS_ID.SILKIA_DEPILATORY,
     title: "Silkia",
     imageSrc: "/images/brandsPopup/silkiaDepilatory.png",
-    text: "Calypso is a sun and skin care brand with a wide range of products.",
+    text: "Silkia is hair removal that leaves you with long lasting smoothness.",
   },
   {
     id: BRANDS_ID.SILKIA_PEDICARE,
     title: "Silkia Skin",
     imageSrc: "/images/brandsPopup/silkiaPedicare.png",
-    text: "Silkia is hair removal that leaves you with long lasting smoothness.",
+    text: "Silkia Skin is treatment to actively repair your dry, cracked heels.",
   },
   {
     id: BRANDS_ID.DIMPLES,
@@ -54,7 +54,7 @@ const BRANDS = [
     id: BRANDS_ID.RE_GEN,
     title: "Re-gen",
     imageSrc: "/images/brandsPopup/regen.png",
-    text: "Sun Tropic is a unique handbag size range offers both UVA and UVB protection.",
+    text: "Specialised to fight against ageing, scars, stretch marks, dry skin and uneven skin tone.",
   },
 ];
 
