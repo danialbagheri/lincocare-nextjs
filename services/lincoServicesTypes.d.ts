@@ -68,3 +68,9 @@ export interface IconGroupsItemType {
   svg_icon: string | null;
   url: string;
 }
+
+export interface IconGroupsType {
+  id: string | number;
+  name: string;
+  items: IconGroupsItemType[];
+}

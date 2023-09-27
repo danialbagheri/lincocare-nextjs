@@ -1,9 +1,13 @@
 import * as React from "react";
 import { NextPage } from "next";
-import { SocialMediaIconsItemType } from "services/lincoServicesTypes";
+import type {
+  IconGroupsType,
+  SocialMediaIconsItemType,
+} from "services/lincoServicesTypes";
 
 export interface InitialStateTypes {
   socialMediaIcons: SocialMediaIconsItemType[];
+  retailersData: IconGroupsType[];
 }
 type AppContextInterface = [
   appState?: InitialStateTypes | null,
@@ -17,7 +21,7 @@ interface Props {
 const AppContext = React.createContext<AppContextInterface>([]);
 
 const AppProvider: NextPage<Props> = (props) => {
-  const initialState = { socialMediaIcons: [] };
+  const initialState = { socialMediaIcons: [], retailersData: [] };
   const [appState, setAppState] =
     React.useState<InitialStateTypes>(initialState);
 

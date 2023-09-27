@@ -11,6 +11,7 @@ import { GetStaticProps } from "next";
 import { useContext, useEffect } from "react";
 import { AppContext, InitialStateTypes } from "components/appProvider";
 import { SocialMediaIconsType } from "services/lincoServicesTypes";
+
 /* -------------------------------------------------------------------------- */
 
 interface PropsTypes {

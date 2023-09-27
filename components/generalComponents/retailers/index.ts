@@ -1,3 +1,2 @@
-import Retailers from "./Retailers";
-
-export { Retailers };
+export * from "./Retailers";
+export * from "./RetailerLogo";
