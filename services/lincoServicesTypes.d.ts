@@ -60,3 +60,11 @@ export interface FaqTypes {
   previous: string | null;
   results: FaqResultsType[];
 }
+
+export interface IconGroupsItemType {
+  icon: string | null;
+  id: number | string;
+  position: number | string;
+  svg_icon: string | null;
+  url: string;
+}

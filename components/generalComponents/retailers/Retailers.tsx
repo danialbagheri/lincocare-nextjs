@@ -1,49 +1,22 @@
+import { useEffect, useState } from "react";
+
 import { Box, Divider, SxProps, Typography } from "@mui/material";
 
-import { Container } from "shared";
 import Image from "next/image";
 
-export const retailersDetail = [
-  {
-    id: "ukAndIreland",
-    title: "UK and Ireland retailers",
-    count: 13,
-    retail: "uk",
-  },
-  { id: "overseas", title: "Overseas retailers", count: 6, retail: "overseas" },
-];
+import { Container } from "shared";
+import { getIcons } from "services";
+import type { IconGroupsItemType } from "services/lincoServicesTypes";
 
-export const renderBrandsLogo = (retailerCount: number, retailer: string) => {
-  const brandsArray = [];
-  for (let i = 0; i < retailerCount; i++) {
-    brandsArray.push(
-      <Box
-        className="centralize"
-        sx={{
-          width: { xs: "84px", md: "157px" },
-          minWidth: { xs: "84px", md: "157px" },
-          height: { xs: "42px", md: "80px" },
-          position: "relative",
-        }}
-      >
-        <Image
-          src={
-            "/images/homePage/retailers/" + retailer + "/retailers" + i + ".png"
-          }
-          alt={"retailer No" + i}
-          fill
-          style={{ objectFit: "cover" }}
-        />
-      </Box>
-    );
-  }
-  return brandsArray;
-};
+interface RetailerDataType {
+  id: string;
+  title: string;
+  items: IconGroupsItemType[];
+}
 
 const RetailerItem = (props: {
-  count: number;
-  retail: string;
   title: string;
+  items: IconGroupsItemType[];
 }) => {
   return (
     <Box>
@@ -69,13 +42,46 @@ const RetailerItem = (props: {
           alignItems: "center",
         }}
       >
-        {renderBrandsLogo(props.count, props.retail)}
+        {props.items.map((item, i) => (
+          <Box
+            className="centralize"
+            key={item.id}
+            sx={{
+              width: { xs: "84px", md: "157px" },
+              minWidth: { xs: "84px", md: "157px" },
+              height: { xs: "42px", md: "80px" },
+              position: "relative",
+            }}
+          >
+            <Image
+              src={item.icon || ""}
+              alt={"retailer No" + i}
+              fill
+              style={{ objectFit: "cover" }}
+            />
+          </Box>
+        ))}
       </Box>
     </Box>
   );
 };
 
 function Retailers(props: { sx?: SxProps }) {
+  const [retailersData, setRetailersData] = useState<RetailerDataType[]>([]);
+
+  useEffect(() => {
+    const getUkRetailers = getIcons("uk_ireland_retailers");
+    const getOverseasRetailers = getIcons("overseas_retailers");
+
+    Promise.all([getUkRetailers, getOverseasRetailers]).then((res) => {
+      const retailersArray: RetailerDataType[] = [];
+      res.forEach((r) => {
+        retailersArray.push({ id: r.id, title: r.name, items: r.items });
+      });
+      setRetailersData(retailersArray);
+    });
+  }, []);
+
   return (
     <Container
       sx={{ alignItems: "center", pt: { xs: 17, md: 10 }, ...props.sx }}
@@ -84,12 +90,12 @@ function Retailers(props: { sx?: SxProps }) {
       <Typography sx={{ typography: { xs: "h4", md: "h2" } }}>
         Retailers
       </Typography>
-      {retailersDetail.map((retailer) => (
+
+      {retailersData.map((retailers) => (
         <RetailerItem
-          key={retailer.id}
-          title={retailer.title}
-          count={retailer.count}
-          retail={retailer.retail}
+          key={retailers.id}
+          title={retailers.title}
+          items={retailers.items}
         />
       ))}
     </Container>

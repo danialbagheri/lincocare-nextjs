@@ -60,6 +60,7 @@ export default function Home(props: PropsTypes) {
 export const getStaticProps: GetStaticProps = async () => {
   try {
     const socialMediaIcons = await getIcons("social_media");
+
     return { props: { socialMediaIcons } };
   } catch {
     return { props: { error: "Something went wrong!" } };
