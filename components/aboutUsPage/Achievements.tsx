@@ -14,21 +14,23 @@ export function Achievements() {
       >
         Achievements
       </Typography>
-      <Stack
+      <Box
         sx={{
           borderBottom: `1px solid ${theme.palette.lincoBlue.light}`,
 
           py: 8,
           mb: 5,
 
-          flexDirection: "row",
-          justifyContent: "space-between",
-          rowGap: 17,
-          columnGap: 9,
-          flexWrap: "wrap",
+          display: "grid",
+          gridTemplateColumns: {
+            xs: "100%",
+            sm: "50% 50%",
+            lg: "repeat(4, 25%)",
+          },
+          rowGap: { xs: 20, md: 32 },
         }}
       >
-        {ACHIEVEMENTS.map((part, i) => (
+        {ACHIEVEMENTS.map((achievement, i) => (
           <Box
             key={i}
             sx={{
@@ -37,25 +39,22 @@ export function Achievements() {
               justifyContent: "space-around",
             }}
           >
-            {part.map((achievement) => (
-              <Box
-                key={achievement.title}
-                color="lincoBlue.main"
-                textAlign="center"
-              >
-                <Typography sx={{ typography: { xs: "h1", md: "h0" } }}>
-                  {achievement.title}
-                </Typography>
-                <Typography
-                  sx={{ typography: { xs: "body1", md: "subtitle1" } }}
-                >
-                  {achievement.subtitle}
-                </Typography>
-              </Box>
-            ))}
+            <Box
+              key={achievement.title}
+              color="lincoBlue.main"
+              textAlign="center"
+            >
+              <Typography sx={{ typography: { xs: "h1", md: "h0" } }}>
+                {achievement.title}
+                <span style={{ fontSize: "40px" }}>{achievement.unit}</span>
+              </Typography>
+              <Typography sx={{ typography: { xs: "body1", md: "subtitle1" } }}>
+                {achievement.subtitle}
+              </Typography>
+            </Box>
           </Box>
         ))}
-      </Stack>
+      </Box>
     </Container>
   );
 }

@@ -132,7 +132,7 @@ export function PrivateLabel() {
         }}
       >
         <Link href="/privateLabel#private_label_process">
-          Private label process
+          Our Private Label Process
         </Link>
       </Box>
     </Container>

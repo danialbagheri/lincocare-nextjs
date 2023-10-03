@@ -9,10 +9,33 @@ export const SUSTAINABILITY = [
   },
   {
     title: "‘A Grade’ Efficiency",
-    description:
-      "Our building is super efficient, with an 'A' grade! We've topped it off with a 100 KW peak Photovoltaic system on the roof, producing 76,900 KW hours a year. That means our carbon output is reduced by a massive 34,000 KG of Co2.",
-    description2:
-      "The system consists of 400 Trina Solar 250 watt panels and is installed on a South East facing roof between the skylights allowing natural daylight into the warehouse. The system also utilities four Power-One inverters to convert the DC power to AC and feed it back into our system. The company is therefore in a position to use all of the energy produced during daylight working hours and then export power back to the Grid when we are closed. By installing energy efficient lighting with daylight controls we have also reduced our power use in the new warehouse and we are looking to replicate these savings throughout our premises.",
+    customDescription: (
+      <>
+        <p>
+          At Linco Care, we take pride in achieving the highest 'A' Grade
+          efficiency standards.{" "}
+        </p>
+        <p>
+          Our 100 KW peak Photovoltaic system installed on our rooftop produces
+          76,900 KW hours annually, translating to a remarkable reduction of
+          34,000 KG of CO2 emissions.
+        </p>
+        <p>
+          The system comprises 400 Trina Solar 250-watt panels installed on a
+          South East facing roof, positioned between skylights to maximise
+          natural daylight within the warehouse.{" "}
+        </p>
+        <p>
+          seamlessly integrating it into our operational system. This setup
+          enables us to utilise all the energy generated during working hours
+          and even export surplus power back to the Grid during our
+          non-operational hours. Furthermore, by installing energy efficient
+          lighting with daylight controls, we have also reduced our power
+          consumption. This initiative serves as a blueprint for extending
+          similar energy-saving measures throughout our entire premises.
+        </p>
+      </>
+    ),
     imgSrc: "efficiency.png",
     imagePos: "left",
     pt: "103.7%",

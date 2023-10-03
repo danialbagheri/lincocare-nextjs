@@ -29,6 +29,6 @@ export const getIcons = (slug: string) => {
   return get({ endpoint: `web/icon-groups/${slug}` });
 };
 
-export const getFaq = () => {
-  return get({ endpoint: "faq" });
+export const getFaq = (page: number = 1) => {
+  return get({ endpoint: `faq/?page=${page}` });
 };

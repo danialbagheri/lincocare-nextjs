@@ -43,23 +43,15 @@ export function AboutLinco() {
             textAlign={{ xs: "unset", md: "justify" }}
             mt={{ xs: 7, md: 10 }}
           >
-            Putting SPF & skincare at the “sun-kissed” epicentre of our purpose,
-            our brand family is something that has professionally matured and
-            grown with over forty years of experimentation and commitment. With
-            dedication to constant improvement, Linco Skincare is constantly
-            exploring new avenues of research and development to create
-            revolutionary products that will change the skincare industry.{" "}
+            At Linco Care, we proudly stand as a prominent manufacturer in the
+            realm of sun care, skin care, and depilatory products. Our journey
+            revolves around placing SPF and skincare at the core of our mission.
+            Over the span of four decades, our brand family has evolved and
+            matured through relentless experimentation and unwavering
+            commitment. We not only offer seven of our own diverse brands, but
+            also provide the option for private label solutions, catering to
+            diverse needs in the world of skincare.
           </Typography>
-          {/* <Divider
-            sx={{
-              position: "absolute",
-              width: "150%",
-              bottom: "-200px",
-              right: "-100px",
-              display: { xs: "none", md: "block" },
-            }}
-            textAlign="right"
-          /> */}
         </Box>
       </Box>
       <Divider
@@ -85,6 +77,7 @@ export function AboutLinco() {
             key={item.title}
             title={item.title}
             description={item.description}
+            customDescription={item.customDescription}
           />
         ))}
       </Box>

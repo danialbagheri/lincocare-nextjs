@@ -24,10 +24,6 @@ export function ProcessLevelItem(props: ProcessItemTypes) {
 
   const dataRef = useRef<HTMLInputElement>();
 
-  useEffect(() => {
-    console.log(dataRef.current?.clientHeight);
-  }, []);
-
   return (
     <Box
       className="centralize"

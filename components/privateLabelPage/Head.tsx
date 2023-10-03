@@ -21,12 +21,12 @@ const PRIVATE_LABEL_INFO = [
   },
   {
     id: "privateLabel_2",
-    title: "From Idea to the market",
+    title: "From idea to market ",
     imgSrc: "/images/privateLabelPage/head/privateLabel.png",
   },
   {
     id: "privateLabel_3",
-    title: "Four Decades of Cosmetic Manufacturing Expertise",
+    title: "Four decades of cosmetic manufacturing expertise ",
     imgSrc: "/images/privateLabelPage/head/privateLabel.png",
   },
 ];

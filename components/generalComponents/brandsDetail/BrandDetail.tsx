@@ -9,7 +9,6 @@ import { Box, Stack, Typography, useTheme } from "@mui/material";
 /* ---------------------------- Local Components ---------------------------- */
 import { Container, CustomLink } from "shared";
 import { BrandDetailsType, BRANDS_ID } from "components/constants";
-import { Details } from "@mui/icons-material";
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 

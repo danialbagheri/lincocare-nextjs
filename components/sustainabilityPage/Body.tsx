@@ -47,12 +47,8 @@ export function Body() {
                 alignSelf: "start",
               }}
             >
-              <Typography>{item.description}</Typography>
-              {item.description2 && (
-                <Typography mt={{ xs: 4, md: 8 }}>
-                  {item.description2}
-                </Typography>
-              )}
+              <Typography>{item?.description}</Typography>
+              {item.customDescription}
             </Box>
 
             <Box

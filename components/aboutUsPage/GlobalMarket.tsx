@@ -34,7 +34,7 @@ export function GlobalMarket() {
         pt={{ xs: 17, md: 20 }}
         mb={{ xs: 8, md: 0 }}
       >
-        Linco’s global market
+        Our Global Market
       </Typography>
       <Countries />
 

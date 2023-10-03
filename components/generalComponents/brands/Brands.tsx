@@ -58,7 +58,7 @@ export function Brands(props: { sx?: SxProps }) {
         mt={8}
         aSx={{ px: 8 }}
       >
-        All Linco brands
+        Linco Care brands
       </CustomLink>
     </Container>
   );

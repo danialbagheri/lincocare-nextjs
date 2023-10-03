@@ -9,6 +9,7 @@ import LoadingButton from "@mui/lab/LoadingButton";
 import { BlogRes, ListOfAllBlogsRes } from "services/lincoServicesTypes";
 import { NewsItem } from "./components";
 import { getListOfAllBlogs } from "services";
+import { LoadMoreBtn } from "components/generalComponents";
 /* -------------------------------------------------------------------------- */
 
 interface PropTypes {
@@ -97,27 +98,13 @@ export function NewsSection(props: PropTypes) {
         {loadMoreNewsError ? (
           <LoadErrorComponent err={loadMoreNewsError} />
         ) : (
-          <LoadingButton
+          <LoadMoreBtn
             loading={loading}
-            sx={{
-              textTransform: "unset",
-              color: "#000",
-              borderBottom: "3px solid ",
-              borderColor: btnDisable
-                ? "rgba(0, 0, 0, 0.26)"
-                : theme.palette.lincoBlue.main,
-              borderRadius: 0,
-              px: 7,
-              "&:hover": {
-                bgcolor: "transparent",
-              },
-              display: btnDisable ? "none" : "block",
-            }}
+            loadMoreHandler={loadMoreHandler}
             disabled={btnDisable}
-            onClick={loadMoreHandler}
           >
-            Load more
-          </LoadingButton>
+            Load More
+          </LoadMoreBtn>
         )}
       </Box>
     </Box>

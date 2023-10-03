@@ -6,12 +6,13 @@ import { Box, Stack, Typography } from "@mui/material";
 interface ItemPropsTypes {
   number: string;
   description: string;
+  unit?: string;
 }
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------- Constants ------------------------------- */
 const STATISTICS_DETAILS = [
-  { number: "1M", description: "Filling capacity" },
+  { number: "1M", unit: "/month", description: "Filling capacity" },
   { number: "60", description: "Countries" },
   { number: "700+", description: "Product formulations" },
   { number: "70+", description: "Sun care formulations" },
@@ -32,7 +33,9 @@ const StatisticItem = (props: ItemPropsTypes) => (
       }}
     >
       {props.number}
+      <span style={{ fontSize: "40px" }}>{props.unit}</span>
     </Typography>
+
     <Typography
       sx={{
         textAlign: "center",
@@ -51,20 +54,26 @@ const StatisticItem = (props: ItemPropsTypes) => (
 
 export function AboutLincoStatistics() {
   return (
-    <Stack
-      direction={"row"}
-      justifyContent={{ xs: "center", sm: "space-between" }}
-      mt={{ xs: 22, md: 32 }}
-      flexWrap={"wrap"}
-      gap={{ xs: 10, md: 8 }}
+    <Box
+      sx={{
+        mt: { xs: 22, md: 32 },
+        display: "grid",
+        gridTemplateColumns: {
+          xs: "100%",
+          sm: "50% 50%",
+          lg: "repeat(4, 25%)",
+        },
+        rowGap: { xs: 20, md: 32 },
+      }}
     >
       {STATISTICS_DETAILS.map((detail) => (
         <StatisticItem
           key={detail.number}
           description={detail.description}
           number={detail.number}
+          unit={detail.unit}
         />
       ))}
-    </Stack>
+    </Box>
   );
 }

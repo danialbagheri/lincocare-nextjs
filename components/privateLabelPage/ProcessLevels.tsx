@@ -1,12 +1,12 @@
 import { Box, Stack, Typography, useTheme } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
-import { FaqResultsType } from "services/lincoServicesTypes";
+import { FaqTypes } from "services/lincoServicesTypes";
 
 import { FAQ, ProcessLevelItem, PROCESS_ITEMS } from "./components";
 import { ItemsSpecsTypes } from "./components/types";
 
 interface PropsTypes {
-  faq: FaqResultsType[];
+  faq: FaqTypes;
 }
 
 export function ProcessLevels(props: PropsTypes) {
@@ -168,26 +168,11 @@ export function ProcessLevels(props: PropsTypes) {
       >
         <Box
           sx={{
-            bgcolor: { xs: "#F4F4F4", md: "#FFF" },
             width: "100%",
-            margin: "0 auto",
             px: { xs: 9, md: 0 },
             py: { xs: 9, md: 22 },
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "column",
           }}
-        >
-          <Typography
-            textAlign="center"
-            sx={{
-              typography: { xs: "h3", md: "h4" },
-              bgcolor: { xs: "#F4F4F4", md: "unset" },
-            }}
-          >
-            We are expert in “Private Label”
-          </Typography>
-        </Box>
+        />
 
         <Stack alignItems="center">
           <Typography
@@ -238,7 +223,7 @@ export function ProcessLevels(props: PropsTypes) {
             />
           ))}
         </Box>
-        <FAQ items={faq} />
+        <FAQ faq={faq} />
       </Box>
     </Box>
   );

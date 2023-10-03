@@ -4,19 +4,15 @@ import { LincoNews } from "components/generalComponents";
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Local Components ---------------------------- */
-import {
-  CommunicatePart,
-  Head,
-  ProcessLevels,
-} from "components/privateLabelPage";
+import { Head, ProcessLevels } from "components/privateLabelPage";
 import { GetStaticProps } from "next";
 import { getFaq } from "services";
-import { FaqResultsType } from "services/lincoServicesTypes";
+import { FaqTypes } from "services/lincoServicesTypes";
 import { Container } from "shared";
 /* -------------------------------------------------------------------------- */
 
 interface PropsTypes {
-  faq: FaqResultsType[];
+  faq: FaqTypes;
 }
 
 function PrivateLabel(props: PropsTypes) {
@@ -28,7 +24,7 @@ function PrivateLabel(props: PropsTypes) {
 
       <ProcessLevels faq={faq} />
 
-      <CommunicatePart />
+      {/* <CommunicatePart /> */}
 
       <Container fullWidth>
         <Divider
@@ -50,7 +46,7 @@ export const getStaticProps: GetStaticProps = async () => {
   try {
     const faq = await getFaq();
 
-    return { props: { faq: faq.results } };
+    return { props: { faq } };
   } catch {
     return { props: { error: "Something went wrong in loading faq!" } };
   }

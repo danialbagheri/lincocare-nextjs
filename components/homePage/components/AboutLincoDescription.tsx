@@ -39,11 +39,11 @@ export function AboutLincoDescription() {
           <Typography color={"#ffffff"} mt={4}>
             At Linco Care, we are committed to pushing the boundaries of
             research and development, striving to innovate and redefine the
-            skincare industry. Our mission is to provide you with revolutionary
-            products that not only meet but exceed your expectations. With a
-            focus on skincare that is gentle yet effective, we aim to ensure
-            your journey towards healthy, radiant skin is always a smooth and
-            delightful one.
+            skincare industry. Within onsite labs, we meticulously craft and
+            create a range of products for our own brands, as well as our
+            private label clients'. Our mission is to provide you with
+            exceptional products that not only meet but exceed your
+            expectations.
           </Typography>
 
           <CustomLink

@@ -240,7 +240,7 @@ export const BRANDS = [
     whiteLogoSrc: "/images/brands/whiteLogo/Dimples-white.svg",
     mt: "06px",
     description:
-      "The Dimples range encompasses body wax strips, hair removal cream, bleach cream, and spray foams, ensuring that regardless of your skin type or preferences, you'll find the perfect Dimples product for you.",
+      "The Dimples range encompasses body wax strips, hair removal cream, bleach cream, and spray foams, ensuring that regardless of your skin type or preferences, you'll find the perfect product for you.",
     color: theme.palette.dimplesBlue.main,
     borderColor: theme.palette.lincoBlue.main,
     knowMoreLink: "/brands/dimples",
@@ -285,7 +285,7 @@ export const BRANDS = [
     whiteLogoSrc: "/images/brands/whiteLogo/SunTropic-white.svg",
     mt: "03px",
     description:
-      "This unique handbag size range offers both UVA and UVB protection. All products are water-resistant, so you don’t need to worry about getting burned at the beach or in the pool.",
+      "This unique handbag size range offers both UVA and UVB protection. Our water-resistant products provide peace of mind, ensuring you stay sunburn-free for your beach and pool days.",
     color: theme.palette.sunTropic.main,
     borderColor: theme.palette.lincoBlue.main,
     knowMoreLink: "/brands/sunTropic",

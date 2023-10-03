@@ -8,7 +8,7 @@ function Brands() {
       <Head />
       <LincoBrands />
 
-      <LincoDivider fullWidth sx={{ mt: 17, mb: { xs: 16, md: 32 } }} />
+      <LincoDivider fullWidth sx={{ mb: { xs: 16, md: 32 } }} />
 
       <Accreditations sx={{ xs: 16, mb: 46 }} />
     </>

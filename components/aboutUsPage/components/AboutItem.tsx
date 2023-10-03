@@ -1,31 +1,25 @@
+import * as React from "react";
 import { Box, Typography } from "@mui/material";
 import { CustomLink } from "shared";
 
 interface PropTypes {
   title: string;
-  description: string;
+  description?: string;
+  customDescription?: React.ReactNode;
 }
 
 export function AboutItem(props: PropTypes) {
-  const { title, description } = props;
+  const { title, description, customDescription } = props;
 
   return (
     <Box>
       <Typography variant="h2" color="lincoBlue.main">
         {title}
       </Typography>
-      <Typography
-        textAlign="justify"
-        mt={6}
-        sx={{
-          display: { xs: "-webkit-box", md: "block" },
-          webkitLineClamp: { xs: "3", md: "unset" },
-          webkitBoxOrient: { xs: "vertical", md: "unset" },
-          overflow: { xs: "hidden", md: "visible" },
-        }}
-      >
+      <Typography textAlign="justify" mt={6}>
         {description}
       </Typography>
+      {customDescription}
       <CustomLink
         href=""
         color="#000"

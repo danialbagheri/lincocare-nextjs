@@ -1,16 +1,17 @@
+import { useContext, useEffect } from "react";
+
+import { GetStaticProps } from "next";
 /* ---------------------------- Local Components ---------------------------- */
+import { getIcons } from "services";
 import { LincoDivider } from "shared";
 import {
   Accreditations,
   LincoNews,
   Retailers,
 } from "components/generalComponents";
-import { AboutLinco, Brands, Head, PrivateLabel } from "components/homePage";
-import { getIcons } from "services";
-import { GetStaticProps } from "next";
-import { useContext, useEffect } from "react";
-import { AppContext, InitialStateTypes } from "components/appProvider";
 import { SocialMediaIconsType } from "services/lincoServicesTypes";
+import { AppContext, InitialStateTypes } from "components/appProvider";
+import { AboutLinco, Brands, Head, PrivateLabel } from "components/homePage";
 
 /* -------------------------------------------------------------------------- */
 

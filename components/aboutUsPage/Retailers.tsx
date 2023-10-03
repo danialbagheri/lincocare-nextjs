@@ -48,8 +48,6 @@ export function Retailers() {
     }
   }, []);
 
-  console.log("logo links::::", logoLinks);
-
   return (
     <Container
       sx={{

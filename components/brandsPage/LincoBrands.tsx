@@ -7,9 +7,11 @@ import { BrandDetail } from "components/generalComponents";
 export function LincoBrands() {
   return (
     <>
-      {BRANDS.map((brand) => (
-        <BrandDetail key={brand.id} details={brand} />
-      ))}
+      {BRANDS.map((brand) => {
+        if (!brand.privateLabel) {
+          return <BrandDetail key={brand.id} details={brand} />;
+        }
+      })}
     </>
   );
 }
