@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 
 import { SxProps, Typography } from "@mui/material";
 
@@ -9,7 +9,6 @@ import type { IconGroupsType } from "services/lincoServicesTypes";
 import { AppContext, InitialStateTypes } from "components/appProvider";
 
 export function Retailers(props: { sx?: SxProps }) {
-  const [retailersData, setRetailersData] = useState<IconGroupsType[]>([]);
   const [appState, setAppState] = useContext(AppContext);
 
   useEffect(() => {
@@ -22,7 +21,6 @@ export function Retailers(props: { sx?: SxProps }) {
         res.forEach((r) => {
           retailersArray.push({ id: r.id, name: r.name, items: r.items });
         });
-        setRetailersData(retailersArray);
         if (setAppState) {
           setAppState((prev: InitialStateTypes) => ({
             ...prev,
@@ -42,7 +40,7 @@ export function Retailers(props: { sx?: SxProps }) {
         Retailers
       </Typography>
 
-      {retailersData.map((retailers) => (
+      {appState?.retailersData.map((retailers) => (
         <RetailerItem
           key={retailers.id}
           name={retailers.name}
