@@ -2,7 +2,7 @@ export const SUSTAINABILITY = [
   {
     title: "Renewable Energy Concern",
     description:
-      "At Linco Care Ltd, we care deeply about the environment and we've been ISO 14001 - Environmental Management accredited since July 2008! We're determined to do our part in reducing our carbon footprint and using more renewable energy. That's why we've invested in a new 2356 sq meter warehouse at our Manchester site. We're excited about this investment and we hope it will help us make a positive impact on the environment.",
+      "At Linco Care Ltd, our commitment to environmental responsibility runs deep. We take pride in our ISO 14001 - Environmental Management accreditation, since July 2008. We're determined to do our part in reducing our carbon footprint and using more renewable energy.",
     imgSrc: "renewableEnergy.png",
     imagePos: "right",
     pt: "78.7%",
@@ -13,7 +13,7 @@ export const SUSTAINABILITY = [
       <>
         <p>
           At Linco Care, we take pride in achieving the highest 'A' Grade
-          efficiency standards.{" "}
+          efficiency standards.
         </p>
         <p>
           Our 100 KW peak Photovoltaic system installed on our rooftop produces
@@ -23,9 +23,10 @@ export const SUSTAINABILITY = [
         <p>
           The system comprises 400 Trina Solar 250-watt panels installed on a
           South East facing roof, positioned between skylights to maximise
-          natural daylight within the warehouse.{" "}
+          natural daylight within the warehouse.
         </p>
         <p>
+          Four Power-One inverters efficiently convert DC power to AC,
           seamlessly integrating it into our operational system. This setup
           enables us to utilise all the energy generated during working hours
           and even export surplus power back to the Grid during our

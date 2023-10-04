@@ -55,7 +55,7 @@ export const ABOUT_ITEM = [
   {
     title: "Innovation",
     description:
-      "From humble grassroots beginnings, where our primary focus was practical and no-nonsense sun protection, Linco Care has evolved into a brand that offers a discerning range of meticulously crafted, cutting-edge formulations designed to address a diverse spectrum of skincare needs. Our commitment to innovation and forward-thinking has firmly established Linco Care as a leader in the skincare industry.",
+      "From humble beginnings, where our primary focus was practical sun protection, Linco Care has evolved into a brand that offers a discerning range of meticulously crafted formulations designed to address a diverse spectrum of skincare needs. With seven own brands and many advanced private label partners, innovation and brand adaptation are the key to our success.",
   },
 ];
 
