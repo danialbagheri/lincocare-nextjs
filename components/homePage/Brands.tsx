@@ -58,8 +58,8 @@ export function Brands() {
   return (
     <Box
       sx={{
-        mt: { xs: 15, md: 0 },
-        p: { xs: "60px 40px", md: "unset" },
+        pt: { xs: 20, md: 40 },
+        px: { xs: 10, md: "unset" },
         bgcolor: { xs: BRANDS[value].color, md: "unset" },
         transition: "all 500ms",
       }}
@@ -72,7 +72,7 @@ export function Brands() {
             xs: BRANDS[value].privateLabel ? "#000" : "#fff",
             md: "#000",
           }}
-          sx={{ typography: { xs: "h4", md: "h2" } }}
+          sx={{ typography: { xs: "h3", md: "h2" } }}
         >
           Our brands
         </Typography>

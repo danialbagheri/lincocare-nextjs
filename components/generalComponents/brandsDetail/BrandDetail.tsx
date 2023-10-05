@@ -41,7 +41,8 @@ const BrandDescription = (props: BrandDescriptionTypes) => {
           xs: props.privateLabel ? "center" : "flex-start",
           md: "flex-start",
         }}
-        gap={10}
+        gap={{ xs: 5, md: 10 }}
+        flexWrap="wrap"
       >
         <CustomLink
           color={{ xs: props.privateLabel ? "#000" : "#FFFFFF", md: "#000" }}

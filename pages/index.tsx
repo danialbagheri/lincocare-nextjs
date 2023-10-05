@@ -34,14 +34,12 @@ export default function Home(props: PropsTypes) {
   return (
     <>
       <Head />
+      <Brands />
+
+      <LincoDivider sx={{ display: { xs: "none", md: "block" } }} fullWidth />
+
       <PrivateLabel />
 
-      <LincoDivider
-        sx={{ my: 25, display: { xs: "none", md: "block" } }}
-        fullWidth
-      />
-
-      <Brands />
       <Retailers />
       <AboutLinco />
 
