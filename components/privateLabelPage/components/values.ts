@@ -137,7 +137,7 @@ export const PROCESS_ITEMS = [
     title: "Production & Manufacturing",
     imgSrc: "/images/privateLabelPage/body/production&Manufacturing.jpg",
     description:
-      "Our constant reinvestment and drive for improvement will ensure you get the best possible product at the highest possible quality.",
+      "Our constant reinvestment and drive for improvement will ensure you get the best product at the highest quality.",
     link: "",
     data: [
       {

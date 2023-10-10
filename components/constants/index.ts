@@ -343,7 +343,7 @@ export const BRANDS = [
     whiteLogoSrc: "/images/brands/whiteLogo/Regen-white.svg",
     mt: "0px",
     description:
-      "Gen Discover Re-Gen, a dedicated line of skincare products designed to combat the effects of ageing, scars, stretch marks, dry skin, and uneven skin tone.",
+      "Discover Re-Gen, a dedicated line of skincare products designed to combat the effects of ageing, scars, stretch marks, dry skin, and uneven skin tone.",
     color: theme.palette.regenPink.main,
     borderColor: theme.palette.primary.main,
     knowMoreLink: "/brands/reGen",

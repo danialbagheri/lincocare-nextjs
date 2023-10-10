@@ -1,10 +1,8 @@
 /* ----------------------------- MUI Components ----------------------------- */
 import { Box, Divider, Typography, useTheme } from "@mui/material";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-import { Container } from "shared";
+import { useRef } from "react";
 import { NumberElement } from "./ NumberElement";
-import LinkElement from "./LinkElement";
 
 /* ---------------------------- Local Components ---------------------------- */
 import { ProcessItemTypes } from "./types";
@@ -17,7 +15,6 @@ export function ProcessLevelItem(props: ProcessItemTypes) {
     imgSrc,
     title,
     description,
-    link,
     data,
     itemSpecs: { active, top },
   } = props;
@@ -69,10 +66,17 @@ export function ProcessLevelItem(props: ProcessItemTypes) {
           />
         </>
       ) : null}
-      <LinkElement
-        href={link}
-        sx={{ display: { xs: active ? "flex" : "none", md: "none" } }}
-      />
+      <Box
+        sx={{
+          display: { xs: active ? "flex" : "none", md: "none" },
+          borderBottom: `2px solid ${theme.palette.lincoBlue.main}`,
+          pb: 2,
+          pt: 5,
+          px: 4,
+        }}
+      >
+        Scroll to read
+      </Box>
       <Image
         src={imgSrc}
         alt={title}
@@ -192,10 +196,18 @@ export function ProcessLevelItem(props: ProcessItemTypes) {
         >
           {description}
         </Typography>
-        <LinkElement
-          href={link}
-          sx={{ display: active ? { xs: "none", md: "flex" } : "none" }}
-        />
+        <Box
+          sx={{
+            display: active ? { xs: "none", md: "inline-block" } : "none",
+            borderBottom: `2px solid ${theme.palette.lincoBlue.main}`,
+            pb: 2,
+            pt: 5,
+            px: 2,
+          }}
+        >
+          Scroll to read
+        </Box>
+
         <NumberElement
           number={index + 1}
           sx={{
