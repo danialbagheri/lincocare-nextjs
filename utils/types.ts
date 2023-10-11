@@ -6,5 +6,5 @@ export interface FetchHandlerGet {
 
 export interface FetchHandlerPost extends FetchHandlerGet {
   data: any;
-  abortController: AbortController;
+  abortController?: AbortController;
 }

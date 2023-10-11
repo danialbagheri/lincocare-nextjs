@@ -12,7 +12,7 @@ import Document, {
 import { AppType } from "next/app";
 import { theme } from "theme";
 
-export default function MyDocument({}: DocumentProps) {
+export default function MyDocument(props: DocumentProps) {
   return (
     <Html lang="en">
       <Head>

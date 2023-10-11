@@ -27,6 +27,19 @@ export default function MyApp(props: AppProps) {
     <AppProvider>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta property="og:title" content="Linco care company" />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:image"
+          content="../public/icons/lincoNameMobile.png"
+        />
+        <meta property="og:url" content="http://www.lincocare.com" />
+
+        <meta
+          property="og:description"
+          content="Linco Care has been a trusted UK based sun and skin care manufacturer since 1979"
+        />
+        <meta property="og:site_name" content="Linco care co." />
         {/* Google Tag Manager */}
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`

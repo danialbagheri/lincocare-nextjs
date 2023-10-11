@@ -26,7 +26,7 @@ const VALUES = [
   {
     title: "Quality",
     description:
-      "We’re dedicated to using only the highest quality ingredients; how we care for our bodies is of the utmost importance.",
+      "We operate a stringent quality control regime covering the purchase of high quality components, raw materials and the manufacture and storage of finished goods. Microbiological analysis by an independent laboratory forms a constant part of the quality control procedures.",
     image: "/images/homePage/values/quality.png",
   },
   {
@@ -96,8 +96,14 @@ export function AboutLincoValues(props: PropsType) {
   const valuesRef = React.useRef<HTMLHeadingElement>(null);
   const theme = useTheme();
 
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     props.setEleHeight(valuesRef.current?.clientHeight);
+
+    if (window) {
+      window.addEventListener("resize", () => {
+        props.setEleHeight(valuesRef.current?.clientHeight);
+      });
+    }
   }, []);
 
   return (

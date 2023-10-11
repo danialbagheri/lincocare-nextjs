@@ -12,23 +12,21 @@ export const SUSTAINABILITY = [
     customDescription: (
       <>
         <p>
-          At Linco Care, we take pride in achieving the highest 'A' Grade
-          efficiency standards.
+          We take pride in achieving the highest 'A' Grade efficiency standards.
         </p>
         <p>
-          Our 100 KW peak Photovoltaic system installed on our rooftop produces
-          76,900 KW hours annually, translating to a remarkable reduction of
-          34,000 KG of CO2 emissions.
+          Our 100 KW peak Photovoltaic system produces 76,900 KW hours annually,
+          translating to a remarkable reduction of 34,000 KG of CO2 emissions.
         </p>
         <p>
           The system comprises 400 Trina Solar 250-watt panels installed on a
-          South East facing roof, positioned between skylights to maximise
+          South East facing roof, positioned between skylights to maximize
           natural daylight within the warehouse.
         </p>
         <p>
           Four Power-One inverters efficiently convert DC power to AC,
           seamlessly integrating it into our operational system. This setup
-          enables us to utilise all the energy generated during working hours
+          enables us to utilize all the energy generated during working hours
           and even export surplus power back to the Grid during our
           non-operational hours. Furthermore, by installing energy efficient
           lighting with daylight controls, we have also reduced our power

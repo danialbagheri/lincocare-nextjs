@@ -4,38 +4,38 @@ export const ABOUT_ITEM = [
   {
     title: "Quality",
     description:
-      "With an enduring commitment to practical skincare and sun protection, Linco Care has evolved to a diverse range of specially crafted formulations that address a wide spectrum of skincare needs. Our dedication extends globally, catering to private label brand needs in various countries worldwide. We pride ourselves on tailoring formulas that best suit each unique project, ensuring excellence and satisfaction across borders.",
+      "We operate a stringent quality control regime covering the purchase of high quality components, raw materials and the manufacture and storage of finished goods. Microbiological analysis by an independent laboratory forms a constant part of the quality control procedures. We are committed to building a lasting relationship with our customers by exceeding expectations of product value and service quality.",
   },
   {
     title: "Ethics",
     customDescription: (
       <>
-        <Typography as="p" textAlign="justify" mt={6}>
+        <Typography as="p" mt={6}>
           At Linco Care, ethical responsibility is incorporated into all of our
           operations. We take pride in our commitment to sustainability, evident
           through our utilisation of solar-panelled warehouses and
           environmentally-conscious production methods.
         </Typography>
-        <Typography as="p" textAlign="justify">
+        <Typography as="p">
           Our dedication to reducing our environmental footprint extends from
           production processes to water management and responsible sourcing of
           supplies.
         </Typography>
-        <Typography as="p" textAlign="justify">
+        <Typography as="p">
           Furthermore, we firmly believe in giving back to our community. We
           actively support charitable initiatives, local businesses, cultivate a
           fair and inclusive workplace, and prioritise ethical values above all
           else.
         </Typography>
-        <Typography as="p" textAlign="justify">
+        <Typography as="p">
           We are actively working to implement The ETI Base Code throughout our
           company and across our network of suppliers.
         </Typography>
-        <Typography as="p" textAlign="justify">
+        <Typography as="p">
           We proudly participate in SMETA, the world's most widely recognized
           social audit program. 
         </Typography>
-        <Typography as="p" textAlign="justify">
+        <Typography as="p">
           The SMETA Audit is built on four fundamental pillars:
         </Typography>
 
@@ -44,7 +44,7 @@ export const ABOUT_ITEM = [
         <li> Environment</li>
         <li> Business Ethics</li>
 
-        <Typography as="p" textAlign="justify">
+        <Typography as="p">
           By setting these business standards, we continue to create a
           sustainable, responsible, and ethical future for our company and the
           wider industry.
@@ -55,7 +55,7 @@ export const ABOUT_ITEM = [
   {
     title: "Innovation",
     description:
-      "From humble beginnings, where our primary focus was practical sun protection, Linco Care has evolved into a brand that offers a discerning range of meticulously crafted formulations designed to address a diverse spectrum of skincare needs. With seven own brands and many advanced private label partners, innovation and brand adaptation are the key to our success.",
+      "We believe innovation and adaptability are the key to success. We pride ourselves on state of the art formulations, a wide range of innovative products and continuous New Product Development (N.P.D). At Linco Care, we believe in setting ambitious goals and continuously working towards them, no matter how challenging. New ideas are celebrated and changes are welcomed.",
   },
 ];
 

@@ -1,18 +1,21 @@
 export interface FormDataTypes {
-  contactType: string;
-  firstName: string;
-  surname: string;
+  name: string;
+  company: string;
   email: string;
-  phone: string;
-  requiredService: string;
-  productCategory: string;
-  companyName: string;
-  sku: string;
-  orderQuantity: string;
+  phone: string | number;
   message: string;
+  recaptcha: string;
+  reason: string;
+}
+
+export interface ErrorTypes {
+  email: string;
+  recaptcha: string;
 }
 
 export interface FieldsPropsTypes {
   formData: FormDataTypes;
   setFormData: (value: any) => void;
+  error?: ErrorTypes;
+  setError?: (value: ErrorTypes) => void;
 }

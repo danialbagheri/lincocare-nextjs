@@ -73,9 +73,7 @@ export function PrivateLabel() {
             service covering a wide spectrum of wet fill manufacturing,
             encompassing oils, creams, lotions, gels, and liquids. Our
             specialisation lies in crafting exceptional products within the sun
-            care, personal care, and depilatory categories. Whether you need a
-            custom solution or seek to expand your brand's offerings, Linco Care
-            is your trusted partner for private label excellence.
+            care, personal care, and depilatory categories.
           </Typography>
           <Link href={"/privateLabel"}>Know more</Link>
         </Box>

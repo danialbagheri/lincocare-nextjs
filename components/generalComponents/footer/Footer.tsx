@@ -1,10 +1,26 @@
+import * as React from "react";
+
 import { Box, Stack, Typography } from "@mui/material";
 import { Contact, FooterAccreditations, SiteMap } from "./components";
 
 import { Container } from "shared";
 import { SocialMedia } from "../socialMedia";
+import { AppContext } from "components/appProvider";
+import { getIcons } from "services";
 
 function Footer() {
+  const [appState, setAppState] = React.useContext(AppContext);
+
+  React.useEffect(() => {
+    if (!appState?.accreditations) {
+      getIcons("accreditations").then((res) => {
+        if (setAppState) {
+          setAppState((prev: any) => ({ ...prev, accreditations: res }));
+        }
+      });
+    }
+  }, []);
+
   return (
     <Box bgcolor={"lincoBlue.dark"}>
       <Container sx={{ py: 25, position: "relative" }}>

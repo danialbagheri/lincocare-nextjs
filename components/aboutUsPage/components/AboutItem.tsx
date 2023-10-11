@@ -16,9 +16,7 @@ export function AboutItem(props: PropTypes) {
       <Typography variant="h2" color="lincoBlue.main">
         {title}
       </Typography>
-      <Typography textAlign="justify" mt={6}>
-        {description}
-      </Typography>
+      <Typography mt={6}>{description}</Typography>
       {customDescription}
       <CustomLink
         href=""

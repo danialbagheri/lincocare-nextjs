@@ -13,7 +13,6 @@ export function CompanyDetails(props: FieldsPropsTypes) {
   return (
     <Box sx={{ display: "flex", justifyContent: "center" }}>
       <TextFields
-        required={false}
         DATA={DATA}
         formData={formData}
         onChangeHandler={(e, id) =>

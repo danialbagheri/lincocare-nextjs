@@ -9,7 +9,10 @@ import {
   LincoNews,
   Retailers,
 } from "components/generalComponents";
-import { SocialMediaIconsType } from "services/lincoServicesTypes";
+import {
+  IconGroupsType,
+  SocialMediaIconsType,
+} from "services/lincoServicesTypes";
 import { AppContext, InitialStateTypes } from "components/appProvider";
 import { AboutLinco, Brands, Head, PrivateLabel } from "components/homePage";
 
@@ -17,6 +20,7 @@ import { AboutLinco, Brands, Head, PrivateLabel } from "components/homePage";
 
 interface PropsTypes {
   socialMediaIcons: SocialMediaIconsType;
+  accreditations: IconGroupsType;
 }
 
 export default function Home(props: PropsTypes) {
@@ -27,6 +31,7 @@ export default function Home(props: PropsTypes) {
       setAppState((prev: InitialStateTypes) => ({
         ...prev,
         socialMediaIcons: props.socialMediaIcons?.items,
+        accreditations: props.accreditations?.items,
       }));
     }
   }, []);
@@ -45,7 +50,7 @@ export default function Home(props: PropsTypes) {
 
       <LincoDivider sx={{ mt: 0, mb: { xs: 19, md: 25 } }} fullWidth />
 
-      <Accreditations />
+      <Accreditations data={props.accreditations.items} />
 
       <LincoDivider
         sx={{ mt: { xs: 17, md: 35 }, mb: { xs: 16, md: 17 } }}
@@ -59,9 +64,14 @@ export default function Home(props: PropsTypes) {
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    const socialMediaIcons = await getIcons("social_media");
+    const response = await Promise.all([
+      getIcons("social_media"),
+      getIcons("accreditations"),
+    ]);
 
-    return { props: { socialMediaIcons } };
+    return {
+      props: { socialMediaIcons: response[0], accreditations: response[1] },
+    };
   } catch {
     return { props: { error: "Something went wrong!" } };
   }

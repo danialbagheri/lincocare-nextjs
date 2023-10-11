@@ -1,5 +1,4 @@
-import { Box, Typography } from "@mui/material";
-import { SelectFields } from "./shared";
+import { Typography } from "@mui/material";
 import { FieldsPropsTypes } from "./types";
 
 const DATA = [
@@ -21,16 +20,6 @@ export function ProductCategory(props: FieldsPropsTypes) {
       >
         Product category(s)
       </Typography>
-      <SelectFields
-        DATA={DATA}
-        value={formData.productCategory}
-        onChangeHandler={(e) =>
-          setFormData((prev: any) => ({
-            ...prev,
-            productCategory: e,
-          }))
-        }
-      />
     </>
   );
 }

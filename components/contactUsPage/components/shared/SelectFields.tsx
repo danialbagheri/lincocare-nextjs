@@ -16,6 +16,7 @@ export function SelectFields(props: PropsTypes) {
     <FieldsContainer sx={{ mt: 4, ...sx }}>
       {DATA.map((_data) => (
         <Button
+          key={_data.id}
           variant="outlined"
           sx={{
             bgcolor: value === _data.id ? "#F4F4F4" : "#FFF",
@@ -55,7 +56,7 @@ export function SelectFields(props: PropsTypes) {
         }}
       >
         {DATA.map((_data) => (
-          <MenuItem value={_data.id} sx={{ maxWidth: "100%" }}>
+          <MenuItem value={_data.id} sx={{ maxWidth: "100%" }} key={_data.id}>
             {_data.title}
           </MenuItem>
         ))}

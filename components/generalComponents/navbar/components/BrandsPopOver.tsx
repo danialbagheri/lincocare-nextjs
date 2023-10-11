@@ -44,12 +44,12 @@ const BRANDS = [
     imageSrc: "/images/brandsPopup/dimples.png",
     text: "Dimples is a British brand with decades of experience in hair removal.",
   },
-  {
-    id: BRANDS_ID.SUN_TROPIC,
-    title: "Sun tropic",
-    imageSrc: "/images/brandsPopup/sunTropic.png",
-    text: "Sun Tropic is a unique handbag size range offers both UVA and UVB protection.",
-  },
+  // {
+  //   id: BRANDS_ID.SUN_TROPIC,
+  //   title: "Sun tropic",
+  //   imageSrc: "/images/brandsPopup/sunTropic.png",
+  //   text: "Sun Tropic is a unique handbag size range offers both UVA and UVB protection.",
+  // },
   {
     id: BRANDS_ID.RE_GEN,
     title: "Re-gen",

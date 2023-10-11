@@ -23,7 +23,10 @@ export function RequiredServices(props: FieldsPropsTypes) {
 
       <SelectFields
         DATA={BUTTONS_DATA}
-        value={formData.requiredService}
+        value={
+          // formData.requiredService
+          ""
+        }
         onChangeHandler={(e: any) => {
           setFormData((prev: any) => ({
             ...prev,

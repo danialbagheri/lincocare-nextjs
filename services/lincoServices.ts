@@ -1,4 +1,6 @@
-import { get } from "utils";
+import { get, post } from "utils";
+
+/* ------------------------------ GET Requests ------------------------------ */
 
 export const getListOfAllBlogs = ({
   count,
@@ -31,4 +33,11 @@ export const getIcons = (slug: string) => {
 
 export const getFaq = (page: number = 1) => {
   return get({ endpoint: `faq/?page=${page}` });
+};
+
+/* -------------------------------------------------------------------------- */
+
+/* ------------------------------ POST Requests ----------------------------- */
+export const postContactUsForm = (data: any) => {
+  return post({ endpoint: "web/contact-us/", data });
 };

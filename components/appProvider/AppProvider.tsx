@@ -6,6 +6,7 @@ import type {
 } from "services/lincoServicesTypes";
 
 export interface InitialStateTypes {
+  accreditations: IconGroupsType | null;
   socialMediaIcons: SocialMediaIconsItemType[];
   retailersData: IconGroupsType[];
 }
@@ -21,7 +22,11 @@ interface Props {
 const AppContext = React.createContext<AppContextInterface>([]);
 
 const AppProvider: NextPage<Props> = (props) => {
-  const initialState = { socialMediaIcons: [], retailersData: [] };
+  const initialState = {
+    socialMediaIcons: [],
+    retailersData: [],
+    accreditations: null,
+  };
   const [appState, setAppState] =
     React.useState<InitialStateTypes>(initialState);
 

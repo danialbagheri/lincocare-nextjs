@@ -39,18 +39,14 @@ export function AboutLinco() {
           />
         </Box>
         <Box position="relative">
-          <Typography
-            textAlign={{ xs: "unset", md: "justify" }}
-            mt={{ xs: 7, md: 10 }}
-          >
-            At Linco Care, we proudly stand as a prominent manufacturer in the
-            realm of sun care, skin care, and depilatory products. Our journey
-            revolves around placing SPF and skincare at the core of our mission.
-            Over the span of four decades, our brand family has evolved and
-            matured through relentless experimentation and unwavering
-            commitment. We not only offer seven of our own diverse brands, but
-            also provide the option for private label solutions, catering to
-            diverse needs in the world of skincare.
+          <Typography mt={{ xs: 7, md: 10 }}>
+            Linco Care has been a trusted UK based sun and skin care
+            manufacturer since 1979. Our commitment to our core values; Quality,
+            Ethics and Innovation have facilitated our journey to success and
+            enabled us to grow our diverse selection of own brands and bespoke
+            private label service globally.  Our passion for skin care is
+            evident in every practice, with continuous innovation and market
+            research to stay ahead in the ever changing world of cosmetics.
           </Typography>
         </Box>
       </Box>

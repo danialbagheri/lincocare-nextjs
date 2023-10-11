@@ -6,7 +6,7 @@ import { Box } from "@mui/system";
 
 /* ---------------------------- Local Components ---------------------------- */
 import { FieldsPropsTypes, FormDataTypes } from "./types";
-import { SelectFields, TextFields } from "./shared";
+import { TextFields } from "./shared";
 /* -------------------------------------------------------------------------- */
 
 const BUTTON_DATA = [
@@ -18,14 +18,14 @@ const BUTTON_DATA = [
 ];
 
 const FIELDS = [
-  { title: "Name", id: "firstName" },
+  { title: "Name", id: "name" },
   { title: "Company", id: "company" },
   { title: "Email", id: "email" },
   { title: "Phone", id: "phone" },
 ];
 
 export function UserProfile(props: FieldsPropsTypes) {
-  const { formData, setFormData } = props;
+  const { formData, setFormData, error } = props;
 
   return (
     <Box
@@ -49,6 +49,7 @@ export function UserProfile(props: FieldsPropsTypes) {
       /> */}
 
       <TextFields
+        error={error}
         DATA={FIELDS}
         formData={formData}
         onChangeHandler={(e, id) =>

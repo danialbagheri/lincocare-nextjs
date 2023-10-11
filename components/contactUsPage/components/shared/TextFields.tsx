@@ -1,5 +1,5 @@
 import { SxProps, TextField } from "@mui/material";
-import { FormDataTypes } from "../types";
+import { ErrorTypes, FormDataTypes } from "../types";
 import { FieldsContainer } from "./FieldsContainer";
 
 interface PropsTypes {
@@ -7,11 +7,11 @@ interface PropsTypes {
   onChangeHandler: (e: any, id: string) => void;
   formData: FormDataTypes;
   sx?: SxProps;
-  required?: boolean;
+  error?: { email: string; recaptcha: string };
 }
 
 export function TextFields(props: PropsTypes) {
-  const { DATA, onChangeHandler, sx, formData, required = true } = props;
+  const { DATA, onChangeHandler, sx, formData, error } = props;
   return (
     <FieldsContainer
       sx={{
@@ -24,10 +24,12 @@ export function TextFields(props: PropsTypes) {
       {DATA.map((_data) => (
         <TextField
           key={_data.id}
-          required={_data.id === "phone" ? false : true}
+          required={_data.id === "email" ? true : false}
           label={_data.title}
+          error={Boolean(error && error[_data.id as keyof ErrorTypes])}
           value={formData[_data.id as keyof FormDataTypes]}
           onChange={(e) => onChangeHandler(e, _data.id)}
+          helperText={error ? error[_data.id as keyof ErrorTypes] : ""}
           variant="standard"
         />
       ))}

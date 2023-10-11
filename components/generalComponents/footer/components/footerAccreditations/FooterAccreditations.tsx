@@ -1,7 +1,11 @@
+import * as React from "react";
+
 import { Box } from "@mui/material";
+import { AppContext } from "components/appProvider";
 import Image from "next/image";
 
 function FooterAccreditations() {
+  const [appState] = React.useContext(AppContext);
   return (
     <Box
       p={5}
@@ -15,7 +19,11 @@ function FooterAccreditations() {
     >
       <Image
         alt={"accreditations"}
-        src={"/images/footer/accreditations.png"}
+        src={
+          appState?.accreditations?.items
+            ? appState?.accreditations?.items[1].icon || ""
+            : ""
+        }
         width={214}
         height={308}
       />

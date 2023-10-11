@@ -12,9 +12,7 @@ export function Description(props: { brandDetails: BrandDetailsType }) {
         {brandDetails?.name}
       </Typography>
       <Box sx={{ columnCount: { xs: 1, md: 2 }, columnGap: 14, mt: 4 }}>
-        <Typography textAlign="justify">
-          {brandDetails?.detailedDescription}
-        </Typography>
+        <Typography>{brandDetails?.detailedDescription}</Typography>
       </Box>
     </Box>
   );

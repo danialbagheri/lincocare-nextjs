@@ -43,7 +43,7 @@ export const BRANDS = [
     whiteLogoSrc: "/images/brands/whiteLogo/Calypso-white.svg",
     mt: "0px",
     description:
-      "Calypso offers an extensive collection of sun care products designed to cater to the needs of all skin types and the entire family.",
+      "Calypso offers an extensive collection of sun care products formulated to meet the needs of all skin types and the entire family.",
     color: theme.palette.calypsoOrange.main,
     borderColor: theme.palette.calypsoOrange.main,
     knowMoreLink: "/brands/calypso",
@@ -102,7 +102,7 @@ export const BRANDS = [
     whiteLogoSrc: "/images/brands/whiteLogo/Cabana-white.svg",
     mt: "0",
     description:
-      "Cabana combines protection and tan enhancement within a single bottle, offering a dual benefit to ensure your safety while achieving a gorgeous tan.",
+      "Cabana combines protection and tan enhancement, offering a dual benefit to ensure your safety while achieving a gorgeous tan.",
     color: theme.palette.cabanaBrown.main,
     borderColor: theme.palette.lincoBlue.main,
     knowMoreLink: "/brands/cabana",
@@ -174,7 +174,7 @@ export const BRANDS = [
         id: "silkia_pedicare_1",
         title: "Cracked Heel Repair Cream",
         description:
-          "Silkia PediCare Cracked Heel Repair Cream is uniquely formulated with multi-patented +Keratin Technology. The cream provides visible results and repairs cracked heels within 48 hours.",
+          "Silkia Skin centres around well nourished skin. The best selling Cracked Heel Repair Cream is a specially formulated treatment using multi-patented Keratin technology to actively repair your dry, cracked heels.",
         imgSrc: "Silkia-cream.png",
       },
       {
@@ -278,64 +278,64 @@ export const BRANDS = [
     detailedDescription:
       "Established in Manchester in the United Kingdom in 1979, Dimples is a British brand with decades of experience in hair removal. Our customers love us for our high-quality products, making perfect smoothness available to everyone at a price that won’t break the bank. Dimples is now one of the top depilatories brands in the market and is sold at home and abroad. Our dedicated product development team is constantly searching for new and innovative products to add to this range so our customers have a wide range of options to meet their depilatory needs. Our range includes body wax strips, hair removal cream, bleach cream and spray foams so that no matter your skin type or preferences, there’s a Dimples product for you.",
   },
-  {
-    id: BRANDS_ID.SUN_TROPIC,
-    name: "Sun Tropic",
-    imageSrc: "/images/brands/sunTropic.png",
-    whiteLogoSrc: "/images/brands/whiteLogo/SunTropic-white.svg",
-    mt: "03px",
-    description:
-      "This unique handbag size range offers both UVA and UVB protection. Our water-resistant products provide peace of mind, ensuring you stay sunburn-free for your beach and pool days.",
-    color: theme.palette.sunTropic.main,
-    borderColor: theme.palette.lincoBlue.main,
-    knowMoreLink: "/brands/sunTropic",
-    brandWebsiteLink: "Suntropic.co.uk",
-    subtitle: "Your beach day essential",
-    socialMediaLinks: [
-      [{ title: "Facebook", link: "" }],
-      [{ title: "Twitter", link: "" }],
-      [{ title: "Instagram", link: "" }],
-    ],
-    products: [
-      {
-        id: "sun_tropic_1",
-        title: "Sun Lotions",
-        description:
-          "This unique handbag size range offers both UVA and UVB protection. All the products in this range are water-resistant, so you don’t need to worry about getting burned at the beach or in the pool. The sun lotions are available in low, medium and high factors.",
-        imgSrc: "Tropic-sun-lotion.png",
-      },
-      {
-        id: "sun_tropic_2",
-        title: "Deep Tanning Oils",
-        description:
-          "For those who want to achieve a natural long-lasting tan, we offer an Original Carrot Oil and a Deep Tanning Oil.",
-        imgSrc: "Tropic-tanning-oil.png",
-      },
-      {
-        id: "sun_tropic_3",
-        title: "Deep Tanning Gel ",
-        description:
-          "If you prefer to use a gel instead of an oil to achieve a gorgeous deep tan, then you can try our Deep Tanning Oil Gel and Original Carrot Oil Gel. The light and easily absorbed formula contains moisturisers and is a natural tan accelerator.",
-        imgSrc: "Tropic-tanning-gel.png",
-      },
-      {
-        id: "sun_tropic_4",
-        title: "Clear Gel",
-        description:
-          "Sun Tropic offers a range of Clear Gel sun protection that is water resistant, dries quickly and allows you to enjoy your day carefree.",
-        imgSrc: "Tropic-clear-gel",
-      },
-      {
-        id: "sun_tropic_5",
-        title: "After Sun Lotion",
-        description:
-          "Sun Tropic also provides sun lovers with a cooling, moisturising After Sun Lotion and an Aloe Vera After Sun Gel. They not only refresh and repair your skin after a long day in the sun, but they also help to prolong your holiday tan.",
-        imgSrc: "Tropic-after-sun.png",
-      },
-    ],
-    detailedDescription:
-      "This unique handbag size range offers both UVA and UVB protection. All the products in this range are water-resistant, so you don’t need to worry about getting burned at the beach or in the pool. The sun lotions are available in low, medium and high factors. For those who want to achieve a natural long-lasting tan, we offer an Original Carrot Oil Gel and a Deep Tanning Oil Gel. Sun Tropic also provides sun lovers with a cooling, moisturising After Sun Lotion and an Aloe Vera After Sun Gel to help your skin recover after a long day in the sun. Sun Tropic is available to buy from Venture Blue, Convenience Distribution and Woolacombe Shop in the UK. It is exported to Thailand and several European countries.",
-  },
+  // {
+  //   id: BRANDS_ID.SUN_TROPIC,
+  //   name: "Sun Tropic",
+  //   imageSrc: "/images/brands/sunTropic.png",
+  //   whiteLogoSrc: "/images/brands/whiteLogo/SunTropic-white.svg",
+  //   mt: "03px",
+  //   description:
+  //     "This unique handbag size range offers both UVA and UVB protection. Our water-resistant products provide peace of mind, ensuring you stay sunburn-free for your beach and pool days.",
+  //   color: theme.palette.sunTropic.main,
+  //   borderColor: theme.palette.lincoBlue.main,
+  //   knowMoreLink: "/brands/sunTropic",
+  //   brandWebsiteLink: "Suntropic.co.uk",
+  //   subtitle: "Your beach day essential",
+  //   socialMediaLinks: [
+  //     [{ title: "Facebook", link: "" }],
+  //     [{ title: "Twitter", link: "" }],
+  //     [{ title: "Instagram", link: "" }],
+  //   ],
+  //   products: [
+  //     {
+  //       id: "sun_tropic_1",
+  //       title: "Sun Lotions",
+  //       description:
+  //         "This unique handbag size range offers both UVA and UVB protection. All the products in this range are water-resistant, so you don’t need to worry about getting burned at the beach or in the pool. The sun lotions are available in low, medium and high factors.",
+  //       imgSrc: "Tropic-sun-lotion.png",
+  //     },
+  //     {
+  //       id: "sun_tropic_2",
+  //       title: "Deep Tanning Oils",
+  //       description:
+  //         "For those who want to achieve a natural long-lasting tan, we offer an Original Carrot Oil and a Deep Tanning Oil.",
+  //       imgSrc: "Tropic-tanning-oil.png",
+  //     },
+  //     {
+  //       id: "sun_tropic_3",
+  //       title: "Deep Tanning Gel ",
+  //       description:
+  //         "If you prefer to use a gel instead of an oil to achieve a gorgeous deep tan, then you can try our Deep Tanning Oil Gel and Original Carrot Oil Gel. The light and easily absorbed formula contains moisturisers and is a natural tan accelerator.",
+  //       imgSrc: "Tropic-tanning-gel.png",
+  //     },
+  //     {
+  //       id: "sun_tropic_4",
+  //       title: "Clear Gel",
+  //       description:
+  //         "Sun Tropic offers a range of Clear Gel sun protection that is water resistant, dries quickly and allows you to enjoy your day carefree.",
+  //       imgSrc: "Tropic-clear-gel",
+  //     },
+  //     {
+  //       id: "sun_tropic_5",
+  //       title: "After Sun Lotion",
+  //       description:
+  //         "Sun Tropic also provides sun lovers with a cooling, moisturising After Sun Lotion and an Aloe Vera After Sun Gel. They not only refresh and repair your skin after a long day in the sun, but they also help to prolong your holiday tan.",
+  //       imgSrc: "Tropic-after-sun.png",
+  //     },
+  //   ],
+  //   detailedDescription:
+  //     "This unique handbag size range offers both UVA and UVB protection. All the products in this range are water-resistant, so you don’t need to worry about getting burned at the beach or in the pool. The sun lotions are available in low, medium and high factors. For those who want to achieve a natural long-lasting tan, we offer an Original Carrot Oil Gel and a Deep Tanning Oil Gel. Sun Tropic also provides sun lovers with a cooling, moisturising After Sun Lotion and an Aloe Vera After Sun Gel to help your skin recover after a long day in the sun. Sun Tropic is available to buy from Venture Blue, Convenience Distribution and Woolacombe Shop in the UK. It is exported to Thailand and several European countries.",
+  // },
   {
     id: BRANDS_ID.RE_GEN,
     name: "Re-Gen",

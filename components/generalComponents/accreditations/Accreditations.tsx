@@ -1,9 +1,14 @@
+import * as React from "react";
 import { Box, SxProps, Typography } from "@mui/material";
 
 import { Container } from "shared";
 import Image from "next/image";
+import { IconGroupsItemType } from "services/lincoServicesTypes";
+import { AppContext } from "components/appProvider";
 
-function Accreditations(props: { sx?: SxProps }) {
+function Accreditations(props: { sx?: SxProps; data?: IconGroupsItemType[] }) {
+  const [appState] = React.useContext(AppContext);
+
   return (
     <Container sx={{ ...props.sx }}>
       <Typography
@@ -22,7 +27,11 @@ function Accreditations(props: { sx?: SxProps }) {
         }}
       >
         <Image
-          src={"/images/homePage/accreditations/mainImage.png"}
+          src={
+            props.data
+              ? props.data[0].icon || ""
+              : appState?.accreditations?.items[0].icon || ""
+          }
           alt="Accreditations"
           fill
           style={{ objectFit: "contain" }}
@@ -39,7 +48,11 @@ function Accreditations(props: { sx?: SxProps }) {
         }}
       >
         <Image
-          src={"/images/homePage/accreditations/mainImageMobile.png"}
+          src={
+            props.data
+              ? props.data[2].icon || ""
+              : appState?.accreditations?.items[2].icon || ""
+          }
           alt="Accreditations"
           fill
           style={{ objectFit: "contain" }}
