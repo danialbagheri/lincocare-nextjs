@@ -14,7 +14,13 @@ import {
   SocialMediaIconsType,
 } from "services/lincoServicesTypes";
 import { AppContext, InitialStateTypes } from "components/appProvider";
-import { AboutLinco, Brands, Head, PrivateLabel } from "components/homePage";
+import {
+  AboutLinco,
+  Brands,
+  Head as HomePageHeader,
+  PrivateLabel,
+} from "components/homePage";
+import Head from "next/head";
 
 /* -------------------------------------------------------------------------- */
 
@@ -38,7 +44,10 @@ export default function Home(props: PropsTypes) {
 
   return (
     <>
-      <Head />
+      <Head>
+        <meta property="og:title" content="Linco Care" />
+      </Head>
+      <HomePageHeader />
       <Brands />
 
       <LincoDivider sx={{ display: { xs: "none", md: "block" } }} fullWidth />
