@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { Box, SxProps, Typography } from "@mui/material";
-import ReCAPTCHA, { ReCAPTCHAProps } from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import { FormDataTypes, Message, SubmitBtn, UserProfile } from "./components";
 

@@ -67,33 +67,33 @@ export const BRANDS = [
         id: "calypso_2",
         title: "Kids/sensitive",
         description:
-          "Our sun protection products are designed by skincare specialists to provide all over body and scalp protection that lasts all day. They are recommended by many independent sources for their high quality and exceptionally low price.",
+          "These non-greasy, water-resistant sun protection products are specially designed for children and those with sensitive skin. The range includes our popular All School Day Long Sun Lotion and our Disappearing Coloured Blue Lotion Spray.",
         imgSrc: "Calypso-kids-sensitive.png",
       },
       {
         id: "calypso_3",
         title: "After sun",
         description:
-          "Our sun protection products are designed by skincare specialists to provide all over body and scalp protection that lasts all day. They are recommended by many independent sources for their high quality and exceptionally low price.",
+          "Our after sun range contains Menthol, known for its dramatic cooling effect and Aloe Vera extracts, which will restore your skin to its natural balance. Your skin will be noticeably softer and smoother, enabling you to prolong your tan.",
         imgSrc: "Calypso-after-sun.png",
       },
       {
         id: "calypso_4",
         title: "Tanning",
         description:
-          "Our sun protection products are designed by skincare specialists to provide all over body and scalp protection that lasts all day. They are recommended by many independent sources for their high quality and exceptionally low price.",
+          "Our advanced tanning formulas contain carrot oil and Monoi Tahiti. Carrot oil accelerates your skin’s natural tanning process while Monoi Tahiti has moisturising and soothing properties that help to nourish and soften your skin after sun exposure.",
         imgSrc: "Calypso-tanning.png",
       },
       {
         id: "calypso_5",
         title: "Health care",
         description:
-          "Our sun protection products are designed by skincare specialists to provide all over body and scalp protection that lasts all day. They are recommended by many independent sources for their high quality and exceptionally low price.",
+          "Ranging from insect repellent to sun burn relief, we have a range of creams and sprays to help you recover from bites, stings and sun damage. They contain the anti-irritant Iricalmin to provide instant relief and plant-derived phospholipids to help restore the protective lipid film of your skin.",
         imgSrc: "Calypso-healthcare.png",
       },
     ],
     detailedDescription:
-      "Calypso sun protection offers a comprehensive range of sun care products for all skin types and for the whole family. All our sunscreens are developed by sun care experts and are tested to Colipa standards. Our Calypso Sun Lotion SPF30 was chosen by the leading consumer watchdog Which? as its “Best Buy Sunscreen” for 2014 and 2015. Our products are sold in many chain stores in the UK including Asda, Aldi, Home Bargains, Wilkinson and Quality Save. They are also exported to many European, Asian and Middle Eastern countries.",
+      "Calypso is a British sun care brand which aims to provide customers with quality sun care products at exceptionally low prices. All our sunscreens are developed by sun care experts and are tested to Colipa standards. Our Calypso Sun Lotion SPF30 was chosen by the leading consumer watchdog Which? as its “Best Buy Sunscreen” for 2014 and 2015. Our products are sold in many chain stores in the UK including Asda, Aldi, Home Bargains, Wilkinson and Quality Save. They are also exported to many European, Asian and Middle Eastern countries.",
   },
   {
     id: BRANDS_ID.CABANA,
@@ -148,7 +148,7 @@ export const BRANDS = [
       },
     ],
     detailedDescription:
-      "Cabana Sun offers protection and tan in the same bottle helping you stay safe while tanning. This brand contains many different products, but our bestsellers are our Dry Coco Oil and our Tropical Sun Lotion Spray. Cabana is not available to buy in the UK. It is exported to Europe, Latin America, North America and Asia.We offer four different ranges",
+      "Cabana offers a combination of sun protection and tan enhancer to help you stay safe while tanning. This brand contains many different products, including our bestsellers, the Dry Coco Oil and Tropical Sun Lotion Spray. Cabana is exported to Europe, Latin America, North America and Asia.",
   },
   {
     id: BRANDS_ID.SILKIA_PEDICARE,
@@ -186,7 +186,7 @@ export const BRANDS = [
       },
     ],
     detailedDescription:
-      "Silkia PediCare Cracked Heel Repair Cream is a specially formulated treatment using multi-patented Keratin technology to actively repair your dry, cracked heels. It is clinically proven to aid the body’s natural recovery process. It helps prevent infection and boosts the fundamental skin repair process after just 48 hours. It is suitable for both general and diabetic feet. The formulation consists of Urea as well as pure Keratin, which is sourced from a keratin technology group based in the United States. Numerous clinical tests have shown that the formula works in sync with the body to repair damaged skin in only two days.",
+      "Silkia PediCare Cracked Heel Repair is a specially formulated treatment using multi-patented Keratin technology to actively repair your dry, cracked heels. It is clinically proven to aid the body’s natural recovery process. It helps prevent infection and boosts the fundamental skin repair process after just 48 hours. The formulation consists of Urea as well as pure Keratin, which is sourced from a keratin technology group based in the United States. Numerous clinical tests have shown that the formula works in sync with the body to repair damaged skin in only two days.",
   },
   {
     id: BRANDS_ID.SILKIA_DEPILATORY,
@@ -231,7 +231,7 @@ export const BRANDS = [
       },
     ],
     detailedDescription:
-      "We understand that nothing can take away the confidence that smooth skin can bring. That is why we have created a wide range of Silkia depilatory products for legs, underarms, upper lips and the bikini line. Silkia Depilatory is your one stop hair removal product providing you with long lasting smoothness that will make everyone else wonder what your secret is. Silkia Depilatory products are available to buy from Bodycare in the UK and on Amazon. It is exported to many European and Middle Eastern countries.",
+      "Nothing can compete with the confidence that smooth skin brings. Silkia Depilatory is your one stop hair removal essential, providing you with long lasting smoothness that makes everyone wonder what your secret is. Silkia offers a wide range of depilatory products for legs, underarms, upper lips and the bikini line. Our products are available to buy from Bodycare in the UK and on Amazon. Silkia is also exported to many European and Middle Eastern countries.",
   },
   {
     id: BRANDS_ID.DIMPLES,
@@ -276,7 +276,7 @@ export const BRANDS = [
       },
     ],
     detailedDescription:
-      "Established in Manchester in the United Kingdom in 1979, Dimples is a British brand with decades of experience in hair removal. Our customers love us for our high-quality products, making perfect smoothness available to everyone at a price that won’t break the bank. Dimples is now one of the top depilatories brands in the market and is sold at home and abroad. Our dedicated product development team is constantly searching for new and innovative products to add to this range so our customers have a wide range of options to meet their depilatory needs. Our range includes body wax strips, hair removal cream, bleach cream and spray foams so that no matter your skin type or preferences, there’s a Dimples product for you.",
+      "Established in Manchester in the United Kingdom in 1979, Dimples is a British brand with decades of experience in hair removal. Our customers love us for our high-quality products and providing smooth skin at a price that won’t break the bank. Dimples is now one of the top depilatories brands in the market and is sold at home and abroad. Our dedicated product development team is constantly searching for new and innovative products to add to this range so our customers have a wide range of options to meet their depilatory needs. Our range includes body wax strips, hair removal cream, bleach cream and spray foams so that no matter your skin type or preferences, there’s a Dimples product for you.",
   },
   // {
   //   id: BRANDS_ID.SUN_TROPIC,
@@ -392,7 +392,7 @@ export const BRANDS = [
       },
     ],
     detailedDescription:
-      "This unique handbag size range offers both UVA and UVB protection. All the products in this range are water-resistant, so you don’t need to worry about getting burned at the beach or in the pool. The sun lotions are available in low, medium and high factors. For those who want to achieve a natural long-lasting tan, we offer an Original Carrot Oil Gel and a Deep Tanning Oil Gel. Sun Tropic also provides sun lovers with a cooling, moisturising After Sun Lotion and an Aloe Vera After Sun Gel to help your skin recover after a long day in the sun. Sun Tropic is available to buy from Venture Blue, Convenience Distribution and Woolacombe Shop in the UK. It is exported to Thailand and several European countries.",
+      "Re-Gen is a range of specialised skin care products that help to fight against ageing, scars, stretch marks, dry skin and uneven skin tone. All our products are affordable and manufactured to the highest quality standards. Re-Gen is available to buy in many chain stores throughout the UK including Asda, Trago Mills, Bodycare and Semichem. You can also purchase it from some UK pharmacies including Murrays, Sundrelle and Numark. It is exported to the Republic of Ireland, Australia, Indonesia and Malaysia.",
   },
   {
     id: BRANDS_ID.PRIVATE_LABEL,

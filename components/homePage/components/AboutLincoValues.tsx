@@ -26,19 +26,19 @@ const VALUES = [
   {
     title: "Quality",
     description:
-      "We operate a stringent quality control regime covering the purchase of high quality components, raw materials and the manufacture and storage of finished goods. Microbiological analysis by an independent laboratory forms a constant part of the quality control procedures.",
+      "We never compromise on quality. Sourcing the highest standard of materials is always indisputable.",
     image: "/images/homePage/values/quality.png",
   },
   {
     title: "Ethics",
     description:
-      "As a skin-focused hub, we make sure that workplace ethics and sustainable manufacturing are a top priority.",
+      "Our team is crucial to our success. We value every worker and maintain an environment where people feel appreciated and inspired. We celebrate a culture of meritocracy to ensure every person has equal opportunity.",
     image: "/images/homePage/values/ethics.jpeg",
   },
   {
     title: "Innovation",
     description:
-      "Innovation is our core focus, driving product development and manufacturing processes to stay ahead.",
+      "We never compromise on quality. Sourcing the highest standard of materials is always indisputable.",
     image: "/images/homePage/values/innovation.png",
   },
 ];

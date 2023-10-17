@@ -11,7 +11,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Local Components ---------------------------- */
-
 import { theme } from "theme";
 import { Layout } from "layout";
 import { AppProvider } from "components/appProvider";
@@ -31,9 +30,9 @@ export default function MyApp(props: AppProps) {
         <meta property="og:type" content="article" />
         <meta
           property="og:image"
-          content="../public/icons/lincoNameMobile.png"
+          content="https://linco-site.s3.amazonaws.com/media/django-summernote/2023-10-17/e7cac042-ae72-49b9-8b24-d6ca4a792e01.jpg"
         />
-        <meta property="og:url" content="http://www.lincocare.com" />
+        <meta property="og:url" content="http://test.lincocare.com" />
 
         <meta
           property="og:description"
