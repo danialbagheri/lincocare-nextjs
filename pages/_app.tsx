@@ -26,13 +26,16 @@ export default function MyApp(props: AppProps) {
     <AppProvider>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta charSet="utf-8" />
         <meta property="og:title" content="Linco care company" />
-        <meta property="og:type" content="article" />
+        <meta property="og:type" content="website" />
         <meta
           property="og:image"
           content="https://linco-site.s3.amazonaws.com/media/django-summernote/2023-10-17/e7cac042-ae72-49b9-8b24-d6ca4a792e01.jpg"
         />
         <meta property="og:url" content="http://test.lincocare.com" />
+        <meta property="og:site_name" content="Linco care" />
+        <title>Linco Care</title>
 
         <meta
           property="og:description"

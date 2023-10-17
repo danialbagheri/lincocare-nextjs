@@ -12,6 +12,7 @@ function Brands() {
           property="og:image"
           content="https://linco-site.s3.amazonaws.com/media/django-summernote/2023-10-17/e7cac042-ae72-49b9-8b24-d6ca4a792e01.jpg"
         />
+        <title>Linco Care Brands</title>
       </Head>
       <BrandsHeader />
       <LincoBrands />
