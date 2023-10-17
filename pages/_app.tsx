@@ -36,7 +36,7 @@ export default function MyApp(props: AppProps) {
 
         <meta
           property="og:description"
-          content="Linco Care has been a trusted UK based sun and skin care manufacturer since 1979"
+          content="Linco Care has been a trusted UK based sun and skin care manufacturer since 1979."
         />
         <meta property="og:site_name" content="Linco care co." />
         {/* Google Tag Manager */}

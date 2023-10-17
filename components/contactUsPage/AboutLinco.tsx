@@ -53,10 +53,13 @@ export function AboutLinco() {
           textAlign={{ xs: "center", md: "left" }}
           color={{ xs: "#FFF", md: "#000" }}
         >
-          Linco Skincare is constantly exploring new avenues of research and
-          development to create revolutionary products that will change the
-          skincare industry; skincare guaranteed not to rub you up the wrong
-          way.
+          Linco Care has been a trusted UK based sun and skin care manufacturer
+          since 1979. Our commitment to our core values; Quality, Ethics and
+          Innovation have facilitated our journey to success and enabled us to
+          grow our diverse selection of own brands and bespoke private label
+          service globally. Our passion for skin care is evident in every
+          practice, with continuous innovation and market research to stay ahead
+          in the ever changing world of cosmetics.
         </Typography>
         <CustomLink
           href="/aboutUs"

@@ -32,7 +32,7 @@ const VALUES = [
   {
     title: "Ethics",
     description:
-      "Our team is crucial to our success. We value every worker and maintain an environment where people feel appreciated and inspired. We celebrate a culture of meritocracy to ensure every person has equal opportunity.",
+      "Our team is crucial to our success. We value every worker and maintain an environment where people feel appreciated and inspired.",
     image: "/images/homePage/values/ethics.jpeg",
   },
   {
