@@ -2,7 +2,7 @@ import {
   AboutLinco,
   Achievements,
   GlobalMarket,
-  Head,
+  Head as AboutUsHeader,
   HeadOffice,
   Retailers,
 } from "components/aboutUsPage";
@@ -11,12 +11,17 @@ import {
   Brands,
   LincoNews,
 } from "components/generalComponents";
+import Head from "next/head";
 import { LincoDivider } from "shared";
 
 function AboutUs() {
   return (
     <>
-      <Head />
+      <Head>
+        <meta property="og:title" content="About Linco Care" />
+        <title>About Linco Care</title>
+      </Head>
+      <AboutUsHeader />
       <AboutLinco />
 
       <LincoDivider sx={{ display: { xs: "none", md: "block" } }} />

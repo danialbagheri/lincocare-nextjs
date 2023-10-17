@@ -13,6 +13,7 @@ import { getListOfAllBlogs } from "services";
 import { Container } from "shared";
 import { ListOfAllBlogsRes } from "services/lincoServicesTypes";
 import { NewsSection, SocialMediaSection } from "components/newsPage";
+import Head from "next/head";
 /* -------------------------------------------------------------------------- */
 
 interface PropTypes {
@@ -24,31 +25,37 @@ export default function News(props: PropTypes) {
   const { error, data } = props;
 
   return (
-    <Container
-      sx={{
-        pt: { xs: 27, md: 63 },
-        display: "flex",
-        flexDirection: { xs: "column", md: "row" },
-      }}
-      fullWidth
-    >
-      {error ? (
-        <Typography variant="h4" color="lincoBlue.main">
-          {error}
-        </Typography>
-      ) : (
-        <>
-          <NewsSection
-            news={data.results}
-            count={data.count}
-            sx={{ flexGrow: { xs: 1, md: 2 } }}
-          />
-          {/* <Divider orientation="vertical" sx={{ height: "unset" }} /> */}
+    <>
+      <Head>
+        <meta property="og:title" content="Linco Care news" />
+        <title>Linco Care news</title>
+      </Head>
+      <Container
+        sx={{
+          pt: { xs: 27, md: 63 },
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+        }}
+        fullWidth
+      >
+        {error ? (
+          <Typography variant="h4" color="lincoBlue.main">
+            {error}
+          </Typography>
+        ) : (
+          <>
+            <NewsSection
+              news={data.results}
+              count={data.count}
+              sx={{ flexGrow: { xs: 1, md: 2 } }}
+            />
+            {/* <Divider orientation="vertical" sx={{ height: "unset" }} /> */}
 
-          {/* <SocialMediaSection sx={{ flexGrow: 1 }} /> */}
-        </>
-      )}
-    </Container>
+            {/* <SocialMediaSection sx={{ flexGrow: 1 }} /> */}
+          </>
+        )}
+      </Container>
+    </>
   );
 }
 

@@ -4,8 +4,12 @@ import { LincoNews } from "components/generalComponents";
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Local Components ---------------------------- */
-import { Head, ProcessLevels } from "components/privateLabelPage";
+import {
+  Head as PrivateLabelHeader,
+  ProcessLevels,
+} from "components/privateLabelPage";
 import { GetStaticProps } from "next";
+import Head from "next/head";
 import { getFaq } from "services";
 import { FaqTypes } from "services/lincoServicesTypes";
 import { Container } from "shared";
@@ -20,7 +24,11 @@ function PrivateLabel(props: PropsTypes) {
 
   return (
     <>
-      <Head />
+      <Head>
+        <meta property="og:title" content="Linco Care Private Label" />
+        <title>Linco Care Private Label</title>
+      </Head>
+      <PrivateLabelHeader />
 
       <ProcessLevels faq={faq} />
 

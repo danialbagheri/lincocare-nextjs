@@ -2,11 +2,16 @@ import { Box, Divider, Typography } from "@mui/material";
 
 import { AboutLinco, Address, ContactForm } from "components/contactUsPage";
 import { Brands } from "components/generalComponents";
+import Head from "next/head";
 import { Container, LincoDivider } from "shared";
 
 export default function ContactUs() {
   return (
     <>
+      <Head>
+        <meta property="og:title" content="Contact Us" />
+        <title>Contact Us</title>
+      </Head>
       <Container
         pt={{ xs: 34, md: 65 }}
         sx={{ width: { xs: "100%", md: "min(1200px,80%)" } }}
