@@ -1,9 +1,9 @@
 import * as React from "react";
 
 import { Box, SxProps, Typography } from "@mui/material";
-import ReCAPTCHA from "react-google-recaptcha";
 
 import { FormDataTypes, Message, SubmitBtn, UserProfile } from "./components";
+import { ReCaptcha } from "components/generalComponents";
 
 interface PropsTypes {
   sx: SxProps;
@@ -11,7 +11,6 @@ interface PropsTypes {
 
 export function ContactForm(props: PropsTypes) {
   const { sx } = props;
-  const recaptchaRef = React.useRef(null);
   const [formData, setFormData] = React.useState<FormDataTypes>({
     name: "",
     company: "",
@@ -50,16 +49,10 @@ export function ContactForm(props: PropsTypes) {
         <CompanyDetails formData={formData} setFormData={setFormData} /> */}
         <Message formData={formData} setFormData={setFormData} />
         <Box mt={8}>
-          <ReCAPTCHA
-            sitekey="6LfjPaEUAAAAAPGfkx7Nxp3glAdPGbLZE3lwY5c9"
-            ref={recaptchaRef}
-            onChange={handleCaptchaSubmission}
+          <ReCaptcha
+            error={error.recaptcha}
+            handleChange={handleCaptchaSubmission}
           />
-          {error.recaptcha ? (
-            <Typography mt={1} color="red" fontSize="12px">
-              {error.recaptcha}
-            </Typography>
-          ) : null}
         </Box>
         <SubmitBtn
           formData={formData}

@@ -7,3 +7,4 @@ export * from "./socialMedia";
 export * from "./brands";
 export * from "./brandsDetail";
 export * from "./loadMoreBtn";
+export * from "./reCaptcha";
