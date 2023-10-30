@@ -1,3 +1,5 @@
+import { useRouter } from "next/router";
+
 import { BRANDS } from "components/constants";
 import { Brands, LincoNews } from "components/generalComponents";
 import {
@@ -7,7 +9,6 @@ import {
   Products,
 } from "components/individualBrandsPage";
 
-import { useRouter } from "next/router";
 import { Container, LincoDivider } from "shared";
 
 export default function BrandPage() {

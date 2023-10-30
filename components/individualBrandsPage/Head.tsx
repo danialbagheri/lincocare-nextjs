@@ -1,7 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { BrandDetailsType } from "components/constants";
 import Image from "next/image";
-import { Container } from "shared";
 
 export function Head(props: {
   brandDetails: BrandDetailsType;
@@ -22,7 +21,7 @@ export function Head(props: {
     >
       <Image
         src={`/images/individualBrandPage/bg/${id}.png`}
-        alt={id || ""}
+        alt={id ?? ""}
         fill
         style={{ objectFit: "cover" }}
       />

@@ -48,7 +48,7 @@ export const BRANDS = [
     borderColor: theme.palette.calypsoOrange.main,
     knowMoreLink: "/brands/calypso",
     brandWebsiteLink: "Calypsosun.com",
-    subtitle: "Healthy Skin is Happy Skin",
+    subtitle: "Sun protection for the whole family",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],
@@ -107,7 +107,7 @@ export const BRANDS = [
     borderColor: theme.palette.lincoBlue.main,
     knowMoreLink: "/brands/cabana",
     brandWebsiteLink: "Cabanasun.co.uk ",
-    subtitle: "Tanning meets sun protection ",
+    subtitle: "Love the sun, love your skin",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],
@@ -163,7 +163,7 @@ export const BRANDS = [
     borderColor: theme.palette.primary.main,
     knowMoreLink: "/brands/silkiaPedicare",
     brandWebsiteLink: "Silkia.com",
-    subtitle: "Revitalise your skin",
+    subtitle: "For silky smooth skin",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],
@@ -201,7 +201,7 @@ export const BRANDS = [
     borderColor: theme.palette.primary.main,
     knowMoreLink: "/brands/silkiaDepilatory",
     brandWebsiteLink: "Silkiadepilatory.co.uk",
-    subtitle: "For Silkia feeling skin",
+    subtitle: "For silky smooth skin",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],
@@ -348,7 +348,7 @@ export const BRANDS = [
     borderColor: theme.palette.primary.main,
     knowMoreLink: "/brands/reGen",
     brandWebsiteLink: "Regenoil.co.uk",
-    subtitle: "Feel confident in your skin",
+    subtitle: "The secret to sensational skin",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],

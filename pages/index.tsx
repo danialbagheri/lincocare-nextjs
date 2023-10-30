@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 
 import { GetStaticProps } from "next";
+import Head from "next/head";
 /* ---------------------------- Local Components ---------------------------- */
 import { getIcons } from "services";
 import { LincoDivider } from "shared";
@@ -20,8 +21,6 @@ import {
   Head as HomePageHeader,
   PrivateLabel,
 } from "components/homePage";
-import Head from "next/head";
-
 /* -------------------------------------------------------------------------- */
 
 interface PropsTypes {
@@ -37,7 +36,7 @@ export default function Home(props: PropsTypes) {
       setAppState((prev: InitialStateTypes) => ({
         ...prev,
         socialMediaIcons: props.socialMediaIcons?.items,
-        accreditations: props.accreditations?.items,
+        accreditations: props.accreditations,
       }));
     }
   }, []);
