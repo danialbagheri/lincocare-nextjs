@@ -1,57 +1,62 @@
-import { Box, Stack, SxProps, Typography } from "@mui/material";
+/* ---------------------------- NextJs Components --------------------------- */
 import Image from "next/image";
-import { Container, CustomLink, HeadContainer } from "shared";
+/* -------------------------------------------------------------------------- */
+
+/* ----------------------------- MUI Components ----------------------------- */
+import { Box, Stack, Typography, useTheme } from "@mui/material";
+import StarIcon from "@mui/icons-material/Star";
+/* -------------------------------------------------------------------------- */
 
 export function Head() {
+  const theme = useTheme();
   return (
-    <HeadContainer
-      bgcolor={"lincoBlue.dark"}
-      sx={{ height: { xs: 630, md: 800, xl: 850 } }}
-    >
-      <Container>
-        <Stack
-          alignItems={"center"}
-          pt={51}
-          display={{ xs: "none", md: "flex" }}
+    <>
+      <Box
+        bgcolor={"lincoBlue.dark"}
+        sx={{ height: { xs: 630, md: 800, xl: 850 }, position: "relative" }}
+      >
+        <Image
+          alt="Brands"
+          src="/images/brandsPage/header.jpg"
+          fill
+          style={{ objectFit: "cover" }}
+        />
+
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%,-50%)",
+          }}
         >
-          <Typography variant={"h1"} color={"#FFFFFF"}>
+          <Typography variant={"h1"} color={"#FFF"}>
             Our Brands
           </Typography>
-          <Typography mt={3} variant={"h4"} color={"#77B4FB"}>
-            Our diverse range of brands
-          </Typography>
-          <Box
-            sx={{
-              width: "100%",
-              pt: "30%",
-              position: "relative",
-              mt: 20,
-            }}
-          >
-            <Image
-              src={"/images/brandsPage/allBrands.png"}
-              alt="Accreditations"
-              fill
-              style={{ objectFit: "contain" }}
-              sizes={"100vw"}
-              loading={"lazy"}
-            />
-          </Box>
-        </Stack>
-        <Stack alignItems={"center"} display={{ xs: "flex", md: "none" }}>
-          <Typography
-            variant={"h4"}
-            pt={58}
-            color={"#FFFFFF"}
-            textAlign={"center"}
-          >
-            700+ Product Formulations
-          </Typography>
-          <CustomLink mt={23} href="">
-            Know more
-          </CustomLink>
-        </Stack>
-      </Container>
-    </HeadContainer>
+        </Box>
+      </Box>
+      <Box
+        sx={{ p: 3, bgcolor: "#F5F5F5", display: { xs: "none", md: "flex" } }}
+      >
+        <Box
+          sx={{
+            m: "0 auto",
+            maxWidth: "70%",
+            minWidth: { md: "60%", lg: "50%" },
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            color: theme.palette.lincoBlue.dark,
+          }}
+        >
+          {["Quality", "Ethics", "Innovation"].map((item) => (
+            <Stack key={item} direction="row" alignItems={"center"} gap={2}>
+              <StarIcon sx={{ fill: "#C2C2C2", fontSize: 16 }} />
+              <Typography>{item}</Typography>
+            </Stack>
+          ))}
+        </Box>
+      </Box>
+    </>
   );
 }
