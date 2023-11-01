@@ -1,11 +1,11 @@
-import { Navbar } from "components";
-import * as React from "react";
+import { Footer, Navbar } from "components/generalComponents";
 
 function Layout({ children }: React.PropsWithChildren) {
   return (
     <>
       <Navbar />
       {children}
+      <Footer />
     </>
   );
 }

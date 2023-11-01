@@ -1,3 +1,4 @@
-export * from "./homePageHead";
-export * from "./privateLabel";
-export * from "./homePageBrands";
+export * from "./Head";
+export * from "./PrivateLabel";
+export * from "./Brands";
+export * from "./AboutLinco";

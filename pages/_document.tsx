@@ -12,7 +12,7 @@ import Document, {
 import { AppType } from "next/app";
 import { theme } from "theme";
 
-export default function MyDocument({}: DocumentProps) {
+export default function MyDocument(props: DocumentProps) {
   return (
     <Html lang="en">
       <Head>
@@ -24,6 +24,16 @@ export default function MyDocument({}: DocumentProps) {
       <body>
         <Main />
         <NextScript />
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-N8WL9NNB"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
       </body>
     </Html>
   );

@@ -1,5 +1,5 @@
-import { createTheme } from "@mui/material";
 import { Inter } from "next/font/google";
+import { createTheme } from "@mui/material";
 
 export const inter = Inter({
   weight: ["300", "400", "500", "700"],
@@ -12,7 +12,7 @@ export const inter = Inter({
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#FF6B00",
+      main: "#004EAA",
     },
     secondary: {
       main: "#226F61",
@@ -30,20 +30,59 @@ const theme = createTheme({
     earth: {
       main: "#3C1510",
     },
+    calypsoOrange: {
+      light: "#F47B47",
+      main: "#EC6B1C",
+    },
     lincoYellow: {
       main: "#FBFF00",
     },
     lincoBlue: {
-      light: "#004EAA",
-      main: "#062952",
+      light: "#247DE7",
+      main: "#004EAA",
+      dark: "#062952",
+    },
+    cabanaBrown: { main: "#CEA974" },
+    silkiaBlue: {
+      main: "#2B69B1",
+    },
+    silkiaDepilatory: {
+      main: "#CF639F",
+    },
+    regenPink: {
+      main: "#FEA08C",
+    },
+    dimplesBlue: {
+      main: "#AECEF4",
+    },
+    sunTropic: {
+      main: "#5BB087",
+    },
+    gray: {
+      light: "#C2C2C2",
+      main: "#B1B1B1",
     },
   },
 
   spacing: 4,
 
   typography: {
+    largeTitle: {
+      fontFamily: inter.style.fontFamily,
+      fontSize: "72px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+    },
+    h0: {
+      fontFamily: inter.style.fontFamily,
+      fontSize: "68px",
+      fontStyle: "normal",
+      fontWeight: 500,
+      lineHeight: "normal",
+    },
+
     h1: {
-      /* Extra Large Title */
       fontFamily: inter.style.fontFamily,
       fontSize: "56px",
       fontStyle: "normal",
@@ -52,26 +91,54 @@ const theme = createTheme({
     },
     h2: {
       fontFamily: inter.style.fontFamily,
+      fontSize: "42px",
+      fontStyle: "normal",
+      fontWeight: 500,
+      lineHeight: "52px",
+    },
+    h3: {
+      fontFamily: inter.style.fontFamily,
+      fontSize: "36px",
+      fontStyle: "normal",
+      fontWeight: 700,
+      lineHeight: "normal",
+    },
+    h4: {
+      fontFamily: inter.style.fontFamily,
       fontSize: "32px",
       fontStyle: "normal",
       fontWeight: 400,
       lineHeight: "40px",
     },
-    h3: {
+    h5: {
       fontFamily: inter.style.fontFamily,
       fontSize: "26px",
       fontStyle: "normal",
       fontWeight: 500,
       lineHeight: "35px",
     },
-    h4: {
+    h6: {
       fontFamily: inter.style.fontFamily,
-      fontSize: "42px",
+      fontSize: "18px",
       fontStyle: "normal",
-      fontWeight: 500,
-      lineHeight: "52px",
+      fontWeight: 400,
+      lineHeight: "30px",
     },
-
+    h7: {},
+    h3thin: {
+      fontFamily: inter.style.fontFamily,
+      fontSize: "36px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+    },
+    subtitle1: {
+      fontFamily: inter.style.fontFamily,
+      fontSize: "18px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+    },
     body1: {
       fontFamily: inter.style.fontFamily,
       fontSize: "16px",
