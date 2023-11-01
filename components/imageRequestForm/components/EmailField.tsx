@@ -6,16 +6,17 @@ import { TextField } from "@mui/material";
 
 /* ---------------------------- Local Components ---------------------------- */
 import { Label } from "./Label";
-import { RequestDataTypes } from "../RequestForm";
+import { ErrorTypes, RequestDataTypes } from "../RequestForm";
 /* -------------------------------------------------------------------------- */
 
 interface PropsTypes {
   value: string;
   setRequestData: Dispatch<SetStateAction<RequestDataTypes>>;
+  error: ErrorTypes;
 }
 
 export function EmailField(props: PropsTypes) {
-  const { value, setRequestData } = props;
+  const { value, setRequestData, error } = props;
 
   const handleChange = (v: string) => {
     setRequestData((prev) => ({ ...prev, email: v }));
@@ -30,6 +31,8 @@ export function EmailField(props: PropsTypes) {
         variant="outlined"
         onChange={(e) => handleChange(e.target.value)}
         value={value}
+        error={Boolean(error.email)}
+        helperText={error.email}
       />
     </>
   );

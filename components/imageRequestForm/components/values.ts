@@ -1,15 +1,15 @@
 export const REQUEST_FIELDS = {
   SKU_LIST: "sku_list",
-  IMAGE_FORMAT: "image_format",
-  IMAGE_TYPE: "image_type",
-  IMAGE_ANGLE: "image_angle",
+  IMAGE_FORMAT: "image_formats",
+  IMAGE_TYPE: "image_types",
+  IMAGE_ANGLE: "image_angles",
   EMAIL: "email",
   RE_CAPTCHA: "recaptcha",
 };
 
 export const IMAGE_TYPE_OPTIONS = {
   PRODUCT_IMAGE: { title: "Product Image", value: "PI" },
-  LIFE_STYLE: { title: "Life Style", value: "LI" },
+  LIFE_STYLE: { title: "Life Style", value: "LS" },
   RANGE_PHOTO: { title: "Range Photo", value: "RP" },
   TEXTURE: { title: "Texture", value: "TX" },
   ANIMATION: { title: "Animation", value: "AN" },
@@ -18,7 +18,7 @@ export const IMAGE_TYPE_OPTIONS = {
   OTHERS: { title: "Others", value: "OT" },
 };
 
-export const IMAGE_FORMAT = {
+export const IMAGE_FORMATS = {
   PNG: { title: "PNG", value: "PNG" },
   JPEG: { title: "JPEG", value: "JPG" },
 };

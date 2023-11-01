@@ -93,7 +93,7 @@ export const BRANDS = [
       },
     ],
     detailedDescription:
-      "Calypso is a British sun care brand which aims to provide customers with quality sun care products at exceptionally low prices. All our sunscreens are developed by sun care experts and are tested to Colipa standards. Our Calypso Sun Lotion SPF30 was chosen by the leading consumer watchdog Which? as its “Best Buy Sunscreen” for 2014 and 2015. Our products are sold in many chain stores in the UK including Asda, Aldi, Home Bargains, Wilkinson and Quality Save. They are also exported to many European, Asian and Middle Eastern countries.",
+      "Calypso is a British sun care brand which aims to provide customers with quality sun care products at exceptionally low prices. All our sunscreens are developed by sun care experts and are tested to Colipa standards. Our products are sold in many chain stores in the UK including Asda, Aldi, Home Bargains, Wilkinson and Quality Save. They are also exported to many European, Asian and Middle Eastern countries.",
   },
   {
     id: BRANDS_ID.CABANA,

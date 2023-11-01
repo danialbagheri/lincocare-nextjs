@@ -1,10 +1,11 @@
-import { Typography } from "@mui/material";
+import { SxProps, Typography } from "@mui/material";
 import * as React from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 interface PropsTypes {
   error?: string;
   handleChange: (v: string) => void;
+  sx?: SxProps;
 }
 
 export function ReCaptcha(props: PropsTypes) {
@@ -18,7 +19,7 @@ export function ReCaptcha(props: PropsTypes) {
         onChange={handleChange}
       />
       {error ? (
-        <Typography mt={1} color="red" fontSize="12px">
+        <Typography mt={1} color="#d32f2f" fontSize="12px" sx={{ ...props.sx }}>
           {error}
         </Typography>
       ) : null}
