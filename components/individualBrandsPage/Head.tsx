@@ -56,9 +56,9 @@ export function Head(props: {
         </Box>
         <Box
           sx={{
-            width: { xs: "80%", sm: "50%" },
-            maxWidth: 300,
-            pt: { xs: "55%", sm: "32%" },
+            width: { xs: "80%", sm: "65%" },
+            // maxWidth: 300,
+            pt: { xs: "55%", sm: "42%" },
             position: "relative",
           }}
         >
