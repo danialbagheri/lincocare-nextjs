@@ -41,12 +41,21 @@ export function Head(props: {
           zIndex: 1,
         }}
       >
-        <Box mb={{ xs: 0, md: "12%" }}>
-          <Typography variant="h1" color="#FFF" textAlign="center">
+        <Box
+          className="centralize"
+          mb={{ xs: 0, md: "12%", flexDirection: "column" }}
+        >
+          {/* <Typography variant="h1" color="#FFF" textAlign="center">
             {brandDetails?.name}
-          </Typography>
+          </Typography> */}
+          <Image
+            src={brandDetails?.whiteLogoSrc ?? ""}
+            alt="logo"
+            width={300}
+            height={100}
+          />
           <Typography
-            variant="h4"
+            variant="h5"
             mt={3}
             color="lincoYellow.main"
             textAlign="center"
