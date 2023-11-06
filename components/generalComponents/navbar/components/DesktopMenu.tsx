@@ -4,7 +4,8 @@ import { Box, Button } from "@mui/material";
 import { useRouter } from "next/router";
 import { NAV_ITEMS } from "./constants";
 import { AboutUsPopOver } from "./AboutUsPopOver";
-import { BrandsPopOver } from "./BrandsPopOver";
+// import { BrandsPopOver } from "./BrandsPopOver";
+import { BrandsSimplePopover } from "./BrandsSimplePopover";
 
 interface DesktopMenuProps {
   darkNavbar: boolean;
@@ -73,7 +74,11 @@ export function DesktopMenu(props: DesktopMenuProps) {
         </>
       ))}
       <AboutUsPopOver anchorEle={anchorEle} handleClose={handlePopoverClose} />
-      <BrandsPopOver anchorEle={anchorEle} handleClose={handlePopoverClose} />
+      {/* <BrandsPopOver anchorEle={anchorEle} handleClose={handlePopoverClose} /> */}
+      <BrandsSimplePopover
+        anchorEle={anchorEle}
+        handleClose={handlePopoverClose}
+      />
     </Box>
   );
 }

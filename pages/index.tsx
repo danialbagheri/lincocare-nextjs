@@ -58,7 +58,7 @@ export default function Home(props: PropsTypes) {
 
       <LincoDivider sx={{ mt: 0, mb: { xs: 19, md: 25 } }} fullWidth />
 
-      <Accreditations data={props.accreditations.items} />
+      <Accreditations data={props.accreditations?.items} />
 
       <LincoDivider
         sx={{ mt: { xs: 17, md: 35 }, mb: { xs: 16, md: 17 } }}
