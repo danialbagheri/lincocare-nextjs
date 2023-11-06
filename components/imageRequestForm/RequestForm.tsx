@@ -52,6 +52,12 @@ export function RequestForm() {
       endpoint: "https://api.cabanasun.co.uk/api/users/variant-image-requests/",
       selected: false,
     },
+    {
+      id: "silkia",
+      title: "Silkia",
+      endpoint: "https://api.silkia.com/api/users/variant-image-requests/",
+      selected: false,
+    },
   ]);
   const [error, setError] = React.useState<ErrorTypes>({
     email: "",

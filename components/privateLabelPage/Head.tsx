@@ -16,12 +16,12 @@ import { HeadContainer } from "shared";
 const PRIVATE_LABEL_INFO = [
   {
     id: "privateLabel_1",
-    title: "360 degree services",
+    title: "360 degree service",
     imgSrc: "/images/privateLabelPage/head/privateLabel.png",
   },
   {
     id: "privateLabel_2",
-    title: "From idea to market ",
+    title: "From concept to market ",
     imgSrc: "/images/privateLabelPage/head/privateLabel.png",
   },
   {

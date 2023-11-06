@@ -163,31 +163,29 @@ export function BrandsPopOver(props: PropsTypes) {
               aria-labelledby={`full-width-tab-${value}`}
               style={{ marginTop: "30px" }}
             >
-              <>
-                <Typography
-                  textAlign="center"
-                  fontSize="14px"
-                  color={theme.palette.lincoBlue.dark}
-                >
-                  {brand.text}
-                </Typography>
+              <Typography
+                textAlign="center"
+                fontSize="14px"
+                color={theme.palette.lincoBlue.dark}
+              >
+                {brand.text}
+              </Typography>
 
-                <Box
-                  sx={{
-                    position: "relative",
-                    height: "76px",
-                    width: "100%",
-                    mt: 6,
-                  }}
-                >
-                  <Image
-                    alt={brand.title}
-                    src={brand.imageSrc}
-                    fill
-                    style={{ objectFit: "contain" }}
-                  />
-                </Box>
-              </>
+              <Box
+                sx={{
+                  position: "relative",
+                  height: "76px",
+                  width: "100%",
+                  mt: 6,
+                }}
+              >
+                <Image
+                  alt={brand.title}
+                  src={brand.imageSrc}
+                  fill
+                  style={{ objectFit: "contain" }}
+                />
+              </Box>
             </div>
           ))}
         </SwipeableViews>
