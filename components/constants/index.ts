@@ -27,8 +27,8 @@ export interface BrandDetailsType {
 export const BRANDS_ID = {
   CALYPSO: "calypso",
   CABANA: "cabana",
-  SILKIA_PEDICARE: "silkiaPedicare",
-  SILKIA_DEPILATORY: "silkiaDepilatory",
+  SILKIA_PEDICARE: "silkiaSkin",
+  SILKIA_DEPILATORY: "silkia",
   DIMPLES: "dimples",
   SUN_TROPIC: "sunTropic",
   RE_GEN: "reGen",
@@ -154,7 +154,7 @@ export const BRANDS = [
     id: BRANDS_ID.SILKIA_PEDICARE,
     name: "Silkia Skin",
     fullName: "Silkia Pedicare",
-    imageSrc: "/images/brands/silkiaPedicare.png",
+    imageSrc: "/images/brands/silkiaSkin.png",
     whiteLogoSrc: "/images/brands/whiteLogo/Pedicare-white.svg",
     mt: "0",
     description:
@@ -192,7 +192,7 @@ export const BRANDS = [
     id: BRANDS_ID.SILKIA_DEPILATORY,
     name: "Silkia",
     fullName: "Silkia Depilatory",
-    imageSrc: "/images/brands/silkiaDepilatory.png",
+    imageSrc: "/images/brands/silkia.png",
     whiteLogoSrc: "/images/brands/whiteLogo/Silkia-white.svg",
     mt: "03px",
     description:

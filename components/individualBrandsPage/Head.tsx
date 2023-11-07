@@ -72,8 +72,8 @@ export function Head(props: {
           }}
         >
           <Image
-            src={`/images/brands/${id}.png`}
-            alt={id || ""}
+            src={brandDetails?.imageSrc}
+            alt={id ?? ""}
             fill
             style={{ objectFit: "contain" }}
           />
