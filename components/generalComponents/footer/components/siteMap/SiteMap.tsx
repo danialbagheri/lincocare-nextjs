@@ -46,15 +46,15 @@ function SiteMap() {
       </Typography>
       <Stack direction={"row"} gap={{ xs: 10, md: 15 }}>
         <Box>
-          <FooterLink href="/privateLabel">Private label</FooterLink>
+          <FooterLink href="/private-label">Private label</FooterLink>
           <FooterLink href="/brands">Brands</FooterLink>
-          <FooterLink href="/aboutUs">About us</FooterLink>
+          <FooterLink href="/about-us">About us</FooterLink>
           <FooterLink href="/sustainability">Sustainability</FooterLink>
           <FooterLink href="/news">News</FooterLink>
         </Box>
         <Box>
-          <FooterLink href="/contactUs">Contact us</FooterLink>
-          <FooterLink href="/privacyPolicy">Privacy policy</FooterLink>
+          <FooterLink href="/contact-us">Contact us</FooterLink>
+          <FooterLink href="/privacy-policy">Privacy policy</FooterLink>
           <FooterLink href="/disclaimer" noMargin>
             Disclaimer
           </FooterLink>

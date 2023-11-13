@@ -224,9 +224,9 @@ export const BRANDS = [
       },
       {
         id: "silkia_depilatory_3",
-        title: "Face Wax Strips",
+        title: "Wax Strips",
         description:
-          "Silkia Face Wax Strips are ideal for those hard to reach areas on the face. With sunflower and damask rose oil, Silkia’s wax formula will leave skin soft and smooth. The post-wax aloe vera cream provided in the pack helps to sooth skin afterwards for optimum comfort and that silky feeling.",
+          "With sunflower and damask rose oil, Silkia’s wax formula will leave skin soft and smooth. The post-wax aloe vera cream provided in the pack helps to sooth skin afterwards for optimum comfort and that silky feeling.",
         imgSrc: "Silkia-wax-strips.png",
       },
     ],

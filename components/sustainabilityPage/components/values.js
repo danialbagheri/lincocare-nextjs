@@ -39,12 +39,12 @@ export const SUSTAINABILITY = [
     imagePos: "left",
     pt: "103.7%",
   },
-  {
-    title: "Recycling",
-    description:
-      "Linco Care recycles as much waste as possible by separating all of our card and plastic from our general waste. At Linco Care, we will continue to review our operations to identify where we need to further improve energy efficiency and reduce energy use.",
-    imgSrc: "recycling.png",
-    imagePos: "right",
-    pt: "79.67%",
-  },
+  // {
+  //   title: "Recycling",
+  //   description:
+  //     "Linco Care recycles as much waste as possible by separating all of our card and plastic from our general waste. At Linco Care, we will continue to review our operations to identify where we need to further improve energy efficiency and reduce energy use.",
+  //   imgSrc: "recycling.png",
+  //   imagePos: "right",
+  //   pt: "79.67%",
+  // },
 ];

@@ -13,7 +13,7 @@ import { Container, LincoDivider } from "shared";
 
 export default function BrandPage() {
   const brandId = useRouter().query.brandId?.toString();
-  const brandDetails = BRANDS.filter((b) => b.id === brandId)[0];
+  const brandDetails = BRANDS.find((b) => b.id === brandId)!;
 
   return (
     <>

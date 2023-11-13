@@ -52,7 +52,7 @@ export function AboutLincoDescription() {
               mt: { xs: 4, md: 0 },
             }}
             borderColor={{ xs: theme.palette.lincoYellow.main }}
-            href="/aboutUs"
+            href="/about-us"
           >
             Know more
           </CustomLink>
@@ -85,7 +85,7 @@ export function AboutLincoDescription() {
         <CustomLink
           sx={{ textAlign: { xs: "center", md: "left" }, mt: { xs: 4, md: 0 } }}
           borderColor={{ xs: theme.palette.lincoYellow.main }}
-          href="/aboutUs"
+          href="/about-us"
         >
           Know more
         </CustomLink>

@@ -15,17 +15,17 @@ const HEADER_TITLES = [
   {
     id: "formulation",
     title: "700+ Product Formulations",
-    href: "/privateLabel",
+    href: "/private-label",
   },
   {
     id: "crafting",
     title: "Crafting Excellence, Nurturing beauty",
-    href: "/aboutUs",
+    href: "/about-us",
   },
   {
     id: "custom",
     title: "Four Decades of Manufacturing Expertise",
-    href: "/privateLabel",
+    href: "/private-label",
   },
 ];
 

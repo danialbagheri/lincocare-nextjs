@@ -33,13 +33,9 @@ export default function Navbar(props: Props) {
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const darkNavbar =
-    router.pathname.includes("/privateLabel") ||
-    router.pathname.includes("/privacyPolicy") ||
-    router.pathname.includes("/disclaimer") ||
-    router.pathname.includes("/contactUs") ||
-    router.pathname.includes("/sustainability") ||
-    router.pathname.includes("/imageRequest") ||
-    router.pathname.includes("/news");
+    router.pathname !== "/" &&
+    !router.pathname.includes("/brands") &&
+    !router.pathname.includes("/about-us");
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,

@@ -8,4 +8,23 @@ module.exports = {
     ],
   },
   output: "standalone",
+  redirects: async () => {
+    return [
+      {
+        source: "/contactUs",
+        destination: "/contact-us",
+        permanent: false,
+      },
+      {
+        source: "/aboutUs",
+        destination: "/about-us",
+        permanent: false,
+      },
+      {
+        source: "/imageRequest",
+        destination: "/image-request",
+        permanent: false,
+      },
+    ];
+  },
 };

@@ -54,7 +54,7 @@ const BrandDescription = (props: BrandDescriptionTypes) => {
               ? theme.palette.lincoBlue.dark
               : props.borderColor,
           }}
-          href={props.details?.knowMoreLink || ""}
+          href={`brands/${props.details?.id}`}
         >
           Know more
         </CustomLink>

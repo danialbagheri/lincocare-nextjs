@@ -8,7 +8,7 @@ interface PropsTypes {
 }
 
 const LINKS = [
-  { href: "/aboutUs", title: "About us" },
+  { href: "/about-us", title: "About us" },
   { href: "/sustainability", title: "Sustainability" },
   { href: "/news", title: "News" },
 ];

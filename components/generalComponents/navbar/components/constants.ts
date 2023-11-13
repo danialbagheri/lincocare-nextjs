@@ -9,10 +9,10 @@ export const NAV_ITEMS = [
   {
     id: "privateLabel",
     name: "Private label",
-    link: "/privateLabel",
+    link: "/private-label",
     justMobile: false,
   },
-  { id: "aboutUs", name: "About us", link: "/aboutUs", justMobile: false },
+  { id: "aboutUs", name: "About us", link: "/about-us", justMobile: false },
   {
     id: "sustainability",
     name: "Sustainability",
@@ -23,7 +23,7 @@ export const NAV_ITEMS = [
   {
     id: "contactUs",
     name: "Contact us",
-    link: "/contactUs",
+    link: "/contact-us",
     justMobile: false,
   },
 ];

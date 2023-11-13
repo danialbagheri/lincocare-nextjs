@@ -27,6 +27,9 @@ export function Products(props: { brandDetails: BrandDetailsType }) {
 
   return (
     <Stack gap={{ xs: 18, md: 13 }} mb={{ xs: 25, md: 37 }}>
+      <Typography variant="h4" textAlign="center" mb={8}>
+        Products by category
+      </Typography>
       {brandDetails?.products?.map((product) => (
         <Box
           key={product.id}

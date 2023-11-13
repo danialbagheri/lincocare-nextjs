@@ -62,7 +62,7 @@ export function AboutLinco() {
           in the ever changing world of cosmetics.
         </Typography>
         <CustomLink
-          href="/aboutUs"
+          href="/about-us"
           color={{ xs: "#fff", md: "#000" }}
           borderColor={{
             xs: theme.palette.lincoYellow.main,

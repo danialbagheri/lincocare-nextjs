@@ -8,7 +8,7 @@ const DATA = [
     question: "Got a question? Ask away!",
     title: "Send us a message",
     button: "Send a message now",
-    link: "/contactUs",
+    link: "/contact-us",
   },
 ];
 
