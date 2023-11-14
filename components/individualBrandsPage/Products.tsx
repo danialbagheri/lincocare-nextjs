@@ -3,6 +3,7 @@ import { Box, Stack, Typography, useTheme } from "@mui/material";
 import { BrandDetailsType } from "components/constants";
 import Image from "next/image";
 import { CustomLink } from "shared";
+import Link from "next/link";
 
 interface ItemsHoverTypes {
   [id: string]: boolean;
@@ -140,6 +141,17 @@ export function Products(props: { brandDetails: BrandDetailsType }) {
           </Box>
         </Box>
       ))}
+      <Typography
+        variant="h4"
+        mt={20}
+        textAlign="center"
+        sx={{ "&>a": { textDecoration: "underline" } }}
+      >
+        See more at{" "}
+        <Link href={`https://${brandDetails?.brandWebsiteLink}` ?? ""}>
+          {brandDetails?.brandWebsiteLink}
+        </Link>
+      </Typography>
     </Stack>
   );
 }

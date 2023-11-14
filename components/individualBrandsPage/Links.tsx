@@ -22,7 +22,7 @@ export function Links(props: { brandDetails: BrandDetailsType }) {
       }}
     >
       <Link href={"https://" + brandDetails?.brandWebsiteLink}>
-        {brandDetails?.brandWebsiteLink}
+        Visit {brandDetails?.brandWebsiteLink}
       </Link>
       <Box
         sx={{

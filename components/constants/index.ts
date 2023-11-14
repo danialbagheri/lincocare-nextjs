@@ -126,11 +126,11 @@ export const BRANDS = [
         imgSrc: "Cabana-sun-protection.png",
       },
       {
-        id: "cabana_2",
-        title: "Kids/Sensitive",
+        id: "cabana_4",
+        title: "Tanning",
         description:
-          "These water-resistant sun protection products are specially designed for children. They protect skin from burning 30 times longer than natural protection and their gentle moisturisers replenish the natural oils lost through exposure to the sun, wind and water.",
-        imgSrc: "Cabana-kids-sensitive.png",
+          "Our range of tanning products are specifically designed to give tan lovers the best of both worlds. They provide a high level of sun protection whilst helping to build a deep, long-lasting tan.",
+        imgSrc: "Cabana-tanning.png",
       },
       {
         id: "cabana_3",
@@ -140,11 +140,11 @@ export const BRANDS = [
         imgSrc: "Cabana-after-sun.png",
       },
       {
-        id: "cabana_4",
-        title: "Tanning",
+        id: "cabana_2",
+        title: "Kids/Sensitive",
         description:
-          "Our range of tanning products are specifically designed to give tan lovers the best of both worlds. They provide a high level of sun protection whilst helping to build a deep, long-lasting tan.",
-        imgSrc: "Cabana-tanning.png",
+          "These water-resistant sun protection products are specially designed for children. They protect skin from burning 30 times longer than natural protection and their gentle moisturisers replenish the natural oils lost through exposure to the sun, wind and water.",
+        imgSrc: "Cabana-kids-sensitive.png",
       },
     ],
     detailedDescription:
@@ -172,16 +172,16 @@ export const BRANDS = [
     products: [
       {
         id: "silkia_pedicare_1",
-        title: "Cracked Heel Repair Cream",
+        title: "Foot Care",
         description:
-          "Silkia Skin centres around well nourished skin. The best selling Cracked Heel Repair Cream is a specially formulated treatment using multi-patented Keratin technology to actively repair your dry, cracked heels.",
+          "Silkia foot care centres around well-nourished skin. The best-selling Cracked Heel Repair range is a specially formulated treatment using multi-patented Keratin technology to actively repair your dry, cracked heels. Available in tube and roll-on format, you can buy our footcare products at Asda, Bodycare, Amazon, Home Bargains, Trago Mills, and Mr Price.",
         imgSrc: "Silkia-cream.png",
       },
       {
         id: "silkia_pedicare_2",
-        title: "Cracked Heel Repair Roll-on",
+        title: "Hand Care",
         description:
-          "PediCare Cracked Heel Repair Cream is available in tube and roll-on format and you can buy it at Asda, Trago Mills, Bodycare, Home Bargains, Poundworld and Rayburn in the UK.",
+          "Silkia presents a variety of delightful fragrances to choose from, including Cherry Blossom, Orange Blossom, and Verbena Blossom. For those seeking even deeper moisture without any added fragrance, we have our Hand Repair cream that provides intense hydration for your skin using a unique Keratin technology.",
         imgSrc: "Silkia-rollon.png",
       },
     ],
