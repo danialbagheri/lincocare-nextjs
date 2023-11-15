@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography, useTheme } from "@mui/material";
 
-import { Container } from "shared";
+import { Container, CustomLink } from "shared";
 import { NewsDetail } from "./newsDetail";
 import { getListOfAllBlogs } from "services";
 import { BlogRes, ListOfAllBlogsRes } from "services/lincoServicesTypes";
@@ -11,6 +11,7 @@ function LincoNews(data: any) {
   const scrollElement = React.useRef<HTMLHeadingElement>(null);
   const [loading, setLoading] = React.useState(false);
   const [news, setNews] = React.useState<BlogRes[]>([]);
+  const theme = useTheme();
 
   React.useEffect(() => {
     setLoading(true);
@@ -40,6 +41,14 @@ function LincoNews(data: any) {
           ))}
         </Stack>
       </Box>
+      <CustomLink
+        color={"#000"}
+        href={`/news`}
+        borderColor={{ xs: theme.palette.lincoBlue.main }}
+        sx={{ textAlign: "center" }}
+      >
+        All Linco News
+      </CustomLink>
     </Container>
   );
 }

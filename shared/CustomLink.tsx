@@ -23,7 +23,7 @@ export function CustomLink(props: CustomLinkTypes) {
         "&>a": {
           display: "inline-block",
           textDecoration: "none",
-          color: props.color || "#fff",
+          color: props.color ?? "#fff",
           borderBottom: `2px solid`,
           borderColor: props.borderColor
             ? { ...props.borderColor }

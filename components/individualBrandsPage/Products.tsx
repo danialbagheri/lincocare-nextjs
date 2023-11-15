@@ -19,7 +19,7 @@ export function Products(props: { brandDetails: BrandDetailsType }) {
       const hoverObj: ItemsHoverTypes = {};
 
       brandDetails?.products?.forEach((product, i) => {
-        hoverObj[product.id] = i === 0 ? true : false;
+        hoverObj[product.id] = i === 0;
       });
 
       setItemsHover(hoverObj);
@@ -145,10 +145,12 @@ export function Products(props: { brandDetails: BrandDetailsType }) {
         variant="h4"
         mt={20}
         textAlign="center"
-        sx={{ "&>a": { textDecoration: "underline" } }}
+        sx={{
+          "&>a": { textDecoration: "underline", textUnderlineOffset: "10px" },
+        }}
       >
         See more at{" "}
-        <Link href={`https://${brandDetails?.brandWebsiteLink}` ?? ""}>
+        <Link href={`https://${brandDetails?.brandWebsiteLink}`}>
           {brandDetails?.brandWebsiteLink}
         </Link>
       </Typography>

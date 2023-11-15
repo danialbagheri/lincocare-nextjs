@@ -55,7 +55,7 @@ export function Brands(props: { sx?: SxProps }) {
         href="/brands"
         color="#000"
         borderColor={{ xs: "lincoBlue.main" }}
-        mt={8}
+        mt={3}
         aSx={{ px: 8 }}
       >
         Linco Care brands
