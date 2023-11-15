@@ -46,6 +46,7 @@ function LincoNews(data: any) {
         href={`/news`}
         borderColor={{ xs: theme.palette.lincoBlue.main }}
         sx={{ textAlign: "center" }}
+        aSx={{ px: 5 }}
       >
         All Linco News
       </CustomLink>
