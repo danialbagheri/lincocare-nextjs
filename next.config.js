@@ -25,6 +25,11 @@ module.exports = {
         destination: "/image-request",
         permanent: false,
       },
+      {
+        source: "/privateLabel",
+        destination: "/private-label",
+        permanent: false,
+      },
     ];
   },
 };

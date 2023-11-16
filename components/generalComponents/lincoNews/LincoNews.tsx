@@ -13,11 +13,12 @@ import {
 
 interface PropsTypes {
   collectionSlug?: string;
+  title?: string;
 }
 
 function LincoNews(props: PropsTypes) {
   const scrollElement = React.useRef<HTMLHeadingElement>(null);
-  const { collectionSlug } = props;
+  const { collectionSlug, title } = props;
   const [news, setNews] = React.useState<BlogRes[]>([]);
   const theme = useTheme();
 
@@ -55,7 +56,7 @@ function LincoNews(props: PropsTypes) {
         sx={{ typography: { xs: "h4", md: "h2" }, mb: { xs: 10, md: 13 } }}
         textAlign={"center"}
       >
-        Skincare Spotlight
+        {title ?? "Skincare Spotlight"}
       </Typography>
       <Box>
         <Stack
@@ -78,7 +79,7 @@ function LincoNews(props: PropsTypes) {
         sx={{ textAlign: "center" }}
         aSx={{ px: 5 }}
       >
-        All Linco News
+        Discover more
       </CustomLink>
     </Container>
   );

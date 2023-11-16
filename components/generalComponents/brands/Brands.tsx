@@ -1,12 +1,27 @@
-import { Slide } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
+/* ---------------------------- NextJs Components --------------------------- */
 import Image from "next/image";
-import { Container, CustomLink } from "shared";
+import { useRouter } from "next/router";
+/* -------------------------------------------------------------------------- */
 
+/* ---------------------------- Slideshow Library --------------------------- */
+import { Slide } from "react-slideshow-image";
+/* -------------------------------------------------------------------------- */
+
+/* ----------------------------- MUI Components ----------------------------- */
+import { Box, SxProps } from "@mui/material";
+/* -------------------------------------------------------------------------- */
+
+/* ---------------------------- Local Components ---------------------------- */
+import { Container, CustomLink } from "shared";
 import { BRANDS } from "components/constants";
-import { SxProps } from "@mui/material";
+/* -------------------------------------------------------------------------- */
+
+/* ---------------------------- Style Components ---------------------------- */
+import "react-slideshow-image/dist/styles.css";
+/* -------------------------------------------------------------------------- */
 
 export function Brands(props: { sx?: SxProps }) {
+  const router = useRouter();
   return (
     <Container
       pt={{ xs: 15, md: 20 }}
@@ -35,17 +50,24 @@ export function Brands(props: { sx?: SxProps }) {
         {BRANDS.map((brand) => {
           if (brand.whiteLogoSrc) {
             return (
-              <Image
+              <Box
                 key={brand.id}
-                src={brand.whiteLogoSrc || ""}
-                alt={brand.name}
-                width={200}
-                height={136}
-                style={{
-                  filter:
-                    "invert(0%) sepia(100%) saturate(0%) hue-rotate(151deg) brightness(0) contrast(104%)",
+                onClick={() => {
+                  router.push(`/brands/${brand.id}`);
                 }}
-              />
+                sx={{ cursor: "pointer" }}
+              >
+                <Image
+                  src={brand.whiteLogoSrc || ""}
+                  alt={brand.name}
+                  width={200}
+                  height={136}
+                  style={{
+                    filter:
+                      "invert(0%) sepia(100%) saturate(0%) hue-rotate(151deg) brightness(0) contrast(104%)",
+                  }}
+                />
+              </Box>
             );
           }
         })}

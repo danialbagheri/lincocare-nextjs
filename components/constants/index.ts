@@ -17,6 +17,7 @@ export interface BrandDetailsType {
   socialMediaLinks: { title: string; link: string }[][];
   detailedDescription: string;
   newsSlug?: string;
+  seeMoreLinkText?: string;
   products?: {
     id: string;
     title: string;
@@ -51,6 +52,7 @@ export const BRANDS: BrandDetailsType[] = [
     brandWebsiteLink: "Calypsosun.com",
     subtitle: "Sun protection for the whole family",
     newsSlug: "calypso-latest-news",
+    seeMoreLinkText: "Dive deeper at",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],
@@ -111,6 +113,7 @@ export const BRANDS: BrandDetailsType[] = [
     brandWebsiteLink: "Cabanasun.co.uk ",
     subtitle: "Love the sun, love your skin",
     newsSlug: "cabana-latest-news",
+    seeMoreLinkText: "Start your journey at",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],
@@ -161,13 +164,14 @@ export const BRANDS: BrandDetailsType[] = [
     whiteLogoSrc: "/images/brands/whiteLogo/Pedicare-white.svg",
     mt: "0",
     description:
-      "Silkia PediCare Cracked Heel Repair Cream is a specially formulated treatment using multi-patented Keratin technology to actively repair your dry, cracked heels.",
+      "Silkia Cracked Heel Repair Cream is a specially formulated treatment using multi-patented Keratin technology to actively repair your dry, cracked heels.",
     color: theme.palette.silkiaBlue.main,
     borderColor: theme.palette.primary.main,
     knowMoreLink: "/brands/silkiaPedicare",
     brandWebsiteLink: "Silkia.com",
     subtitle: "For silky smooth skin",
     newsSlug: "silkia-skin-latest-news",
+    seeMoreLinkText: "Love your skin at",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],
@@ -190,7 +194,7 @@ export const BRANDS: BrandDetailsType[] = [
       },
     ],
     detailedDescription:
-      "Silkia PediCare Cracked Heel Repair is a specially formulated treatment using multi-patented Keratin technology to actively repair your dry, cracked heels. It is clinically proven to aid the body’s natural recovery process. It helps prevent infection and boosts the fundamental skin repair process after just 48 hours. The formulation consists of Urea as well as pure Keratin, which is sourced from a keratin technology group based in the United States. Numerous clinical tests have shown that the formula works in sync with the body to repair damaged skin in only two days.",
+      "Silkia Cracked Heel Repair is a specially formulated treatment using multi-patented Keratin technology to actively repair your dry, cracked heels. It is clinically proven to aid the body’s natural recovery process. It helps prevent infection and boosts the fundamental skin repair process after just 48 hours. The formulation consists of Urea as well as pure Keratin, which is sourced from a keratin technology group based in the United States. Numerous clinical tests have shown that the formula works in sync with the body to repair damaged skin in only two days.",
   },
   {
     id: BRANDS_ID.SILKIA_DEPILATORY,
@@ -207,6 +211,7 @@ export const BRANDS: BrandDetailsType[] = [
     brandWebsiteLink: "Silkiadepilatory.co.uk",
     subtitle: "For silky smooth skin",
     newsSlug: "silkia-depilatory-latest-news",
+    seeMoreLinkText: "Embrace silky smooth skin at",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],
@@ -252,6 +257,7 @@ export const BRANDS: BrandDetailsType[] = [
     brandWebsiteLink: "Dimplesdepilatory.com/",
     subtitle: "The secret to smooth skin",
     newsSlug: "dimples-latest-news",
+    seeMoreLinkText: "Discover more at",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],
@@ -356,6 +362,7 @@ export const BRANDS: BrandDetailsType[] = [
     brandWebsiteLink: "Regenoil.co.uk",
     subtitle: "The secret to sensational skin",
     newsSlug: "re-gen-latest-news",
+    seeMoreLinkText: "Regenerate your skin at",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],

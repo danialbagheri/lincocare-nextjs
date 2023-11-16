@@ -149,7 +149,7 @@ export function Products(props: { brandDetails: BrandDetailsType }) {
           "&>a": { textDecoration: "underline", textUnderlineOffset: "10px" },
         }}
       >
-        See more at{" "}
+        {`${brandDetails.seeMoreLinkText} `}
         <CustomLink
           borderColor={{ xs: theme.palette.lincoBlue.main }}
           color="#000"
