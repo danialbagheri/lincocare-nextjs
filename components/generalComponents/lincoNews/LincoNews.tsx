@@ -4,21 +4,50 @@ import { Box, Stack, Typography, useTheme } from "@mui/material";
 
 import { Container, CustomLink } from "shared";
 import { NewsDetail } from "./newsDetail";
-import { getListOfAllBlogs } from "services";
-import { BlogRes, ListOfAllBlogsRes } from "services/lincoServicesTypes";
+import { getListOfAllBlogs, getSingleBlogCollectionBySlug } from "services";
+import {
+  BlogRes,
+  ListOfAllBlogsRes,
+  ListOfCollectionBlogBySlug,
+} from "services/lincoServicesTypes";
 
-function LincoNews(data: any) {
+interface PropsTypes {
+  collectionSlug?: string;
+}
+
+function LincoNews(props: PropsTypes) {
   const scrollElement = React.useRef<HTMLHeadingElement>(null);
-  const [loading, setLoading] = React.useState(false);
+  const { collectionSlug } = props;
   const [news, setNews] = React.useState<BlogRes[]>([]);
   const theme = useTheme();
 
   React.useEffect(() => {
-    setLoading(true);
-    getListOfAllBlogs({ count: "3" }).then((res: ListOfAllBlogsRes) => {
-      setNews(res.results);
-    });
-  }, []);
+    if (collectionSlug) {
+      getSingleBlogCollectionBySlug(collectionSlug).then(
+        (res: ListOfCollectionBlogBySlug) => {
+          if (res.items.length) {
+            const newsArr: BlogRes[] = [];
+
+            res.items.forEach((item, i) => {
+              if (i < 3) {
+                newsArr.push(item.item);
+              }
+            });
+
+            setNews(newsArr);
+          } else {
+            getListOfAllBlogs({ count: "3" }).then((res: ListOfAllBlogsRes) => {
+              setNews(res.results);
+            });
+          }
+        }
+      );
+    } else {
+      getListOfAllBlogs({ count: "3" }).then((res: ListOfAllBlogsRes) => {
+        setNews(res.results);
+      });
+    }
+  }, [collectionSlug]);
 
   return (
     <Container sx={{ mb: { xs: 18, md: 32 } }}>
@@ -35,6 +64,7 @@ function LincoNews(data: any) {
           gap={{ xs: 8, md: 11 }}
           ref={scrollElement}
           flexWrap={{ xs: "wrap", md: "nowrap" }}
+          justifyContent="center"
         >
           {news.map((n) => (
             <NewsDetail key={n.id} newsData={n} />

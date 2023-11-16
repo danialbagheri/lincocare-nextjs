@@ -3,7 +3,6 @@ import { Box, Stack, Typography, useTheme } from "@mui/material";
 import { CustomLink } from "shared";
 import Image from "next/image";
 import { BlogRes } from "services/lincoServicesTypes";
-import HTMLReactParser from "html-react-parser";
 import { manipulateDate } from "utils";
 import { useRouter } from "next/router";
 
@@ -11,13 +10,17 @@ function NewsDetail(props: { newsData: BlogRes }) {
   const { newsData } = props;
   const theme = useTheme();
   const router = useRouter();
-  const properDate = manipulateDate(newsData.publish_date);
+
+  const properDate = newsData.publish_date
+    ? manipulateDate(newsData.publish_date)
+    : { day: "", month: "", year: "" };
 
   return (
     <Stack
       sx={{
         width: "100%",
         cursor: "pointer",
+        maxWidth: 300,
       }}
       gap={{ xs: 4, md: 5 }}
       onClick={() => router.push(`/news/${newsData.slug}`)}

@@ -28,7 +28,7 @@ export default function BrandPage() {
       <Brands />
 
       <LincoDivider sx={{ mb: { xs: 16, md: 26 } }} fullWidth />
-      <LincoNews />
+      <LincoNews collectionSlug={brandDetails?.newsSlug} />
     </>
   );
 }

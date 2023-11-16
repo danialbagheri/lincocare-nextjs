@@ -27,6 +27,10 @@ export const getSingleBlog = (slug: string) => {
   return get({ endpoint: `blogs/all/${slug}/` });
 };
 
+export const getSingleBlogCollectionBySlug = (slug: string) => {
+  return get({ endpoint: `blogs/collections/${slug}/?count=3` });
+};
+
 export const getIcons = (slug: string) => {
   return get({ endpoint: `web/icon-groups/${slug}` });
 };

@@ -16,6 +16,7 @@ export interface BrandDetailsType {
   privateLabel?: boolean;
   socialMediaLinks: { title: string; link: string }[][];
   detailedDescription: string;
+  newsSlug?: string;
   products?: {
     id: string;
     title: string;
@@ -35,7 +36,7 @@ export const BRANDS_ID = {
   PRIVATE_LABEL: "privateLabel",
 };
 
-export const BRANDS = [
+export const BRANDS: BrandDetailsType[] = [
   {
     id: BRANDS_ID.CALYPSO,
     name: "Calypso",
@@ -49,6 +50,7 @@ export const BRANDS = [
     knowMoreLink: "/brands/calypso",
     brandWebsiteLink: "Calypsosun.com",
     subtitle: "Sun protection for the whole family",
+    newsSlug: "calypso-latest-news",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],
@@ -108,6 +110,7 @@ export const BRANDS = [
     knowMoreLink: "/brands/cabana",
     brandWebsiteLink: "Cabanasun.co.uk ",
     subtitle: "Love the sun, love your skin",
+    newsSlug: "cabana-latest-news",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],
@@ -164,6 +167,7 @@ export const BRANDS = [
     knowMoreLink: "/brands/silkiaPedicare",
     brandWebsiteLink: "Silkia.com",
     subtitle: "For silky smooth skin",
+    newsSlug: "silkia-skin-latest-news",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],
@@ -202,6 +206,7 @@ export const BRANDS = [
     knowMoreLink: "/brands/silkiaDepilatory",
     brandWebsiteLink: "Silkiadepilatory.co.uk",
     subtitle: "For silky smooth skin",
+    newsSlug: "silkia-depilatory-latest-news",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],
@@ -246,6 +251,7 @@ export const BRANDS = [
     knowMoreLink: "/brands/dimples",
     brandWebsiteLink: "Dimplesdepilatory.com/",
     subtitle: "The secret to smooth skin",
+    newsSlug: "dimples-latest-news",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],
@@ -349,6 +355,7 @@ export const BRANDS = [
     knowMoreLink: "/brands/reGen",
     brandWebsiteLink: "Regenoil.co.uk",
     subtitle: "The secret to sensational skin",
+    newsSlug: "re-gen-latest-news",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],
@@ -407,6 +414,7 @@ export const BRANDS = [
     brandWebsiteLink: "",
     privateLabel: true,
     subtitle: "",
+    newsSlug: "private-label-latest-news",
     socialMediaLinks: [
       [{ title: "Facebook", link: "" }],
       [{ title: "Twitter", link: "" }],

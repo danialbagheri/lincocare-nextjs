@@ -143,16 +143,21 @@ export function Products(props: { brandDetails: BrandDetailsType }) {
       ))}
       <Typography
         variant="h4"
-        mt={20}
+        mt={10}
         textAlign="center"
         sx={{
           "&>a": { textDecoration: "underline", textUnderlineOffset: "10px" },
         }}
       >
         See more at{" "}
-        <Link href={`https://${brandDetails?.brandWebsiteLink}`}>
+        <CustomLink
+          borderColor={{ xs: theme.palette.lincoBlue.main }}
+          color="#000"
+          href={`https://${brandDetails?.brandWebsiteLink}`}
+          sx={{ display: "inline" }}
+        >
           {brandDetails?.brandWebsiteLink}
-        </Link>
+        </CustomLink>
       </Typography>
     </Stack>
   );

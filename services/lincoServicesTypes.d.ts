@@ -1,6 +1,6 @@
 export interface BlogRes {
   body: string;
-  category: [];
+  category: string[];
   excerpt: string;
   plain_excerpt: string;
   id: number;
@@ -25,6 +25,18 @@ export interface ListOfAllBlogsRes {
   next: string;
   previous: null | boolean;
   results: BlogRes[];
+}
+
+export interface ListOfCollectionBlogBySlug {
+  counts: number;
+  description: string;
+  id: string | number;
+  image: string;
+  items: { item: BlogRes }[];
+  name: string;
+  //TODO::: Change slider type based on api response
+  slider: any;
+  slug: string;
 }
 
 /* -------------------------------------------------------------------------- */
