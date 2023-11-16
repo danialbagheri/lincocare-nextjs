@@ -13,11 +13,6 @@ import "react-slideshow-image/dist/styles.css";
 
 const HEADER_TITLES = [
   {
-    id: "formulation",
-    title: "700+ Product Formulations",
-    href: "/private-label",
-  },
-  {
     id: "crafting",
     title: "Crafting Excellence, Nurturing beauty",
     href: "/about-us",
@@ -25,6 +20,11 @@ const HEADER_TITLES = [
   {
     id: "custom",
     title: "Four Decades of Manufacturing Expertise",
+    href: "/private-label",
+  },
+  {
+    id: "formulation",
+    title: "700+ Product Formulations",
     href: "/private-label",
   },
 ];
