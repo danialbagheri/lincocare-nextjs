@@ -10,9 +10,12 @@ export function AddressSection() {
           Linco Care Ltd, Linco House, Manchester Road, Carrington, Manchester,
           England M31 4BX
         </Typography>
-        <Typography>Telephone : +44 (0) 161 777 9229</Typography>
-        <Typography>
-          Registered: England & Wales. Company number: 1420923
+        <Typography mt={2}>
+          <strong>Telephone</strong> :{" "}
+          <a href="tel:+441617779229">+44 (0) 161 777 9229</a>
+        </Typography>
+        <Typography mt={2}>
+          <strong>Company registered number in England & Wales</strong>: 1420923
         </Typography>
       </Box>
       <Button

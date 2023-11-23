@@ -27,40 +27,38 @@ export function ContactForm(props: PropsTypes) {
   };
 
   return (
-    <>
-      <Box
-        sx={{
-          ...sx,
-          pl: { xs: 9, md: 25 },
-          pr: { xs: 9, md: 0 },
-          pb: 25,
-        }}
-      >
-        <Typography variant="h4" textAlign="center">
-          Contact form
-        </Typography>
-        <UserProfile
-          formData={formData}
-          setFormData={setFormData}
-          error={error}
-        />
-        {/* <RequiredServices formData={formData} setFormData={setFormData} /> */}
-        {/* <ProductCategory formData={formData} setFormData={setFormData} />
+    <Box
+      sx={{
+        ...sx,
+        pl: { xs: 9, md: 25 },
+        pr: { xs: 9, md: 0 },
+        pb: 25,
+      }}
+    >
+      <Typography variant="h4" textAlign="center">
+        Contact form
+      </Typography>
+      <UserProfile
+        formData={formData}
+        setFormData={setFormData}
+        error={error}
+      />
+      {/* <RequiredServices formData={formData} setFormData={setFormData} /> */}
+      {/* <ProductCategory formData={formData} setFormData={setFormData} />
         <CompanyDetails formData={formData} setFormData={setFormData} /> */}
-        <Message formData={formData} setFormData={setFormData} />
-        <Box mt={8}>
-          <ReCaptcha
-            error={error.recaptcha}
-            handleChange={handleCaptchaSubmission}
-          />
-        </Box>
-        <SubmitBtn
-          formData={formData}
-          setFormData={setFormData}
-          error={error}
-          setError={setError}
+      <Message formData={formData} setFormData={setFormData} />
+      <Box mt={8}>
+        <ReCaptcha
+          error={error.recaptcha}
+          handleChange={handleCaptchaSubmission}
         />
       </Box>
-    </>
+      <SubmitBtn
+        formData={formData}
+        setFormData={setFormData}
+        error={error}
+        setError={setError}
+      />
+    </Box>
   );
 }
