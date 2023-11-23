@@ -4,6 +4,17 @@ export function AddressSection() {
   const theme = useTheme();
   return (
     <Box px={{ xs: 9, md: 0 }}>
+      <Typography variant="h4">Address</Typography>
+      <Box mt={5} maxWidth="300px">
+        <Typography>
+          Linco Care Ltd, Linco House, Manchester Road, Carrington, Manchester,
+          England M31 4BX
+        </Typography>
+        <Typography>Telephone : +44 (0) 161 777 9229</Typography>
+        <Typography>
+          Registered: England & Wales. Company number: 1420923
+        </Typography>
+      </Box>
       <Button
         sx={{
           textTransform: "unset",
