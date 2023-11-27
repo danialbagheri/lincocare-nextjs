@@ -8,3 +8,4 @@ export * from "./Message";
 export * from "./SubmitBtn";
 export * from "./types";
 export * from "./shared";
+export * from "./GoogleMapContainer";
