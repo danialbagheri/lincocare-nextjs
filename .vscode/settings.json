@@ -1,3 +1,7 @@
 {
-  "cSpell.words": ["regen", "Safa", "Silkia", "swipeable"]
+  "cSpell.words": ["regen", "Safa", "Silkia", "swipeable"],
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 16,
+  "editor.fontWeight": "normal",
+  "editor.fontLigatures": true
 }

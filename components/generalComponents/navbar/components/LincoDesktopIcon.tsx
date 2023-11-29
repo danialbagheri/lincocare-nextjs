@@ -28,8 +28,8 @@ export function LincoDesktopIcon(props: { darkNavbar: boolean }) {
           alt={"linco-logo"}
           src={
             props.darkNavbar
-              ? "/icons/Linco-logo-blue-small.png"
-              : "/icons/Linco-logo-white-small.svg"
+              ? "/icons/Linco-logo.svg"
+              : "/icons/Linco-logo-white.svg"
           }
           width={177}
           height={40}
