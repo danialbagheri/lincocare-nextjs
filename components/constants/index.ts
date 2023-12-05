@@ -180,16 +180,16 @@ export const BRANDS: BrandDetailsType[] = [
     products: [
       {
         id: "silkia_pedicare_1",
-        title: "Foot Care",
+        title: "Hand Care",
         description:
-          "Silkia foot care centres around well-nourished skin. The best-selling Cracked Heel Repair range is a specially formulated treatment using multi-patented Keratin technology to actively repair your dry, cracked heels. Available in tube and roll-on format, you can buy our footcare products at Asda, Bodycare, Amazon, Home Bargains, Trago Mills, and Mr Price.",
+          "Silkia presents a variety of delightful fragrances to choose from, including Cherry Blossom, Orange Blossom, and Verbena Blossom. For those seeking even deeper moisture without any added fragrance, we have our Hand Repair cream that provides intense hydration for your skin using a unique Keratin technology.",
         imgSrc: "Silkia-cream.png",
       },
       {
         id: "silkia_pedicare_2",
-        title: "Hand Care",
+        title: "Foot Care",
         description:
-          "Silkia presents a variety of delightful fragrances to choose from, including Cherry Blossom, Orange Blossom, and Verbena Blossom. For those seeking even deeper moisture without any added fragrance, we have our Hand Repair cream that provides intense hydration for your skin using a unique Keratin technology.",
+          "Silkia foot care centres around well-nourished skin. The best-selling Cracked Heel Repair range is a specially formulated treatment using multi-patented Keratin technology to actively repair your dry, cracked heels. Available in tube and roll-on format, you can buy our footcare products at Asda, Bodycare, Amazon, Home Bargains, Trago Mills, and Mr Price.",
         imgSrc: "Silkia-rollon.png",
       },
     ],
