@@ -223,7 +223,7 @@ export const PROCESS_ITEMS = [
         unit: "",
         active: false,
         description:
-          "Other accreditations include Soil Association, Nordic Swan Ecolabel, and Halal Sedex and RSPO certified.",
+          "Other accreditations include Halal, Sedex and RSPO certified.",
       },
       {
         title: "",
