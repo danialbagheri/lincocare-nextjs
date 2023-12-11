@@ -12,7 +12,7 @@ interface ItemPropsTypes {
 
 /* -------------------------------- Constants ------------------------------- */
 const STATISTICS_DETAILS = [
-  { number: "1M", unit: "/month", description: "Filling capacity" },
+  { number: "1.5M", unit: "unit/month", description: "Filling capacity" },
   { number: "60", description: "Countries" },
   { number: "700+", description: "Product formulations" },
   { number: "70+", description: "Sun care formulations" },
