@@ -52,7 +52,7 @@ export const PROCESS_ITEMS = [
     ],
   },
   {
-    title: "Product Specification ",
+    title: "Packaging Specification ",
     imgSrc: "/images/privateLabelPage/body/branding&marketing.jpg",
     description:
       "We can source and fill your product into bottles, jars or tubes in a wide range of sizes and in whatever style you’re looking for.",
@@ -141,13 +141,13 @@ export const PROCESS_ITEMS = [
     link: "",
     data: [
       {
-        title: "1240",
+        title: "300",
         unit: "t/month",
         active: false,
         description: "Mixing capacity",
       },
       {
-        title: "1M",
+        title: "1.5M",
         unit: "unit/month",
         active: false,
         description: "Filling capacity",
