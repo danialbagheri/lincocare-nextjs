@@ -61,7 +61,7 @@ export const ABOUT_ITEM = [
 
 export const ACHIEVEMENTS = [
   {
-    title: "1M",
+    title: "1.5M",
     unit: "/month",
     subtitle: "Filling capacity",
   },

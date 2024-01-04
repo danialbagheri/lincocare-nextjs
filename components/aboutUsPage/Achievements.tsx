@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, useTheme } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import { Container } from "shared";
 import { ACHIEVEMENTS } from "./components";
 

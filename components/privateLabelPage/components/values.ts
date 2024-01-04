@@ -7,52 +7,49 @@ export const PROCESS_ITEMS = [
     link: "",
     data: [
       {
-        title: "70+",
-        unit: "",
-        active: false,
-        description: "Standard Suncare Formulation",
-      },
-      {
-        title: "700+",
-        unit: "",
-        active: false,
-        description: "Product Formulations",
-      },
-      {
         title: "",
         unit: "",
         active: false,
-        description: "Sun Care Photostable, UVA / UVB, EU Compliant",
-      },
-      {
-        title: "5-Star",
-        unit: "",
-        active: false,
-        description: "Australian Standard, Nordic SWAN & Allergy Asthma",
+        description: "Bulk Manufacturing",
       },
       {
         title: "",
         unit: "",
         active: false,
         description:
-          "Hair Care and Skin Care including Vegan, Organic COSMOS, Cosmeceutical, Natural and Halal",
+          "DSEAR-COMPLIANT MANUFACTURING AREAS\nDesignated homogeniser for flammables",
       },
       {
         title: "",
         unit: "",
         active: false,
-        description: "Specific country / client specification",
+        description:
+          "MULTI-PURPOSE MIXING VESSELS\nMax. VESSELs Capacity 6,000KGS\nmax. 300tonnes/month",
       },
       {
         title: "",
         unit: "",
         active: false,
-        description: "Award winning formulation",
+        description: "Elf capper and Harland labelling machines",
+      },
+      {
+        title: "",
+        unit: "",
+        active: false,
+        description:
+          "7 filling and packing lines\n1.5 units/month Filling capacity",
+      },
+      {
+        title: "",
+        unit: "",
+        active: false,
+        description: "10,000m² production and storage area",
       },
     ],
   },
   {
     title: "Packaging Specification ",
+
     imgSrc: "/images/privateLabelPage/body/branding&marketing.jpg",
     description:
       "We can source and fill your product into bottles, jars or tubes in a wide range of sizes and in whatever style you’re looking for.",
@@ -62,38 +59,26 @@ export const PROCESS_ITEMS = [
         title: "",
         unit: "",
         active: false,
-        description: "Plastic and laminate tubes",
+        description:
+          "Aluminum, plastic and laminate tubes\nPump Dispensing System",
       },
       {
-        title: "1M",
-        unit: "unit/month",
+        title: "",
+        unit: "",
         active: false,
         description: "Glass, plastic bottles and jars",
       },
-      { title: "", unit: "", active: false, description: "Shrink wrapping" },
       {
         title: "",
         unit: "",
         active: false,
-        description: "Tamper-evident packing",
-      },
-      {
-        title: "",
-        unit: "",
-        active: false,
-        description: "Cello wrapping",
+        description: "Shrink wrapping\nTamper-Evident Packing\nCello Wrapping",
       },
       {
         title: "",
         unit: "",
         active: false,
         description: "Miniature/ promotion packs and sachets",
-      },
-      {
-        title: "",
-        unit: "",
-        active: false,
-        description: "Bespoke boxes suited to customer needs and requirements",
       },
     ],
   },
@@ -115,14 +100,14 @@ export const PROCESS_ITEMS = [
         unit: "",
         active: false,
         description:
-          "In-house photography studio specializing in model photography that weaves brand narratives, building emotional connections through visual storytelling.",
+          "In-house photography studio, building emotional connections through visual storytelling",
       },
       {
         title: "",
         unit: "",
         active: false,
         description:
-          " Crafting campaigns and designs rooted in consumer insights, we spark connections that turn clicks into committed customers. ",
+          " Crafting campaigns and designs rooted in consumer insights",
       },
       {
         title: "",
