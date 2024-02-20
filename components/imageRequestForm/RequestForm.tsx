@@ -7,12 +7,14 @@ import SelectBox from "./components/SelectBox";
 import {
   BrandSelect,
   EmailField,
+  CheckboxField,
   IMAGE_ANGLE_OPTIONS,
   IMAGE_FORMATS,
   IMAGE_TYPE_OPTIONS,
   SkuField,
   SubmitButton,
 } from "./components";
+
 import { ReCaptcha } from "components/generalComponents";
 
 export interface RequestDataTypes {
@@ -20,6 +22,7 @@ export interface RequestDataTypes {
   image_formats: string[];
   image_types: string[];
   image_angles: string[];
+  no_directories: Boolean;
   email: string;
   recaptcha: string;
 }
@@ -69,6 +72,7 @@ export function RequestForm() {
     image_formats: [IMAGE_FORMATS.PNG.value],
     image_types: [IMAGE_TYPE_OPTIONS.PRODUCT_IMAGE.value],
     image_angles: [IMAGE_ANGLE_OPTIONS.FRONT.value],
+    no_directories: false,
     email: "",
     recaptcha: "",
   });
@@ -82,7 +86,7 @@ export function RequestForm() {
   };
 
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", gap: 5, mt: 20 }}>
+    <Box sx={{ display: "flex", flexDirection: "column", gap: 5, mt: 10 }}>
       <BrandSelect brand={brand} setBrand={setBrand} />
       <EmailField
         value={requestData.email}
@@ -116,6 +120,11 @@ export function RequestForm() {
         handleChange={handleCaptchaChange}
         error={error.recaptcha}
         sx={{ mt: -5 }}
+      />
+      <CheckboxField
+        label="Organise Files: Tick to keep all files in one directory (folder)"
+        setRequestData={setRequestData}
+        value={requestData.no_directories}
       />
       <SubmitButton
         brand={brand}

@@ -33,7 +33,7 @@ const StatisticItem = (props: ItemPropsTypes) => (
       }}
     >
       {props.number}
-      <span style={{ fontSize: "40px" }}>{props.unit}</span>
+      <span style={{ fontSize: "20px" }}>{props.unit}</span>
     </Typography>
 
     <Typography
