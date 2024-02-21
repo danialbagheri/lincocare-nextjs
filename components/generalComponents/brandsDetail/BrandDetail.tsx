@@ -170,7 +170,7 @@ export default function BrandDetail(props: { details: BrandDetailsType }) {
             }}
           >
             <Image
-              src={details?.imageSrc}
+              src={details?.imageSrc ?? ""}
               alt="Accreditations"
               fill
               style={{ objectFit: "contain" }}

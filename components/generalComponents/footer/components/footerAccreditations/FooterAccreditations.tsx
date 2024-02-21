@@ -21,7 +21,7 @@ function FooterAccreditations() {
         alt={"accreditations"}
         src={
           appState?.accreditations?.items
-            ? appState?.accreditations?.items[1].icon || ""
+            ? appState?.accreditations?.items[1].icon ?? ""
             : ""
         }
         width={214}

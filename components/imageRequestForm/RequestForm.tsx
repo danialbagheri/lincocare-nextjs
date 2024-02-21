@@ -22,7 +22,7 @@ export interface RequestDataTypes {
   image_formats: string[];
   image_types: string[];
   image_angles: string[];
-  no_directories: Boolean;
+  no_directories: boolean;
   email: string;
   recaptcha: string;
 }

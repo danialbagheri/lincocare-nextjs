@@ -51,7 +51,7 @@ function Accreditations(props: { sx?: SxProps; data?: IconGroupsItemType[] }) {
           src={
             props.data
               ? props.data[2].icon ?? ""
-              : appState?.accreditations?.items[2].icon ?? ""
+              : appState?.accreditations?.items[2]?.icon ?? ""
           }
           alt="Accreditations"
           fill
