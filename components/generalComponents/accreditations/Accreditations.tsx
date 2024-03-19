@@ -27,11 +27,7 @@ function Accreditations(props: { sx?: SxProps; data?: IconGroupsItemType[] }) {
         }}
       >
         <Image
-          src={
-            props.data
-              ? props.data[0].icon ?? ""
-              : appState?.accreditations?.items[0].icon ?? ""
-          }
+          src={appState?.accreditations?.items[0].icon ?? ""}
           alt="Accreditations"
           fill
           style={{ objectFit: "contain" }}
